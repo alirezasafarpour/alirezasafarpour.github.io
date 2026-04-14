@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alireza Safarpour — Process Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;
+  --bg2:oklch(98.5% .002 247.839);
+  --bg3:oklch(96.7% .003 264.542);
+  --border:oklch(92.8% .006 264.531);
+  --border-light:oklch(96.7% .003 264.542);
+  --border-strong:oklch(87.2% .01 258.338);
+  --text:oklch(37.3% .034 259.733);
+  --text-dim:oklch(55.1% .027 264.364);
+  --text-dark:oklch(21% .034 264.665);
+  --white:#ffffff;
+  --accent:#1d4ed8;
+  --accent2:#1e40af;
+  --accent-light:rgba(29,78,216,0.08);
+  --accent-border:rgba(29,78,216,0.18);
+  --accent-glow:rgba(29,78,216,0.26);
+  --teal:#0f766e;
+  --teal-light:rgba(15,118,110,0.08);
+  --amber:#b45309;
+  --amber-light:rgba(180,83,9,0.08);
+  --slate:#475569;
+  --slate-light:rgba(71,85,105,0.08);
+  --shadow:0 16px 40px rgba(17,24,39,0.06);
+  --mono:'IBM Plex Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:15.4px;line-height:1.74;font-weight:400;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent2)}
+::selection{background:rgba(29,78,216,0.14);color:var(--text-dark)}
+
+/* ─── NAV ─── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-bottom-color:var(--border)}
+.nav-name{font-size:1rem;color:var(--text-dark);font-weight:600;letter-spacing:-0.03em}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--text-dim);font-size:.8rem;font-weight:500;letter-spacing:.01em;transition:color .2s}
+.nav-links a:hover{color:var(--text-dark)}
+.lang-switch{position:relative}
+.lang-btn{background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-family:var(--mono);font-size:.68rem;color:var(--text-dim);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:4px}
+.lang-btn:hover{border-color:var(--accent-border);color:var(--accent)}
+.lang-btn svg{width:10px;height:10px;transition:transform .2s}
+.lang-switch.open .lang-btn svg{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--white);border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow);padding:4px;min-width:110px;opacity:0;pointer-events:none;transform:translateY(-4px);transition:all .2s;z-index:200}
+.lang-switch.open .lang-menu{opacity:1;pointer-events:auto;transform:translateY(0)}
+.lang-option{display:block;width:100%;text-align:left;background:none;border:none;padding:6px 12px;font-family:var(--mono);font-size:.7rem;color:var(--text);cursor:pointer;border-radius:5px;transition:background .15s}
+.lang-option:hover{background:var(--bg2)}
+.lang-option.active{color:var(--accent);font-weight:500}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:18px;height:1.5px;background:var(--text-dark);margin:3.5px 0;transition:all .3s}
+
+/* ─── HERO ─── */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--white)}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 900px 1200px at 0% 0%,rgba(29,78,216,0.25) 0%,rgba(29,78,216,0.14) 18%,rgba(29,78,216,0.06) 38%,rgba(255,255,255,0.55) 68%,rgba(255,255,255,0.94) 88%,#fff 100%)}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(229,231,235,0.55) 1px,transparent 1px),linear-gradient(to bottom,rgba(229,231,235,0.55) 1px,transparent 1px);background-size:180px 180px;mask-image:radial-gradient(85% 85% at 100% 0,#fff,transparent);opacity:.7}
+.hero-top,.sim-wrapper{position:relative;z-index:1}
+.hero-top{flex:1;display:flex;flex-direction:column;justify-content:center;padding:110px 48px 32px}
+.hero-code{font-family:var(--mono);font-size:.68rem;color:var(--text-dim);letter-spacing:.08em;margin-bottom:20px;opacity:0;animation:fadeIn .6s .2s forwards;user-select:none}
+.hero-code span{color:var(--accent);opacity:.72}
+.hero-greeting{font-size:.94rem;color:var(--text-dim);font-weight:400;margin-bottom:8px;opacity:0;animation:fadeIn .6s .35s forwards}
+.hero-name{font-family:var(--mono);font-size:clamp(2.9rem,6.25vw,4.95rem);color:var(--text-dark);font-weight:600;letter-spacing:-0.065em;line-height:1.02;margin-bottom:16px;opacity:0;animation:fadeIn .6s .5s forwards;max-width:10ch}
+.hero-role{font-size:.96rem;color:var(--text);font-weight:400;opacity:0;animation:fadeIn .6s .65s forwards}
+.hero-hint{font-family:var(--mono);font-size:.69rem;color:var(--text-dim);opacity:0;animation:fadeIn .6s .8s forwards;margin-top:14px}
+.hero-hint em{color:var(--accent);font-style:normal}
+
+/* Social icons row in hero */
+.hero-socials{display:flex;gap:16px;margin-top:24px;opacity:0;animation:fadeIn .6s .9s forwards}
+.hero-socials a{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text-dim);background:rgba(255,255,255,0.74);box-shadow:0 1px 0 rgba(255,255,255,0.9) inset}
+.hero-socials a:hover{border-color:var(--accent-border);color:var(--accent);background:rgba(255,255,255,0.94);box-shadow:0 12px 24px rgba(29,78,216,0.08)}
+.hero-socials a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+.sim-wrapper{width:100%;height:280px;position:relative;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(29,78,216,0.06) 0%,rgba(255,255,255,0.94) 32%,var(--bg2) 100%);opacity:0;animation:fadeIn .7s 1s forwards;overflow:hidden;cursor:crosshair}
+.sim-wrapper::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 12% 18%,rgba(29,78,216,0.12),transparent 28%),radial-gradient(circle at 82% 16%,rgba(15,118,110,0.08),transparent 24%),linear-gradient(to right,rgba(229,231,235,0.45) 1px,transparent 1px),linear-gradient(to bottom,rgba(229,231,235,0.45) 1px,transparent 1px);background-size:auto,auto,120px 120px,120px 120px;opacity:.85}
+#wwtp-canvas{width:100%;height:100%;display:block}
+.hero-scroll{position:absolute;right:48px;bottom:16px;display:flex;flex-direction:column;align-items:center;gap:6px;font-family:var(--mono);font-size:.62rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;opacity:0;animation:fadeIn .6s 1.2s forwards}
+.scroll-circle{width:28px;height:28px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;animation:bobble 2s infinite;background:rgba(255,255,255,0.76)}
+.scroll-circle svg{width:10px;height:10px;stroke:var(--text-dim);fill:none;stroke-width:1.5}
+@keyframes bobble{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── TWO-COL SECTION LAYOUT ─── */
+.section{padding:80px 48px;border-top:1px solid var(--border-light);background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,250,251,0.86))}
+.section-inner{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start}
+.section-side{position:sticky;top:100px}
+.section-label{font-family:var(--mono);font-size:.67rem;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.section-title{font-family:var(--mono);font-size:clamp(1.12rem,2.3vw,1.56rem);color:var(--text-dark);font-weight:600;letter-spacing:-0.045em;line-height:1.3}
+.section-underline{width:32px;height:2px;background:var(--accent);margin-top:10px;border-radius:1px}
+
+/* ─── ABOUT ─── */
+.about-text{font-size:.94rem;line-height:1.84;margin-bottom:18px;font-weight:400}
+.about-text strong{color:var(--text-dark);font-weight:500}
+.skill-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:24px}
+.skill-pills span{font-family:var(--mono);font-size:.66rem;padding:5px 12px;border:1px solid var(--border);border-radius:999px;color:var(--text-dim);transition:all .2s;cursor:default;background:rgba(255,255,255,0.85)}
+.skill-pills span:hover{border-color:var(--accent-border);color:var(--accent);background:var(--accent-light)}
+
+/* ─── NEWS ─── */
+.news-list{list-style:none}
+.news-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border-light);align-items:baseline}
+.news-item:last-child{border-bottom:none}
+.news-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px;box-shadow:0 0 0 5px rgba(29,78,216,0.07)}
+.news-date{font-family:var(--mono);font-size:.7rem;color:var(--text-dim);min-width:96px;flex-shrink:0;font-weight:500}
+.news-text{font-size:.89rem;font-weight:400;line-height:1.76}
+.news-text strong{color:var(--text-dark);font-weight:500}
+
+/* ─── EXPERIENCE ─── */
+.exp-item{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid var(--border-light)}
+.exp-item:last-child{border-bottom:none}
+.exp-dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--accent);background:rgba(29,78,216,0.08);flex-shrink:0;margin-top:7px}
+.exp-body{flex:1}
+.exp-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:1px}
+.exp-company{font-size:.93rem;color:var(--text-dark);font-weight:600}
+.exp-period{font-family:var(--mono);font-size:.68rem;color:var(--text-dim)}
+.exp-role{font-size:.82rem;color:var(--accent);font-weight:500;margin-bottom:8px}
+.exp-bullets{list-style:none}
+.exp-bullets li{position:relative;padding-left:12px;margin-bottom:5px;font-size:.85rem;font-weight:400;line-height:1.76}
+.exp-bullets li::before{content:'\2013';position:absolute;left:0;color:var(--text-dim);font-size:.7rem}
+.exp-bullets .hl{color:var(--amber);font-weight:500}
+
+/* ─── PROJECTS ─── */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.proj-card{position:relative;padding:22px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,250,251,0.92));transition:all .25s;cursor:default;overflow:hidden;box-shadow:0 8px 24px rgba(17,24,39,0.04)}
+.proj-card::before{content:'';position:absolute;left:0;top:0;right:0;height:3px;background:var(--card-accent,var(--accent))}
+.proj-card:hover{border-color:var(--accent-border);transform:translateY(-3px);box-shadow:var(--shadow)}
+.proj-card:nth-child(1){--card-accent:var(--accent);background:linear-gradient(180deg,rgba(29,78,216,0.07),rgba(255,255,255,0.98) 46%)}
+.proj-card:nth-child(2){--card-accent:var(--teal);background:linear-gradient(180deg,rgba(15,118,110,0.06),rgba(255,255,255,0.98) 46%)}
+.proj-card:nth-child(3){--card-accent:var(--amber);background:linear-gradient(180deg,rgba(180,83,9,0.06),rgba(255,255,255,0.98) 46%)}
+.proj-card:nth-child(4){--card-accent:var(--slate);background:linear-gradient(180deg,rgba(71,85,105,0.06),rgba(255,255,255,0.98) 46%)}
+.proj-emoji{font-size:1.05rem;margin-bottom:12px;display:block}
+.proj-card h3{font-family:var(--mono);font-size:.93rem;color:var(--text-dark);font-weight:600;margin-bottom:8px;line-height:1.45;letter-spacing:-0.03em}
+.proj-card p{font-size:.8rem;font-weight:400;line-height:1.76;margin-bottom:12px}
+.proj-tags{display:flex;flex-wrap:wrap;gap:4px}
+.proj-tags span{font-family:var(--mono);font-size:.58rem;padding:3px 8px;border-radius:999px;background:var(--accent-light);color:var(--accent);border:1px solid var(--accent-border)}
+.proj-card:nth-child(2) .proj-tags span{background:var(--teal-light);border-color:rgba(15,118,110,0.16);color:var(--teal)}
+.proj-card:nth-child(3) .proj-tags span{background:var(--amber-light);border-color:rgba(180,83,9,0.16);color:var(--amber)}
+.proj-card:nth-child(4) .proj-tags span{background:var(--slate-light);border-color:rgba(71,85,105,0.16);color:var(--slate)}
+
+/* ─── EDUCATION ─── */
+.edu-item{padding:22px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,250,251,0.9));margin-bottom:12px;cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s}
+.edu-item:hover{border-color:var(--accent-border);transform:translateY(-1px);box-shadow:0 10px 28px rgba(17,24,39,0.04)}
+.edu-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.edu-degree{font-family:var(--mono);font-size:.92rem;color:var(--text-dark);font-weight:600;letter-spacing:-0.03em}
+.edu-period{font-family:var(--mono);font-size:.67rem;color:var(--text-dim)}
+.edu-school{font-size:.83rem;color:var(--text);font-weight:400;margin-top:4px;line-height:1.7}
+.edu-details{max-height:0;overflow:hidden;transition:max-height .4s,opacity .3s;opacity:0}
+.edu-item.open .edu-details{max-height:200px;opacity:1;margin-top:10px}
+.edu-details li{font-size:.81rem;font-weight:400;margin-bottom:3px;color:var(--text);list-style:none;padding-left:12px;position:relative;line-height:1.72}
+.edu-details li::before{content:'\2013';position:absolute;left:0;color:var(--text-dim);font-size:.7rem}
+.edu-hint{font-family:var(--mono);font-size:.62rem;color:var(--text-dim);margin-top:8px}
+
+/* ─── CONTACT ─── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-card{padding:18px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,250,251,0.9));display:flex;align-items:center;gap:14px;transition:border-color .2s,transform .2s,box-shadow .2s}
+.contact-card:hover{border-color:var(--accent-border);transform:translateY(-1px);box-shadow:0 10px 26px rgba(17,24,39,0.04)}
+.contact-icon{width:34px;height:34px;border-radius:10px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:15px;height:15px;stroke:var(--accent);fill:none;stroke-width:1.5}
+.contact-label{font-family:var(--mono);font-size:.6rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1px}
+.contact-value{font-size:.82rem;color:var(--text-dark);font-weight:500}
+.contact-value a{color:var(--text-dark);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1px;transition:border-color .2s}
+.contact-value a:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ─── FOOTER ─── */
+footer{padding:40px 48px;border-top:1px solid var(--border);background:var(--bg)}
+.footer-inner{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px}
+.footer-copy{font-family:var(--mono);font-size:.62rem;color:var(--text-dim)}
+.footer-links{display:flex;gap:18px}
+.footer-links a{font-size:.82rem;color:var(--text-dim);transition:color .2s}
+.footer-links a:hover{color:var(--accent)}
+
+/* ─── REVEAL ─── */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s cubic-bezier(.23,1,.32,1)}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:800px){
+  nav{padding:12px 20px}
+  .nav-toggle{display:block}
+  .nav-links{position:fixed;top:48px;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);flex-direction:column;padding:18px;gap:14px;transform:translateY(-120%);transition:transform .3s;border-bottom:1px solid var(--border)}
+  .nav-links.open{transform:translateY(0)}
+  .hero-top{padding:90px 20px 24px}
+  .section{padding:48px 20px}
+  .section-inner{grid-template-columns:1fr;gap:20px}
+  .section-side{position:static}
+  footer{padding:32px 20px}
+  .projects-grid,.contact-grid{grid-template-columns:1fr}
+  .sim-wrapper{height:200px}
+  .hero-scroll{right:20px;bottom:10px}
+  .news-item{flex-direction:column;gap:3px}
+  .news-date{min-width:auto}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <span class="nav-name">Alireza Safarpour</span>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#news" data-i18n="nav_news">News</a></li>
+      <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+      <li><a href="#projects" data-i18n="nav_proj">Projects</a></li>
+      <li><a href="#education" data-i18n="nav_edu">Education</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" id="langBtn">EN <svg viewBox="0 0 10 10"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" fill="none" stroke-width="1.2"/></svg></button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
+    <div class="hero-code"><span>H&#8322;O</span> &rarr; <span>[ ]</span> &#10230; <span>&asymp;</span> :: <span>&#9678;</span> &rarr; <span>&#10003;</span></div>
+    <div class="hero-greeting" data-i18n="hero_greeting">Hello! &#128075;</div>
+    <h1 class="hero-name" data-i18n="hero_name">This is Alireza</h1>
+    <p class="hero-role" data-i18n="hero_role">Process Engineer &nbsp;|&nbsp; Water & Wastewater</p>
+    <div class="hero-socials">
+      <a href="mailto:Alireza.safarpour@mail.polimi.it" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      <a href="https://www.linkedin.com/in/alirezasafarpour/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="tel:+31683486623" aria-label="Phone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+    </div>
+    <p class="hero-hint" data-i18n="hero_hint">Move your cursor to interact with the <em>water treatment simulation</em></p>
+  </div>
+  <div class="sim-wrapper" style="position:relative">
+    <canvas id="wwtp-canvas"></canvas>
+    <div class="hero-scroll"><div class="scroll-circle"><svg viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>SCROLL</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner reveal">
+    <div class="section-side">
+      <div class="section-label" data-i18n="about_label">About Me</div>
+      <div class="section-title" data-i18n="about_side_title">About Me</div>
+      <div class="section-underline"></div>
+    </div>
+    <div>
+      <p class="about-text" data-i18n="about_p1">I am a Process Engineer specialised in <strong>WWTP/RWZI design</strong>, <strong>sludge-line optimisation</strong>, <strong>anaerobic digestion</strong>, and <strong>industrial wastewater treatment</strong>. I have hands-on experience across the Netherlands, Italy, Switzerland, and Canada — delivering measurable improvements in biogas production, energy efficiency, and overall plant performance.</p>
+      <p class="about-text" data-i18n="about_p2">My work focuses on <strong>process troubleshooting</strong>, <strong>data-driven optimisation</strong>, aeration and energy efficiency, N/P removal pathways, SCADA interpretation, and industrial pretreatment technologies (ED/BPMED). I am familiar with Dutch frameworks including <strong>NEN-EN design standards</strong>, <strong>STOWA guidelines</strong>, and permitting procedures.</p>
+      <p class="about-text" data-i18n="about_p3">Open to engineering roles within utilities, waterschappen, consulting firms, and industrial treatment facilities across the Netherlands and Europe.</p>
+      <div class="skill-pills">
+        <span>WWTP/RWZI</span><span>anaerobic digestion</span><span>sludge optimisation</span><span>process modelling</span><span>mass balance</span><span>hydraulic checks</span><span>SCADA</span><span>NEN-EN / STOWA</span><span>Python</span><span>R</span><span>QGIS / ArcGIS</span><span>Six Sigma</span><span>BPMED / ED</span><span>IC analysis</span><span>pilot testing</span><span>N/P removal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section" id="news">
+  <div class="section-inner reveal">
+    <div class="section-side">
+      <div class="section-label" data-i18n="news_label">News</div>
+      <div class="section-title" data-i18n="news_side_title">News</div>
+      <div class="section-underline"></div>
+    </div>
+    <ul class="news-list">
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2024 – 2026</span><span class="news-text" data-i18n="news_1">Worked as an <strong>Environmental Process Engineer</strong> at AtkinsRéalis in Toronto, focusing on anaerobic digestion, process optimisation, and wastewater system performance.</span></li>
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2021 – 2023</span><span class="news-text" data-i18n="news_2">Worked at <strong>TU Delft</strong> on BPMED electrodialysis research for industrial wastewater treatment and recovery optimisation.</span></li>
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2019 – 2023</span><span class="news-text" data-i18n="news_3">Completed joint <strong>M.Sc. Environmental Engineering</strong> at TU Delft, Politecnico di Milano, and FHNW (Switzerland).</span></li>
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2018 – 2019</span><span class="news-text" data-i18n="news_4">Worked on municipal sewer network operation, hydraulic analysis, and remediation support at Sailab Jonob in Tehran.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="exp_label">Experience</div>
+      <div class="section-title" data-i18n="exp_side_title">Experience</div>
+      <div class="section-underline"></div>
+    </div>
+    <div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-company">AtkinsRéalis — Toronto, Canada</span><span class="exp-period">Feb 2024 – Jan 2026</span></div>
+          <div class="exp-role" data-i18n="exp1_role">Environmental Process Engineer</div>
+          <ul class="exp-bullets">
+            <li data-i18n="exp1_b1">Optimised anaerobic digesters achieving <span class="hl">CAD 45,000/year cost reduction</span> and <span class="hl">5% increase in biogas production</span></li>
+            <li data-i18n="exp1_b2">Reduced reaction time by <span class="hl">8%</span> through water quality data analysis and Six Sigma</li>
+            <li data-i18n="exp1_b3">Delivered process design, hydraulic checks, and troubleshooting for municipal & industrial WWTPs</li>
+            <li data-i18n="exp1_b4">Prepared tender documents, permit applications, technical specifications, and O&M guidance</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-company">TU Delft — Netherlands</span><span class="exp-period">Nov 2021 – Aug 2023</span></div>
+          <div class="exp-role" data-i18n="exp2_role">Environmental Engineer — NoChemNar R&D</div>
+          <ul class="exp-bullets">
+            <li data-i18n="exp2_b1">Designed and validated BPMED electrodialysis systems for industrial wastewater treatment</li>
+            <li data-i18n="exp2_b2">Increased BPMED recovery efficiency by <span class="hl">12%</span> via operating-window optimisation</li>
+            <li data-i18n="exp2_b3">Conducted IC analysis, pilot testing, process monitoring, and regulatory reporting</li>
+            <li data-i18n="exp2_b4">Supported process modelling, experimental design, and cost estimation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-company">Sailab Jonob — Tehran, Iran</span><span class="exp-period">Mar 2018 – Jul 2019</span></div>
+          <div class="exp-role" data-i18n="exp3_role">Civil Engineer</div>
+          <ul class="exp-bullets">
+            <li data-i18n="exp3_b1">Managed operation and maintenance of municipal sewer networks</li>
+            <li data-i18n="exp3_b2">Prepared hydraulic analyses, site reports, technical drawings, and material lists</li>
+            <li data-i18n="exp3_b3">Supported soil investigation and remediation planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="proj_label">Projects</div>
+      <div class="section-title" data-i18n="proj_side_title">Projects</div>
+      <div class="section-underline"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="proj-card reveal"><span class="proj-emoji">💧</span><h3 data-i18n="pr1_t">BPMED Industrial Wastewater Pilot</h3><p data-i18n="pr1_d">Pilot-scale bipolar membrane electrodialysis for industrial wastewater treatment and resource recovery — achieving 12% efficiency improvement at TU Delft.</p><div class="proj-tags"><span>BPMED</span><span>pilot testing</span><span>electrodialysis</span></div></div>
+      <div class="proj-card reveal"><span class="proj-emoji">⚡</span><h3 data-i18n="pr2_t">Sludge Line & Biogas Optimisation</h3><p data-i18n="pr2_d">Operational and process improvement for anaerobic digestion — delivering CAD 45,000/year savings and 5% biogas yield increase.</p><div class="proj-tags"><span>anaerobic digestion</span><span>biogas</span><span>Six Sigma</span></div></div>
+      <div class="proj-card reveal"><span class="proj-emoji">🧪</span><h3 data-i18n="pr3_t">VOC Soil Remediation Strategy</h3><p data-i18n="pr3_d">Contamination assessment, remediation technology selection, risk assessment, and planning for VOC impacted sites.</p><div class="proj-tags"><span>soil remediation</span><span>VOC</span><span>risk assessment</span></div></div>
+      <div class="proj-card reveal"><span class="proj-emoji">🌍</span><h3 data-i18n="pr4_t">Landslide Early Warning WebGIS</h3><p data-i18n="pr4_d">WebGIS application for spatial monitoring and early warning of landslide risk zones.</p><div class="proj-tags"><span>GIS</span><span>spatial analysis</span><span>WebGIS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="edu_label">Education</div>
+      <div class="section-title" data-i18n="edu_side_title">Education</div>
+      <div class="section-underline"></div>
+      <div class="edu-hint" data-i18n="edu_hint">hover or tap to expand</div>
+    </div>
+    <div>
+      <div class="edu-item reveal" onclick="this.classList.toggle('open')">
+        <div class="edu-header"><span class="edu-degree">M.Sc. Environmental Engineering</span><span class="edu-period">Oct 2019 – Oct 2023</span></div>
+        <div class="edu-school">TU Delft — Politecnico di Milano — FHNW, Switzerland</div>
+        <div class="edu-details"><ul>
+          <li data-i18n="edu1_d1">Joint triple-university programme with Erasmus Mundus & SEMP scholarships</li>
+          <li data-i18n="edu1_d2">Thesis: BPMED for Industrial Wastewater Recovery — TU Delft</li>
+          <li data-i18n="edu1_d3">Key coursework: Water & Wastewater Treatment, Bio-Energy, Solid Waste, Soil Remediation, GIS</li>
+        </ul></div>
+      </div>
+      <div class="edu-item reveal" onclick="this.classList.toggle('open')">
+        <div class="edu-header"><span class="edu-degree">B.Sc. Civil Engineering</span><span class="edu-period">Sep 2014 – Sep 2018</span></div>
+        <div class="edu-school">Azad University, Pardis, Iran</div>
+        <div class="edu-details"><ul>
+          <li data-i18n="edu2_d1">Foundation in hydraulics, hydrology, soil mechanics, construction management</li>
+          <li data-i18n="edu2_d2">DSU Scholarship recipient</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="contact_label">Contact</div>
+      <div class="section-title" data-i18n="contact_side_title">Contact</div>
+      <div class="section-underline"></div>
+    </div>
+    <div>
+      <div class="contact-grid reveal">
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:Alireza.safarpour@mail.polimi.it">Alireza.safarpour@mail.polimi.it</a></div></div></div>
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="contact-label" data-i18n="phone_label">Phone</div><div class="contact-value"><a href="tel:+31683486623">+31 6 83 48 66 23</a></div></div></div>
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div><div class="contact-label">LinkedIn</div><div class="contact-value"><a href="https://www.linkedin.com/in/alirezasafarpour/" target="_blank">linkedin.com/in/alirezasafarpour</a></div></div></div>
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-label" data-i18n="loc_label">Location</div><div class="contact-value" data-i18n="loc_value">Amsterdam, Netherlands</div></div></div>
+      </div>
+      <div class="reveal" style="margin-top:12px">
+        <div class="contact-card" style="max-width:380px"><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="contact-label" data-i18n="auth_label">Work authorisation</div><div class="contact-value" data-i18n="auth_value">EU Permanent Resident — no visa required</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Alireza Safarpour</div>
+    <div class="footer-links">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#experience" data-i18n="nav_exp">Experience</a>
+      <a href="#projects" data-i18n="nav_proj">Projects</a>
+      <a href="https://www.linkedin.com/in/alirezasafarpour/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── i18n ───
+const T={
+en:{nav_about:"About",nav_news:"News",nav_exp:"Experience",nav_proj:"Projects",nav_edu:"Education",nav_contact:"Contact",hero_greeting:"Hello! 👋",hero_name:"This is Alireza",hero_role:"Process Engineer &nbsp;|&nbsp; Water & Wastewater",hero_hint:'Move your cursor to interact with the <em>water treatment simulation</em>',about_label:"ABOUT ME",about_side_title:"About Me",about_p1:'I am a Process Engineer specialised in <strong>WWTP/RWZI design</strong>, <strong>sludge-line optimisation</strong>, <strong>anaerobic digestion</strong>, and <strong>industrial wastewater treatment</strong>. I have hands-on experience across the Netherlands, Italy, Switzerland, and Canada — delivering measurable improvements in biogas production, energy efficiency, and overall plant performance.',about_p2:'My work focuses on <strong>process troubleshooting</strong>, <strong>data-driven optimisation</strong>, aeration and energy efficiency, N/P removal pathways, SCADA interpretation, and industrial pretreatment technologies (ED/BPMED). I am familiar with Dutch frameworks including <strong>NEN-EN design standards</strong>, <strong>STOWA guidelines</strong>, and permitting procedures.',about_p3:'Open to engineering roles within utilities, waterschappen, consulting firms, and industrial treatment facilities across the Netherlands and Europe.',news_label:"NEWS",news_side_title:"News",news_1:'Worked as an <strong>Environmental Process Engineer</strong> at AtkinsRéalis in Toronto, focusing on anaerobic digestion, process optimisation, and wastewater system performance.',news_2:'Worked at <strong>TU Delft</strong> on BPMED electrodialysis research for industrial wastewater treatment and recovery optimisation.',news_3:'Completed joint <strong>M.Sc. Environmental Engineering</strong> at TU Delft, Politecnico di Milano, and FHNW (Switzerland).',news_4:'Worked on municipal sewer network operation, hydraulic analysis, and remediation support at Sailab Jonob in Tehran.',exp_label:"EXPERIENCE",exp_side_title:"Experience",exp1_role:"Environmental Process Engineer",exp1_b1:'Optimised anaerobic digesters achieving <span class="hl">CAD 45,000/year cost reduction</span> and <span class="hl">5% increase in biogas production</span>',exp1_b2:'Reduced reaction time by <span class="hl">8%</span> through water quality data analysis and Six Sigma',exp1_b3:'Delivered process design, hydraulic checks, and troubleshooting for municipal & industrial WWTPs',exp1_b4:'Prepared tender documents, permit applications, technical specifications, and O&M guidance',exp2_role:"Environmental Engineer — NoChemNar R&D",exp2_b1:"Designed and validated BPMED electrodialysis systems for industrial wastewater treatment",exp2_b2:'Increased BPMED recovery efficiency by <span class="hl">12%</span> via operating-window optimisation',exp2_b3:"Conducted IC analysis, pilot testing, process monitoring, and regulatory reporting",exp2_b4:"Supported process modelling, experimental design, and cost estimation",exp3_role:"Civil Engineer",exp3_b1:"Managed operation and maintenance of municipal sewer networks",exp3_b2:"Prepared hydraulic analyses, site reports, technical drawings, and material lists",exp3_b3:"Supported soil investigation and remediation planning",proj_label:"PROJECTS",proj_side_title:"Projects",pr1_t:"BPMED Industrial Wastewater Pilot",pr1_d:"Pilot-scale bipolar membrane electrodialysis for industrial wastewater treatment and resource recovery — achieving 12% efficiency improvement at TU Delft.",pr2_t:"Sludge Line & Biogas Optimisation",pr2_d:"Operational and process improvement for anaerobic digestion — delivering CAD 45,000/year savings and 5% biogas yield increase.",pr3_t:"VOC Soil Remediation Strategy",pr3_d:"Contamination assessment, remediation technology selection, risk assessment, and planning for VOC impacted sites.",pr4_t:"Landslide Early Warning WebGIS",pr4_d:"WebGIS application for spatial monitoring and early warning of landslide risk zones.",edu_label:"EDUCATION",edu_side_title:"Education",edu_hint:"hover or tap to expand",edu1_d1:"Joint triple-university programme with Erasmus Mundus & SEMP scholarships",edu1_d2:"Thesis: BPMED for Industrial Wastewater Recovery — TU Delft",edu1_d3:"Key coursework: Water & Wastewater Treatment, Bio-Energy, Solid Waste, Soil Remediation, GIS",edu2_d1:"Foundation in hydraulics, hydrology, soil mechanics, construction management",edu2_d2:"DSU Scholarship recipient",contact_label:"CONTACT",contact_side_title:"Contact",phone_label:"Phone",loc_label:"Location",loc_value:"Amsterdam, Netherlands",auth_label:"Work authorisation",auth_value:"EU Permanent Resident — no visa required"},
+nl:{nav_about:"Over mij",nav_news:"Nieuws",nav_exp:"Ervaring",nav_proj:"Projecten",nav_edu:"Opleiding",nav_contact:"Contact",hero_greeting:"Hallo! 👋",hero_name:"Dit is Alireza",hero_role:"Procesingenieur &nbsp;|&nbsp; Water & Afvalwater",hero_hint:'Beweeg je cursor om de <em>waterzuiveringssimulatie</em> te gebruiken',about_label:"OVER MIJ",about_side_title:"Over mij",about_p1:'Ik ben een procesingenieur gespecialiseerd in <strong>WWTP/RWZI-ontwerp</strong>, <strong>slibverwerking</strong>, <strong>anaerobe vergisting</strong> en <strong>industriële afvalwaterzuivering</strong>. Ik heb praktijkervaring opgedaan in Nederland, Italië, Zwitserland en Canada — met meetbare verbeteringen in biogasproductie, energie-efficiëntie en installatieprestaties.',about_p2:'Mijn werk richt zich op <strong>procesanalyse</strong>, <strong>data-gedreven optimalisatie</strong>, beluchting en energie-efficiëntie, N/P-verwijdering, SCADA-interpretatie en industriële voorzuiveringstechnologieën (ED/BPMED). Bekend met <strong>NEN-EN normen</strong>, <strong>STOWA-richtlijnen</strong> en vergunningenprocedures.',about_p3:'Open voor functies bij waterschappen, nutsbedrijven, adviesbureaus en industriële waterbedrijven in Nederland en Europa.',news_label:"NIEUWS",news_side_title:"Nieuws",news_1:'Gewerkt als <strong>Milieuprocesingenieur</strong> bij AtkinsRéalis in Toronto, gericht op anaerobe vergisting, procesoptimalisatie en prestaties van afvalwatersystemen.',news_2:'Gewerkt bij <strong>TU Delft</strong> aan BPMED-elektrodialyseonderzoek voor industriële afvalwaterzuivering.',news_3:'Gezamenlijke <strong>M.Sc. Milieutechniek</strong> afgerond aan TU Delft, Politecnico di Milano en FHNW (Zwitserland).',news_4:'Gewerkt aan beheer van gemeentelijke rioolnetwerken, hydraulische analyses en saneringsondersteuning bij Sailab Jonob in Teheran.',exp_label:"ERVARING",exp_side_title:"Ervaring",exp1_role:"Milieuprocesingenieur",exp1_b1:'Anaerobe vergisters geoptimaliseerd met <span class="hl">CAD 45.000/jaar kostenbesparing</span> en <span class="hl">5% hogere biogasproductie</span>',exp1_b2:'Reactietijd met <span class="hl">8%</span> verminderd via waterkwaliteitsanalyse en Six Sigma',exp1_b3:"Procesontwerp, hydraulische controles en troubleshooting voor gemeentelijke en industriële RWZI's",exp1_b4:'Offertes, vergunningaanvragen, technische specificaties en O&M-richtlijnen opgesteld',exp2_role:"Milieu-ingenieur — NoChemNar R&D",exp2_b1:"BPMED-elektrodialysesystemen ontworpen en gevalideerd voor industriële afvalwaterzuivering",exp2_b2:'BPMED-herstelrendement met <span class="hl">12%</span> verhoogd door optimalisatie van het operating window',exp2_b3:"IC-analyse, pilottesten, procesmonitoring en regulatoire rapportage uitgevoerd",exp2_b4:"Procesmodellering, experimenteel ontwerp en kostenraming ondersteund",exp3_role:"Civiel ingenieur",exp3_b1:"Beheer en onderhoud van gemeentelijke rioolnetwerken",exp3_b2:"Hydraulische analyses, veldrapporten, technische tekeningen en materiaallijsten opgesteld",exp3_b3:"Ondersteuning bij bodemonderzoek en saneringsplanning",proj_label:"PROJECTEN",proj_side_title:"Projecten",pr1_t:"BPMED industriële afvalwaterpilot",pr1_d:"Pilotschaal bipolaire membraan-elektrodialyse voor industriële afvalwaterzuivering — 12% efficiëntieverbetering bij TU Delft.",pr2_t:"Sliblijn- & biogasoptimalisatie",pr2_d:"Operationele procesverbetering voor anaerobe vergisting — CAD 45.000/jaar besparing en 5% hogere biogasopbrengst.",pr3_t:"VOC-bodemsaneringsstrategie",pr3_d:"Verontreinigingsbeoordeling, technologieselectie, risicoanalyse en saneringsplanning voor VOC-locaties.",pr4_t:"WebGIS aardverschuivingsmonitoring",pr4_d:"WebGIS-applicatie voor ruimtelijke monitoring en vroegtijdige waarschuwing van aardverschuivingsrisicozones.",edu_label:"OPLEIDING",edu_side_title:"Opleiding",edu_hint:"hover of tik om uit te klappen",edu1_d1:"Gezamenlijk drievoudig universitair programma met Erasmus Mundus & SEMP-beurzen",edu1_d2:"Scriptie: BPMED voor industriële afvalwaterterugwinning — TU Delft",edu1_d3:"Belangrijkste vakken: water- en afvalwaterzuivering, bio-energie, afvalbeheer, bodemsanering, GIS",edu2_d1:"Basis in hydraulica, hydrologie, grondmechanica, bouwmanagement",edu2_d2:"DSU-beurs ontvanger",contact_label:"CONTACT",contact_side_title:"Contact",phone_label:"Telefoon",loc_label:"Locatie",loc_value:"Amsterdam, Nederland",auth_label:"Werkvergunning",auth_value:"EU Permanent Resident — geen visum vereist"},
+de:{nav_about:"Über mich",nav_news:"Aktuelles",nav_exp:"Erfahrung",nav_proj:"Projekte",nav_edu:"Ausbildung",nav_contact:"Kontakt",hero_greeting:"Hallo! 👋",hero_name:"Das ist Alireza",hero_role:"Verfahrensingenieur &nbsp;|&nbsp; Wasser & Abwasser",hero_hint:'Bewegen Sie den Cursor für die <em>Wasseraufbereitungssimulation</em>',about_label:"ÜBER MICH",about_side_title:"Über mich",about_p1:'Ich bin Verfahrensingenieur spezialisiert auf <strong>Kläranlagenplanung (WWTP/RWZI)</strong>, <strong>Schlammbehandlung</strong>, <strong>anaerobe Vergärung</strong> und <strong>industrielle Abwasserbehandlung</strong>. Praktische Erfahrung in den Niederlanden, Italien, der Schweiz und Kanada — mit messbaren Verbesserungen bei Biogasproduktion, Energieeffizienz und Anlagenleistung.',about_p2:'Schwerpunkt auf <strong>Prozess-Troubleshooting</strong>, <strong>datengetriebener Optimierung</strong>, Belüftung und Energieeffizienz, N/P-Entfernung, SCADA-Interpretation und industriellen Vorbehandlungstechnologien (ED/BPMED). Vertraut mit <strong>NEN-EN Normen</strong>, <strong>STOWA-Richtlinien</strong> und Genehmigungsverfahren.',about_p3:'Offen für Ingenieurstellen bei Versorgungsunternehmen, Beratungsfirmen und industriellen Wasseraufbereitungsunternehmen in den Niederlanden und Europa.',news_label:"AKTUELLES",news_side_title:"Aktuelles",news_1:'Tätig als <strong>Umweltverfahrensingenieur</strong> bei AtkinsRéalis in Toronto mit Schwerpunkt anaerobe Vergärung und Prozessoptimierung.',news_2:'Arbeit an <strong>TU Delft</strong> zu BPMED-Elektrodialyseforschung für industrielle Abwasserbehandlung.',news_3:'Gemeinsamer <strong>M.Sc. Umwelttechnik</strong> an TU Delft, Politecnico di Milano und FHNW (Schweiz) abgeschlossen.',news_4:'Arbeit am kommunalen Kanalnetz, hydraulische Analysen und Sanierungsunterstützung bei Sailab Jonob in Teheran.',exp_label:"ERFAHRUNG",exp_side_title:"Erfahrung",exp1_role:"Umweltverfahrensingenieur",exp1_b1:'Anaerobe Fermenter optimiert mit <span class="hl">CAD 45.000/Jahr Kostenreduktion</span> und <span class="hl">5% mehr Biogasproduktion</span>',exp1_b2:'Reaktionszeit um <span class="hl">8%</span> reduziert durch Wasserqualitätsanalyse und Six Sigma',exp1_b3:'Prozessplanung, hydraulische Prüfungen und Troubleshooting für kommunale und industrielle Kläranlagen',exp1_b4:'Ausschreibungsunterlagen, Genehmigungsanträge, technische Spezifikationen und Betriebsanleitungen erstellt',exp2_role:"Umweltingenieur — NoChemNar F&E",exp2_b1:"BPMED-Elektrodialysesysteme für industrielle Abwasserbehandlung entworfen und validiert",exp2_b2:'BPMED-Rückgewinnungseffizienz um <span class="hl">12%</span> durch Betriebsfenster-Optimierung gesteigert',exp2_b3:"IC-Analyse, Pilotversuche, Prozessüberwachung und regulatorische Berichterstattung",exp2_b4:"Prozessmodellierung, Versuchsplanung und Kostenschätzung unterstützt",exp3_role:"Bauingenieur",exp3_b1:"Betrieb und Instandhaltung kommunaler Kanalnetze",exp3_b2:"Hydraulische Analysen, Baustellenberichte, technische Zeichnungen und Materiallisten erstellt",exp3_b3:"Unterstützung bei Bodenuntersuchung und Sanierungsplanung",proj_label:"PROJEKTE",proj_side_title:"Projekte",pr1_t:"BPMED Industrie-Abwasser-Pilotanlage",pr1_d:"Pilotmaßstab bipolare Membran-Elektrodialyse für industrielle Abwasserbehandlung — 12% Effizienzsteigerung an der TU Delft.",pr2_t:"Schlammlinie & Biogasoptimierung",pr2_d:"Betriebliche Prozessverbesserung für anaerobe Vergärung — CAD 45.000/Jahr Einsparung und 5% mehr Biogasertrag.",pr3_t:"VOC-Bodensanierungsstrategie",pr3_d:"Kontaminationsbewertung, Technologieauswahl, Risikobewertung und Sanierungsplanung für VOC-belastete Standorte.",pr4_t:"WebGIS Erdrutsch-Frühwarnung",pr4_d:"WebGIS-Anwendung zur räumlichen Überwachung und Frühwarnung von Erdrutschrisikozonen.",edu_label:"AUSBILDUNG",edu_side_title:"Ausbildung",edu_hint:"Zum Aufklappen hovern oder tippen",edu1_d1:"Gemeinsames Dreifach-Universitätsprogramm mit Erasmus Mundus & SEMP-Stipendien",edu1_d2:"Abschlussarbeit: BPMED für industrielle Abwasserrückgewinnung — TU Delft",edu1_d3:"Kernfächer: Wasser- & Abwasserbehandlung, Bioenergie, Abfallwirtschaft, Bodensanierung, GIS",edu2_d1:"Grundlagen in Hydraulik, Hydrologie, Bodenmechanik, Baumanagement",edu2_d2:"DSU-Stipendiat",contact_label:"KONTAKT",contact_side_title:"Kontakt",phone_label:"Telefon",loc_label:"Standort",loc_value:"Amsterdam, Niederlande",auth_label:"Arbeitserlaubnis",auth_value:"EU-Daueraufenthalt — kein Visum erforderlich"},
+sv:{nav_about:"Om mig",nav_news:"Nyheter",nav_exp:"Erfarenhet",nav_proj:"Projekt",nav_edu:"Utbildning",nav_contact:"Kontakt",hero_greeting:"Hej! 👋",hero_name:"Det här är Alireza",hero_role:"Processingenjör &nbsp;|&nbsp; Vatten & Avlopp",hero_hint:'Flytta markören för att interagera med <em>vattenreningssimuleringen</em>',about_label:"OM MIG",about_side_title:"Om mig",about_p1:'Jag är processingenjör specialiserad på <strong>reningsverksdesign (WWTP/RWZI)</strong>, <strong>slambehandling</strong>, <strong>anaerob rötning</strong> och <strong>industriell avloppsrening</strong>. Praktisk erfarenhet från Nederländerna, Italien, Schweiz och Kanada — med mätbara förbättringar inom biogasproduktion, energieffektivitet och anläggningsprestanda.',about_p2:'Mitt arbete fokuserar på <strong>processfelsökning</strong>, <strong>datadriven optimering</strong>, luftning och energieffektivitet, N/P-borttagning, SCADA-tolkning och industriella förbehandlingsteknologier (ED/BPMED). Bekant med <strong>NEN-EN standarder</strong>, <strong>STOWA-riktlinjer</strong> och tillståndsförfaranden.',about_p3:'Öppen för ingenjörsroller inom kommunala verk, konsultföretag och industriella vattenreningsföretag i Nederländerna och Europa.',news_label:"NYHETER",news_side_title:"Nyheter",news_1:'Arbetade som <strong>miljöprocessingenjör</strong> hos AtkinsRéalis i Toronto med fokus på anaerob rötning och processoptimering.',news_2:'Arbetade vid <strong>TU Delft</strong> med BPMED-elektrodialysforskning för industriell avloppsrening.',news_3:'Avslutade gemensam <strong>M.Sc. Miljöteknik</strong> vid TU Delft, Politecnico di Milano och FHNW (Schweiz).',news_4:'Arbetade med kommunalt avloppsnätsunderhåll, hydraulisk analys och saneringsarbete hos Sailab Jonob i Teheran.',exp_label:"ERFARENHET",exp_side_title:"Erfarenhet",exp1_role:"Miljöprocessingenjör",exp1_b1:'Optimerade anaeroba rötkammare med <span class="hl">CAD 45 000/år kostnadsreduktion</span> och <span class="hl">5% ökad biogasproduktion</span>',exp1_b2:'Minskade reaktionstiden med <span class="hl">8%</span> genom vattenkvalitetsanalys och Six Sigma',exp1_b3:'Processdesign, hydrauliska kontroller och felsökning för kommunala och industriella reningsverk',exp1_b4:'Framställde anbudshandlingar, tillståndsansökningar, tekniska specifikationer och driftsanvisningar',exp2_role:"Miljöingenjör — NoChemNar FoU",exp2_b1:"Designade och validerade BPMED-elektrodialyssystem för industriell avloppsrening",exp2_b2:'Ökade BPMED-återvinningseffektiviteten med <span class="hl">12%</span> genom driftsfönsteroptimering',exp2_b3:"Genomförde IC-analys, pilotförsök, processövervakning och regulatorisk rapportering",exp2_b4:"Stödde processmodellering, experimentell design och kostnadsuppskattning",exp3_role:"Civilingenjör",exp3_b1:"Drift och underhåll av kommunala avloppsnät",exp3_b2:"Upprättade hydrauliska analyser, fältrapporter, tekniska ritningar och materiallistor",exp3_b3:"Stödde markundersökning och saneringsplanering",proj_label:"PROJEKT",proj_side_title:"Projekt",pr1_t:"BPMED industriell avloppspilot",pr1_d:"Pilotskala bipolär membranelektrodialys för industriell avloppsrening — 12% effektivitetsförbättring vid TU Delft.",pr2_t:"Slamlinje & biogasoptimering",pr2_d:"Driftsprocessförbättring för anaerob rötning — CAD 45 000/år besparing och 5% ökad biogasavkastning.",pr3_t:"VOC-marksaneringsstrategi",pr3_d:"Kontamineringsbedömning, teknikval, riskbedömning och saneringsplanering för VOC-förorenade platser.",pr4_t:"WebGIS jordskredvarning",pr4_d:"WebGIS-applikation för rumslig övervakning och tidig varning för jordskredrisker.",edu_label:"UTBILDNING",edu_side_title:"Utbildning",edu_hint:"hovra eller tryck för att expandera",edu1_d1:"Gemensamt treuniversitetsprogram med Erasmus Mundus & SEMP-stipendier",edu1_d2:"Examensarbete: BPMED för industriell avloppsåtervinning — TU Delft",edu1_d3:"Kärnkurser: vatten- & avloppsrening, bioenergi, avfallshantering, marksanering, GIS",edu2_d1:"Grund i hydraulik, hydrologi, jordmekanik, byggnadsmanagement",edu2_d2:"DSU-stipendiat",contact_label:"KONTAKT",contact_side_title:"Kontakt",phone_label:"Telefon",loc_label:"Plats",loc_value:"Amsterdam, Nederländerna",auth_label:"Arbetstillstånd",auth_value:"EU permanent uppehållstillstånd — inget visum krävs"},
+fr:{nav_about:"À propos",nav_news:"Actualités",nav_exp:"Expérience",nav_proj:"Projets",nav_edu:"Formation",nav_contact:"Contact",hero_greeting:"Bonjour ! 👋",hero_name:"Voici Alireza",hero_role:"Ingénieur procédés &nbsp;|&nbsp; Eau & Assainissement",hero_hint:'Déplacez votre curseur pour la <em>simulation de traitement des eaux</em>',about_label:"À PROPOS",about_side_title:"À propos",about_p1:"Je suis ingénieur procédés spécialisé en <strong>conception de STEP</strong>, <strong>optimisation de la filière boues</strong>, <strong>digestion anaérobie</strong> et <strong>traitement des eaux usées industrielles</strong>. Expérience pratique aux Pays-Bas, en Italie, en Suisse et au Canada — avec des améliorations mesurables en production de biogaz, efficacité énergétique et performance des installations.",about_p2:"Mon travail se concentre sur le <strong>diagnostic de procédés</strong>, l'<strong>optimisation basée sur les données</strong>, l'aération et l'efficacité énergétique, l'élimination N/P, l'interprétation SCADA et les technologies de prétraitement industriel (ED/BPMED). Je connais les <strong>normes NEN-EN</strong>, les <strong>directives STOWA</strong> et les procédures d'autorisation.",about_p3:"Ouvert aux postes d'ingénieur au sein de services publics, bureaux d'études et entreprises de traitement des eaux industrielles aux Pays-Bas et en Europe.",news_label:"ACTUALITÉS",news_side_title:"Actualités",news_1:"A travaillé comme <strong>Ingénieur procédés environnementaux</strong> chez AtkinsRéalis à Toronto, spécialisé en digestion anaérobie et optimisation des procédés.",news_2:"A travaillé à la <strong>TU Delft</strong> sur la recherche BPMED pour le traitement des eaux usées industrielles.",news_3:"<strong>M.Sc. Génie de l'Environnement</strong> conjoint achevé à TU Delft, Politecnico di Milano et FHNW (Suisse).",news_4:"Travail sur l'exploitation des réseaux d'assainissement municipaux chez Sailab Jonob à Téhéran.",exp_label:"EXPÉRIENCE",exp_side_title:"Expérience",exp1_role:"Ingénieur procédés environnementaux",exp1_b1:'Digesteurs anaérobies optimisés avec <span class="hl">réduction des coûts de 45 000 CAD/an</span> et <span class="hl">augmentation de 5% de la production de biogaz</span>',exp1_b2:'Temps de réaction réduit de <span class="hl">8%</span> par analyse de qualité de l\'eau et Six Sigma',exp1_b3:"Conception de procédés, vérifications hydrauliques et dépannage pour STEP municipales et industrielles",exp1_b4:"Préparation de dossiers d'appel d'offres, demandes de permis, spécifications techniques et guides d'exploitation",exp2_role:"Ingénieur environnement — NoChemNar R&D",exp2_b1:"Systèmes d'électrodialyse BPMED conçus et validés pour le traitement des eaux usées industrielles",exp2_b2:'Efficacité de récupération BPMED augmentée de <span class="hl">12%</span> par optimisation des paramètres opératoires',exp2_b3:"Analyse IC, essais pilotes, suivi des procédés et rapports réglementaires réalisés",exp2_b4:"Modélisation des procédés, conception expérimentale et estimation des coûts",exp3_role:"Ingénieur civil",exp3_b1:"Gestion de l'exploitation et maintenance des réseaux d'assainissement municipaux",exp3_b2:"Analyses hydrauliques, rapports de terrain, dessins techniques et listes de matériaux",exp3_b3:"Soutien aux investigations de sols et planification de réhabilitation",proj_label:"PROJETS",proj_side_title:"Projets",pr1_t:"Pilote BPMED eaux usées industrielles",pr1_d:"Électrodialyse à membrane bipolaire à l'échelle pilote — amélioration de 12% de l'efficacité à TU Delft.",pr2_t:"Filière boues & optimisation biogaz",pr2_d:"Amélioration opérationnelle de la digestion anaérobie — économies de 45 000 CAD/an et augmentation de 5% du rendement en biogaz.",pr3_t:"Stratégie de dépollution des sols VOC",pr3_d:"Évaluation de contamination, sélection technologique, analyse de risques et planification pour sites impactés par les COV.",pr4_t:"WebGIS alerte glissements de terrain",pr4_d:"Application WebGIS pour la surveillance spatiale et l'alerte précoce des zones à risque de glissement de terrain.",edu_label:"FORMATION",edu_side_title:"Formation",edu_hint:"survoler ou appuyer pour développer",edu1_d1:"Programme conjoint triple-université avec bourses Erasmus Mundus & SEMP",edu1_d2:"Thèse : BPMED pour la récupération des eaux usées industrielles — TU Delft",edu1_d3:"Cours clés : traitement des eaux, bioénergie, gestion des déchets, dépollution des sols, SIG",edu2_d1:"Bases en hydraulique, hydrologie, mécanique des sols, gestion de construction",edu2_d2:"Boursier DSU",contact_label:"CONTACT",contact_side_title:"Contact",phone_label:"Téléphone",loc_label:"Localisation",loc_value:"Amsterdam, Pays-Bas",auth_label:"Autorisation de travail",auth_value:"Résident permanent UE — aucun visa requis"}
+};
+const langs=[{code:'en',label:'English'},{code:'nl',label:'Nederlands'},{code:'de',label:'Deutsch'},{code:'sv',label:'Svenska'},{code:'fr',label:'Français'}];
+let currentLang='en';
+const langMenu=document.getElementById('langMenu'),langBtn=document.getElementById('langBtn'),langSwitch=document.getElementById('langSwitch');
+langs.forEach(l=>{const b=document.createElement('button');b.className='lang-option'+(l.code==='en'?' active':'');b.textContent=l.label;b.dataset.lang=l.code;b.addEventListener('click',()=>switchLang(l.code));langMenu.appendChild(b)});
+langBtn.addEventListener('click',e=>{e.stopPropagation();langSwitch.classList.toggle('open')});
+document.addEventListener('click',()=>langSwitch.classList.remove('open'));
+function switchLang(c){currentLang=c;document.documentElement.lang=c;langBtn.innerHTML=c.toUpperCase()+' <svg viewBox="0 0 10 10"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" fill="none" stroke-width="1.2"/></svg>';langMenu.querySelectorAll('.lang-option').forEach(b=>b.classList.toggle('active',b.dataset.lang===c));langSwitch.classList.remove('open');document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(T[c]&&T[c][k])el.innerHTML=T[c][k]})}
+
+// NAV
+const nav=document.getElementById('nav'),navToggle=document.getElementById('navToggle'),navLinksEl=document.getElementById('navLinks');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+navToggle.addEventListener('click',()=>navLinksEl.classList.toggle('open'));
+navLinksEl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinksEl.classList.remove('open')));
+
+// REVEAL
+const obs=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ═══ WWTP SIMULATION ═══
+const canvas=document.getElementById('wwtp-canvas'),ctx=canvas.getContext('2d');
+let W,H,mx=-999,my=-999;const dpr=Math.min(window.devicePixelRatio||1,2);
+function resize(){const r=canvas.parentElement.getBoundingClientRect();W=r.width;H=r.height;canvas.width=W*dpr;canvas.height=H*dpr;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+resize();window.addEventListener('resize',resize);
+const simEl=canvas.parentElement;
+simEl.addEventListener('mousemove',e=>{const r=simEl.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top});
+simEl.addEventListener('mouseleave',()=>{mx=-999;my=-999});
+simEl.addEventListener('touchmove',e=>{const r=simEl.getBoundingClientRect();mx=e.touches[0].clientX-r.left;my=e.touches[0].clientY-r.top},{passive:true});
+simEl.addEventListener('touchend',()=>{mx=-999;my=-999});
+const stages=[{label:'Inlet',xf:.03,wf:.07},{label:'Screen',xf:.13,wf:.06},{label:'Aeration',xf:.23,wf:.20},{label:'Clarifier',xf:.47,wf:.16},{label:'Membrane',xf:.67,wf:.09},{label:'Outlet',xf:.80,wf:.08}];
+const PCOUNT=240,particles=[];const zyN=.28,zbN=.78;
+function mkP(rx){return{x:rx?Math.random():(.01+Math.random()*.03),y:zyN+Math.random()*(zbN-zyN),vx:.0012+Math.random()*.0012,vy:0,r:1+Math.random()*1.6,s:Math.random()*Math.PI*2}}
+for(let i=0;i<PCOUNT;i++)particles.push(mkP(true));
+const BCOUNT=40,bubbles=[];function mkB(){return{xf:.24+Math.random()*.18,yf:.82+Math.random()*.2,r:.8+Math.random()*2.5,sp:.001+Math.random()*.0018,w:Math.random()*Math.PI*2,ws:.015+Math.random()*.02}}
+for(let i=0;i<BCOUNT;i++)bubbles.push(mkB());
+const SCOUNT=40,sludgeP=[];function mkS(){return{xf:.48+Math.random()*.14,yf:.38+Math.random()*.28,r:1+Math.random()*1.8,st:.0002+Math.random()*.0005,w:Math.random()*Math.PI*2}}
+for(let i=0;i<SCOUNT;i++)sludgeP.push(mkS());
+const ripples=[];simEl.addEventListener('click',e=>{const r=simEl.getBoundingClientRect();ripples.push({x:e.clientX-r.left,y:e.clientY-r.top,rad:0,op:.35})});
+function pCol(p){if(p<.13)return'rgba(180,83,9,';if(p<.23)return'rgba(100,116,139,';if(p<.43)return'rgba(15,118,110,';if(p<.63)return'rgba(37,99,235,';if(p<.76)return'rgba(29,78,216,';return'rgba(29,78,216,'}
+function draw(){ctx.clearRect(0,0,W,H);const zy=H*.24,zh=H*.56;
+stages.forEach((s,i)=>{const sx=s.xf*W,sw=s.wf*W;ctx.fillStyle=i%2===0?'rgba(29,78,216,0.028)':'rgba(15,118,110,0.018)';ctx.fillRect(sx,zy,sw,zh);ctx.strokeStyle='rgba(29,78,216,0.08)';ctx.lineWidth=.8;ctx.strokeRect(sx,zy,sw,zh);ctx.fillStyle='rgba(107,114,128,0.55)';ctx.font='500 8px "IBM Plex Mono",monospace';ctx.textAlign='center';ctx.fillText(s.label.toUpperCase(),sx+sw/2,zy-6);
+if(i===1){ctx.strokeStyle='rgba(29,78,216,0.12)';ctx.lineWidth=1;for(let j=1;j<=5;j++){const by=zy+zh/6*j;ctx.beginPath();ctx.moveTo(sx+sw*.2,by);ctx.lineTo(sx+sw*.8,by);ctx.stroke()}}
+if(i===3){ctx.beginPath();ctx.moveTo(sx+sw*.15,zy+zh*.5);ctx.lineTo(sx+sw*.5,zy+zh*.9);ctx.lineTo(sx+sw*.85,zy+zh*.5);ctx.strokeStyle='rgba(180,83,9,0.1)';ctx.lineWidth=.8;ctx.stroke()}
+if(i===4){ctx.strokeStyle='rgba(29,78,216,0.1)';ctx.lineWidth=.8;ctx.setLineDash([2,3]);for(let j=1;j<=3;j++){const lx=sx+sw/4*j;ctx.beginPath();ctx.moveTo(lx,zy+4);ctx.lineTo(lx,zy+zh-4);ctx.stroke()}ctx.setLineDash([])}
+if(i<stages.length-1){const ns=stages[i+1];const ax1=sx+sw+2,ax2=ns.xf*W-2,ay=zy+zh/2;ctx.beginPath();ctx.moveTo(ax1,ay);ctx.lineTo(ax2,ay);ctx.strokeStyle='rgba(29,78,216,0.08)';ctx.lineWidth=.8;ctx.setLineDash([2,3]);ctx.stroke();ctx.setLineDash([]);ctx.beginPath();ctx.moveTo(ax2,ay);ctx.lineTo(ax2-3.5,ay-2);ctx.lineTo(ax2-3.5,ay+2);ctx.closePath();ctx.fillStyle='rgba(29,78,216,0.1)';ctx.fill()}});
+bubbles.forEach(b=>{b.w+=b.ws;b.yf-=b.sp;const bx=b.xf*W+Math.sin(b.w)*2.5,by=b.yf*H;const bdx=bx-mx,bdy=by-my,bd=Math.sqrt(bdx*bdx+bdy*bdy);if(bd<45&&bd>0){b.xf+=bdx/bd*.0015;b.yf+=bdy/bd*.0015}if(b.yf<.24)Object.assign(b,mkB());ctx.beginPath();ctx.arc(bx,by,b.r,0,Math.PI*2);ctx.fillStyle=`rgba(29,78,216,${.08+(1-(b.yf-.24)/.56)*.1})`;ctx.fill();ctx.beginPath();ctx.arc(bx-b.r*.25,by-b.r*.25,b.r*.25,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,0.35)';ctx.fill()});
+sludgeP.forEach(s=>{s.w+=.005;s.yf+=s.st;const sx=s.xf*W+Math.sin(s.w)*1.2,sy=s.yf*H;const sd2=Math.sqrt((sx-mx)**2+(sy-my)**2);if(sd2<40&&sd2>0){s.xf+=(sx-mx)/sd2*.001;s.yf-=s.st*4}if(s.yf>.80)Object.assign(s,mkS());ctx.beginPath();ctx.arc(sx,sy,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(180,83,9,${.06+(s.yf-.24)/.56*.18})`;ctx.fill()});
+particles.forEach(p=>{p.s+=.007;let sp=.0013;if(p.x>.23&&p.x<.43)sp=.0007;if(p.x>.47&&p.x<.63)sp=.0005;if(p.x>.67)sp=.0016;p.vx+=(sp-p.vx)*.025;p.vy*=.95;p.vy+=(Math.random()-.5)*.00025+Math.sin(p.s)*.00006;const px=p.x*W,py=p.y*H;const dx=px-mx,dy=py-my,d=Math.sqrt(dx*dx+dy*dy);if(d<55&&d>0){const f=(55-d)/55;p.vx+=dx/d*f*.0005;p.vy+=dy/d*f*.0005}p.x+=p.vx;p.y+=p.vy;if(p.y<zyN+.015){p.y=zyN+.015;p.vy=Math.abs(p.vy)*.3}if(p.y>zbN-.015){p.y=zbN-.015;p.vy=-Math.abs(p.vy)*.3}if(p.x>.90)Object.assign(p,mkP(false));ctx.beginPath();ctx.arc(px,py,p.r,0,Math.PI*2);ctx.fillStyle=pCol(p.x)+'0.4)';ctx.fill()});
+for(let i=ripples.length-1;i>=0;i--){const r=ripples[i];r.rad+=1;r.op-=.007;if(r.op<=0){ripples.splice(i,1);continue}ctx.beginPath();ctx.arc(r.x,r.y,r.rad,0,Math.PI*2);ctx.strokeStyle=`rgba(29,78,216,${r.op})`;ctx.lineWidth=.8;ctx.stroke()}
+if(mx>0&&my>0){const g=ctx.createRadialGradient(mx,my,0,mx,my,45);g.addColorStop(0,'rgba(29,78,216,0.045)');g.addColorStop(1,'rgba(29,78,216,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(mx,my,45,0,Math.PI*2);ctx.fill()}
+requestAnimationFrame(draw)}draw();
+</script>
+</body>
+</html>
