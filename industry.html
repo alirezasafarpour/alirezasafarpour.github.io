@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alireza Safarpour — Environmental &amp; Water Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#ffffff;
+  --bg2:oklch(98.5% .002 247.839);
+  --bg3:oklch(96.7% .003 264.542);
+  --border:oklch(92.8% .006 264.531);
+  --border-light:oklch(96.7% .003 264.542);
+  --border-strong:oklch(87.2% .01 258.338);
+  --text:oklch(37.3% .034 259.733);
+  --text-dim:oklch(55.1% .027 264.364);
+  --text-dark:oklch(21% .034 264.665);
+  --white:#ffffff;
+  --accent:#1d4ed8;
+  --accent2:#1e40af;
+  --accent-light:rgba(29,78,216,0.08);
+  --accent-border:rgba(29,78,216,0.18);
+  --accent-glow:rgba(29,78,216,0.26);
+  --teal:#0f766e;
+  --teal-light:rgba(15,118,110,0.08);
+  --amber:#b45309;
+  --amber-light:rgba(180,83,9,0.08);
+  --slate:#475569;
+  --slate-light:rgba(71,85,105,0.08);
+  --shadow:0 16px 40px rgba(17,24,39,0.06);
+  --mono:'IBM Plex Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:15.4px;line-height:1.74;font-weight:400;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent2)}
+::selection{background:rgba(29,78,216,0.14);color:var(--text-dark)}
+
+/* ─── NAV ─── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-bottom-color:var(--border)}
+.nav-name{font-size:1rem;color:var(--text-dark);font-weight:600;letter-spacing:-0.03em}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:var(--text-dim);font-size:.8rem;font-weight:500;letter-spacing:.01em;transition:color .2s}
+.nav-links a:hover{color:var(--text-dark)}
+.lang-switch{position:relative}
+.lang-btn{background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-family:var(--mono);font-size:.68rem;color:var(--text-dim);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:4px}
+.lang-btn:hover{border-color:var(--accent-border);color:var(--accent)}
+.lang-btn svg{width:10px;height:10px;transition:transform .2s}
+.lang-switch.open .lang-btn svg{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:calc(100% + 6px);right:0;background:var(--white);border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow);padding:4px;min-width:110px;opacity:0;pointer-events:none;transform:translateY(-4px);transition:all .2s;z-index:200}
+.lang-switch.open .lang-menu{opacity:1;pointer-events:auto;transform:translateY(0)}
+.lang-option{display:block;width:100%;text-align:left;background:none;border:none;padding:6px 12px;font-family:var(--mono);font-size:.7rem;color:var(--text);cursor:pointer;border-radius:5px;transition:background .15s}
+.lang-option:hover{background:var(--bg2)}
+.lang-option.active{color:var(--accent);font-weight:500}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:18px;height:1.5px;background:var(--text-dark);margin:3.5px 0;transition:all .3s}
+
+/* ─── HERO ─── */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--white)}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 900px 1200px at 0% 0%,rgba(29,78,216,0.25) 0%,rgba(29,78,216,0.14) 18%,rgba(29,78,216,0.06) 38%,rgba(255,255,255,0.55) 68%,rgba(255,255,255,0.94) 88%,#fff 100%)}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(229,231,235,0.55) 1px,transparent 1px),linear-gradient(to bottom,rgba(229,231,235,0.55) 1px,transparent 1px);background-size:180px 180px;mask-image:radial-gradient(85% 85% at 100% 0,#fff,transparent);opacity:.7}
+.hero-top,.sim-wrapper{position:relative;z-index:1}
+.hero-top{flex:1;display:flex;flex-direction:column;justify-content:center;padding:110px 48px 32px}
+.hero-code{font-family:var(--mono);font-size:.68rem;color:var(--text-dim);letter-spacing:.08em;margin-bottom:20px;opacity:0;animation:fadeIn .6s .2s forwards;user-select:none}
+.hero-code span{color:var(--accent);opacity:.72}
+.hero-greeting{font-size:.94rem;color:var(--text-dim);font-weight:400;margin-bottom:8px;opacity:0;animation:fadeIn .6s .35s forwards}
+.hero-name{font-family:var(--mono);font-size:clamp(2.9rem,6.25vw,4.95rem);color:var(--text-dark);font-weight:600;letter-spacing:-0.065em;line-height:1.02;margin-bottom:16px;opacity:0;animation:fadeIn .6s .5s forwards;max-width:10ch}
+.hero-role{font-size:.96rem;color:var(--text);font-weight:400;opacity:0;animation:fadeIn .6s .65s forwards}
+.hero-hint{font-family:var(--mono);font-size:.69rem;color:var(--text-dim);opacity:0;animation:fadeIn .6s .8s forwards;margin-top:14px}
+.hero-hint em{color:var(--accent);font-style:normal}
+
+/* Social icons row in hero */
+.hero-socials{display:flex;gap:16px;margin-top:24px;opacity:0;animation:fadeIn .6s .9s forwards}
+.hero-socials a{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text-dim);background:rgba(255,255,255,0.74);box-shadow:0 1px 0 rgba(255,255,255,0.9) inset}
+.hero-socials a:hover{border-color:var(--accent-border);color:var(--accent);background:rgba(255,255,255,0.94);box-shadow:0 12px 24px rgba(29,78,216,0.08)}
+.hero-socials a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+.sim-wrapper{width:100%;height:340px;position:relative;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(29,78,216,0.05) 0%,rgba(255,255,255,0.92) 28%,var(--bg2) 100%);opacity:0;animation:fadeIn .7s 1s forwards;overflow:hidden;cursor:crosshair}
+.sim-wrapper::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 12% 18%,rgba(29,78,216,0.1),transparent 32%),radial-gradient(circle at 85% 85%,rgba(180,83,9,0.06),transparent 30%),linear-gradient(to right,rgba(229,231,235,0.4) 1px,transparent 1px),linear-gradient(to bottom,rgba(229,231,235,0.4) 1px,transparent 1px);background-size:auto,auto,80px 80px,80px 80px;opacity:.85}
+#wwtp-canvas{width:100%;height:100%;display:block;position:relative;z-index:1}
+.sim-overlay{position:absolute;top:16px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none;z-index:5;flex-wrap:wrap;gap:12px}
+.sim-title{font-family:var(--mono);font-size:.68rem;color:var(--text-dark);font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);padding:6px 12px;border-radius:6px;border:1px solid var(--border);box-shadow:0 2px 8px rgba(17,24,39,0.04)}
+.sim-title .sim-sub{color:var(--text-dim);font-weight:400;margin-left:6px;text-transform:none;letter-spacing:0}
+.sim-kpis{display:flex;gap:6px;flex-wrap:wrap}
+.sim-kpi{font-family:var(--mono);font-size:.6rem;background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);padding:5px 10px;border-radius:5px;border:1px solid var(--border);display:flex;align-items:center;gap:6px;box-shadow:0 2px 8px rgba(17,24,39,0.04)}
+.sim-kpi-label{color:var(--text-dim);letter-spacing:.05em}
+.sim-kpi-val{color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;min-width:34px;text-align:right}
+.sim-kpi-val.amber{color:var(--amber)}
+.sim-kpi-val.teal{color:var(--teal)}
+.sim-legend{position:absolute;left:20px;bottom:16px;display:flex;gap:14px;font-family:var(--mono);font-size:.58rem;color:var(--text);background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);padding:6px 12px;border-radius:6px;border:1px solid var(--border);z-index:5;box-shadow:0 2px 8px rgba(17,24,39,0.04);flex-wrap:wrap;pointer-events:none}
+.sim-legend-item{display:flex;align-items:center;gap:5px}
+.sim-legend-dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+#quality-canvas{position:absolute;right:20px;bottom:16px;width:220px;height:46px;background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:6px;z-index:5;box-shadow:0 2px 8px rgba(17,24,39,0.04);pointer-events:none}
+.hero-scroll{display:none}
+@media(max-width:800px){
+  .sim-wrapper{height:300px}
+  .sim-overlay{top:10px;left:12px;right:12px;gap:6px}
+  .sim-title{font-size:.58rem;padding:4px 8px}
+  .sim-kpi{font-size:.54rem;padding:3px 7px}
+  .sim-legend{font-size:.5rem;padding:4px 8px;bottom:10px;left:12px;gap:8px}
+  #quality-canvas{display:none}
+}
+.hero-scroll{position:absolute;right:48px;bottom:16px;display:flex;flex-direction:column;align-items:center;gap:6px;font-family:var(--mono);font-size:.62rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;opacity:0;animation:fadeIn .6s 1.2s forwards}
+.scroll-circle{width:28px;height:28px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;animation:bobble 2s infinite;background:rgba(255,255,255,0.76)}
+.scroll-circle svg{width:10px;height:10px;stroke:var(--text-dim);fill:none;stroke-width:1.5}
+@keyframes bobble{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── TWO-COL SECTION LAYOUT ─── */
+.section{padding:80px 48px;border-top:1px solid var(--border-light);background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,250,251,0.86))}
+.section-inner{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start}
+.section-side{position:sticky;top:100px}
+.section-label{font-family:var(--mono);font-size:.67rem;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.section-title{font-family:var(--mono);font-size:clamp(1.12rem,2.3vw,1.56rem);color:var(--text-dark);font-weight:600;letter-spacing:-0.045em;line-height:1.3}
+.section-underline{width:32px;height:2px;background:var(--accent);margin-top:10px;border-radius:1px}
+
+/* ─── ABOUT ─── */
+.about-text{font-size:.94rem;line-height:1.84;margin-bottom:18px;font-weight:400}
+.about-text strong{color:var(--text-dark);font-weight:500}
+.skill-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:24px}
+.skill-pills span{font-family:var(--mono);font-size:.66rem;padding:5px 12px;border:1px solid var(--border);border-radius:999px;color:var(--text-dim);transition:all .2s;cursor:default;background:rgba(255,255,255,0.85)}
+.skill-pills span:hover{border-color:var(--accent-border);color:var(--accent);background:var(--accent-light)}
+
+/* ─── NEWS ─── */
+.news-list{list-style:none}
+.news-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border-light);align-items:baseline}
+.news-item:last-child{border-bottom:none}
+.news-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:7px;box-shadow:0 0 0 5px rgba(29,78,216,0.07)}
+.news-date{font-family:var(--mono);font-size:.7rem;color:var(--text-dim);min-width:96px;flex-shrink:0;font-weight:500}
+.news-text{font-size:.89rem;font-weight:400;line-height:1.76}
+.news-text strong{color:var(--text-dark);font-weight:500}
+
+/* ─── EXPERIENCE ─── */
+.exp-item{display:flex;gap:18px;padding:26px 0;border-bottom:1px solid var(--border-light);align-items:flex-start}
+.exp-item:last-child{border-bottom:none}
+.exp-logo{width:48px;height:48px;border-radius:10px;flex-shrink:0;background:var(--white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:2px;box-shadow:0 1px 3px rgba(17,24,39,0.04);transition:transform .2s,border-color .2s}
+.exp-item:hover .exp-logo{border-color:var(--accent-border);transform:scale(1.03)}
+.exp-logo img{width:100%;height:100%;object-fit:contain;padding:5px}
+.exp-body{flex:1;min-width:0}
+.exp-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:1px}
+.exp-company{font-size:.94rem;color:var(--text-dark);font-weight:600}
+.exp-period{font-family:var(--mono);font-size:.68rem;color:var(--text-dim)}
+.exp-role{font-size:.84rem;color:var(--accent);font-weight:500;margin-bottom:10px}
+.exp-context{font-size:.85rem;font-weight:400;line-height:1.78;margin-bottom:10px;color:var(--text);padding:10px 14px;background:var(--bg2);border-left:2px solid var(--accent);border-radius:0 6px 6px 0}
+.exp-context strong{color:var(--text-dark);font-weight:500}
+.exp-bullets{list-style:none;margin-bottom:12px}
+.exp-bullets li{position:relative;padding-left:12px;margin-bottom:6px;font-size:.855rem;font-weight:400;line-height:1.76}
+.exp-bullets li::before{content:'\2013';position:absolute;left:0;color:var(--text-dim);font-size:.7rem}
+.exp-bullets .hl{color:var(--amber);font-weight:500}
+.exp-skills{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;padding-top:10px;border-top:1px dashed var(--border-light)}
+.exp-skills span{font-family:var(--mono);font-size:.6rem;padding:3px 9px;border-radius:999px;background:var(--accent-light);color:var(--accent);border:1px solid var(--accent-border);font-weight:500}
+.exp-fit{margin-top:10px;font-size:.78rem;color:var(--text-dim);line-height:1.72;padding:8px 12px;background:rgba(15,118,110,0.05);border-left:2px solid var(--teal);border-radius:0 4px 4px 0}
+.exp-fit strong{color:var(--teal);font-weight:500}
+
+/* ─── PROJECTS ─── */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.proj-card{position:relative;padding:22px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.96),rgba(249,250,251,0.92));transition:all .25s;cursor:default;overflow:hidden;box-shadow:0 8px 24px rgba(17,24,39,0.04)}
+.proj-card::before{content:'';position:absolute;left:0;top:0;right:0;height:3px;background:var(--card-accent,var(--accent))}
+.proj-card:hover{border-color:var(--accent-border);transform:translateY(-3px);box-shadow:var(--shadow)}
+.proj-card:nth-child(1){--card-accent:var(--accent);background:linear-gradient(180deg,rgba(29,78,216,0.07),rgba(255,255,255,0.98) 46%)}
+.proj-card:nth-child(2){--card-accent:var(--teal);background:linear-gradient(180deg,rgba(15,118,110,0.06),rgba(255,255,255,0.98) 46%)}
+.proj-card:nth-child(3){--card-accent:var(--amber);background:linear-gradient(180deg,rgba(180,83,9,0.06),rgba(255,255,255,0.98) 46%)}
+.proj-card:nth-child(4){--card-accent:var(--slate);background:linear-gradient(180deg,rgba(71,85,105,0.06),rgba(255,255,255,0.98) 46%)}
+.proj-emoji{font-size:1.05rem;margin-bottom:12px;display:block}
+.proj-card h3{font-family:var(--mono);font-size:.93rem;color:var(--text-dark);font-weight:600;margin-bottom:8px;line-height:1.45;letter-spacing:-0.03em}
+.proj-card p{font-size:.8rem;font-weight:400;line-height:1.76;margin-bottom:12px}
+.proj-tags{display:flex;flex-wrap:wrap;gap:4px}
+.proj-tags span{font-family:var(--mono);font-size:.58rem;padding:3px 8px;border-radius:999px;background:var(--accent-light);color:var(--accent);border:1px solid var(--accent-border)}
+.proj-card:nth-child(2) .proj-tags span{background:var(--teal-light);border-color:rgba(15,118,110,0.16);color:var(--teal)}
+.proj-card:nth-child(3) .proj-tags span{background:var(--amber-light);border-color:rgba(180,83,9,0.16);color:var(--amber)}
+.proj-card:nth-child(4) .proj-tags span{background:var(--slate-light);border-color:rgba(71,85,105,0.16);color:var(--slate)}
+
+/* ─── EDUCATION ─── */
+.edu-narrative{font-size:.85rem;line-height:1.78;margin-bottom:14px;color:var(--text)}
+.edu-narrative strong{color:var(--text-dark);font-weight:500}
+.edu-block{margin-bottom:14px}
+.edu-block-title{font-family:var(--mono);font-size:.64rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.coursework-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:6px}
+.coursework-item{padding:9px 12px;border:1px solid var(--border-light);border-radius:8px;background:rgba(255,255,255,0.75);font-size:.78rem;line-height:1.5;transition:border-color .2s,background .2s}
+.coursework-item:hover{border-color:var(--accent-border);background:var(--accent-light)}
+.coursework-item strong{color:var(--text-dark);font-weight:500;display:block;margin-bottom:2px;font-size:.8rem}
+.coursework-item .cw-desc{font-size:.74rem;color:var(--text-dim);display:block;margin-top:3px;line-height:1.55}
+@media(max-width:800px){.coursework-grid{grid-template-columns:1fr}}
+.edu-scholarship{padding:10px 14px;background:var(--accent-light);border-left:2px solid var(--accent);border-radius:0 6px 6px 0;font-size:.8rem;line-height:1.7;color:var(--text);margin-top:10px}
+.edu-scholarship strong{color:var(--text-dark);font-weight:500}
+/* ─── EDUCATION-orig ─── */
+.edu-item{display:flex;gap:16px;align-items:flex-start;padding:22px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,250,251,0.9));margin-bottom:12px;cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s}
+.edu-item:hover{border-color:var(--accent-border);transform:translateY(-1px);box-shadow:0 10px 28px rgba(17,24,39,0.04)}
+.edu-logos{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
+.edu-logo{width:42px;height:42px;border-radius:9px;background:var(--white);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 1px 3px rgba(17,24,39,0.04);transition:border-color .2s}
+.edu-item:hover .edu-logo{border-color:var(--accent-border)}
+.edu-logo img{width:100%;height:100%;object-fit:contain;padding:4px}
+.edu-content{flex:1;min-width:0}
+.edu-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+.edu-degree{font-family:var(--mono);font-size:.92rem;color:var(--text-dark);font-weight:600;letter-spacing:-0.03em}
+.edu-period{font-family:var(--mono);font-size:.67rem;color:var(--text-dim)}
+.edu-school{font-size:.83rem;color:var(--text);font-weight:400;margin-top:4px;line-height:1.7}
+.edu-details{max-height:0;overflow:hidden;transition:max-height .4s,opacity .3s;opacity:0}
+.edu-item.open .edu-details{max-height:200px;opacity:1;margin-top:10px}
+.edu-details li{font-size:.81rem;font-weight:400;margin-bottom:3px;color:var(--text);list-style:none;padding-left:12px;position:relative;line-height:1.72}
+.edu-details li::before{content:'\2013';position:absolute;left:0;color:var(--text-dim);font-size:.7rem}
+.edu-hint{font-family:var(--mono);font-size:.62rem;color:var(--text-dim);margin-top:8px}
+
+/* ─── CONTACT ─── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-card{padding:18px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(249,250,251,0.9));display:flex;align-items:center;gap:14px;transition:border-color .2s,transform .2s,box-shadow .2s}
+.contact-card:hover{border-color:var(--accent-border);transform:translateY(-1px);box-shadow:0 10px 26px rgba(17,24,39,0.04)}
+.contact-icon{width:34px;height:34px;border-radius:10px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:15px;height:15px;stroke:var(--accent);fill:none;stroke-width:1.5}
+.contact-label{font-family:var(--mono);font-size:.6rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1px}
+.contact-value{font-size:.82rem;color:var(--text-dark);font-weight:500}
+.contact-value a{color:var(--text-dark);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1px;transition:border-color .2s}
+.contact-value a:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ─── FOOTER ─── */
+footer{padding:40px 48px;border-top:1px solid var(--border);background:var(--bg)}
+.footer-inner{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px}
+.footer-copy{font-family:var(--mono);font-size:.62rem;color:var(--text-dim)}
+.footer-links{display:flex;gap:18px}
+.footer-links a{font-size:.82rem;color:var(--text-dim);transition:color .2s}
+.footer-links a:hover{color:var(--accent)}
+
+/* ─── REVEAL ─── */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s cubic-bezier(.23,1,.32,1)}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* ─── HERO LOGO STRIP (inline with name, right next to it) ─── */
+.hero-name-row{display:flex;align-items:center;gap:36px;margin-bottom:16px;flex-wrap:wrap}
+.hero-name-row .hero-name{margin-bottom:0}
+.hero-logos{display:flex;align-items:center;flex-wrap:wrap;gap:26px;opacity:0;animation:fadeIn .6s .7s forwards}
+.hero-logos .logo-item{height:30px;display:flex;align-items:center;opacity:.62;filter:grayscale(15%);transition:opacity .28s,filter .28s,transform .28s}
+.hero-logos .logo-item:hover{opacity:1;filter:grayscale(0);transform:translateY(-1px)}
+.hero-logos .logo-item img{height:100%;width:auto;max-height:30px;object-fit:contain;display:block}
+.hero-logos-sep{width:1px;height:20px;background:var(--border-strong);opacity:.45}
+@media(max-width:800px){
+  .hero-name-row{gap:18px}
+  .hero-logos{gap:16px;margin-left:0}
+  .hero-logos .logo-item{height:22px}
+  .hero-logos .logo-item img{max-height:22px}
+  .hero-logos-sep{display:none}
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:800px){
+  nav{padding:12px 20px}
+  .nav-toggle{display:block}
+  .nav-links{position:fixed;top:48px;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);flex-direction:column;padding:18px;gap:14px;transform:translateY(-120%);transition:transform .3s;border-bottom:1px solid var(--border)}
+  .nav-links.open{transform:translateY(0)}
+  .hero-top{padding:90px 20px 24px}
+  .section{padding:48px 20px}
+  .section-inner{grid-template-columns:1fr;gap:20px}
+  .section-side{position:static}
+  footer{padding:32px 20px}
+  .projects-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-scroll{right:20px;bottom:10px}
+  .news-item{flex-direction:column;gap:3px}
+  .news-date{min-width:auto}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-name" style="text-decoration:none;display:flex;align-items:center;gap:8px"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:var(--text-dim);fill:none;stroke-width:1.8"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Alireza Safarpour</a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#news" data-i18n="nav_news">News</a></li>
+      <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+      <li><a href="#projects" data-i18n="nav_proj">Projects</a></li>
+      <li><a href="#education" data-i18n="nav_edu">Education</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" id="langBtn" aria-label="Select language">
+        <svg class="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="langLabel">EN</span>
+        <svg class="chev" viewBox="0 0 10 10"><path d="M2 3.5L5 6.5L8 3.5"/></svg>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option active" data-lang="en"><span class="flag">🇬🇧</span>English</button>
+        <button class="lang-option" data-lang="nl"><span class="flag">🇳🇱</span>Nederlands</button>
+        <button class="lang-option" data-lang="de"><span class="flag">🇩🇪</span>Deutsch</button>
+        <button class="lang-option" data-lang="sv"><span class="flag">🇸🇪</span>Svenska</button>
+        <button class="lang-option" data-lang="fr"><span class="flag">🇫🇷</span>Français</button>
+      </div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
+    <div class="hero-code"><span>H&#8322;O</span> &rarr; <span>[ ]</span> &#10230; <span>&asymp;</span> :: <span>&#9678;</span> &rarr; <span>&#10003;</span></div>
+    <div class="hero-greeting" data-i18n="hero_greeting">Hello! &#128075;</div>
+    <div class="hero-name-row">
+      <h1 class="hero-name" data-i18n="hero_name">This is Alireza</h1>
+      <div class="hero-logos">
+        <div class="logo-item" title="AtkinsRéalis"><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/AtkinsR%C3%A9alis_logo.svg" onerror="this.onerror=null;this.src='https://logo.clearbit.com/atkinsrealis.com'" alt="AtkinsRéalis"></div>
+        <div class="hero-logos-sep"></div>
+        <div class="logo-item" title="TU Delft"><img src="https://upload.wikimedia.org/wikipedia/en/b/b5/TU_Delft_Logo.svg" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/de/b/b5/TU_Delft_Logo.svg'" alt="TU Delft"></div>
+        <div class="hero-logos-sep"></div>
+        <div class="logo-item" title="Politecnico di Milano"><img src="data:image/jpeg;base64,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" alt="Politecnico di Milano"></div>
+        <div class="hero-logos-sep"></div>
+        <div class="logo-item" title="FHNW"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/FHNW_Logo.svg" onerror="this.onerror=null;this.src='https://logo.clearbit.com/fhnw.ch'" alt="FHNW"></div>
+      </div>
+    </div>
+    <p class="hero-role" data-i18n="hero_role">Environmental &amp; Water Engineer &nbsp;|&nbsp; Process · Civil · HSE · Consulting</p>
+    <div class="hero-socials">
+      <a href="mailto:Alireza.safarpour@mail.polimi.it" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      <a href="https://www.linkedin.com/in/alirezasafarpour/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      <a href="tel:+31683486623" aria-label="Phone"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+    </div>
+    <p class="hero-hint" data-i18n="hero_hint">Move your cursor to interact with the <em>live wastewater treatment plant simulation</em> — operational KPIs update in real time</p>
+  </div>
+  <div class="sim-wrapper" style="position:relative">
+    <canvas id="wwtp-canvas"></canvas>
+    <div class="sim-overlay">
+      <div class="sim-title">Live WWTP <span class="sim-sub">municipal wastewater plant &middot; real-time KPIs</span></div>
+      <div class="sim-kpis">
+        <div class="sim-kpi"><span class="sim-kpi-label">Q</span><span class="sim-kpi-val" id="kpi-q">0</span><span class="sim-kpi-label">m&sup3;/h</span></div>
+        <div class="sim-kpi"><span class="sim-kpi-label">DO</span><span class="sim-kpi-val teal" id="kpi-do">0.0</span><span class="sim-kpi-label">mg/L</span></div>
+        <div class="sim-kpi"><span class="sim-kpi-label">TSS rem.</span><span class="sim-kpi-val amber" id="kpi-tss">0</span><span class="sim-kpi-label">%</span></div>
+        <div class="sim-kpi"><span class="sim-kpi-label">E</span><span class="sim-kpi-val" id="kpi-energy">0.00</span><span class="sim-kpi-label">kWh/m&sup3;</span></div>
+        <div class="sim-kpi"><span class="sim-kpi-label">Biogas</span><span class="sim-kpi-val teal" id="kpi-biogas">0</span><span class="sim-kpi-label">Nm&sup3;/h</span></div>
+      </div>
+    </div>
+    <div class="sim-legend">
+      <div class="sim-legend-item"><span class="sim-legend-dot" style="background:#64748b"></span>influent</div>
+      <div class="sim-legend-item"><span class="sim-legend-dot" style="background:#0f766e"></span>activated sludge</div>
+      <div class="sim-legend-item"><span class="sim-legend-dot" style="background:#b45309"></span>sludge</div>
+      <div class="sim-legend-item"><span class="sim-legend-dot" style="background:#1d4ed8"></span>clean effluent</div>
+      <div class="sim-legend-item"><span class="sim-legend-dot" style="background:#f59e0b;box-shadow:0 0 4px #f59e0b"></span>biogas</div>
+    </div>
+    <canvas id="quality-canvas"></canvas>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner reveal">
+    <div class="section-side">
+      <div class="section-label" data-i18n="lbl_about">About Me</div>
+      <div class="section-title" data-i18n="title_about">About Me</div>
+      <div class="section-underline"></div>
+    </div>
+    <div>
+      <p class="about-text">I am an <strong>Environmental &amp; Water Engineer</strong> with <strong>6+ years of combined academic and industrial experience</strong> across the Netherlands, Italy, Switzerland, and Canada. I hold an <strong>M.Sc. in Environmental Engineering</strong> (TU Delft &middot; Politecnico di Milano &middot; FHNW &mdash; Erasmus) and a <strong>B.Sc. in Civil Engineering</strong>, which gives me a rare dual foundation: I work equally comfortably in <strong>water/wastewater process engineering</strong>, <strong>civil infrastructure</strong>, <strong>environmental compliance</strong>, and <strong>HSE-adjacent roles</strong>.</p>
+      <p class="about-text">Most recently, as an Environmental Process Engineer at <strong>AtkinsRéalis (Toronto)</strong>, I delivered <strong>CAD 45,000/year in operational savings</strong>, <strong>5% biogas yield improvement</strong>, and authored tender documents, environmental permit applications, and O&amp;M guidance for municipal and industrial wastewater infrastructure. Prior to that, at <strong>TU Delft</strong>, I designed and commissioned a pilot-scale BPMED electrodialysis system, achieving <strong>12% recovery efficiency improvement</strong> within an EU Horizon 2020 research project.</p>
+      <p class="about-text">I am comfortable across the full engineering lifecycle: <strong>concept design, feasibility studies, hydraulic &amp; process modelling, permitting, tendering, field supervision, commissioning, O&amp;M, performance optimisation, and data analysis</strong>. I communicate fluently with clients, regulators, contractors, and research collaborators, and I work well in multidisciplinary teams.</p>
+      <p class="about-text">I am <strong>EU Permanent Resident (no visa required)</strong>, based in <strong>Amsterdam</strong>, and open to roles across Europe, the Netherlands &amp; Canada in <strong>water utilities &amp; waterschappen, engineering consultancy, industrial facilities, HSE &amp; compliance, environmental services, construction engineering, and municipal infrastructure</strong>.</p>
+      <div class="skill-pills">
+        <span>water &amp; wastewater</span><span>WWTP / RWZI design</span><span>process engineering</span><span>civil engineering</span><span>hydraulic modelling</span><span>anaerobic digestion</span><span>sludge optimisation</span><span>biogas</span><span>nutrient removal (N/P)</span><span>SCADA</span><span>mass &amp; energy balance</span><span>Six Sigma / DMAIC</span><span>HSE awareness</span><span>environmental permitting</span><span>NEN-EN / STOWA</span><span>Ontario MOE</span><span>tender documents</span><span>O&amp;M guidance</span><span>BPMED / electrodialysis</span><span>ion chromatography</span><span>Python · R</span><span>QGIS / ArcGIS</span><span>AutoCAD</span><span>LaTeX</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section" id="news">
+  <div class="section-inner reveal">
+    <div class="section-side">
+      <div class="section-label" data-i18n="lbl_news">News</div>
+      <div class="section-title" data-i18n="title_news">News</div>
+      <div class="section-underline"></div>
+    </div>
+    <ul class="news-list">
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2024 – 2026</span><span class="news-text">Worked as an <strong>Environmental Process Engineer</strong> at AtkinsRéalis in Toronto, focusing on anaerobic digestion, process optimisation, and wastewater system performance.</span></li>
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2021 – 2023</span><span class="news-text">Worked at <strong>TU Delft</strong> on BPMED electrodialysis research for industrial wastewater treatment and recovery optimisation.</span></li>
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2019 – 2023</span><span class="news-text">Completed joint <strong>M.Sc. Environmental Engineering</strong> at TU Delft, Politecnico di Milano, and FHNW (Switzerland).</span></li>
+      <li class="news-item"><span class="news-dot"></span><span class="news-date">2018 – 2019</span><span class="news-text">Worked on municipal sewer network operation, hydraulic analysis, and remediation support at Sailab Jonob in Tehran.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="lbl_experience">Experience</div>
+      <div class="section-title" data-i18n="title_experience">Professional Experience</div>
+      <div class="section-underline"></div>
+    </div>
+    <div>
+
+      <div class="exp-item reveal">
+        <div class="exp-logo"><img src="https://logo.clearbit.com/atkinsrealis.com" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=atkinsrealis.com&amp;sz=128'" alt="AtkinsRéalis logo"></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-company">AtkinsRéalis — Toronto, Ontario, Canada</span><span class="exp-period">Feb 2024 – Jan 2026</span></div>
+          <div class="exp-role">Environmental Process Engineer — Water &amp; Wastewater Infrastructure</div>
+          <div class="exp-context">
+            <strong>AtkinsRéalis</strong> (formerly SNC-Lavalin) is one of the <strong>world's largest engineering, design, and project management consultancies</strong>, with ~37,000 employees across 50+ countries. Within the Canadian Water &amp; Wastewater practice, I worked on municipal and industrial treatment projects across Ontario — covering the full engineering lifecycle from feasibility through commissioning.
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Process engineering &amp; optimisation:</strong> Led systematic optimisation of anaerobic digestion parameters (organic loading rate, retention time, mixing, temperature) across multiple municipal WWTPs — delivering <span class="hl">CAD 45,000/year operational cost reduction</span> and <span class="hl">5% improvement in biogas yield</span>.</li>
+            <li><strong>Data analysis &amp; Six Sigma:</strong> Applied <strong>DMAIC methodology</strong> to operational water quality datasets (COD, BOD, N-species, P-species, TSS), identifying statistically significant inefficiencies and reducing reaction time by <span class="hl">8%</span>.</li>
+            <li><strong>Civil &amp; process design:</strong> Developed process configurations, hydraulic profiles, and mass/energy balances for municipal and industrial treatment systems (activated sludge, MBBR, SBR, anaerobic digesters, clarifiers, sludge thickening).</li>
+            <li><strong>Permitting &amp; regulatory work:</strong> Authored environmental permit applications, Environmental Compliance Approvals (ECAs), technical specifications, and O&amp;M manuals under Ontario Ministry of Environment, Conservation and Parks (MECP) frameworks.</li>
+            <li><strong>Tendering &amp; project documentation:</strong> Prepared tender packages, cost estimates, material take-offs, and client deliverables for public and private infrastructure projects.</li>
+            <li><strong>Field engineering &amp; HSE:</strong> Conducted site inspections, sampling campaigns, commissioning support, and effluent quality monitoring — working within site HSE procedures on active treatment plants.</li>
+            <li><strong>Stakeholder collaboration:</strong> Coordinated with clients, operators, regulators, contractors, and multidisciplinary internal teams (mechanical, civil, electrical, instrumentation).</li>
+          </ul>
+          <div class="exp-skills"><span>process engineering</span><span>anaerobic digestion</span><span>biogas optimisation</span><span>WWTP design</span><span>Six Sigma / DMAIC</span><span>mass &amp; energy balance</span><span>hydraulic profiles</span><span>nutrient removal</span><span>permitting (MECP)</span><span>tender documents</span><span>O&amp;M manuals</span><span>cost estimating</span><span>HSE awareness</span><span>commissioning</span><span>client coordination</span></div>
+          <div class="exp-fit"><strong>Role fit signals →</strong> Process Engineer · Environmental Engineer · Water/Wastewater Engineer · Project Engineer · Design Engineer · Permitting Specialist · Technical Writer · HSE Officer · Consulting Engineer · Plant Engineer · Commissioning Engineer</div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-logo"><img src="https://logo.clearbit.com/tudelft.nl" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=tudelft.nl&amp;sz=128'" alt="TU Delft logo"></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-company">TU Delft — Department of Water Management, Netherlands</span><span class="exp-period">Nov 2021 – Aug 2023</span></div>
+          <div class="exp-role">Research &amp; Design Engineer — NoChemNar Project (EU Horizon 2020)</div>
+          <div class="exp-context">
+            An <strong>EU Horizon 2020 research project</strong> targeting industrial wastewater treatment and resource recovery in the chemical manufacturing sector. My role combined laboratory research, mechanical design, pilot-plant commissioning, data analysis, and technical reporting within a multi-stakeholder European consortium — giving me exposure to the full R&amp;D-to-engineering translation pipeline.
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Pilot-plant design &amp; construction:</strong> Designed, built, and commissioned a laboratory-to-pilot scale <strong>bipolar membrane electrodialysis (BPMED)</strong> unit — including mechanical layout, hydraulic flow architecture, electrode/membrane configuration, instrumentation, and data acquisition.</li>
+            <li><strong>Process optimisation:</strong> Applied <strong>design of experiments (DoE)</strong> to systematically optimise operating parameters (current density, flow rate, membrane configuration), achieving a <span class="hl">12% improvement in recovery efficiency</span> over baseline.</li>
+            <li><strong>Modelling &amp; simulation:</strong> Developed mass-balance and ion-transport models validated against experimental data with <span class="hl">&lt;8% deviation</span> — enabling predictive scale-up analysis for full-scale implementation.</li>
+            <li><strong>Analytical chemistry:</strong> Performed ion chromatography (IC), water quality analysis, and Python-based data processing (NumPy, Pandas, Matplotlib) for statistical analysis and visualisation.</li>
+            <li><strong>Technical writing &amp; reporting:</strong> Authored regulatory-compliant reports documenting methodology, results, uncertainty analysis, and scale-up feasibility for EU consortium stakeholders and project milestones.</li>
+            <li><strong>Cross-functional collaboration:</strong> Worked across academic supervisors, industrial partners, and the N2kWH research consortium to align technical outcomes with deliverables.</li>
+          </ul>
+          <div class="exp-skills"><span>pilot-plant design</span><span>mechanical layout</span><span>commissioning</span><span>DoE optimisation</span><span>mass balance modelling</span><span>data analysis (Python)</span><span>ion chromatography</span><span>membrane technology</span><span>R&amp;D</span><span>technical writing</span><span>EU project reporting</span><span>stakeholder coordination</span></div>
+          <div class="exp-fit"><strong>Role fit signals →</strong> R&amp;D Engineer · Process Engineer · Design Engineer · Pilot Plant Engineer · Innovation Engineer · Applications Engineer · Membrane Specialist · Water Technology Engineer · Research Assistant · Project Engineer</div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-logo"><img src="data:image/jpeg;base64,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" alt="Sailab Jonob logo"></div>
+        <div class="exp-body">
+          <div class="exp-header"><span class="exp-company">Sailab Jonob (South Storm Water Company) — Tehran, Iran</span><span class="exp-period">Mar 2018 – Jul 2019</span></div>
+          <div class="exp-role">Civil Engineer — Municipal Water &amp; Infrastructure</div>
+          <div class="exp-context">
+            A municipal water infrastructure contractor responsible for sewer network operation, maintenance, rehabilitation, and civil engineering support across urban Tehran. My first professional role gave me ground-level experience in <strong>civil works, hydraulic infrastructure, field operations, and HSE-aware construction management</strong>.
+          </div>
+          <ul class="exp-bullets">
+            <li><strong>Civil &amp; hydraulic engineering:</strong> Prepared hydraulic analyses, technical site reports, and <strong>AutoCAD drawings</strong> for sewer network capacity assessment, rehabilitation planning, and new-build projects.</li>
+            <li><strong>Operations &amp; maintenance:</strong> Managed operation and preventive maintenance of municipal sewer networks including inspection scheduling, fault diagnosis, CCTV surveys, and rehabilitation coordination.</li>
+            <li><strong>Site &amp; field engineering:</strong> Conducted on-site inspections, coordinated with crews and contractors, and provided engineering support during construction and rehabilitation works.</li>
+            <li><strong>Soil &amp; geotechnical work:</strong> Supported soil investigation campaigns, subsurface assessment, and remediation planning for urban infrastructure projects.</li>
+            <li><strong>Documentation &amp; compliance:</strong> Prepared technical specifications, material take-offs, and progress reports to municipal and contractor standards.</li>
+          </ul>
+          <div class="exp-skills"><span>civil engineering</span><span>hydraulic analysis</span><span>sewer networks</span><span>AutoCAD</span><span>site supervision</span><span>O&amp;M</span><span>CCTV surveys</span><span>soil investigation</span><span>construction coordination</span><span>technical drawing</span><span>field engineering</span></div>
+          <div class="exp-fit"><strong>Role fit signals →</strong> Civil Engineer · Site Engineer · Construction Engineer · Junior Project Engineer · Infrastructure Engineer · Water/Sewer Engineer · Field Engineer · HSE Assistant · Geotechnical Support Engineer · Municipal Engineer</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="lbl_projects">Projects</div>
+      <div class="section-title" data-i18n="title_projects">Projects</div>
+      <div class="section-underline"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="proj-card reveal"><span class="proj-emoji">💧</span><h3>BPMED Industrial Wastewater Pilot</h3><p>Pilot-scale bipolar membrane electrodialysis for industrial wastewater treatment and resource recovery — achieving 12% efficiency improvement at TU Delft.</p><div class="proj-tags"><span>BPMED</span><span>pilot testing</span><span>electrodialysis</span></div></div>
+      <div class="proj-card reveal"><span class="proj-emoji">⚡</span><h3>Sludge Line & Biogas Optimisation</h3><p>Operational and process improvement for anaerobic digestion — delivering CAD 45,000/year savings and 5% biogas yield increase.</p><div class="proj-tags"><span>anaerobic digestion</span><span>biogas</span><span>Six Sigma</span></div></div>
+      <div class="proj-card reveal"><span class="proj-emoji">🧪</span><h3>VOC Soil Remediation Strategy</h3><p>Contamination assessment, remediation technology selection, risk assessment, and planning for VOC impacted sites.</p><div class="proj-tags"><span>soil remediation</span><span>VOC</span><span>risk assessment</span></div></div>
+      <div class="proj-card reveal"><span class="proj-emoji">🌍</span><h3>Landslide Early Warning WebGIS</h3><p>WebGIS application for spatial monitoring and early warning of landslide risk zones.</p><div class="proj-tags"><span>GIS</span><span>spatial analysis</span><span>WebGIS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="lbl_education">Education</div>
+      <div class="section-title" data-i18n="title_education">Education</div>
+      <div class="section-underline"></div>
+    </div>
+    <div>
+
+      <div class="edu-item reveal">
+        <div class="edu-logos">
+          <div class="edu-logo"><img src="https://logo.clearbit.com/tudelft.nl" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=tudelft.nl&amp;sz=128'" alt="TU Delft"></div>
+          <div class="edu-logo"><img src="data:image/jpeg;base64,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" alt="Politecnico di Milano"></div>
+          <div class="edu-logo"><img src="https://logo.clearbit.com/fhnw.ch" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=fhnw.ch&amp;sz=128'" alt="FHNW"></div>
+        </div>
+        <div class="edu-content">
+          <div class="edu-header">
+            <span class="edu-degree">M.Sc. Environmental Engineering</span>
+            <span class="edu-period">Oct 2019 – Oct 2023</span>
+          </div>
+          <div class="edu-school"><strong>TU Delft</strong> (Netherlands) · <strong>Politecnico di Milano</strong> (Italy) · <strong>FHNW</strong> (Switzerland) — <strong>Erasmus Joint Master Degree</strong> (fully funded by the European Commission)</div>
+
+          <div class="edu-narrative">
+            A <strong>highly selective EU-funded programme</strong> structured across three European universities, combining water &amp; wastewater engineering, energy systems, environmental management, chemical engineering, and applied research methodology. The programme produced a dual-competency engineer capable of working across <strong>process design, environmental compliance, sustainability, and applied R&amp;D</strong>.
+          </div>
+
+          <div class="edu-block">
+            <div class="edu-block-title" data-i18n="edu_coursework">Key Coursework</div>
+            <div class="coursework-grid">
+              <div class="coursework-item">
+                <strong>Water &amp; Wastewater Treatment Technologies</strong>
+                <span class="cw-desc">Municipal and industrial treatment design, activated sludge, biofilm systems, nutrient removal, membrane processes, disinfection — core competency for WWTP/RWZI roles.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Bio-Energy &amp; Waste-to-Energy Technologies</strong>
+                <span class="cw-desc">Anaerobic digestion kinetics, biogas upgrading, thermochemical conversion, sludge-line energy optimisation — directly applied at AtkinsRéalis.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Solid Waste Management &amp; Treatment</strong>
+                <span class="cw-desc">Waste characterisation, landfill engineering, MSW treatment lines, circular economy frameworks — relevant for environmental consultancy and municipal engineering roles.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Soil Remediation</strong>
+                <span class="cw-desc">Contaminant fate &amp; transport, risk assessment, remediation technology selection, site investigation — applicable to environmental consulting and contaminated-land projects.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Pollution Measurement &amp; Management</strong>
+                <span class="cw-desc">Analytical methods, sampling protocols, environmental monitoring, regulatory frameworks — foundation for environmental compliance and HSE roles.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Geographic Information Systems (GIS)</strong>
+                <span class="cw-desc">Spatial analysis, QGIS/ArcGIS workflows, WebGIS development — useful for infrastructure planning, environmental assessment, utility asset management.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Electrochemical Energy Generators</strong>
+                <span class="cw-desc">Fuel cells, electrolysers, ion transport — relevant for emerging water treatment technologies and green hydrogen applications.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Chemistry &amp; Materials for Energy</strong>
+                <span class="cw-desc">Functional materials, membrane chemistry, catalysis — directly applied to BPMED pilot-plant work at TU Delft.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Mathematical Physics</strong>
+                <span class="cw-desc">Partial differential equations, transport phenomena, numerical methods — mathematical foundation for process modelling and simulation.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>M.Sc. Thesis (TU Delft)</strong>
+                <span class="cw-desc"><em>BPMED for Industrial Wastewater Treatment &amp; Resource Recovery.</em> Pilot-plant design, commissioning, optimisation, modelling — delivering 12% efficiency improvement within an EU Horizon 2020 project.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-scholarship">
+            <strong>Scholarships:</strong> <strong>Erasmus Joint Master Degree Scholarship</strong> (European Commission, 2019&ndash;2023) covering tuition, travel, and living expenses across three countries. <strong>DSU Merit-based Scholarship</strong> (Politecnico di Milano / Regione Lombardia, 2019&ndash;2023) for academic merit during the M.Sc. programme. <strong>SEMP Scholarship</strong> (Swiss Confederation, 2021) for the exchange semester at FHNW.
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-item reveal">
+        <div class="edu-logos">
+          <div class="edu-logo"><img src="https://logo.clearbit.com/iau.ac.ir" onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=iau.ac.ir&amp;sz=128'" alt="Azad University"></div>
+        </div>
+        <div class="edu-content">
+          <div class="edu-header">
+            <span class="edu-degree">B.Sc. Civil Engineering</span>
+            <span class="edu-period">Sep 2014 – Sep 2018</span>
+          </div>
+          <div class="edu-school"><strong>Islamic Azad University</strong>, Pardis Campus — Tehran, Iran</div>
+
+          <div class="edu-narrative">
+            A four-year bachelor's programme providing a <strong>rigorous civil engineering foundation</strong> with strong concentration in <strong>water, hydraulics, environmental, and structural fundamentals</strong>. This degree makes me equally credible for pure civil engineering roles, infrastructure projects, and site engineering positions.
+          </div>
+
+          <div class="edu-block">
+            <div class="edu-block-title" data-i18n="edu_coursework">Key Coursework</div>
+            <div class="coursework-grid">
+              <div class="coursework-item">
+                <strong>Water &amp; Sewage Engineering</strong>
+                <span class="cw-desc">Water supply, distribution networks, wastewater collection, pumping stations — core knowledge for utility and municipal roles.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Hydraulics &amp; Laboratory</strong>
+                <span class="cw-desc">Open-channel and pipe flow, pump characteristics, hydraulic modelling — applicable to any water infrastructure or drainage project.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Hydrology Engineering</strong>
+                <span class="cw-desc">Precipitation-runoff modelling, flood analysis, water balance — relevant for stormwater, flood protection, and water-management projects.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Environmental Engineering</strong>
+                <span class="cw-desc">Water quality, pollution pathways, treatment principles, environmental impact — foundation for environmental and HSE roles.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Soil Mechanics &amp; Foundation Engineering</strong>
+                <span class="cw-desc">Subsurface investigation, soil behaviour, foundation design — applicable to geotechnical and infrastructure engineering.</span>
+              </div>
+              <div class="coursework-item">
+                <strong>Construction Management</strong>
+                <span class="cw-desc">Project planning, cost estimation, specifications, stakeholder coordination, site supervision — general engineering management skills.</span>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-side reveal">
+      <div class="section-label" data-i18n="lbl_contact">Contact</div>
+      <div class="section-title" data-i18n="title_contact">Contact</div>
+      <div class="section-underline"></div>
+    </div>
+    <div>
+      <div class="contact-grid reveal">
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:Alireza.safarpour@mail.polimi.it">Alireza.safarpour@mail.polimi.it</a></div></div></div>
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="contact-label">Phone</div><div class="contact-value"><a href="tel:+31683486623">+31 6 83 48 66 23</a></div></div></div>
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div><div class="contact-label">LinkedIn</div><div class="contact-value"><a href="https://www.linkedin.com/in/alirezasafarpour/" target="_blank">linkedin.com/in/alirezasafarpour</a></div></div></div>
+        <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-label">Location</div><div class="contact-value" data-i18n="c_location_val">Amsterdam, Netherlands</div></div></div>
+      </div>
+      <div class="reveal" style="margin-top:12px">
+        <div class="contact-card" style="max-width:380px"><div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="contact-label">Work authorisation</div><div class="contact-value" data-i18n="c_auth_val">EU Permanent Resident — no visa required</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Alireza Safarpour</div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="https://www.linkedin.com/in/alirezasafarpour/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+// ─── LANGUAGE SWITCHER ───
+const T = {
+  en: {
+    nav_about: "About", nav_news: "News", nav_exp: "Experience", nav_proj: "Projects", nav_edu: "Education", nav_contact: "Contact",
+    hero_greeting: "Hello! &#128075;",
+    hero_name: "This is Alireza",
+    hero_role: "Environmental &amp; Water Engineer &nbsp;|&nbsp; Process &middot; Civil &middot; HSE &middot; Consulting",
+    hero_hint: "Move your cursor to interact with the <em>live wastewater treatment plant simulation</em> &mdash; operational KPIs update in real time",
+    lbl_about: "About Me", title_about: "About Me",
+    lbl_news: "News", title_news: "News",
+    lbl_experience: "Experience", title_experience: "Professional Experience",
+    lbl_projects: "Projects", title_projects: "Projects",
+    lbl_education: "Education", title_education: "Education",
+    lbl_contact: "Contact", title_contact: "Contact",
+    c_email: "Email", c_linkedin: "LinkedIn", c_phone: "Phone", c_location: "Location", c_auth: "Work authorisation",
+    c_location_val: "Amsterdam, Netherlands", c_auth_val: "EU Permanent Resident &mdash; no visa required",
+    edu_coursework: "Key Coursework"
+  },
+  nl: {
+    nav_about: "Over mij", nav_news: "Nieuws", nav_exp: "Ervaring", nav_proj: "Projecten", nav_edu: "Opleiding", nav_contact: "Contact",
+    hero_greeting: "Hallo! &#128075;",
+    hero_name: "Dit is Alireza",
+    hero_role: "Milieu- &amp; Watertechnicus &nbsp;|&nbsp; Proces &middot; Civiel &middot; HSE &middot; Advies",
+    hero_hint: "Beweeg je cursor om te communiceren met de <em>live RWZI-simulatie</em> &mdash; operationele KPI&apos;s worden in real time bijgewerkt",
+    lbl_about: "Over mij", title_about: "Over mij",
+    lbl_news: "Nieuws", title_news: "Nieuws",
+    lbl_experience: "Ervaring", title_experience: "Werkervaring",
+    lbl_projects: "Projecten", title_projects: "Projecten",
+    lbl_education: "Opleiding", title_education: "Opleiding",
+    lbl_contact: "Contact", title_contact: "Contact",
+    c_email: "E-mail", c_linkedin: "LinkedIn", c_phone: "Telefoon", c_location: "Locatie", c_auth: "Werkvergunning",
+    c_location_val: "Amsterdam, Nederland", c_auth_val: "EU-verblijfsvergunning voor lange duur &mdash; geen visum nodig",
+    edu_coursework: "Belangrijkste vakken"
+  },
+  de: {
+    nav_about: "&Uuml;ber mich", nav_news: "Aktuelles", nav_exp: "Erfahrung", nav_proj: "Projekte", nav_edu: "Ausbildung", nav_contact: "Kontakt",
+    hero_greeting: "Hallo! &#128075;",
+    hero_name: "Das ist Alireza",
+    hero_role: "Umwelt- &amp; Wasseringenieur &nbsp;|&nbsp; Prozess &middot; Bau &middot; HSE &middot; Beratung",
+    hero_hint: "Bewegen Sie Ihren Cursor, um mit der <em>Live-Kl&auml;ranlagen-Simulation</em> zu interagieren &mdash; KPIs werden in Echtzeit aktualisiert",
+    lbl_about: "&Uuml;ber mich", title_about: "&Uuml;ber mich",
+    lbl_news: "Aktuelles", title_news: "Aktuelles",
+    lbl_experience: "Erfahrung", title_experience: "Berufserfahrung",
+    lbl_projects: "Projekte", title_projects: "Projekte",
+    lbl_education: "Ausbildung", title_education: "Ausbildung",
+    lbl_contact: "Kontakt", title_contact: "Kontakt",
+    c_email: "E-Mail", c_linkedin: "LinkedIn", c_phone: "Telefon", c_location: "Standort", c_auth: "Arbeitserlaubnis",
+    c_location_val: "Amsterdam, Niederlande", c_auth_val: "EU-Daueraufenthalt &mdash; kein Visum erforderlich",
+    edu_coursework: "Kernf&auml;cher"
+  },
+  sv: {
+    nav_about: "Om mig", nav_news: "Nyheter", nav_exp: "Erfarenhet", nav_proj: "Projekt", nav_edu: "Utbildning", nav_contact: "Kontakt",
+    hero_greeting: "Hej! &#128075;",
+    hero_name: "Det h&auml;r &auml;r Alireza",
+    hero_role: "Milj&ouml;- &amp; Vatteningenj&ouml;r &nbsp;|&nbsp; Process &middot; Bygg &middot; HSE &middot; Konsult",
+    hero_hint: "R&ouml;r p&aring; mark&ouml;ren f&ouml;r att interagera med den <em>direkts&auml;nda avloppsreningssimuleringen</em> &mdash; drifts-KPI:er uppdateras i realtid",
+    lbl_about: "Om mig", title_about: "Om mig",
+    lbl_news: "Nyheter", title_news: "Nyheter",
+    lbl_experience: "Erfarenhet", title_experience: "Yrkeserfarenhet",
+    lbl_projects: "Projekt", title_projects: "Projekt",
+    lbl_education: "Utbildning", title_education: "Utbildning",
+    lbl_contact: "Kontakt", title_contact: "Kontakt",
+    c_email: "E-post", c_linkedin: "LinkedIn", c_phone: "Telefon", c_location: "Plats", c_auth: "Arbetstillst&aring;nd",
+    c_location_val: "Amsterdam, Nederl&auml;nderna", c_auth_val: "EU-varaktig uppeh&aring;llsr&auml;tt &mdash; inget visum kr&auml;vs",
+    edu_coursework: "Centrala kurser"
+  },
+  fr: {
+    nav_about: "&Agrave; propos", nav_news: "Actualit&eacute;s", nav_exp: "Exp&eacute;rience", nav_proj: "Projets", nav_edu: "Formation", nav_contact: "Contact",
+    hero_greeting: "Bonjour&nbsp;! &#128075;",
+    hero_name: "Je suis Alireza",
+    hero_role: "Ing&eacute;nieur Environnement &amp; Eau &nbsp;|&nbsp; Proc&eacute;d&eacute;s &middot; G&eacute;nie civil &middot; HSE &middot; Conseil",
+    hero_hint: "D&eacute;placez votre curseur pour interagir avec la <em>simulation en direct d&apos;une station d&apos;&eacute;puration</em> &mdash; les KPI op&eacute;rationnels se mettent &agrave; jour en temps r&eacute;el",
+    lbl_about: "&Agrave; propos", title_about: "&Agrave; propos de moi",
+    lbl_news: "Actualit&eacute;s", title_news: "Actualit&eacute;s",
+    lbl_experience: "Exp&eacute;rience", title_experience: "Exp&eacute;rience professionnelle",
+    lbl_projects: "Projets", title_projects: "Projets",
+    lbl_education: "Formation", title_education: "Formation",
+    lbl_contact: "Contact", title_contact: "Contact",
+    c_email: "E-mail", c_linkedin: "LinkedIn", c_phone: "T&eacute;l&eacute;phone", c_location: "Localisation", c_auth: "Autorisation de travail",
+    c_location_val: "Amsterdam, Pays-Bas", c_auth_val: "R&eacute;sident permanent UE &mdash; pas de visa requis",
+    edu_coursework: "Cours principaux"
+  }
+};
+
+const langSwitch = document.getElementById('langSwitch');
+const langBtn = document.getElementById('langBtn');
+const langLabel = document.getElementById('langLabel');
+const langMenu = document.getElementById('langMenu');
+let currentLang = 'en';
+
+// Save originals so we can round-trip safely
+const origText = new Map();
+document.querySelectorAll('[data-i18n]').forEach(el => {
+  origText.set(el.dataset.i18n, el.innerHTML);
+});
+
+function switchLang(code) {
+  if (!T[code]) return;
+  currentLang = code;
+  document.documentElement.lang = code;
+  langLabel.textContent = code.toUpperCase();
+  langMenu.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('active', opt.dataset.lang === code);
+  });
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (T[code] && T[code][key]) {
+      el.innerHTML = T[code][key];
+    } else if (origText.has(key)) {
+      el.innerHTML = origText.get(key);
+    }
+  });
+  try { localStorage.setItem('siteLang', code); } catch (e) {}
+  langSwitch.classList.remove('open');
+}
+
+if (langBtn) {
+  langBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langSwitch.classList.toggle('open');
+  });
+  langMenu.querySelectorAll('.lang-option').forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      switchLang(opt.dataset.lang);
+    });
+  });
+  document.addEventListener('click', () => langSwitch.classList.remove('open'));
+  // Restore preference on load
+  try {
+    const saved = localStorage.getItem('siteLang');
+    if (saved && T[saved]) switchLang(saved);
+  } catch (e) {}
+}
+
+// ─── NAV ───
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('navToggle');
+const navLinksEl = document.getElementById('navLinks');
+if (nav) {
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+}
+if (navToggle && navLinksEl) {
+  navToggle.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+  navLinksEl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinksEl.classList.remove('open')));
+}
+
+// ─── REVEAL on scroll ───
+const obs = new IntersectionObserver(e => {
+  e.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('vis'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ═══ LIVE WASTEWATER TREATMENT PLANT (WWTP) SIMULATION — 10/10 EDITION ═══
+// ═══════════════════════════════════════════════════════════════════════════
+// A realistic visualisation of a municipal RWZI, directly inspired by the
+// plants Alireza worked on at AtkinsRéalis. Stages: Inlet → Screen → Aeration
+// → Secondary Clarifier → Membrane Filter → Treated Effluent. Includes:
+//   • Diurnal inflow pattern (morning peak, midday dip, evening peak)
+//   • Aeration with rising bubble diffusers & sludge flocs
+//   • Secondary clarifier with sludge settling + RAS recycle line
+//   • Membrane flux indicators
+//   • Water clarity gradient (murky → clear) driven by simulated TSS removal
+//   • Live KPIs: flow rate Q, dissolved oxygen DO, TSS removal %, specific
+//     energy E, biogas production (from sludge line digester)
+//   • Mini effluent-quality chart (rolling 60-sample window)
+
+const canvas = document.getElementById('wwtp-canvas');
+const ctx = canvas.getContext('2d');
+const qualCanvas = document.getElementById('quality-canvas');
+const qualCtx = qualCanvas.getContext('2d');
+let W, H, mx = -999, my = -999;
+const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+function resize() {
+  const r = canvas.parentElement.getBoundingClientRect();
+  W = r.width; H = r.height;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const qr = qualCanvas.getBoundingClientRect();
+  qualCanvas.width = qr.width * dpr; qualCanvas.height = qr.height * dpr;
+  qualCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+resize(); window.addEventListener('resize', resize);
+
+const simEl = canvas.parentElement;
+simEl.addEventListener('mousemove', e => { const r = simEl.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
+simEl.addEventListener('mouseleave', () => { mx = -999; my = -999; });
+simEl.addEventListener('touchmove', e => { const r = simEl.getBoundingClientRect(); mx = e.touches[0].clientX - r.left; my = e.touches[0].clientY - r.top; }, { passive: true });
+simEl.addEventListener('touchend', () => { mx = -999; my = -999; });
+
+// ─── Geometry (normalised fractions of canvas) ───
+const Y_TOP = 0.26, Y_BOT = 0.82;
+// 6 process stages, left-to-right
+const STAGES = [
+  { id: 'inlet',     label: 'INLET',       sub: 'raw',        x0: 0.02, x1: 0.10, color: 'rgba(100,116,139,0.05)' },
+  { id: 'screen',    label: 'SCREENING',   sub: 'primary',    x0: 0.12, x1: 0.22, color: 'rgba(180,83,9,0.04)' },
+  { id: 'aeration',  label: 'AERATION',    sub: 'biological', x0: 0.24, x1: 0.46, color: 'rgba(15,118,110,0.05)' },
+  { id: 'clarifier', label: 'CLARIFIER',   sub: 'secondary',  x0: 0.48, x1: 0.66, color: 'rgba(29,78,216,0.04)' },
+  { id: 'membrane',  label: 'MEMBRANE',    sub: 'polishing',  x0: 0.68, x1: 0.80, color: 'rgba(29,78,216,0.05)' },
+  { id: 'outlet',    label: 'EFFLUENT',    sub: 'to receiver',x0: 0.82, x1: 0.96, color: 'rgba(59,130,246,0.06)' }
+];
+
+// Water droplets flowing through the plant
+const N_DROPS = 180;
+const drops = [];
+function spawnDrop(fresh) {
+  return {
+    x: fresh ? 0.02 : (0.02 + Math.random() * 0.94),
+    y: Y_TOP + 0.04 + Math.random() * (Y_BOT - Y_TOP - 0.08),
+    vx: 0,
+    vy: 0,
+    r: 1.1 + Math.random() * 1.4,
+    phase: Math.random() * Math.PI * 2,
+    age: 0,
+    cleanliness: 0    // 0 = dirty (grey), 1 = clean (blue)
+  };
+}
+for (let i = 0; i < N_DROPS; i++) drops.push(spawnDrop(false));
+
+// Aeration bubbles (rise through aeration tank)
+const N_BUBBLES = 55;
+const bubbles = [];
+function spawnBubble() {
+  return {
+    x: 0.25 + Math.random() * 0.2,
+    y: Y_BOT - 0.02,
+    r: 0.6 + Math.random() * 2.3,
+    vy: 0.0012 + Math.random() * 0.0022,
+    wob: Math.random() * Math.PI * 2,
+    wobSpeed: 0.015 + Math.random() * 0.025
+  };
+}
+for (let i = 0; i < N_BUBBLES; i++) { const b = spawnBubble(); b.y = Y_TOP + Math.random() * (Y_BOT - Y_TOP); bubbles.push(b); }
+
+// Activated sludge flocs (darker, swirl in aeration tank)
+const N_FLOCS = 38;
+const flocs = [];
+function spawnFloc() {
+  return {
+    x: 0.25 + Math.random() * 0.2,
+    y: Y_TOP + 0.05 + Math.random() * (Y_BOT - Y_TOP - 0.1),
+    vx: 0, vy: 0,
+    r: 1.3 + Math.random() * 1.8,
+    phase: Math.random() * Math.PI * 2
+  };
+}
+for (let i = 0; i < N_FLOCS; i++) flocs.push(spawnFloc());
+
+// Sludge particles settling in clarifier (sink to bottom, then recycled via RAS)
+const N_SLUDGE = 44;
+const sludgePts = [];
+function spawnSludge() {
+  return {
+    x: 0.49 + Math.random() * 0.15,
+    y: Y_TOP + 0.04 + Math.random() * (Y_BOT - Y_TOP - 0.08),
+    vy: 0.00018 + Math.random() * 0.00045,
+    wob: Math.random() * Math.PI * 2,
+    r: 1.0 + Math.random() * 1.7
+  };
+}
+for (let i = 0; i < N_SLUDGE; i++) sludgePts.push(spawnSludge());
+
+// Biogas particles (rising from digester icon in lower area)
+const N_GAS = 18;
+const gasParts = [];
+function spawnGas() {
+  return {
+    x: 0.28 + Math.random() * 0.14,
+    y: 0.90,
+    vy: 0.0015 + Math.random() * 0.0025,
+    r: 0.8 + Math.random() * 1.6,
+    op: 0.6 + Math.random() * 0.4
+  };
+}
+for (let i = 0; i < N_GAS; i++) { const g = spawnGas(); g.y = 0.84 + Math.random() * 0.12; gasParts.push(g); }
+
+// Ripples (click)
+const ripples = [];
+simEl.addEventListener('click', e => {
+  const r = simEl.getBoundingClientRect();
+  ripples.push({ x: e.clientX - r.left, y: e.clientY - r.top, rad: 0, op: 0.3 });
+});
+
+// ─── Operating state — diurnal pattern ───
+let simHour = 7.0;
+const HOUR_PER_SEC = 0.5;
+let lastTime = performance.now();
+let frames = 0;
+
+// Flow rate varies with hour of day (realistic municipal profile)
+function flowAtHour(h) {
+  const morning = 280 * Math.exp(-Math.pow((h - 8) / 1.6, 2));
+  const evening = 240 * Math.exp(-Math.pow((h - 20) / 2.0, 2));
+  const nightLow = -140 * Math.exp(-Math.pow((h - 3.5) / 2.5, 2));
+  const base = 520;
+  return Math.max(180, base + morning + evening + nightLow);
+}
+
+// KPI DOM refs
+const kpiQ = document.getElementById('kpi-q');
+const kpiDO = document.getElementById('kpi-do');
+const kpiTSS = document.getElementById('kpi-tss');
+const kpiEnergy = document.getElementById('kpi-energy');
+const kpiBiogas = document.getElementById('kpi-biogas');
+
+// Rolling quality history for mini chart
+const QUAL_HISTORY = 60;
+const qualHist = Array(QUAL_HISTORY).fill(0.5);
+
+// Smoothed values
+let smQ = 500, smDO = 2.0, smTSS = 92, smE = 0.45, smBiogas = 32;
+
+// ─── Draw helpers ───
+function drawStageBoxes() {
+  const yT = H * Y_TOP, chH = H * (Y_BOT - Y_TOP);
+  STAGES.forEach((s, i) => {
+    const x0 = s.x0 * W, x1 = s.x1 * W;
+    // Fill
+    ctx.fillStyle = s.color;
+    ctx.fillRect(x0, yT, x1 - x0, chH);
+    // Border
+    ctx.strokeStyle = 'rgba(29,78,216,0.1)';
+    ctx.lineWidth = 0.8;
+    ctx.strokeRect(x0, yT, x1 - x0, chH);
+    // Label on top
+    ctx.fillStyle = 'rgba(55,65,81,0.55)';
+    ctx.font = '600 8.5px "IBM Plex Mono",monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(s.label, (x0 + x1) / 2, yT - 10);
+    ctx.font = '400 7.2px "IBM Plex Mono",monospace';
+    ctx.fillStyle = 'rgba(107,114,128,0.62)';
+    ctx.fillText(s.sub, (x0 + x1) / 2, yT - 2);
+
+    // Stage-specific decorations
+    if (s.id === 'screen') {
+      // Vertical bar-screen lines
+      ctx.strokeStyle = 'rgba(180,83,9,0.25)';
+      ctx.lineWidth = 0.9;
+      for (let j = 1; j <= 5; j++) {
+        const lx = x0 + (x1 - x0) * j / 6;
+        ctx.beginPath(); ctx.moveTo(lx, yT + 6); ctx.lineTo(lx, yT + chH - 6); ctx.stroke();
+      }
+    }
+    if (s.id === 'aeration') {
+      // Diffuser manifold at bottom
+      ctx.strokeStyle = 'rgba(15,118,110,0.4)';
+      ctx.lineWidth = 1.2;
+      ctx.beginPath();
+      ctx.moveTo(x0 + 6, yT + chH - 4);
+      ctx.lineTo(x1 - 6, yT + chH - 4);
+      ctx.stroke();
+      // Diffuser dots
+      ctx.fillStyle = 'rgba(15,118,110,0.5)';
+      for (let j = 0; j < 8; j++) {
+        const dx = x0 + 10 + ((x1 - x0 - 20) / 7) * j;
+        ctx.beginPath(); ctx.arc(dx, yT + chH - 4, 1.3, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+    if (s.id === 'clarifier') {
+      // Inverted triangle shape for settler
+      ctx.strokeStyle = 'rgba(29,78,216,0.18)';
+      ctx.lineWidth = 0.8;
+      ctx.beginPath();
+      ctx.moveTo(x0 + 6, yT + chH * 0.4);
+      ctx.lineTo((x0 + x1) / 2, yT + chH - 6);
+      ctx.lineTo(x1 - 6, yT + chH * 0.4);
+      ctx.stroke();
+    }
+    if (s.id === 'membrane') {
+      // Horizontal membrane sheets
+      ctx.strokeStyle = 'rgba(29,78,216,0.25)';
+      ctx.lineWidth = 0.8;
+      ctx.setLineDash([2, 2]);
+      for (let j = 1; j <= 3; j++) {
+        const ly = yT + (chH * j / 4);
+        ctx.beginPath(); ctx.moveTo(x0 + 4, ly); ctx.lineTo(x1 - 4, ly); ctx.stroke();
+      }
+      ctx.setLineDash([]);
+    }
+
+    // Connector arrow to next stage
+    if (i < STAGES.length - 1) {
+      const nx0 = STAGES[i + 1].x0 * W;
+      const ay = yT + chH / 2;
+      ctx.strokeStyle = 'rgba(29,78,216,0.12)';
+      ctx.lineWidth = 0.8;
+      ctx.setLineDash([2, 3]);
+      ctx.beginPath(); ctx.moveTo(x1 + 1, ay); ctx.lineTo(nx0 - 3, ay); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.beginPath();
+      ctx.moveTo(nx0 - 3, ay);
+      ctx.lineTo(nx0 - 6, ay - 2);
+      ctx.lineTo(nx0 - 6, ay + 2);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(29,78,216,0.18)';
+      ctx.fill();
+    }
+  });
+}
+
+function drawRASLoop() {
+  // Sludge return line from clarifier bottom back to aeration inlet
+  const yT = H * Y_TOP, chH = H * (Y_BOT - Y_TOP);
+  const yBot = yT + chH + 10;
+  const xStart = 0.57 * W;
+  const xEnd = 0.30 * W;
+  ctx.strokeStyle = 'rgba(180,83,9,0.3)';
+  ctx.lineWidth = 1.0;
+  ctx.setLineDash([3, 2]);
+  ctx.beginPath();
+  ctx.moveTo(xStart, yT + chH - 3);
+  ctx.lineTo(xStart, yBot);
+  ctx.lineTo(xEnd, yBot);
+  ctx.lineTo(xEnd, yT + chH - 3);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  // Label
+  ctx.fillStyle = 'rgba(180,83,9,0.65)';
+  ctx.font = 'italic 500 7px "IBM Plex Mono",monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText('RAS recycle', (xStart + xEnd) / 2, yBot + 9);
+}
+
+function drawDigester() {
+  // Small circle representing digester below aeration (for biogas)
+  const cx = 0.35 * W, cy = H * 0.92;
+  ctx.strokeStyle = 'rgba(245,158,11,0.5)';
+  ctx.fillStyle = 'rgba(245,158,11,0.08)';
+  ctx.lineWidth = 0.9;
+  ctx.beginPath();
+  ctx.arc(cx, cy, 7, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.stroke();
+  ctx.fillStyle = 'rgba(180,83,9,0.55)';
+  ctx.font = 'italic 500 7px "IBM Plex Mono",monospace';
+  ctx.textAlign = 'right';
+  ctx.fillText('digester', cx - 12, cy + 2);
+}
+
+// Stage-dependent speed multiplier (slow in aeration + clarifier, fast in pipes)
+function stageSpeed(x) {
+  if (x < 0.10) return 1.1;         // inlet
+  if (x < 0.22) return 0.85;         // screen
+  if (x < 0.46) return 0.4;          // aeration (slow mixing)
+  if (x < 0.66) return 0.35;         // clarifier (very slow)
+  if (x < 0.80) return 0.55;         // membrane
+  return 1.2;                         // effluent
+}
+
+function stageColor(x, clean) {
+  // Grey (murky) upstream → teal (aerated) → blue (clean)
+  if (x < 0.22) return { r: 100, g: 116, b: 139 };       // grey
+  if (x < 0.46) return { r: 50 + clean * 0, g: 120 - clean * 20, b: 110 + clean * 10 };  // teal-ish
+  if (x < 0.66) return { r: 60, g: 90 + clean * 30, b: 160 + clean * 20 };
+  if (x < 0.80) return { r: 50, g: 100 + clean * 50, b: 200 };
+  return { r: 59, g: 130, b: 246 };                       // clean blue
+}
+
+function drawQualityChart() {
+  const qr = qualCanvas.getBoundingClientRect();
+  const w = qr.width, h = qr.height;
+  qualCtx.clearRect(0, 0, w, h);
+  qualCtx.fillStyle = 'rgba(255,255,255,0.5)';
+  qualCtx.fillRect(0, 0, w, h);
+
+  const padL = 6, padR = 6, padT = 10, padB = 8;
+  const cw = w - padL - padR, ch = h - padT - padB;
+
+  // Area
+  qualCtx.beginPath();
+  qualCtx.moveTo(padL, padT + ch);
+  for (let i = 0; i < QUAL_HISTORY; i++) {
+    const x = padL + (i / (QUAL_HISTORY - 1)) * cw;
+    const y = padT + ch - qualHist[i] * ch;
+    qualCtx.lineTo(x, y);
+  }
+  qualCtx.lineTo(padL + cw, padT + ch);
+  qualCtx.closePath();
+  const grad = qualCtx.createLinearGradient(0, padT, 0, padT + ch);
+  grad.addColorStop(0, 'rgba(29,78,216,0.26)');
+  grad.addColorStop(1, 'rgba(29,78,216,0.02)');
+  qualCtx.fillStyle = grad;
+  qualCtx.fill();
+
+  // Curve
+  qualCtx.beginPath();
+  for (let i = 0; i < QUAL_HISTORY; i++) {
+    const x = padL + (i / (QUAL_HISTORY - 1)) * cw;
+    const y = padT + ch - qualHist[i] * ch;
+    if (i === 0) qualCtx.moveTo(x, y);
+    else qualCtx.lineTo(x, y);
+  }
+  qualCtx.strokeStyle = 'rgba(29,78,216,0.78)';
+  qualCtx.lineWidth = 1.2;
+  qualCtx.stroke();
+
+  // Dot at the latest point
+  const lastX = padL + cw;
+  const lastY = padT + ch - qualHist[QUAL_HISTORY - 1] * ch;
+  qualCtx.beginPath();
+  qualCtx.arc(lastX, lastY, 3, 0, Math.PI * 2);
+  qualCtx.fillStyle = '#1d4ed8';
+  qualCtx.fill();
+  qualCtx.strokeStyle = '#fff';
+  qualCtx.lineWidth = 1.2;
+  qualCtx.stroke();
+
+  // Label
+  qualCtx.fillStyle = 'rgba(107,114,128,0.75)';
+  qualCtx.font = '500 7px "IBM Plex Mono",monospace';
+  qualCtx.textAlign = 'left';
+  qualCtx.fillText('effluent TSS removal', padL, 7);
+}
+
+// ─── Main loop ───
+function draw() {
+  frames++;
+  const now = performance.now();
+  const dt = Math.min(0.1, (now - lastTime) / 1000);
+  lastTime = now;
+  simHour = (simHour + HOUR_PER_SEC * dt) % 24;
+
+  // Instantaneous operating parameters
+  const Q = flowAtHour(simHour);               // m³/h
+  const flowScale = Q / 500;                    // drives particle speed
+  const aerationIntensity = Math.min(1.3, 0.6 + flowScale * 0.5);  // DO control
+  const DO_target = 1.5 + aerationIntensity * 0.8;
+  const DO = 1.2 + aerationIntensity * 0.9 + Math.sin(frames * 0.04) * 0.08;
+  const energy = 0.18 + aerationIntensity * 0.35 + flowScale * 0.08;  // kWh/m³
+  const biogas = 22 + flowScale * 18 + Math.sin(frames * 0.015) * 3;
+  const tssRemoval = 91 + aerationIntensity * 3 + Math.sin(frames * 0.02) * 0.8;
+
+  // Smooth for display
+  smQ = smQ * 0.92 + Q * 0.08;
+  smDO = smDO * 0.88 + DO * 0.12;
+  smTSS = smTSS * 0.92 + tssRemoval * 0.08;
+  smE = smE * 0.9 + energy * 0.1;
+  smBiogas = smBiogas * 0.92 + biogas * 0.08;
+
+  // Cursor boost — increases local aeration
+  let cursorBoost = 1;
+  if (mx > 0) {
+    cursorBoost = 1 + Math.max(0, Math.min(0.4, 70 / Math.max(40, Math.hypot(mx - W * 0.35, my - H * 0.5)) - 0.4));
+  }
+
+  ctx.clearRect(0, 0, W, H);
+
+  // 1. Stage backgrounds
+  drawStageBoxes();
+  drawRASLoop();
+  drawDigester();
+
+  // 2. Flow-direction arrows at top (subtle, pulsing with flow rate)
+  const arrowAlpha = 0.08 + Math.min(1, flowScale) * 0.1;
+  ctx.strokeStyle = `rgba(29,78,216,${arrowAlpha})`;
+  ctx.fillStyle = `rgba(29,78,216,${arrowAlpha})`;
+  ctx.lineWidth = 0.8;
+  const ayLine = H * Y_TOP - 22;
+  for (let i = 0; i < 6; i++) {
+    const ax0 = W * (0.04 + i * 0.16);
+    const ax1 = ax0 + W * 0.05;
+    ctx.beginPath(); ctx.moveTo(ax0, ayLine); ctx.lineTo(ax1, ayLine); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ax1, ayLine); ctx.lineTo(ax1 - 3, ayLine - 2); ctx.lineTo(ax1 - 3, ayLine + 2); ctx.closePath(); ctx.fill();
+  }
+  ctx.fillStyle = 'rgba(107,114,128,0.6)';
+  ctx.font = 'italic 500 7px "IBM Plex Mono",monospace';
+  ctx.textAlign = 'left';
+  ctx.fillText(`Q = ${Math.round(smQ)} m³/h`, 8, ayLine + 2);
+
+  // 3. Water droplets
+  drops.forEach((d) => {
+    d.age++;
+    d.phase += 0.04;
+    const spd = stageSpeed(d.x);
+    const baseVx = 0.0018 * spd * flowScale;
+    // Aeration zone: add vertical turbulence
+    let turb_y = 0;
+    if (d.x >= 0.24 && d.x <= 0.46) {
+      turb_y = Math.sin(d.phase * 1.5 + d.x * 40) * 0.00055 * aerationIntensity * cursorBoost;
+    }
+    // Clarifier: gentle downward + slight spread
+    if (d.x >= 0.48 && d.x <= 0.66) {
+      turb_y = 0.00015;
+    }
+    d.vx = d.vx * 0.86 + baseVx * 0.14 + (Math.random() - 0.5) * 0.00012;
+    d.vy = d.vy * 0.85 + turb_y * 0.15 + (Math.random() - 0.5) * 0.00018;
+
+    // Cursor interaction
+    const px = d.x * W, py = d.y * H;
+    const mdx = px - mx, mdy = py - my;
+    const md = Math.hypot(mdx, mdy);
+    if (md < 55 && md > 0 && mx > 0) {
+      const f = (55 - md) / 55;
+      d.vx += (mdx / md) * f * 0.0006;
+      d.vy += (mdy / md) * f * 0.0006;
+    }
+
+    d.x += d.vx;
+    d.y += d.vy;
+
+    // Confine vertically to channel
+    if (d.y < Y_TOP + 0.02) { d.y = Y_TOP + 0.02; d.vy = Math.abs(d.vy) * 0.3; }
+    if (d.y > Y_BOT - 0.02) { d.y = Y_BOT - 0.02; d.vy = -Math.abs(d.vy) * 0.3; }
+
+    // Update cleanliness as it progresses through the plant
+    if (d.x > 0.22 && d.x < 0.46) d.cleanliness = Math.min(1, d.cleanliness + 0.005 * aerationIntensity);
+    else if (d.x > 0.48 && d.x < 0.66) d.cleanliness = Math.min(1, d.cleanliness + 0.004);
+    else if (d.x > 0.68 && d.x < 0.80) d.cleanliness = Math.min(1, d.cleanliness + 0.008);
+
+    // Respawn when past the end
+    if (d.x > 0.97) Object.assign(d, spawnDrop(true));
+
+    // Draw
+    const col = stageColor(d.x, d.cleanliness);
+    const drawX = d.x * W, drawY = d.y * H;
+    // Halo
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, d.r + 1.2, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${col.r},${col.g},${col.b},0.14)`;
+    ctx.fill();
+    // Core
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, d.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${col.r},${col.g},${col.b},0.68)`;
+    ctx.fill();
+    // Highlight
+    ctx.beginPath();
+    ctx.arc(drawX - d.r * 0.3, drawY - d.r * 0.3, d.r * 0.35, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.4)';
+    ctx.fill();
+  });
+
+  // 4. Activated sludge flocs (swirl in aeration)
+  flocs.forEach((f) => {
+    f.phase += 0.03;
+    const orbitCx = 0.35, orbitCy = (Y_TOP + Y_BOT) / 2;
+    const dxo = f.x - orbitCx, dyo = f.y - orbitCy;
+    // gentle swirl
+    f.vx = f.vx * 0.88 + (-dyo * 0.002 * aerationIntensity) * 0.12 + (Math.random() - 0.5) * 0.0002;
+    f.vy = f.vy * 0.88 + (dxo * 0.002 * aerationIntensity) * 0.12 + (Math.random() - 0.5) * 0.00022;
+    // cursor
+    const px = f.x * W, py = f.y * H;
+    const mdx = px - mx, mdy = py - my;
+    const md = Math.hypot(mdx, mdy);
+    if (md < 50 && md > 0 && mx > 0) {
+      const ff = (50 - md) / 50;
+      f.vx += (mdx / md) * ff * 0.0007;
+      f.vy += (mdy / md) * ff * 0.0007;
+    }
+    f.x += f.vx;
+    f.y += f.vy;
+    // Confine to aeration tank
+    if (f.x < 0.25) { f.x = 0.25; f.vx = Math.abs(f.vx) * 0.5; }
+    if (f.x > 0.45) { f.x = 0.45; f.vx = -Math.abs(f.vx) * 0.5; }
+    if (f.y < Y_TOP + 0.03) { f.y = Y_TOP + 0.03; f.vy = Math.abs(f.vy) * 0.4; }
+    if (f.y > Y_BOT - 0.03) { f.y = Y_BOT - 0.03; f.vy = -Math.abs(f.vy) * 0.4; }
+
+    const drawX = f.x * W, drawY = f.y * H;
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, f.r + 1.5, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(15,118,110,0.09)';
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, f.r, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(15,118,110,0.55)';
+    ctx.fill();
+  });
+
+  // 5. Aeration bubbles rising
+  bubbles.forEach((b) => {
+    b.wob += b.wobSpeed;
+    b.y -= b.vy * aerationIntensity * cursorBoost;
+    const drawX = b.x * W + Math.sin(b.wob) * 2.5;
+    const drawY = b.y * H;
+    if (b.y < Y_TOP + 0.02) Object.assign(b, spawnBubble());
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, b.r, 0, Math.PI * 2);
+    const depth = (b.y - Y_TOP) / (Y_BOT - Y_TOP);
+    ctx.fillStyle = `rgba(29,78,216,${0.1 + (1 - depth) * 0.15})`;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(drawX - b.r * 0.3, drawY - b.r * 0.3, b.r * 0.3, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.45)';
+    ctx.fill();
+  });
+
+  // 6. Sludge particles in clarifier (settle then RAS-recycle)
+  sludgePts.forEach((s) => {
+    s.wob += 0.02;
+    s.y += s.vy;
+    const drawX = s.x * W + Math.sin(s.wob) * 1.2;
+    const drawY = s.y * H;
+    // Cursor lift
+    const mdx = drawX - mx, mdy = drawY - my;
+    const md = Math.hypot(mdx, mdy);
+    if (md < 45 && md > 0 && mx > 0) {
+      s.y -= s.vy * 5;
+      s.x += (mdx / md) * 0.0012;
+    }
+    if (s.y > Y_BOT - 0.02) Object.assign(s, spawnSludge());
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, s.r, 0, Math.PI * 2);
+    const depth = (s.y - Y_TOP) / (Y_BOT - Y_TOP);
+    ctx.fillStyle = `rgba(180,83,9,${0.15 + depth * 0.35})`;
+    ctx.fill();
+  });
+
+  // 7. Biogas particles rising above digester
+  gasParts.forEach((g) => {
+    g.y -= g.vy;
+    const drawX = g.x * W + Math.sin(frames * 0.05 + g.y * 10) * 1.4;
+    const drawY = g.y * H;
+    if (g.y < 0.82) Object.assign(g, spawnGas());
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, g.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(245,158,11,${g.op * 0.5})`;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(drawX, drawY, g.r + 1.2, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(245,158,11,${g.op * 0.15})`;
+    ctx.fill();
+  });
+
+  // 8. Click ripples
+  for (let i = ripples.length - 1; i >= 0; i--) {
+    const r = ripples[i];
+    r.rad += 1.2; r.op -= 0.008;
+    if (r.op <= 0) { ripples.splice(i, 1); continue; }
+    ctx.beginPath();
+    ctx.arc(r.x, r.y, r.rad, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(29,78,216,${r.op})`;
+    ctx.lineWidth = 0.8;
+    ctx.stroke();
+  }
+
+  // 9. Cursor glow
+  if (mx > 0 && my > 0) {
+    const gg = ctx.createRadialGradient(mx, my, 0, mx, my, 55);
+    gg.addColorStop(0, 'rgba(29,78,216,0.06)');
+    gg.addColorStop(1, 'rgba(29,78,216,0)');
+    ctx.fillStyle = gg;
+    ctx.beginPath(); ctx.arc(mx, my, 55, 0, Math.PI * 2); ctx.fill();
+  }
+
+  // 10. Update KPIs (smoothed)
+  if (frames % 5 === 0) {
+    kpiQ.textContent = Math.round(smQ);
+    kpiDO.textContent = smDO.toFixed(1);
+    kpiTSS.textContent = smTSS.toFixed(0);
+    kpiEnergy.textContent = smE.toFixed(2);
+    kpiBiogas.textContent = Math.round(smBiogas);
+  }
+
+  // 11. Shift quality history + draw chart
+  if (frames % 12 === 0) {
+    qualHist.shift();
+    qualHist.push(smTSS / 100);
+    drawQualityChart();
+  }
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+</body>
+</html>
