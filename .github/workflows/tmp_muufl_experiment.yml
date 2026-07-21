@@ -7,6 +7,12 @@ on:
     paths:
       - 'tmp_muufl/**'
       - '.github/workflows/tmp_muufl_experiment.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'tmp_muufl/**'
+      - '.github/workflows/tmp_muufl_experiment.yml'
 
 jobs:
   run-muufl:
