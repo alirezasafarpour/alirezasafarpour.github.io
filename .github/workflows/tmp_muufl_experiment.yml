@@ -1,0 +1,43 @@
+name: Temporary MUUFL TGRS Experiment
+
+on:
+  push:
+    branches:
+      - tmp-muufl-tgrs-experiment
+    paths:
+      - 'tmp_muufl/**'
+      - '.github/workflows/tmp_muufl_experiment.yml'
+
+jobs:
+  run-muufl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy pandas matplotlib scikit-learn
+      - name: Run native HSI-LiDAR experiment
+        run: python tmp_muufl/run_muufl_experiment.py
+      - name: Package outputs
+        run: |
+          cp tmp_muufl/run_muufl_experiment.py muufl_results/
+          printf 'numpy\nscipy\npandas\nmatplotlib\nscikit-learn\n' > muufl_results/requirements.txt
+          cat > muufl_results/README.txt <<'EOF'
+          Native MUUFL Gulfport HSI-LiDAR experiment for the TGRS manuscript.
+          Data source: official GatorSense/MUUFLGulfport repository.
+          The included .mat file contains the 325x220x64 HSI cube, co-registered LiDAR, and 11-class scene labels.
+          Run: python run_muufl_experiment.py
+          EOF
+      - name: Upload complete reproducibility artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MUUFL_native_HSI_LiDAR_results
+          path: muufl_results/
+          retention-days: 7
+          compression-level: 6
