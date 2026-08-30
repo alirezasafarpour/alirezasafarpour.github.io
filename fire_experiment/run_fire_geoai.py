@@ -28,15 +28,12 @@ fires['acq_date']=pd.to_datetime(fires['acq_date'], errors='coerce')
 weather['time']=pd.to_datetime(weather['time'], errors='coerce')
 fires=fires.dropna(subset=['acq_date','latitude','longitude'])
 weather=weather.dropna(subset=['time','location_id'])
-# Normalize join keys across source CSVs.
 weather['location_id']=pd.to_numeric(weather['location_id'],errors='coerce')
 places['location_id']=pd.to_numeric(places['location_id'],errors='coerce')
 weather=weather.dropna(subset=['location_id']).copy(); places=places.dropna(subset=['location_id']).copy()
 weather['location_id']=weather['location_id'].astype(int); places['location_id']=places['location_id'].astype(int)
-# High-confidence MODIS active-fire detections, following repository's conservative practice.
 fires=fires[pd.to_numeric(fires['confidence'],errors='coerce').fillna(0)>=80].copy()
 
-# Nearest weather-grid location for each fire using vectorized equirectangular distance; keep <=35 km.
 latp=np.radians(places['latitude'].to_numpy()); lonp=np.radians(places['longitude'].to_numpy())
 flats=np.radians(fires['latitude'].to_numpy()); flons=np.radians(fires['longitude'].to_numpy())
 nearest=[]; distkm=[]
@@ -48,14 +45,11 @@ fires['location_id']=nearest; fires['nearest_km']=distkm
 fires=fires[fires['nearest_km']<=35].copy()
 fire_days=fires[['location_id','acq_date']].drop_duplicates().copy(); fire_days['fire_next_day']=1
 
-# Merge weather with static location variables.
 df=weather.merge(places[['location_id','latitude','longitude','elevation']],on='location_id',how='left')
-# One-day-ahead label: weather at day t -> fire near location on day t+1.
 df['target_date']=df['time']+pd.Timedelta(days=1)
 df=df.merge(fire_days,left_on=['location_id','target_date'],right_on=['location_id','acq_date'],how='left')
 df['fire_next_day']=df['fire_next_day'].fillna(0).astype(int)
 df['year']=df['time'].dt.year; df['month']=df['time'].dt.month; df['doy']=df['time'].dt.dayofyear
-# Fire season only: May-Oct; focus 2012-2021 for modern, consistent period.
 df=df[df['month'].between(5,10) & df['year'].between(2012,2021)].copy()
 df['sin_doy']=np.sin(2*np.pi*df['doy']/365.25); df['cos_doy']=np.cos(2*np.pi*df['doy']/365.25)
 
@@ -71,6 +65,10 @@ df=df.dropna(subset=features+['latitude','longitude'])
 train=df[df.year<=2020].copy(); test=df[df.year==2021].copy()
 X=train[features]; y=train.fire_next_day; Xt=test[features]; yt=test.fire_next_day
 train['spatial_group']=(np.floor(train.latitude).astype(int)*100+np.floor(train.longitude).astype(int)).astype(str)
+n_groups=int(train['spatial_group'].nunique())
+if n_groups < 3:
+    raise RuntimeError(f'Insufficient independent spatial groups for validation: {n_groups}')
+n_splits=min(5,n_groups)
 
 def metrics(y_true,p):
     pred=(p>=0.5).astype(int)
@@ -83,7 +81,7 @@ models={
  'XGBoost':XGBClassifier(n_estimators=300,max_depth=5,learning_rate=.05,subsample=.85,colsample_bytree=.85,scale_pos_weight=spw,eval_metric='logloss',n_jobs=4,random_state=42)
 }
 
-gkf=GroupKFold(n_splits=5); rows=[]
+gkf=GroupKFold(n_splits=n_splits); rows=[]
 for name,model in models.items():
     for fold,(tr,va) in enumerate(gkf.split(X,y,groups=train.spatial_group),1):
         model.fit(X.iloc[tr],y.iloc[tr]); p=model.predict_proba(X.iloc[va])[:,1]
@@ -112,7 +110,7 @@ except Exception as e:
 cal=pd.DataFrame({'y':yt.to_numpy(),'p':ptest}); cal['bin']=pd.qcut(cal.p.rank(method='first'),10,labels=False,duplicates='drop')
 cal.groupby('bin').agg(mean_pred=('p','mean'),observed=('y','mean'),n=('y','size')).reset_index().to_csv(OUT/'calibration_2021.csv',index=False)
 
-prov={'source_fire':'NASA FIRMS active-fire CSV via public NASA Space Apps repository','source_weather':'Open-Meteo daily historical weather via public NASA Space Apps repository','study_period_train':'2012-2020 May-Oct','locked_test':'2021 May-Oct','forecast_horizon':'1 day','fire_confidence_threshold':80,'max_fire_to_weather_location_km':35,'n_train':int(len(train)),'positive_train':int(y.sum()),'prevalence_train':float(y.mean()),'features':features,'selected_model_by_spatial_cv_pr_auc':best}
+prov={'source_fire':'NASA FIRMS active-fire CSV via public NASA Space Apps repository','source_weather':'Open-Meteo daily historical weather via public NASA Space Apps repository','study_period_train':'2012-2020 May-Oct','locked_test':'2021 May-Oct','forecast_horizon':'1 day','fire_confidence_threshold':80,'max_fire_to_weather_location_km':35,'n_train':int(len(train)),'positive_train':int(y.sum()),'prevalence_train':float(y.mean()),'features':features,'spatial_group_definition':'1-degree latitude-longitude blocks','n_spatial_groups':n_groups,'spatial_cv_folds':n_splits,'selected_model_by_spatial_cv_pr_auc':best}
 (OUT/'provenance.json').write_text(json.dumps(prov,indent=2))
 registry={'cv':cv.groupby('model')[['pr_auc','roc_auc','f1','precision','recall','balanced_accuracy','brier']].mean().round(6).to_dict(orient='index'),'test_2021':test_metrics,'attica_window_2021':att_out,'provenance':prov}
 (OUT/'results_registry.json').write_text(json.dumps(registry,indent=2))
