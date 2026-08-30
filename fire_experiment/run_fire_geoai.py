@@ -32,20 +32,28 @@ weather['location_id']=pd.to_numeric(weather['location_id'],errors='coerce')
 places['location_id']=pd.to_numeric(places['location_id'],errors='coerce')
 weather=weather.dropna(subset=['location_id']).copy(); places=places.dropna(subset=['location_id']).copy()
 weather['location_id']=weather['location_id'].astype(int); places['location_id']=places['location_id'].astype(int)
+
+# Conservative active-fire filtering.
 fires=fires[pd.to_numeric(fires['confidence'],errors='coerce').fillna(0)>=80].copy()
 
-latp=np.radians(places['latitude'].to_numpy()); lonp=np.radians(places['longitude'].to_numpy())
+# IMPORTANT: map fires only to locations for which weather observations actually exist.
+weather_ids=np.sort(weather['location_id'].unique())
+wplaces=places[places['location_id'].isin(weather_ids)].drop_duplicates('location_id').copy()
+if len(wplaces)<3:
+    raise RuntimeError(f'Only {len(wplaces)} weather-covered locations available')
+latp=np.radians(wplaces['latitude'].to_numpy()); lonp=np.radians(wplaces['longitude'].to_numpy())
 flats=np.radians(fires['latitude'].to_numpy()); flons=np.radians(fires['longitude'].to_numpy())
 nearest=[]; distkm=[]
 for a,b in zip(flats,flons):
     x=(lonp-b)*np.cos((latp+a)/2); y=latp-a
     d=np.sqrt(x*x+y*y)*6371.0
-    j=int(np.argmin(d)); nearest.append(int(places.iloc[j]['location_id'])); distkm.append(float(d[j]))
+    j=int(np.argmin(d)); nearest.append(int(wplaces.iloc[j]['location_id'])); distkm.append(float(d[j]))
 fires['location_id']=nearest; fires['nearest_km']=distkm
-fires=fires[fires['nearest_km']<=35].copy()
+# 75-km station-support radius; explicitly recorded as coarse regional support.
+fires=fires[fires['nearest_km']<=75].copy()
 fire_days=fires[['location_id','acq_date']].drop_duplicates().copy(); fire_days['fire_next_day']=1
 
-df=weather.merge(places[['location_id','latitude','longitude','elevation']],on='location_id',how='left')
+df=weather.merge(wplaces[['location_id','latitude','longitude','elevation']],on='location_id',how='left')
 df['target_date']=df['time']+pd.Timedelta(days=1)
 df=df.merge(fire_days,left_on=['location_id','target_date'],right_on=['location_id','acq_date'],how='left')
 df['fire_next_day']=df['fire_next_day'].fillna(0).astype(int)
@@ -64,7 +72,8 @@ df=df.dropna(subset=features+['latitude','longitude'])
 
 train=df[df.year<=2020].copy(); test=df[df.year==2021].copy()
 X=train[features]; y=train.fire_next_day; Xt=test[features]; yt=test.fire_next_day
-train['spatial_group']=(np.floor(train.latitude).astype(int)*100+np.floor(train.longitude).astype(int)).astype(str)
+# Location-level grouping is stronger here than coarse degree blocks because the weather source is station/grid-location based.
+train['spatial_group']=train['location_id'].astype(str)
 n_groups=int(train['spatial_group'].nunique())
 if n_groups < 3:
     raise RuntimeError(f'Insufficient independent spatial groups for validation: {n_groups}')
@@ -87,13 +96,14 @@ for name,model in models.items():
         model.fit(X.iloc[tr],y.iloc[tr]); p=model.predict_proba(X.iloc[va])[:,1]
         r={'model':name,'fold':fold}; r.update(metrics(y.iloc[va],p)); rows.append(r)
 cv=pd.DataFrame(rows); cv.to_csv(OUT/'spatial_cv_metrics.csv',index=False)
-summary=cv.groupby('model').agg(['mean','std']); summary.to_csv(OUT/'spatial_cv_summary.csv')
+cv.groupby('model').agg(['mean','std']).to_csv(OUT/'spatial_cv_summary.csv')
 best=cv.groupby('model')['pr_auc'].mean().idxmax()
 
 final=models[best]; final.fit(X,y); ptest=final.predict_proba(Xt)[:,1]
 test_metrics=metrics(yt,ptest); test_metrics.update({'model':best,'n_test':int(len(test)),'positives_test':int(yt.sum()),'prevalence_test':float(yt.mean())})
 pd.DataFrame([test_metrics]).to_csv(OUT/'temporal_holdout_2021.csv',index=False)
 
+# Attica geographic window, if weather-covered locations fall inside it.
 att=test[(test.latitude.between(37.6,38.5)) & (test.longitude.between(22.7,24.3))].copy()
 att_out={'n':int(len(att)),'positives':int(att.fire_next_day.sum()),'prevalence':float(att.fire_next_day.mean()) if len(att) else None}
 if len(att)>0 and att.fire_next_day.nunique()>1:
@@ -110,7 +120,11 @@ except Exception as e:
 cal=pd.DataFrame({'y':yt.to_numpy(),'p':ptest}); cal['bin']=pd.qcut(cal.p.rank(method='first'),10,labels=False,duplicates='drop')
 cal.groupby('bin').agg(mean_pred=('p','mean'),observed=('y','mean'),n=('y','size')).reset_index().to_csv(OUT/'calibration_2021.csv',index=False)
 
-prov={'source_fire':'NASA FIRMS active-fire CSV via public NASA Space Apps repository','source_weather':'Open-Meteo daily historical weather via public NASA Space Apps repository','study_period_train':'2012-2020 May-Oct','locked_test':'2021 May-Oct','forecast_horizon':'1 day','fire_confidence_threshold':80,'max_fire_to_weather_location_km':35,'n_train':int(len(train)),'positive_train':int(y.sum()),'prevalence_train':float(y.mean()),'features':features,'spatial_group_definition':'1-degree latitude-longitude blocks','n_spatial_groups':n_groups,'spatial_cv_folds':n_splits,'selected_model_by_spatial_cv_pr_auc':best}
+# Diagnostic coverage table.
+wplaces[['location_id','latitude','longitude','elevation']].to_csv(OUT/'weather_locations.csv',index=False)
+coverage={'n_weather_locations':int(len(wplaces)),'n_fire_detections_after_confidence':int(len(distkm)),'n_fire_detections_within_75km':int(len(fires)),'fire_station_distance_km_median':float(np.median(fires['nearest_km'])) if len(fires) else None,'fire_station_distance_km_p95':float(np.percentile(fires['nearest_km'],95)) if len(fires) else None}
+
+prov={'source_fire':'NASA FIRMS active-fire CSV via public NASA Space Apps repository','source_weather':'Open-Meteo daily historical weather via public NASA Space Apps repository','study_period_train':'2012-2020 May-Oct','locked_test':'2021 May-Oct','forecast_horizon':'1 day','fire_confidence_threshold':80,'max_fire_to_weather_location_km':75,'spatial_support_note':'coarse weather-location support; not a 500 m hazard map','n_train':int(len(train)),'positive_train':int(y.sum()),'prevalence_train':float(y.mean()),'features':features,'spatial_group_definition':'weather location ID','n_spatial_groups':n_groups,'spatial_cv_folds':n_splits,'selected_model_by_spatial_cv_pr_auc':best,**coverage}
 (OUT/'provenance.json').write_text(json.dumps(prov,indent=2))
 registry={'cv':cv.groupby('model')[['pr_auc','roc_auc','f1','precision','recall','balanced_accuracy','brier']].mean().round(6).to_dict(orient='index'),'test_2021':test_metrics,'attica_window_2021':att_out,'provenance':prov}
 (OUT/'results_registry.json').write_text(json.dumps(registry,indent=2))
