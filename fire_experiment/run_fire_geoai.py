@@ -28,6 +28,11 @@ fires['acq_date']=pd.to_datetime(fires['acq_date'], errors='coerce')
 weather['time']=pd.to_datetime(weather['time'], errors='coerce')
 fires=fires.dropna(subset=['acq_date','latitude','longitude'])
 weather=weather.dropna(subset=['time','location_id'])
+# Normalize join keys across source CSVs.
+weather['location_id']=pd.to_numeric(weather['location_id'],errors='coerce')
+places['location_id']=pd.to_numeric(places['location_id'],errors='coerce')
+weather=weather.dropna(subset=['location_id']).copy(); places=places.dropna(subset=['location_id']).copy()
+weather['location_id']=weather['location_id'].astype(int); places['location_id']=places['location_id'].astype(int)
 # High-confidence MODIS active-fire detections, following repository's conservative practice.
 fires=fires[pd.to_numeric(fires['confidence'],errors='coerce').fillna(0)>=80].copy()
 
@@ -59,20 +64,17 @@ features=[]
 for c in df.columns:
     if c in exclude: continue
     if pd.api.types.is_numeric_dtype(df[c]): features.append(c)
-# Avoid metadata-like numeric offsets if present.
 features=[c for c in features if c not in {'utc_offset_seconds'}]
 for c in features: df[c]=pd.to_numeric(df[c],errors='coerce')
-df=df.dropna(subset=features)
+df=df.dropna(subset=features+['latitude','longitude'])
 
 train=df[df.year<=2020].copy(); test=df[df.year==2021].copy()
 X=train[features]; y=train.fire_next_day; Xt=test[features]; yt=test.fire_next_day
-
-# spatial grouping: 1-degree blocks from station coordinates, keeping exact location out of predictors.
 train['spatial_group']=(np.floor(train.latitude).astype(int)*100+np.floor(train.longitude).astype(int)).astype(str)
 
 def metrics(y_true,p):
     pred=(p>=0.5).astype(int)
-    return {'pr_auc':float(average_precision_score(y_true,p)),'roc_auc':float(roc_auc_score(y_true,p)),'f1':float(f1_score(y_true,p,zero_division=0)),'precision':float(precision_score(y_true,p,zero_division=0)),'recall':float(recall_score(y_true,p,zero_division=0)),'balanced_accuracy':float(balanced_accuracy_score(y_true,pred)),'brier':float(brier_score_loss(y_true,p))}
+    return {'pr_auc':float(average_precision_score(y_true,p)),'roc_auc':float(roc_auc_score(y_true,p)),'f1':float(f1_score(y_true,pred,zero_division=0)),'precision':float(precision_score(y_true,pred,zero_division=0)),'recall':float(recall_score(y_true,pred,zero_division=0)),'balanced_accuracy':float(balanced_accuracy_score(y_true,pred)),'brier':float(brier_score_loss(y_true,p))}
 
 pos=max(1,int(y.sum())); neg=max(1,int((1-y).sum())); spw=neg/pos
 models={
@@ -94,14 +96,12 @@ final=models[best]; final.fit(X,y); ptest=final.predict_proba(Xt)[:,1]
 test_metrics=metrics(yt,ptest); test_metrics.update({'model':best,'n_test':int(len(test)),'positives_test':int(yt.sum()),'prevalence_test':float(yt.mean())})
 pd.DataFrame([test_metrics]).to_csv(OUT/'temporal_holdout_2021.csv',index=False)
 
-# Attica-region case study window, explicitly a geographic window rather than an administrative polygon.
 att=test[(test.latitude.between(37.6,38.5)) & (test.longitude.between(22.7,24.3))].copy()
 att_out={'n':int(len(att)),'positives':int(att.fire_next_day.sum()),'prevalence':float(att.fire_next_day.mean()) if len(att) else None}
 if len(att)>0 and att.fire_next_day.nunique()>1:
     pa=final.predict_proba(att[features])[:,1]; att_out.update(metrics(att.fire_next_day,pa))
 pd.DataFrame([att_out]).to_csv(OUT/'attica_window_2021.csv',index=False)
 
-# Permutation importance on a bounded holdout sample for explainability.
 sample=test.sample(min(12000,len(test)),random_state=42)
 try:
     pi=permutation_importance(final,sample[features],sample.fire_next_day,n_repeats=5,scoring='average_precision',random_state=42,n_jobs=-1)
@@ -109,18 +109,13 @@ try:
 except Exception as e:
     (OUT/'importance_error.txt').write_text(str(e))
 
-# Calibration bins.
 cal=pd.DataFrame({'y':yt.to_numpy(),'p':ptest}); cal['bin']=pd.qcut(cal.p.rank(method='first'),10,labels=False,duplicates='drop')
 cal.groupby('bin').agg(mean_pred=('p','mean'),observed=('y','mean'),n=('y','size')).reset_index().to_csv(OUT/'calibration_2021.csv',index=False)
 
-# Dataset/provenance summary.
 prov={'source_fire':'NASA FIRMS active-fire CSV via public NASA Space Apps repository','source_weather':'Open-Meteo daily historical weather via public NASA Space Apps repository','study_period_train':'2012-2020 May-Oct','locked_test':'2021 May-Oct','forecast_horizon':'1 day','fire_confidence_threshold':80,'max_fire_to_weather_location_km':35,'n_train':int(len(train)),'positive_train':int(y.sum()),'prevalence_train':float(y.mean()),'features':features,'selected_model_by_spatial_cv_pr_auc':best}
 (OUT/'provenance.json').write_text(json.dumps(prov,indent=2))
-
-# Results registry for manuscript assembler.
 registry={'cv':cv.groupby('model')[['pr_auc','roc_auc','f1','precision','recall','balanced_accuracy','brier']].mean().round(6).to_dict(orient='index'),'test_2021':test_metrics,'attica_window_2021':att_out,'provenance':prov}
 (OUT/'results_registry.json').write_text(json.dumps(registry,indent=2))
-
 with zipfile.ZipFile('fire_experiment/fire_geoai_results.zip','w',zipfile.ZIP_DEFLATED) as z:
     for p in OUT.rglob('*'):
         if p.is_file(): z.write(p,arcname=p.name)
