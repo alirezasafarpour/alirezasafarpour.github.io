@@ -1,0 +1,25 @@
+name: Fire GeoAI Experiment
+on:
+  push:
+    branches: [fire-experiment]
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy scikit-learn xgboost scipy
+      - name: Run real-data wildfire experiment
+        run: python fire_experiment/run_fire_geoai.py
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: fire-geoai-results
+          path: |
+            fire_experiment/results/
+            fire_experiment/fire_geoai_results.zip
