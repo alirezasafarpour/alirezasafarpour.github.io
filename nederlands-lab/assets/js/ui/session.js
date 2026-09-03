@@ -24,6 +24,13 @@ const EX_LABEL = {
   listen: 'Luister en typ',
 };
 
+const EMPTY_MSG = {
+  review: 'Je hebt nog geen woorden geleerd om te herhalen — begin met Leren.',
+  hard: 'Nog geen moeilijke woorden — markeer een woord als moeilijk vanuit het woordoverzicht.',
+  fav: 'Nog geen favorieten — tik op het sterretje bij een woord om het hier te verzamelen.',
+  learn: 'Dit boek is helemaal geleerd — probeer Herhalen of het andere boek.',
+};
+
 let current = null;
 
 export function isActive() { return !!current; }
@@ -32,7 +39,7 @@ export function abort() { current?.close(true); }
 export function startSession(kind, opts = {}) {
   const queue = DATA.buildQueue(kind, opts);
   if (!queue.length) {
-    toast('Geen woorden voor deze oefening — kies een andere modus of les.', 'bad');
+    toast(EMPTY_MSG[kind] || 'Geen woorden voor deze oefening — kies een andere modus of les.', 'bad');
     return false;
   }
   current?.close(true);

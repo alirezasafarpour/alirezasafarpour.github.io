@@ -310,16 +310,39 @@ export function exerciseForStage(w, card, allow) {
   return pick;
 }
 
+/**
+ * Same stage logic as exerciseForStage, but a review session pulls in every
+ * card due on a given day, and a batch of cards studied together often sits
+ * at the exact same stage — so a strict per-stage pick makes the whole
+ * session drill one exercise type over and over. Weight toward the stage's
+ * own exercise but mix in a neighbour so the session stays varied.
+ */
+function reviewExercise(w, card, allow) {
+  const s = (card && card.s) || 0;
+  const canCloze = clozeExamples(w).length > 0;
+  let options;
+  if (s <= 1) options = ['mc'];
+  else if (s === 2) options = ['mcRev', 'mcRev', 'mc'];
+  else if (s === 3) options = canCloze ? ['type', 'type', 'blank', 'mcRev'] : ['type', 'type', 'mcRev'];
+  else options = canCloze ? ['blank', 'blank', 'type'] : ['type', 'type', 'mcRev'];
+  if (allow) options = options.filter((o) => allow.includes(o));
+  if (!options.length) options = (allow && allow.length) ? allow : ['mc'];
+  const pick = options[Math.floor(Math.random() * options.length)];
+  return pick === 'blank' && !canCloze ? 'type' : pick;
+}
+
 function poolFor(kind, opts) {
   const book = opts.book;
-  const now = Date.now();
   // An explicit pool (e.g. the current search results) overrides everything.
   if (Array.isArray(opts.pool) && opts.pool.length) return opts.pool;
   const all = book ? bookWords(book) : db.words;
   switch (kind) {
     case 'hard': return all.filter((w) => store.difficult(w.id));
     case 'fav': return all.filter((w) => store.isFav(w.id));
-    case 'review': return all.filter((w) => SRS.isDue(store.card(w.id), now));
+    // Not pre-filtered to due words: buildQueue's own due/fresh/rest split
+    // needs the full pool so it can fall back to the weakest seen words
+    // when nothing is due yet.
+    case 'review': return all;
     case 'lesson': return opts.lesson != null ? lessonWords(book, opts.lesson) : all;
     default: return all;
   }
@@ -377,6 +400,7 @@ export function buildQueue(kind, opts = {}) {
     else if (kind === 'type') ex = 'type';
     else if (kind === 'blank') ex = clozeExamples(w).length ? 'blank' : 'type';
     else if (kind === 'learn' && SRS.isNew(card)) ex = 'intro';
+    else if (kind === 'review') ex = reviewExercise(w, card, allow);
     else ex = exerciseForStage(w, card, allow);
     return { id: w.id, ex };
   });
@@ -418,24 +442,26 @@ function learnQueue(due, fresh, rest, size, newCap) {
   return items;
 }
 
-/** Keep the queue varied so the same exercise type never runs many times over. */
+/**
+ * Keep the queue varied so the same exercise type never runs many times over.
+ * A plain round-robin dumps whatever's left of the biggest bucket at the end
+ * once smaller buckets run dry, so instead every item gets a fractional
+ * position spread evenly across its own bucket, and the merge-sort by that
+ * position interleaves buckets proportionally to their size — the standard
+ * trick for spacing a skewed multiset without clumping.
+ */
 function spreadExercises(items) {
   const buckets = new Map();
   for (const it of items) {
     if (!buckets.has(it.ex)) buckets.set(it.ex, []);
     buckets.get(it.ex).push(it);
   }
-  const keys = [...buckets.keys()];
-  const out = [];
-  while (out.length < items.length) {
-    let moved = false;
-    for (const k of keys) {
-      const b = buckets.get(k);
-      if (b.length) { out.push(b.shift()); moved = true; }
-    }
-    if (!moved) break;
+  const placed = [];
+  for (const list of buckets.values()) {
+    list.forEach((it, i) => placed.push({ it, pos: (i + 0.5) / list.length }));
   }
-  return out;
+  placed.sort((a, b) => a.pos - b.pos);
+  return placed.map((p) => p.it);
 }
 
 /** Counts used by the dashboard tiles. */
