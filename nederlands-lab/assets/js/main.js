@@ -121,7 +121,8 @@ async function boot() {
   // Sync runs after first paint so a slow network never blocks studying.
   sync.init().then(() => paintChrome()).catch(() => paintChrome());
 
-  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  // isSecureContext covers https and localhost, where service workers are allowed.
+  if ('serviceWorker' in navigator && isSecureContext) {
     navigator.serviceWorker.register(new URL('../../sw.js', import.meta.url)).catch(() => { /* offline cache is optional */ });
   }
 
