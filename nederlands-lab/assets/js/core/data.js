@@ -26,6 +26,7 @@ export const db = {
   books: [],                // BOOKS entries that actually loaded
   lexicon: new Map(),       // normalized dutch token -> {term, fa}
   stems: new Map(),         // stem -> lexicon entry (for inflected forms)
+  byLex: new Map(),         // lexeme id -> words[] (the same word across books)
   loadErrors: [],
 };
 
@@ -88,6 +89,7 @@ export async function loadData() {
 
   buildSearchKeys();
   buildLexicon();
+  buildLexemeIndex();
   return db;
 }
 
@@ -116,6 +118,25 @@ function buildLexicon() {
     const stem = k.replace(/(eren|en|te|de|s|e)$/, '');
     if (stem.length >= 4 && !db.stems.has(stem)) db.stems.set(stem, v);
   }
+}
+
+/**
+ * Group words by lexeme so the app can tell that a word met in Groen Boek is
+ * the same word when it comes back in Tweede Ronde.
+ */
+function buildLexemeIndex() {
+  db.byLex.clear();
+  for (const w of db.words) {
+    if (!w.lex) continue;
+    if (!db.byLex.has(w.lex)) db.byLex.set(w.lex, []);
+    db.byLex.get(w.lex).push(w);
+  }
+}
+
+/** Other entries for the same lexeme — usually the same word in the other book. */
+export function relatedWords(w) {
+  if (!w || !w.lex) return [];
+  return (db.byLex.get(w.lex) || []).filter((x) => x.id !== w.id);
 }
 
 /** Persian gloss for one Dutch token, tolerant of common inflections. */

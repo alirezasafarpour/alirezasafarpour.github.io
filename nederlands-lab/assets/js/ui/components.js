@@ -3,7 +3,7 @@
 import { el, mount, clear, icon, ICONS, splitTokens, splitBidi, dueLabel, pct } from '../core/util.js';
 import { store } from '../core/store.js';
 import * as SRS from '../core/srs.js';
-import { glossFor, termRanges, BOOKS } from '../core/data.js';
+import { glossFor, termRanges, BOOKS, relatedWords } from '../core/data.js';
 import * as audio from '../core/audio.js';
 
 /* ---------- sheets ---------- */
@@ -249,9 +249,31 @@ export function wordDetail(w, { showActions = true } = {}) {
   if (w.ant?.length) extras.push(chipGroup('Tegenstellingen', w.ant));
   if (extras.length) parts.push(el('div.stack', { style: { gap: '12px' } }, extras));
 
+  const related = relatedWords(w);
+  if (related.length) parts.push(relatedRow(w, related));
+
   parts.push(statusRow(w, card));
   if (showActions) parts.push(actionRow(w));
   return el('div.word-detail', {}, parts);
+}
+
+/**
+ * The same word in the other book. Seeing that a Groen Boek word returns in
+ * Tweede Ronde is what makes the two books feel like one course.
+ */
+function relatedRow(w, related) {
+  return el('div', {},
+    el('div.section-title', { text: 'Ook in' }),
+    el('div.row.wrap', { style: { gap: '6px' } }, related.map((r) => {
+      const b = bookOf(r.book);
+      const seen = store.card(r.id)?.r > 0;
+      return el(`button.chip.chip-btn.chip-${b.tone}`, {
+        type: 'button',
+        title: r.fa || '',
+        text: `${b.short} · les ${r.lesson}${seen ? ' ✓' : ''}`,
+        onclick: () => openWord(r),
+      });
+    })));
 }
 
 function chipGroup(title, items) {
