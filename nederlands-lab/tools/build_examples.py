@@ -15,6 +15,27 @@ import parse_master as PM
 
 DATA = "../data"
 CURATED = "curated/examples.curated.json"
+SENT_FA = "curated/sentences.fa.json"
+RAW = "build/tr.words.raw.json"
+
+
+# Markdown, grammar tables and exercise scaffolding leak into the prose blocks;
+# none of it reads as a natural Dutch sentence, so it must not become an example.
+ARTIFACTS = ("_____", "*", "`", " = ", "|", "->")
+
+
+def usable(s):
+    """True when a mined sentence reads as ordinary running Dutch."""
+    if any(a in s for a in ARTIFACTS):
+        return False
+    if s.endswith(":") or s.endswith(";"):
+        return False
+    if s.count("-") >= 3 or s.count("?") >= 3:
+        return False
+    if not re.search(r"[.!?]$", s):
+        return False
+    # Needs a real clause, not a heading or a bare list of terms.
+    return len(s.split()) >= 4 and s.count(",") <= 6
 
 
 def build_corpus():
@@ -24,7 +45,7 @@ def build_corpus():
     def add(par):
         for s in T.split_sentences((par or "").translate(T._FOLD)):
             s = T.norm_ws(s)
-            if not (25 <= len(s) <= 165) or "_____" in s:
+            if not (25 <= len(s) <= 165) or not usable(s):
                 continue
             k = T.fold(s)
             if k in seen:
@@ -36,7 +57,7 @@ def build_corpus():
         if b["kind"] in ("text", "exercises", "grammar"):
             for p in PM.paragraphs(b["body"]):
                 add(p)
-    for w in json.load(open(f"{DATA}/tr.words.raw.json", encoding="utf-8")):
+    for w in json.load(open(RAW, encoding="utf-8")):
         add(w["_para"])
     return sents
 
@@ -114,10 +135,17 @@ def assign(word, pool):
 
 
 def main():
-    words = json.load(open(f"{DATA}/tr.words.raw.json", encoding="utf-8"))
+    words = json.load(open(RAW, encoding="utf-8"))
     curated = {}
     if os.path.exists(CURATED):
         curated = json.load(open(CURATED, encoding="utf-8"))
+    # Persian keyed by the Dutch sentence itself, so a sentence shared by several
+    # words is translated once and reused everywhere it appears.
+    sent_fa = {}
+    if os.path.exists(SENT_FA):
+        for k, v in json.load(open(SENT_FA, encoding="utf-8")).items():
+            if v and v.strip():
+                sent_fa[T.fold(k)] = v.strip()
     sents = build_corpus()
     idx = index_corpus(sents)
     print(f"corpus sentences: {len(sents)}")
@@ -126,12 +154,12 @@ def main():
     for w in words:
         pool = []
         own = T.find_sentence(w["_para"], w["term"])
-        if own:
+        if own and usable(own):
             pool.append(("book", own))
         for s in candidates(w, sents, idx):
             if not own or T.fold(s) != T.fold(own):
                 pool.append(("corpus", s))
-        if w["_extra"]:
+        if w["_extra"] and usable(w["_extra"]):
             pool.append(("natural", w["_extra"]))
         for c in curated.get(w["id"], []):
             pool.insert(0, ("authored", c["nl"]))
@@ -139,7 +167,7 @@ def main():
         # Attach curated Persian where the sentence matches one we authored.
         fa_by_nl = {T.fold(c["nl"]): c.get("fa", "") for c in curated.get(w["id"], [])}
         for e in ex:
-            fa = fa_by_nl.get(T.fold(e["nl"]))
+            fa = fa_by_nl.get(T.fold(e["nl"])) or sent_fa.get(T.fold(e["nl"]))
             if fa:
                 e["fa"] = fa
         w["ex"] = ex

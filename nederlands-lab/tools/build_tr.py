@@ -54,9 +54,24 @@ def short_persian(deep):
     return head if len(head) <= 60 else T.norm_ws(re.split(r"[،,]", head)[0])
 
 
+# The dataset fills unwritten example slots with instruction templates rather
+# than sentences; these are not usable as example material.
+PLACEHOLDER_STARTS = ("Gebruik", "Probeer", "Schrijf", "Maak een zin", "Bedenk")
+PLACEHOLDER_MARKERS = (
+    "korte, natuurlijke Nederlandse zin",
+    "in een eigen antwoord te gebruiken",
+    "in een zin over je eigen situatie",
+    "te gebruiken.",
+)
+
+
 def is_placeholder(x):
     x = (x or "").strip()
-    return (not x) or x.startswith("Gebruik") or "korte, natuurlijke Nederlandse zin" in x
+    if not x:
+        return True
+    if x.startswith(PLACEHOLDER_STARTS):
+        return True
+    return any(m in x for m in PLACEHOLDER_MARKERS)
 
 
 def build_words():
@@ -161,9 +176,10 @@ def build_lessons(words):
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
+    os.makedirs("build", exist_ok=True)
     words = build_words()
     lessons = build_lessons(words)
-    json.dump(words, open(f"{OUT}/tr.words.raw.json", "w", encoding="utf-8"), ensure_ascii=False)
+    json.dump(words, open("build/tr.words.raw.json", "w", encoding="utf-8"), ensure_ascii=False)
     json.dump({"book": "tr", "title": "Tweede Ronde",
                "subtitle": "Nederlands voor buitenlanders — Delftse methode, deel 2",
                "lessons": lessons},
