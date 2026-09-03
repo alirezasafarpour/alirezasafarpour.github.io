@@ -2,8 +2,7 @@
  *
  * Talks to the Supabase Auth and PostgREST endpoints directly — no SDK, no CDN
  * script, nothing to keep in step. The project URL and anon key are public by
- * design (row-level security is what protects the data), and are configurable
- * in-app so no keys have to live in the repository.
+ * design (row-level security is what protects the data).
  *
  * Sync model: one JSONB row per user holding the whole progress state. On every
  * sync we pull the remote row, merge it with local state (per-word timestamps,
@@ -17,6 +16,13 @@ const CFG_KEY = 'nl-lab:supabase';
 const SESSION_KEY = 'nl-lab:session';
 const TABLE = 'user_state';
 const AUTO_MS = 90_000;
+
+// Public client credentials for the dedicated Nederlands Lab Supabase project.
+// This key is intentionally publishable; RLS policies protect each user's data.
+const DEFAULT_CFG = {
+  url: 'https://aqudtbbrmugaatszoayc.supabase.co',
+  key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFxdWR0YmJybXVnYWF0c3pvYXljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg0NDYyOTIsImV4cCI6MjEwNDAyMjI5Mn0.BiHSLIucQeibLLyL238NHJokY9A0Qb3uuvBdas8f05I',
+};
 
 export const state = {
   configured: false,
@@ -67,11 +73,11 @@ export function configure(url, anonKey) {
 }
 
 export function clearConfig() {
-  cfg = null; session = null;
+  cfg = { ...DEFAULT_CFG }; session = null;
   writeJSON(CFG_KEY, null); writeJSON(SESSION_KEY, null);
-  state.configured = false; state.user = null;
+  state.configured = true; state.user = null;
   stopAuto();
-  setStatus('off');
+  setStatus('idle');
 }
 
 /* ---------- low-level requests ---------- */
@@ -241,8 +247,8 @@ function stopAuto() { clearInterval(timer); timer = null; }
 /* ---------- boot ---------- */
 
 export async function init() {
-  cfg = readJSON(CFG_KEY);
-  state.configured = !!cfg;
+  cfg = readJSON(CFG_KEY) || { ...DEFAULT_CFG };
+  state.configured = true;
 
   const redirected = consumeAuthRedirect();
   if (!redirected) {
@@ -250,7 +256,6 @@ export async function init() {
     if (saved?.access_token) { session = saved; state.user = saved.user || null; }
   }
 
-  if (!cfg) { setStatus('off'); return state; }
   if (!session) { setStatus('idle'); return state; }
 
   setStatus('pending');
