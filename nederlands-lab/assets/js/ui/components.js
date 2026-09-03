@@ -191,7 +191,7 @@ export function wordDetail(w, { showActions = true } = {}) {
   const card = store.card(w.id);
   const head = el('div.word-head', {},
     el('div.row', {},
-      el('h2.word-term.grow', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span>` : '') + w.term }),
+      el('h2.word-term.grow', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span> ` : '') + w.term }),
       speakButton(w.term)),
     w.printed && w.printed !== w.term ? el('div.word-en', { text: `in het boek: ${w.printed}` }) : null,
     fa('div.word-fa', w.fa || '—'),

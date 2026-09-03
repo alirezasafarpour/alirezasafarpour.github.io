@@ -85,7 +85,12 @@ export function splitTokens(s) {
  * slashes end up on the wrong side. Splitting the string into RTL and LTR runs
  * lets the caller isolate each Latin run in its own <bdi>.
  */
-const LATIN_RUN = /[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ0-9'’\-]*(?:[ /][A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ0-9'’\-]*)*/g;
+const LATIN_WORD = "[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ0-9'\u2019\\-]*";
+// A Latin run, optionally with the quotes that wrap it. Pulling the quotes into
+// the isolated run is what keeps « » and " " on the correct side of the phrase.
+const LATIN_RUN = new RegExp(
+  '[\u00ab\u201c"]?' + LATIN_WORD + '(?:[ /]' + LATIN_WORD + ')*' + '[\u00bb\u201d"]?',
+  'g');
 
 export function splitBidi(text) {
   const str = String(text ?? '');

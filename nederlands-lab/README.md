@@ -47,10 +47,11 @@ slightly more advanced, each tagged with where it came from:
   mined from the rest of the book's prose. Authentic Dutch, no invention.
 - **voorbeeld** — a natural example sentence from the vocabulary dataset.
 
-Persian support works on two levels: a full translation where one has been authored,
-and **tap-to-gloss** on every sentence — tap any Dutch word and the Persian meaning
-appears, resolved from the combined lexicon of both books (including common
-inflections). That means no example sentence is ever left without Persian help.
+Every Tweede Ronde example sentence carries a Persian translation (5058 of 5058).
+On top of that, **tap-to-gloss** works on every sentence — tap any Dutch word and
+its Persian meaning appears, resolved from the combined lexicon of both books
+including common inflections. So even a sentence without an authored translation
+is never left without Persian help.
 
 ## Progress and sync
 

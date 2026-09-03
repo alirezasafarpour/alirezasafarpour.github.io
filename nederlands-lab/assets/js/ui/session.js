@@ -141,7 +141,7 @@ class Session {
     store.introduce(w.id);
     const prompt = el('div.prompt', {},
       el('div.row', { style: { gap: '10px', justifyContent: 'center' } },
-        el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span>` : '') + w.term }),
+        el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span> ` : '') + w.term }),
         speakButton(w.term)),
       fa('div.prompt-fa', w.fa || ''),
       store.settings.showEnglish && w.en ? el('div.prompt-hint', { text: w.en }) : null,
@@ -168,13 +168,13 @@ class Session {
   qFlash(w) {
     const front = el('div.prompt', {},
       el('div.row', { style: { gap: '10px', justifyContent: 'center' } },
-        el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span>` : '') + w.term },),
+        el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span> ` : '') + w.term },),
         speakButton(w.term)));
     mount(this.inner, this.kindLabel('flash'), front);
 
     const reveal = () => {
       const back = el('div.prompt', {},
-        el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span>` : '') + w.term }),
+        el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span> ` : '') + w.term }),
         fa('div.prompt-fa', w.fa || ''),
         store.settings.showEnglish && w.en ? el('div.prompt-hint', { text: w.en }) : null);
       mount(this.inner, this.kindLabel('flash'), back,
@@ -212,7 +212,7 @@ class Session {
     const prompt = nl2fa
       ? el('div.prompt', {},
           el('div.row', { style: { gap: '10px', justifyContent: 'center' } },
-            el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span>` : '') + w.term }),
+            el('div.prompt-word', { lang: 'nl', html: (w.article ? `<span class="art">${w.article}</span> ` : '') + w.term }),
             speakButton(w.term)))
       : el('div.prompt', {}, fa('div.prompt-fa', w.faShort || w.fa || ''));
 
@@ -420,7 +420,7 @@ class Session {
 
     const answerLine = el('div.row', { style: { gap: '10px', flexWrap: 'wrap' } },
       el('span.word-term', { lang: 'nl', style: { fontSize: '1.35rem' },
-        html: (w.article ? `<span class="art">${w.article}</span>` : '') + w.term }),
+        html: (w.article ? `<span class="art">${w.article}</span> ` : '') + w.term }),
       speakButton(w.term));
 
     const detail = el('div.verdict', { dataset: { v: ok ? 'ok' : 'no' } },
