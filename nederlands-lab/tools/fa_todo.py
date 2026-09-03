@@ -24,6 +24,9 @@ def pending():
     first_use, users = {}, collections.Counter()
     for w in words:
         for e in w["ex"]:
+            if e.get("fa"):
+                done.add(T.fold(e["nl"]))   # already translated in the curated layer
+                continue
             key = e["nl"]
             users[key] += 1
             prev = first_use.get(key)

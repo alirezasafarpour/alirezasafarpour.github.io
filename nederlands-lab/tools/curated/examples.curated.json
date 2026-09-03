@@ -3607,6 +3607,12 @@
 "nl": "Op zaterdagavond is er veel amusement op tv."
 }
 ],
+"tr-0931": [
+{
+"fa": "این یک شرکت تجاری است، نه خیریه.",
+"nl": "Dit is een commercieel bedrijf, geen goed doel."
+}
+],
 "tr-0933": [
 {
 "fa": "این مخفف‌ها چه معنایی دارند؟",
@@ -3685,6 +3691,12 @@
 "nl": "De prijs is afhankelijk van de kwaliteit."
 }
 ],
+"tr-0952": [
+{
+"fa": "باشگاه با حق عضویت اعضا اداره می‌شود.",
+"nl": "De club leeft van contributies van de leden."
+}
+],
 "tr-0954": [
 {
 "fa": "به لطف حمایت مالی، باشگاه می‌تواند پیراهن نو بخرد.",
@@ -3697,10 +3709,26 @@
 "nl": "De wedstrijd wordt live uitgezonden."
 }
 ],
+"tr-0957": [
+{
+"fa": "کسل‌کننده نبود، برعکس، هیجان‌انگیز بود.",
+"nl": "Het was niet saai, integendeel, het was spannend."
+},
+{
+"fa": "او شکایت نمی‌کند؛ برعکس، راضی است.",
+"nl": "Hij klaagt niet; integendeel, hij is tevreden."
+}
+],
 "tr-0958": [
 {
 "fa": "او به اندازهٔ همکارش درآمد دارد.",
 "nl": "Hij verdient zo veel als zijn collega."
+}
+],
+"tr-0959": [
+{
+"fa": "تا وقتی باران می‌بارد، داخل می‌مانیم.",
+"nl": "Zolang het regent, blijven we binnen."
 }
 ],
 "tr-0961": [
@@ -3727,6 +3755,12 @@
 "nl": "Het was een geweldig concert."
 }
 ],
+"tr-0968": [
+{
+"fa": "این نقاش در سراسر جهان مشهور است.",
+"nl": "Deze schilder is over de hele wereld beroemd."
+}
+],
 "tr-0969": [
 {
 "fa": "پنل خورشیدی روی خیلی از بام‌ها نیست.",
@@ -3735,6 +3769,18 @@
 {
 "fa": "آنتن‌ها روی خیلی از بام‌ها نیست.",
 "nl": "Antennes staan lang niet overal op de daken."
+}
+],
+"tr-0970": [
+{
+"fa": "روی خانه‌های قدیمی هنوز آنتن می‌بینی.",
+"nl": "Op oude huizen zie je nog antennes."
+}
+],
+"tr-0971": [
+{
+"fa": "کابل‌ها زیر خیابان قرار دارند.",
+"nl": "De kabels liggen onder de straat."
 }
 ],
 "tr-0972": [
@@ -3753,6 +3799,7294 @@
 {
 "fa": "صفحهٔ تلفنم شکسته است.",
 "nl": "Het scherm van mijn telefoon is kapot."
+}
+],
+"tr-0977": [
+{
+"fa": "او تمام شب مشغول عوض کردن کانال است.",
+"nl": "Hij zit de hele avond te zappen."
+},
+{
+"fa": "می‌شود کمی از عوض کردن کانال دست برداری؟",
+"nl": "Kun je even stoppen met zappen?"
+}
+],
+"tr-0978": [
+{
+"fa": "بعد از یک هفته زنگ زد: دیر بهتر از هرگز است.",
+"nl": "Hij belde pas na een week terug: beter laat dan nooit."
+}
+],
+"tr-0979": [
+{
+"fa": "خواهرم به اولین فرزندش باردار است.",
+"nl": "Mijn zus is in verwachting van haar eerste kind."
+}
+],
+"tr-0980": [
+{
+"fa": "نظر تو دربارهٔ این پیشنهاد چیست؟",
+"nl": "Hoe sta jij tegenover dit voorstel?"
+},
+{
+"fa": "من نسبت به این طرح نظر مثبتی دارم.",
+"nl": "Ik sta positief tegenover het plan."
+}
+],
+"tr-0985": [
+{
+"fa": "مدرسه مدرک خارجی او را به رسمیت می‌شناسد.",
+"nl": "De school erkent zijn buitenlandse diploma."
+}
+],
+"tr-0986": [
+{
+"fa": "در به‌طور خودکار باز می‌شود.",
+"nl": "De deur gaat automatisch open."
+}
+],
+"tr-0987": [
+{
+"fa": "باید کمی به آب‌وهوای اینجا عادت کنی.",
+"nl": "Je moet even wennen aan het klimaat hier."
+},
+{
+"fa": "عادت کردن به کار جدید زمان می‌برد.",
+"nl": "Aan het nieuwe werk wennen kost tijd."
+}
+],
+"tr-0989": [
+{
+"fa": "تلفن قدیمی‌ام را یک سال دیگر نگه می‌دارم.",
+"nl": "Ik hou mijn oude telefoon nog een jaar."
+}
+],
+"tr-0990": [
+{
+"fa": "توضیح نسبتاً گیج‌کننده بود.",
+"nl": "De uitleg was nogal verwarrend."
+}
+],
+"tr-0991": [
+{
+"fa": "یک تغییر کوچک می‌تواند خیلی کمک کند.",
+"nl": "Een kleine verandering kan veel helpen."
+},
+{
+"fa": "تغییر هوا سریع اتفاق افتاد.",
+"nl": "De verandering van het weer kwam snel."
+}
+],
+"tr-0992": [
+{
+"fa": "ناگهان باران شدیدی شروع شد.",
+"nl": "Opeens begon het hard te regenen."
+}
+],
+"tr-0994": [
+{
+"fa": "اگر جای تو بودم، اول استراحت می‌کردم.",
+"nl": "Als ik jou was, zou ik eerst uitrusten."
+}
+],
+"tr-0995": [
+{
+"fa": "دوچرخه‌ام خراب است، پس مالِ برام را می‌گیرم.",
+"nl": "Mijn fiets is kapot, dus ik neem die van Bram."
+}
+],
+"tr-0996": [
+{
+"fa": "دوچرخهٔ من قدیمی است؛ مال تو نو است.",
+"nl": "Mijn fiets is oud; de jouwe is nieuw."
+}
+],
+"tr-0997": [
+{
+"fa": "اعلامیه‌های عروسی روی میز هستند.",
+"nl": "De aankondigingen van de bruiloft liggen op tafel."
+}
+],
+"tr-0998": [
+{
+"fa": "بسته دیروز ارسال شد.",
+"nl": "Het pakket is gisteren verstuurd."
+}
+],
+"tr-0999": [
+{
+"fa": "نامه‌ها همین الان ارسال شدند.",
+"nl": "De brieven zijn net de deur uit."
+}
+],
+"tr-1000": [
+{
+"fa": "ماه آینده عروسی برادرم است.",
+"nl": "Volgende maand is de bruiloft van mijn broer."
+}
+],
+"tr-1001": [
+{
+"fa": "یک صبحانهٔ کامل با تمام مخلفات گرفتیم.",
+"nl": "We kregen een compleet ontbijt met alles erop en eraan."
+},
+{
+"fa": "مهمانی‌ای با تمام مخلفات برگزار کردند.",
+"nl": "Ze gaven een feest met alles erop en eraan."
+}
+],
+"tr-1002": [
+{
+"fa": "ایدهٔ برام در نهایت بهترین بود.",
+"nl": "Bram z'n idee was uiteindelijk het beste."
+},
+{
+"fa": "آن طرح ایدهٔ برام است، نه مال من.",
+"nl": "Dat plan is Bram z'n idee, niet het mijne."
+}
+],
+"tr-1003": [
+{
+"fa": "تمام جمع بعد از شام به خانه رفتند.",
+"nl": "Het hele gezelschap ging na het diner naar huis."
+}
+],
+"tr-1004": [
+{
+"fa": "عروس لباس بلند سفیدی پوشیده بود.",
+"nl": "De bruid droeg een lange witte jurk."
+}
+],
+"tr-1005": [
+{
+"fa": "بعد از مراسم، پذیرایی در هتل است.",
+"nl": "Na de ceremonie is er een receptie in het hotel."
+}
+],
+"tr-1006": [
+{
+"fa": "شام ساعت هفت شروع می‌شود.",
+"nl": "Het diner begint om zeven uur."
+}
+],
+"tr-1007": [
+{
+"fa": "چه مهمانی شادی بود!",
+"nl": "Wat een vrolijk feest was dat!"
+}
+],
+"tr-1008": [
+{
+"fa": "می‌خواهیم مادرمان را با یک هدیه غافلگیر کنیم.",
+"nl": "We willen onze moeder verrassen met een cadeau."
+}
+],
+"tr-1009": [
+{
+"fa": "بچه‌ها در مدرسه ترانه می‌خوانند.",
+"nl": "De kinderen zingen liedjes op school."
+}
+],
+"tr-1010": [
+{
+"fa": "او به هلندی شعر می‌نویسد.",
+"nl": "Hij schrijft gedichten in het Nederlands."
+}
+],
+"tr-1011": [
+{
+"fa": "در مهمانی همه می‌خواستند برقصند.",
+"nl": "Op het feest wilde iedereen dansen."
+}
+],
+"tr-1013": [
+{
+"fa": "خداحافظی در ایستگاه کوتاه بود.",
+"nl": "Het afscheid op het station was kort."
+}
+],
+"tr-1014": [
+{
+"fa": "او چهل ساله است و هنوز مجرد.",
+"nl": "Hij is veertig en nog steeds vrijgezel."
+}
+],
+"tr-1016": [
+{
+"fa": "دوچرخهٔ برام جلوی در است.",
+"nl": "Brams fiets staat voor de deur."
+}
+],
+"tr-1017": [
+{
+"fa": "ابرهای زیادی هست، اما باران نمی‌بارد.",
+"nl": "Er zijn veel wolken, maar het regent niet."
+}
+],
+"tr-1018": [
+{
+"fa": "وقتی خبر را شنید، از خوشحالی روی ابرها بود.",
+"nl": "Toen ze het nieuws hoorde, was ze in de wolken."
+}
+],
+"tr-1019": [
+{
+"fa": "او دربارهٔ سلامتی‌ام پرس‌وجو کرد.",
+"nl": "Zij informeerde naar mijn gezondheid."
+}
+],
+"tr-1022": [
+{
+"fa": "وقتی قبول شد، از خوشحالی بال درآورد.",
+"nl": "Toen hij slaagde, sprong hij een gat in de lucht."
+}
+],
+"tr-1023": [
+{
+"fa": "به هدیه فکر کرده‌ای؟",
+"nl": "Heb je aan het cadeau gedacht?"
+},
+{
+"fa": "به همه‌چیز فکر کردم جز کلیدها.",
+"nl": "Ik heb aan alles gedacht behalve aan de sleutels."
+}
+],
+"tr-1024": [
+{
+"fa": "همسایه‌ام از بچه‌ها مراقبت می‌کند.",
+"nl": "Mijn buurvrouw past op de kinderen."
+},
+{
+"fa": "امشب چه کسی از سگ مراقبت می‌کند؟",
+"nl": "Wie past er vanavond op de hond?"
+}
+],
+"tr-1025": [
+{
+"fa": "بالاخره در کمپینگ جایی به دست آوردیم.",
+"nl": "We hebben eindelijk een plekje veroverd op de camping."
+}
+],
+"tr-1026": [
+{
+"fa": "پسر ما سه روز در هفته به مهدکودک می‌رود.",
+"nl": "Onze zoon gaat drie dagen per week naar de crèche."
+},
+{
+"fa": "مهدکودک ساعت هفت باز است.",
+"nl": "De crèche is om zeven uur open."
+}
+],
+"tr-1027": [
+{
+"fa": "صندلی‌ها را جابه‌جا کنیم تا جا باز شود؟",
+"nl": "Zullen we de stoelen draaien om meer ruimte te maken?"
+},
+{
+"fa": "امسال نقش‌ها را عوض می‌کنیم.",
+"nl": "Dit jaar draaien we de rollen om."
+}
+],
+"tr-1028": [
+{
+"fa": "در این خانواده نقش‌ها متفاوت تقسیم شده است.",
+"nl": "In dit gezin zijn de rollen anders verdeeld."
+}
+],
+"tr-1029": [
+{
+"fa": "این ساختمان مدرنی با شیشهٔ زیاد است.",
+"nl": "Dit is een modern gebouw met veel glas."
+}
+],
+"tr-1030": [
+{
+"fa": "از حرف او لبخند زدم.",
+"nl": "Ik moest glimlachen om zijn opmerking."
+}
+],
+"tr-1031": [
+{
+"fa": "می‌شود در حمل کیف‌ها یک دستی کمکم کنی؟",
+"nl": "Kun je me even een handje helpen met de tassen?"
+}
+],
+"tr-1032": [
+{
+"fa": "اولین نوهٔ ما هفتهٔ گذشته به دنیا آمد.",
+"nl": "Ons eerste kleinkind is vorige week geboren."
+}
+],
+"tr-1033": [
+{
+"fa": "از بلند کردن، شانه‌ام درد می‌کند.",
+"nl": "Ik heb een pijnlijke schouder van het tillen."
+}
+],
+"tr-1034": [
+{
+"fa": "گلویم ملتهب است و به‌سختی می‌توانم قورت بدهم.",
+"nl": "Mijn keel is ontstoken en ik kan slecht slikken."
+}
+],
+"tr-1035": [
+{
+"fa": "گلویم درد می‌کند.",
+"nl": "Ik heb pijn in mijn keel."
+}
+],
+"tr-1036": [
+{
+"fa": "بعد از آن غذا معده‌ام اذیت شد.",
+"nl": "Na dat eten had ik last van mijn maag."
+},
+{
+"fa": "با معدهٔ خالی قهوه نمی‌نوشم.",
+"nl": "Op een lege maag drink ik geen koffie."
+}
+],
+"tr-1040": [
+{
+"fa": "سالمندان هر سال واکسن آنفلوآنزا می‌گیرند.",
+"nl": "Ouderen krijgen elk jaar een griepprik."
+}
+],
+"tr-1041": [
+{
+"fa": "فیزیوتراپیست به کمرم کمک می‌کند.",
+"nl": "De fysiotherapeut helpt me met mijn rug."
+}
+],
+"tr-1042": [
+{
+"fa": "زیر آفتاب باید پوستت را محافظت کنی.",
+"nl": "In de zon moet je je huid beschermen."
+},
+{
+"fa": "پوستم در زمستان خشک است.",
+"nl": "Mijn huid is droog in de winter."
+}
+],
+"tr-1043": [
+{
+"fa": "ورزش برای قلبت خوب است.",
+"nl": "Sporten is goed voor je hart."
+}
+],
+"tr-1044": [
+{
+"fa": "برای متخصص به ارجاع‌نامه نیاز داری.",
+"nl": "Voor de specialist heb je een verwijzing nodig."
+}
+],
+"tr-1045": [
+{
+"fa": "این در اصل باید ارزان‌تر باشد.",
+"nl": "Dat zou eigenlijk goedkoper moeten zijn."
+},
+{
+"fa": "واقعاً باید بیشتر استراحت کنی.",
+"nl": "Je zou meer moeten rusten."
+}
+],
+"tr-1046": [
+{
+"fa": "بیشتر ورزش کردن؟ گفتنش آسان‌تر از انجام دادنش است.",
+"nl": "Meer sporten? Makkelijker gezegd dan gedaan."
+}
+],
+"tr-1047": [
+{
+"fa": "تعدادشان کم است تا به همه کمک شود.",
+"nl": "Er zijn er te weinig om iedereen te helpen."
+},
+{
+"fa": "معلم خوب؟ تعدادشان کم است.",
+"nl": "Goede docenten? Er zijn er te weinig."
+}
+],
+"tr-1048": [
+{
+"fa": "قطار دوباره دیر کرده. علتش چیست؟",
+"nl": "De trein is weer te laat. Hoe komt dat?"
+},
+{
+"fa": "خسته‌ای. علتش چیست؟",
+"nl": "Je bent moe. Hoe komt dat?"
+}
+],
+"tr-1049": [
+{
+"fa": "تمایل دارم بیش از حد کار کنم.",
+"nl": "Ik heb de neiging om te veel te werken."
+}
+],
+"tr-1052": [
+{
+"fa": "جمعیت در سراسر اروپا سالخورده می‌شود.",
+"nl": "De bevolking vergrijst in heel Europa."
+}
+],
+"tr-1053": [
+{
+"fa": "هرچه مسن‌تر می‌شود، آرام‌تر است.",
+"nl": "Hoe ouder hij wordt, des te rustiger is hij."
+},
+{
+"fa": "هرچه بیشتر بخوانی، هلندی‌ات بهتر می‌شود.",
+"nl": "Hoe meer je leest, des te beter wordt je Nederlands."
+}
+],
+"tr-1056": [
+{
+"fa": "این ترکیب رنگ‌ها زیبا به نظر می‌رسد.",
+"nl": "Deze combinatie van kleuren staat mooi."
+}
+],
+"tr-1057": [
+{
+"fa": "پزشک خانواده مطب پرمشغله‌ای دارد.",
+"nl": "De huisarts heeft een drukke praktijk."
+}
+],
+"tr-1058": [
+{
+"fa": "این عمل پرهزینه‌ای است.",
+"nl": "Dit is een kostbare operatie."
+}
+],
+"tr-1059": [
+{
+"fa": "آن نکته را در پرانتز بگذار.",
+"nl": "Zet die opmerking maar tussen haakjes."
+}
+],
+"tr-1060": [
+{
+"fa": "راستی، کتاب من هنوز پیش توست؟",
+"nl": "Tussen twee haakjes, heb je mijn boek nog?"
+}
+],
+"tr-1061": [
+{
+"fa": "پزشک آنتی‌بیوتیک تجویز می‌کند.",
+"nl": "De arts schrijft antibiotica voor."
+},
+{
+"fa": "او نمی‌خواست قرص تجویز کند.",
+"nl": "Hij wilde geen pillen voorschrijven."
+}
+],
+"tr-1062": [
+{
+"fa": "این‌ها داروهای قوی هستند.",
+"nl": "Dit zijn zware medicijnen."
+}
+],
+"tr-1063": [
+{
+"fa": "پیام تو را به‌موقع دریافت کردم.",
+"nl": "Ik heb je mededeling op tijd ontvangen."
+}
+],
+"tr-1064": [
+{
+"fa": "یک هفتهٔ دیگر صبر می‌کنیم و می‌بینیم.",
+"nl": "We kijken het nog een week aan."
+},
+{
+"fa": "پزشک اول می‌خواهد صبر کند و ببیند.",
+"nl": "De dokter wil het eerst aankijken."
+}
+],
+"tr-1065": [
+{
+"fa": "اگر درد برگشت، به دکتر زنگ بزن.",
+"nl": "Als de pijn terugkomt, bel je de dokter."
+},
+{
+"fa": "او هفتهٔ آینده از اسپانیا برمی‌گردد.",
+"nl": "Hij komt volgende week terug uit Spanje."
+}
+],
+"tr-1066": [
+{
+"fa": "سرما خورده‌ام و زیاد سرفه می‌کنم.",
+"nl": "Ik ben verkouden en hoest veel."
+}
+],
+"tr-1067": [
+{
+"fa": "برای ویروس آنتی‌بیوتیک کمکی نمی‌کند.",
+"nl": "Voor een virus helpen antibiotica niet."
+}
+],
+"tr-1068": [
+{
+"fa": "اصرار کردن فایده‌ای ندارد.",
+"nl": "Blijven aandringen heeft geen zin."
+}
+],
+"tr-1069": [
+{
+"fa": "آن سردرد خودبه‌خود برطرف می‌شود.",
+"nl": "Die hoofdpijn gaat vanzelf over."
+},
+{
+"fa": "درد بعد از یک ساعت برطرف شد.",
+"nl": "De pijn ging na een uur over."
+}
+],
+"tr-1070": [
+{
+"fa": "وقتی زنگ می‌زنی، سراغ خانم دِ ویت را بگیر.",
+"nl": "Als je opbelt, vraag dan naar mevrouw De Wit."
+}
+],
+"tr-1071": [
+{
+"fa": "شب‌ها می‌توانی به مرکز پزشک خانواده مراجعه کنی.",
+"nl": "'s Avonds kun je terecht bij de huisartsenpost."
+}
+],
+"tr-1072": [
+{
+"fa": "فردا دکتر دوباره با من تماس می‌گیرد.",
+"nl": "Ik word morgen door de dokter teruggebeld."
+}
+],
+"tr-1074": [
+{
+"fa": "در موارد اورژانسی با ۱۱۲ تماس می‌گیری.",
+"nl": "Bij spoedeisende klachten bel je 112."
+}
+],
+"tr-1076": [
+{
+"fa": "همان مشکل را ما پارسال هم داشتیم.",
+"nl": "Datzelfde probleem hadden wij vorig jaar ook."
+}
+],
+"tr-1077": [
+{
+"fa": "در صورت لزوم می‌توانیم دیرتر شروع کنیم.",
+"nl": "Eventueel kunnen we later beginnen."
+}
+],
+"tr-1078": [
+{
+"fa": "آمبولانس ظرف ده دقیقه رسید.",
+"nl": "De ambulance was er binnen tien minuten."
+}
+],
+"tr-1079": [
+{
+"fa": "عصر بخیر، می‌توانم کمکتان کنم؟",
+"nl": "Goedemiddag, kan ik u helpen?"
+},
+{
+"fa": "عصر بخیر خانم، بفرمایید بنشینید.",
+"nl": "Goedemiddag mevrouw, gaat u zitten."
+}
+],
+"tr-1080": [
+{
+"fa": "یکشنبه گردشی در تپه‌های شنی می‌کنیم.",
+"nl": "We maken zondag een tocht door de duinen."
+}
+],
+"tr-1082": [
+{
+"fa": "برخلاف دیروز، امروز سرد است.",
+"nl": "In tegenstelling tot gisteren is het vandaag koud."
+},
+{
+"fa": "برخلاف برادرش، او آرام است.",
+"nl": "In tegenstelling tot zijn broer is hij rustig."
+}
+],
+"tr-1085": [
+{
+"fa": "به سمت ایستگاه راه برو.",
+"nl": "Loop in de richting van het station."
+}
+],
+"tr-1086": [
+{
+"fa": "او در خیابان آرامی با درختان قدیمی زندگی می‌کند.",
+"nl": "Zij woont in een rustige laan met oude bomen."
+}
+],
+"tr-1087": [
+{
+"fa": "رودخانه اینجا خیلی پهن است.",
+"nl": "De rivier is hier heel breed."
+}
+],
+"tr-1088": [
+{
+"fa": "رستوران شیکی با رومیزی‌های سفید است.",
+"nl": "Het is een deftig restaurant met witte tafellakens."
+}
+],
+"tr-1090": [
+{
+"fa": "اینجا می‌گویند این کاملاً لاهه‌ای است.",
+"nl": "Dat is echt Haags, zeggen ze hier."
+}
+],
+"tr-1091": [
+{
+"fa": "در روز پادشاه همه‌جا پرچم آویزان است.",
+"nl": "Op Koningsdag hangt overal de vlag uit."
+}
+],
+"tr-1092": [
+{
+"fa": "لاهه اقامتگاه رسمی پادشاه است.",
+"nl": "Den Haag is de residentie van de koning."
+}
+],
+"tr-1093": [
+{
+"fa": "در این خیابان سه سفارت هست.",
+"nl": "In deze straat staan drie ambassades."
+}
+],
+"tr-1094": [
+{
+"fa": "خانهٔ آجری قدیمی تازه بازسازی شده است.",
+"nl": "Het oude bakstenen huis is net gerenoveerd."
+}
+],
+"tr-1095": [
+{
+"fa": "پنجره‌های کلیسا از شیشهٔ رنگی است.",
+"nl": "De vensters van de kerk zijn van gekleurd glas."
+}
+],
+"tr-1097": [
+{
+"fa": "همان کتابی که همین الان درباره‌اش صحبت کردم، آنجاست.",
+"nl": "Dat boek waar ik het net over had, ligt daar."
+}
+],
+"tr-1100": [
+{
+"fa": "در میدان یک مجسمهٔ بزرگ هست.",
+"nl": "Op het plein staat een groot standbeeld."
+}
+],
+"tr-1101": [
+{
+"fa": "علیه طرح جدید تظاهرات برگزار شد.",
+"nl": "Er waren demonstraties tegen het nieuwe plan."
+}
+],
+"tr-1102": [
+{
+"fa": "اتحادیهٔ کارگری دربارهٔ دستمزد بالاتر مذاکره می‌کند.",
+"nl": "De vakbond onderhandelt over hogere lonen."
+}
+],
+"tr-1103": [
+{
+"fa": "به‌خاطر اعتصاب امروز قطاری حرکت نمی‌کند.",
+"nl": "Door de staking rijden er vandaag geen treinen."
+}
+],
+"tr-1104": [
+{
+"fa": "روی بام یک برجک کوچک هست.",
+"nl": "Op het dak staat een klein torentje."
+}
+],
+"tr-1105": [
+{
+"fa": "متوجه شده‌ای که مغازه بسته است؟",
+"nl": "Is je opgevallen dat de winkel dicht is?"
+}
+],
+"tr-1107": [
+{
+"fa": "طراحی این ساختمان بسیار مدرن است.",
+"nl": "Het ontwerp van dit gebouw is heel modern."
+}
+],
+"tr-1110": [
+{
+"fa": "این کلیسای قدیمی زیبایی است.",
+"nl": "Dit is een fraaie oude kerk."
+}
+],
+"tr-1111": [
+{
+"fa": "بعد از جنگ سرانجام صلح برقرار شد.",
+"nl": "Na de oorlog kwam er eindelijk vrede."
+},
+{
+"fa": "همه به صلح در منطقه امید دارند.",
+"nl": "Iedereen hoopt op vrede in de regio."
+}
+],
+"tr-1112": [
+{
+"fa": "همایش در دو تالار بزرگ برگزار می‌شود.",
+"nl": "Het congres vindt plaats in twee grote zalen."
+}
+],
+"tr-1114": [
+{
+"fa": "دیوان عدالت امروز رأی صادر کرد.",
+"nl": "Het Gerechtshof deed vandaag uitspraak."
+}
+],
+"tr-1115": [
+{
+"fa": "بین همسایه‌ها بر سر باغ اختلافی پیش آمد.",
+"nl": "Tussen de buren ontstond een conflict over de tuin."
+},
+{
+"fa": "آن درگیری بعد از سال‌ها حل شد.",
+"nl": "Het conflict werd na jaren opgelost."
+}
+],
+"tr-1116": [
+{
+"fa": "قاضی هفتهٔ آینده دربارهٔ پرونده حکم صادر می‌کند.",
+"nl": "De rechter doet volgende week uitspraak over de zaak."
+},
+{
+"fa": "دادگاه دربارهٔ شکایت رأی داد.",
+"nl": "Het hof deed uitspraak over de klacht."
+}
+],
+"tr-1117": [
+{
+"fa": "قاضی‌ها پرونده را پشت درهای بسته بررسی می‌کنند.",
+"nl": "De rechters bespreken de zaak achter gesloten deuren."
+},
+{
+"fa": "سه قاضی در این پرونده حضور دارند.",
+"nl": "Er zitten drie rechters in deze zaak."
+}
+],
+"tr-1118": [
+{
+"fa": "پرونده ماه آینده در دادگاه رسیدگی می‌شود.",
+"nl": "De zaak dient volgende maand bij de rechtbank."
+},
+{
+"fa": "دادگاه کنار ایستگاه است.",
+"nl": "De rechtbank staat naast het station."
+}
+],
+"tr-1119": [
+{
+"fa": "برای کمک حقوقی نزد وکیل می‌روی.",
+"nl": "Voor juridische hulp ga je naar een advocaat."
+}
+],
+"tr-1120": [
+{
+"fa": "مهمان‌ها ساعت شش می‌رسند.",
+"nl": "De gasten komen om zes uur aan."
+}
+],
+"tr-1121": [
+{
+"fa": "اسخِفِنینگن یک منطقهٔ تفریحی ساحلی شناخته‌شده است.",
+"nl": "Scheveningen is een bekende badplaats."
+}
+],
+"tr-1123": [
+{
+"fa": "دریا امروز برای شنا خیلی خشن است.",
+"nl": "De zee is vandaag te wild om te zwemmen."
+}
+],
+"tr-1124": [
+{
+"fa": "برای هوای تازه کمی بیرون می‌روم.",
+"nl": "Ik ga even naar buiten voor frisse lucht."
+}
+],
+"tr-1125": [
+{
+"fa": "بینی‌ام از سرماخوردگی گرفته است.",
+"nl": "Mijn neus is verstopt door de verkoudheid."
+}
+],
+"tr-1126": [
+{
+"fa": "تا انتهای اسکله راه رفتیم.",
+"nl": "We liepen tot het eind van de pier."
+}
+],
+"tr-1127": [
+{
+"fa": "کنار دریا همیشه یک ماهی می‌خوریم.",
+"nl": "Aan zee eten we altijd een visje."
+}
+],
+"tr-1128": [
+{
+"fa": "در بلوار تابستان‌ها شلوغ است.",
+"nl": "Op de boulevard is het 's zomers druk."
+}
+],
+"tr-1129": [
+{
+"fa": "پرندگان در بهار برمی‌گردند.",
+"nl": "De vogels keren in het voorjaar terug."
+},
+{
+"fa": "ساعت شش به هتل برمی‌گردیم.",
+"nl": "We keren om zes uur terug naar het hotel."
+}
+],
+"tr-1130": [
+{
+"fa": "ماهیگیران صبح زود حرکت می‌کنند.",
+"nl": "De vissers vertrekken 's ochtends vroeg."
+},
+{
+"fa": "ماهیگیران ماهی‌شان را در بازار می‌فروشند.",
+"nl": "De vissers verkopen hun vis op de markt."
+}
+],
+"tr-1131": [
+{
+"fa": "ایستگاه نقطهٔ شروع ماست.",
+"nl": "Het station is ons vertrekpunt."
+}
+],
+"tr-1132": [
+{
+"fa": "می‌روم نان بگیرم، تا بعد!",
+"nl": "Ik ga even brood halen, tot zo!"
+},
+{
+"fa": "بعداً می‌بینمت، ده دقیقهٔ دیگر برمی‌گردم.",
+"nl": "Tot zo, ik ben over tien minuten terug."
+}
+],
+"tr-1134": [
+{
+"fa": "در آن سال‌ها کارها برایمان خوب پیش می‌رفت.",
+"nl": "In die jaren ging het ons voor de wind."
+},
+{
+"fa": "شرکت رشد می‌کرد؛ کارها خوب پیش می‌رفت.",
+"nl": "Het bedrijf groeide; het ging voor de wind."
+}
+],
+"tr-1135": [
+{
+"fa": "پشت روستا باتلاق بزرگی قرار دارد.",
+"nl": "Achter het dorp ligt een groot moeras."
+}
+],
+"tr-1136": [
+{
+"fa": "یوهان کرویف مشهورترین فوتبالیست هلند بود.",
+"nl": "Johan Cruijff was Nederlands bekendste voetballer."
+}
+],
+"tr-1138": [
+{
+"fa": "در بندر صدها قایق پهلو گرفته‌اند.",
+"nl": "In de haven liggen honderden boten."
+}
+],
+"tr-1139": [
+{
+"fa": "اینکه او برنده شد، واضح بود.",
+"nl": "Dat hij won, lag voor de hand."
+}
+],
+"tr-1140": [
+{
+"fa": "از آنجا که باران می‌بارد، خانه می‌مانیم.",
+"nl": "Aangezien het regent, blijven we thuis."
+}
+],
+"tr-1142": [
+{
+"fa": "حمل‌ونقل کالاها دو روز طول می‌کشد.",
+"nl": "Het transport van de goederen duurt twee dagen."
+},
+{
+"fa": "حمل‌ونقل آبی اغلب ارزان‌تر است.",
+"nl": "Transport over water is vaak goedkoper."
+}
+],
+"tr-1143": [
+{
+"fa": "آن‌ها فنون جدیدی برای صرفه‌جویی انرژی به کار می‌برند.",
+"nl": "Ze gebruiken nieuwe technieken om energie te besparen."
+}
+],
+"tr-1144": [
+{
+"fa": "در آن زمان همه‌چیز را با دست می‌ساختند.",
+"nl": "In die tijd vervaardigden ze alles met de hand."
+}
+],
+"tr-1146": [
+{
+"fa": "ابزارهای پزشک آماده است.",
+"nl": "De instrumenten van de dokter liggen klaar."
+}
+],
+"tr-1147": [
+{
+"fa": "برای این شغل به مهارت‌های خوبی نیاز داری.",
+"nl": "Voor deze baan heb je goede vaardigheden nodig."
+}
+],
+"tr-1148": [
+{
+"fa": "خبرها به‌سرعت در شهر پخش شدند.",
+"nl": "De berichten verspreidden zich snel door de stad."
+}
+],
+"tr-1154": [
+{
+"fa": "در اسکاندیناوی زمستان‌ها طولانی است.",
+"nl": "In Scandinavië zijn de winters lang."
+}
+],
+"tr-1156": [
+{
+"fa": "کمی نمک بیشتر در آن بریز.",
+"nl": "Doe er wat meer zout in."
+}
+],
+"tr-1157": [
+{
+"fa": "با غذا شراب قرمز نوشیدیم.",
+"nl": "Bij het eten dronken we rode wijn."
+}
+],
+"tr-1158": [
+{
+"fa": "آن کشتی‌ها در همهٔ اقیانوس‌های جهان سفر می‌کردند.",
+"nl": "Die schepen voeren over alle wereldzeeën."
+}
+],
+"tr-1159": [
+{
+"fa": "او سه سال در آسیا کار می‌کند.",
+"nl": "Zij werkt drie jaar in Azië."
+}
+],
+"tr-1160": [
+{
+"fa": "روی تخم‌مرغت نمک و فلفل می‌خواهی؟",
+"nl": "Wil je zout en peper op je ei?"
+}
+],
+"tr-1161": [
+{
+"fa": "در این غذا ادویه‌های زیادی هست.",
+"nl": "In dit gerecht zitten veel kruiden."
+}
+],
+"tr-1162": [
+{
+"fa": "به هزینه‌ها هزینهٔ سفر هم اضافه شد.",
+"nl": "Bij de kosten kwamen nog de reiskosten."
+},
+{
+"fa": "امسال دو همکار به ما اضافه شدند.",
+"nl": "Er kwamen dit jaar twee collega's bij."
+}
+],
+"tr-1163": [
+{
+"fa": "این پیراهن از پنبه است.",
+"nl": "Dit overhemd is van katoen."
+}
+],
+"tr-1164": [
+{
+"fa": "او روسری ابریشمی می‌پوشد.",
+"nl": "Zij draagt een sjaal van zijde."
+}
+],
+"tr-1165": [
+{
+"fa": "انگشتر از طلا است.",
+"nl": "De ring is van goud."
+}
+],
+"tr-1166": [
+{
+"fa": "شکلات از کاکائو ساخته می‌شود.",
+"nl": "Chocolade wordt van cacao gemaakt."
+}
+],
+"tr-1168": [
+{
+"fa": "این نان تازه از تنور آمده است.",
+"nl": "Dit brood is vers uit de oven."
+}
+],
+"tr-1170": [
+{
+"fa": "برای زمستان چوب ذخیره می‌کنیم.",
+"nl": "Voor de winter slaan we hout in."
+},
+{
+"fa": "برای این هفته برنج و روغن ذخیره می‌خریم.",
+"nl": "We slaan rijst en olie in voor de week."
+}
+],
+"tr-1171": [
+{
+"fa": "می‌توانی سوپ را در یخچال نگه داری.",
+"nl": "Je kunt de soep in de koelkast bewaren."
+}
+],
+"tr-1173": [
+{
+"fa": "این شرکت در پنج کشور نمایندگی دارد.",
+"nl": "Het bedrijf heeft vestigingen in vijf landen."
+}
+],
+"tr-1174": [
+{
+"fa": "او پارسال در هند سفر کرد.",
+"nl": "Zij reisde vorig jaar door India."
+},
+{
+"fa": "در هند زبان‌های زیادی صحبت می‌کنند.",
+"nl": "In India spreken ze veel talen."
+}
+],
+"tr-1176": [
+{
+"fa": "در آمستردام موزه‌های مشهور زیادی هست.",
+"nl": "In Amsterdam zijn veel bekende musea."
+}
+],
+"tr-1184": [
+{
+"fa": "پرتغال کنار اقیانوس اطلس است.",
+"nl": "Portugal ligt aan de Atlantische Oceaan."
+}
+],
+"tr-1185": [
+{
+"fa": "آمدن قطار روستا را تغییر داد.",
+"nl": "De komst van de trein veranderde het dorp."
+}
+],
+"tr-1186": [
+{
+"fa": "نرخ بهرهٔ پایین اقتصاد را تقویت کرد.",
+"nl": "De lage rente stimuleerde de economie."
+}
+],
+"tr-1187": [
+{
+"fa": "موسیقی به او آرامش معنوی می‌دهد.",
+"nl": "Muziek geeft hem geestelijk rust."
+}
+],
+"tr-1189": [
+{
+"fa": "در هلند بیمه کردن خود اجباری است.",
+"nl": "Je moet je in Nederland verplicht verzekeren."
+},
+{
+"fa": "او خود را در برابر هزینه‌های درمانی بیمه کرده است.",
+"nl": "Zij heeft zich tegen ziektekosten verzekerd."
+}
+],
+"tr-1190": [
+{
+"fa": "هیچ‌کدام از آن دو پاسخ درست نیست.",
+"nl": "Geen van beide antwoorden is goed."
+},
+{
+"fa": "هیچ‌کدام از آن دو فیلم را نمی‌شناسم.",
+"nl": "Ik ken geen van beide films."
+}
+],
+"tr-1191": [
+{
+"fa": "از شرکت بیمهٔ درمانی‌ام نامه‌ای دریافت کردم.",
+"nl": "Ik heb een brief van mijn zorgverzekeraar gekregen."
+}
+],
+"tr-1192": [
+{
+"fa": "این قرارداد یعنی دو سال می‌مانی.",
+"nl": "Dit contract houdt in dat je twee jaar blijft."
+}
+],
+"tr-1195": [
+{
+"fa": "کارکنان بخشی از حقوقشان را واگذار می‌کنند.",
+"nl": "Werknemers staan een deel van hun loon af."
+},
+{
+"fa": "هر سال پولی به یک خیریه می‌دهند.",
+"nl": "Zij staan elk jaar geld af aan een goed doel."
+}
+],
+"tr-1198": [
+{
+"fa": "دو نام دیگر به فهرست اضافه می‌کنیم.",
+"nl": "We voegen nog twee namen aan de lijst toe."
+},
+{
+"fa": "کمی نمک به سوپ اضافه کن.",
+"nl": "Voeg wat zout aan de soep toe."
+}
+],
+"tr-1199": [
+{
+"fa": "قیمت‌ها به‌شدت بالا رفته است.",
+"nl": "De prijzen zijn fors gestegen."
+}
+],
+"tr-1200": [
+{
+"fa": "قبلاً برای درآمدهای پایین صندوق‌های بیمهٔ درمانی وجود داشت.",
+"nl": "Vroeger waren er ziekenfondsen voor lage inkomens."
+}
+],
+"tr-1201": [
+{
+"fa": "پول به حسابم واریز شده است.",
+"nl": "Het geld is op mijn rekening gestort."
+}
+],
+"tr-1202": [
+{
+"fa": "بسیاری از کارکنان به اتحادیه ملحق می‌شوند.",
+"nl": "Veel werknemers sluiten zich aan bij een vakbond."
+},
+{
+"fa": "می‌خواهی به باشگاه ما ملحق شوی؟",
+"nl": "Wil je je bij onze club aansluiten?"
+}
+],
+"tr-1204": [
+{
+"fa": "او نمی‌آید، و او هم همین‌طور.",
+"nl": "Hij komt niet, en zij evenmin."
+}
+],
+"tr-1205": [
+{
+"fa": "کارکنان قرارداد جمعی دارند.",
+"nl": "De werknemers hebben een collectief contract."
+}
+],
+"tr-1208": [
+{
+"fa": "بیکاران در جست‌وجوی کار کمک می‌گیرند.",
+"nl": "Werklozen krijgen hulp bij het zoeken naar werk."
+}
+],
+"tr-1209": [
+{
+"fa": "بیکاری پارسال کاهش یافت.",
+"nl": "De werkeloosheid daalde vorig jaar."
+}
+],
+"tr-1210": [
+{
+"fa": "روی‌هم‌رفته روز موفقی بود.",
+"nl": "Al met al was het een geslaagde dag."
+}
+],
+"tr-1211": [
+{
+"fa": "این‌قدر صبر نمی‌توانم فراهم کنم.",
+"nl": "Zoveel geduld kan ik niet opbrengen."
+},
+{
+"fa": "او نتوانست شهامت زنگ زدن را پیدا کند.",
+"nl": "Hij kon de moed niet opbrengen om te bellen."
+}
+],
+"tr-1212": [
+{
+"fa": "شهرداری اطلاعاتی دربارهٔ قوانین ارائه می‌دهد.",
+"nl": "De gemeente verstrekt informatie over de regels."
+}
+],
+"tr-1213": [
+{
+"fa": "او پاسخ مفصلی به سؤالم داد.",
+"nl": "Zij gaf een uitgebreid antwoord op mijn vraag."
+}
+],
+"tr-1214": [
+{
+"fa": "بسته فردا می‌رسد.",
+"nl": "Het pakket komt morgen aan."
+}
+],
+"tr-1215": [
+{
+"fa": "با درآمد پایین کمک‌هزینهٔ درمان می‌گیری.",
+"nl": "Met een laag inkomen krijg je zorgtoeslag."
+}
+],
+"tr-1217": [
+{
+"fa": "برای دندان‌پزشکی به بیمهٔ تکمیلی نیاز داری.",
+"nl": "Voor de tandarts heb je een aanvullende verzekering nodig."
+}
+],
+"tr-1218": [
+{
+"fa": "این سازمان از خدمات درمانی بهتر دفاع می‌کند.",
+"nl": "De organisatie pleit voor betere zorg."
+},
+{
+"fa": "او از فضای سبز بیشتر در شهر دفاع می‌کند.",
+"nl": "Zij pleit voor meer groen in de stad."
+}
+],
+"tr-1219": [
+{
+"fa": "تغییر کوچکی در برنامه هست.",
+"nl": "Er is een kleine wijziging in het programma."
+}
+],
+"tr-1220": [
+{
+"fa": "کلیدهایم در جیب کتم هستند.",
+"nl": "Mijn sleutels zitten in de zak van mijn jas."
+}
+],
+"tr-1221": [
+{
+"fa": "بقیه را باید از جیب خودم پرداخت می‌کردم.",
+"nl": "De rest moest ik uit eigen zak betalen."
+},
+{
+"fa": "هزینهٔ آن سفر را از جیب خودم دادم.",
+"nl": "Die reis heb ik uit eigen zak betaald."
+}
+],
+"tr-1223": [
+{
+"fa": "این قوانین برای من غیرقابل‌فهم است.",
+"nl": "Deze regels zijn voor mij onbegrijpelijk."
+}
+],
+"tr-1224": [
+{
+"fa": "بدون آب از تشنگی می‌میرم.",
+"nl": "Zonder water sterf ik van de dorst."
+}
+],
+"tr-1227": [
+{
+"fa": "به ساعت توجه کن، باید زود برویم.",
+"nl": "Let op de tijd, we moeten zo weg."
+},
+{
+"fa": "او خوب مراقب سلامتی‌اش است.",
+"nl": "Zij let goed op haar gezondheid."
+}
+],
+"tr-1228": [
+{
+"fa": "بدون کت رفتن غیرعاقلانه است.",
+"nl": "Het is onverstandig om zonder jas te gaan."
+}
+],
+"tr-1229": [
+{
+"fa": "او بیست سال است که دیگر سیگار نمی‌کشد.",
+"nl": "Hij rookt al twintig jaar niet meer."
+}
+],
+"tr-1231": [
+{
+"fa": "او خود را در آن حادثه مقصر می‌داند.",
+"nl": "Hij voelt zich schuldig aan het ongeluk."
+},
+{
+"fa": "چه کسی مسئول این اشتباه است؟",
+"nl": "Wie is schuldig aan deze fout?"
+}
+],
+"tr-1232": [
+{
+"fa": "این کار ریسک کمی دارد.",
+"nl": "Aan dit werk zitten weinig risico's."
+}
+],
+"tr-1233": [
+{
+"fa": "این پیشنهاد معقولی است.",
+"nl": "Dat is een redelijk aanbod."
+}
+],
+"tr-1238": [
+{
+"fa": "به نظر من این بهترین راه‌حل است.",
+"nl": "Naar mijn oordeel is dit de beste oplossing."
+},
+{
+"fa": "قضاوت قاضی روشن بود.",
+"nl": "Het oordeel van de rechter was duidelijk."
+}
+],
+"tr-1239": [
+{
+"fa": "این آشپزخانه نیاز به نوسازی دارد.",
+"nl": "Deze keuken is aan vernieuwing toe."
+},
+{
+"fa": "مدرسه واقعاً نیاز به نوسازی دارد.",
+"nl": "De school is echt aan vernieuwing toe."
+}
+],
+"tr-1240": [
+{
+"fa": "هرکس هزینه‌ای ایجاد نکند، تخفیف عدم‌خسارت می‌گیرد.",
+"nl": "Wie geen kosten maakt, krijgt no-claimkorting."
+}
+],
+"tr-1241": [
+{
+"fa": "این متراکم‌ترین جنگل منطقه است.",
+"nl": "Dit is het dichtste bos van de streek."
+}
+],
+"tr-1243": [
+{
+"fa": "اتوبوس در مسافت‌های طولانی از قطار عقب می‌ماند.",
+"nl": "De bus verliest het van de trein op lange afstanden."
+},
+{
+"fa": "این مغازه در برابر سوپرمارکت می‌بازد.",
+"nl": "Deze winkel verliest het van de supermarkt."
+}
+],
+"tr-1244": [
+{
+"fa": "هر مسافری باید بلیت معتبر داشته باشد.",
+"nl": "Elke reiziger moet een geldig kaartje hebben."
+},
+{
+"fa": "مسافر در اوترخت قطار عوض کرد.",
+"nl": "De reiziger stapte in Utrecht over."
+}
+],
+"tr-1245": [
+{
+"fa": "امروز صد کیلومتر طی کردیم.",
+"nl": "We hebben vandaag honderd kilometer afgelegd."
+}
+],
+"tr-1246": [
+{
+"fa": "می‌فهمم منظورت چیست.",
+"nl": "Ik snap wat je bedoelt."
+},
+{
+"fa": "این جمله را می‌فهمی؟",
+"nl": "Snap je deze zin?"
+}
+],
+"tr-1247": [
+{
+"fa": "دوچرخه وسیلهٔ حمل‌ونقل ارزانی است.",
+"nl": "De fiets is een goedkoop vervoermiddel."
+}
+],
+"tr-1249": [
+{
+"fa": "در آمستردام ترامواهای زیادی حرکت می‌کند.",
+"nl": "In Amsterdam rijden veel trams."
+}
+],
+"tr-1250": [
+{
+"fa": "اتوبوس در همهٔ ایستگاه‌ها می‌ایستد.",
+"nl": "De bus stopt bij alle haltes."
+}
+],
+"tr-1251": [
+{
+"fa": "بیرون از محدودهٔ ساخته‌شده می‌توانی تندتر برانی.",
+"nl": "Buiten de bebouwde kom mag je harder rijden."
+}
+],
+"tr-1252": [
+{
+"fa": "داخل محدودهٔ شهر می‌توانی پنجاه برانی.",
+"nl": "Binnen de bebouwde kom mag je vijftig rijden."
+}
+],
+"tr-1253": [
+{
+"fa": "از ریل‌های راه‌آهن دور بمان، خطرناک است.",
+"nl": "Blijf van de spoorrails af, dat is gevaarlijk."
+}
+],
+"tr-1254": [
+{
+"fa": "فرض می‌کنم او از قبل می‌داند.",
+"nl": "Ik veronderstel dat hij het al weet."
+}
+],
+"tr-1255": [
+{
+"fa": "اتوبوس این مسیر را در بیست دقیقه طی می‌کند.",
+"nl": "De bus legt deze route in twintig minuten af."
+},
+{
+"fa": "او هر روز سی کیلومتر می‌پیماید.",
+"nl": "Hij legt elke dag dertig kilometer af."
+}
+],
+"tr-1256": [
+{
+"fa": "چه مزخرفی، این اصلاً درست نیست.",
+"nl": "Wat een onzin, dat klopt helemaal niet."
+},
+{
+"fa": "مزخرف نگو، جدی باش.",
+"nl": "Praat geen onzin, wees serieus."
+}
+],
+"tr-1257": [
+{
+"fa": "این قطار فقط در ایستگاه‌های بزرگ توقف می‌کند.",
+"nl": "Deze trein doet alleen de grote stations aan."
+},
+{
+"fa": "کشتی در سه بندر توقف می‌کند.",
+"nl": "Het schip doet drie havens aan."
+}
+],
+"tr-1263": [
+{
+"fa": "اگر همه با هم حرف بزنند، اوضاع به‌هم می‌ریزد.",
+"nl": "Als iedereen tegelijk praat, loopt de zaak in 't honderd."
+},
+{
+"fa": "بدون توافق‌های روشن، اوضاع به‌هم می‌ریزد.",
+"nl": "Zonder duidelijke afspraken loopt de zaak in 't honderd."
+}
+],
+"tr-1264": [
+{
+"fa": "واکنش او خیلی منفی بود.",
+"nl": "Zijn reactie was heel negatief."
+},
+{
+"fa": "پاسخ منفی بود؛ اجازه نداریم برویم.",
+"nl": "Het antwoord was negatief; we mogen niet gaan."
+}
+],
+"tr-1265": [
+{
+"fa": "راه‌آهن هلند میلیون‌ها مسافر جابه‌جا می‌کند.",
+"nl": "De Nederlandse Spoorwegen vervoeren miljoenen reizigers."
+}
+],
+"tr-1266": [
+{
+"fa": "این قطار هر نیم ساعت حرکت می‌کند.",
+"nl": "Deze trein rijdt elk half uur."
+}
+],
+"tr-1269": [
+{
+"fa": "برای حرفت مدرکی داری؟",
+"nl": "Heb je bewijs voor wat je zegt?"
+}
+],
+"tr-1270": [
+{
+"fa": "بسامد اتوبوس شب‌ها کمتر است.",
+"nl": "De frequentie van de bus is 's avonds lager."
+}
+],
+"tr-1271": [
+{
+"fa": "او هر روز به اوترخت رفت و برگشت می‌کند.",
+"nl": "Hij reist elke dag heen en weer naar Utrecht."
+}
+],
+"tr-1273": [
+{
+"fa": "در آمرسفورت باید قطار عوض کنی.",
+"nl": "In Amersfoort moet je overstappen."
+}
+],
+"tr-1274": [
+{
+"fa": "هماهنگی سرویس‌ها در اوترخت خوب است.",
+"nl": "De aansluitingen in Utrecht zijn goed."
+}
+],
+"tr-1275": [
+{
+"fa": "با خط سریع‌السیر زود در پاریس هستی.",
+"nl": "Met de hogesnelheidslijn ben je snel in Parijs."
+}
+],
+"tr-1276": [
+{
+"fa": "از آمستردام سه ساعته در پاریس هستی.",
+"nl": "Vanuit Amsterdam ben je in drie uur in Parijs."
+}
+],
+"tr-1278": [
+{
+"fa": "بجنب رفیق، از پسش برمی‌آیی!",
+"nl": "Kom op, man, dat lukt je wel!"
+},
+{
+"fa": "داداش، اینجا چقدر گرم است!",
+"nl": "Man, wat is het hier warm!"
+}
+],
+"tr-1281": [
+{
+"fa": "چه فیلم وحشتناکی بود.",
+"nl": "Wat een vreselijke film was dat."
+}
+],
+"tr-1282": [
+{
+"fa": "تلفن موبایلت را کمی خاموش کن.",
+"nl": "Zet je mobiele telefoon even uit."
+}
+],
+"tr-1283": [
+{
+"fa": "آن تلفن‌زدن در قطار آزاردهنده است.",
+"nl": "Dat getelefoneer in de trein is vervelend."
+}
+],
+"tr-1284": [
+{
+"fa": "اینجا سیگار کشیدن ممنوع است؛ همه‌جا ممنوع می‌کنند.",
+"nl": "Hier is het verboden te roken; ze verbieden het overal."
+}
+],
+"tr-1285": [
+{
+"fa": "در کوپه‌های ساکت صحبت نمی‌شود.",
+"nl": "In de stille coupés wordt niet gepraat."
+}
+],
+"tr-1286": [
+{
+"fa": "یک دورهٔ عکاسی، به نظرت خوب نیست؟",
+"nl": "Een cursus fotografie, niks voor jou?"
+},
+{
+"fa": "یک آخر هفته در کوهستان، به نظرت خوب نیست؟",
+"nl": "Een weekend in de bergen, niks voor jou?"
+}
+],
+"tr-1287": [
+{
+"fa": "قطار لبالب از دانشجو بود.",
+"nl": "De trein zat tjokvol met studenten."
+}
+],
+"tr-1289": [
+{
+"fa": "او از دانشگاه بورسیه می‌گیرد.",
+"nl": "Zij krijgt een studiebeurs van de universiteit."
+}
+],
+"tr-1291": [
+{
+"fa": "در هلند مردم دوست دارند شاه‌ماهی بخورند.",
+"nl": "In Nederland eet men graag haringen."
+}
+],
+"tr-1293": [
+{
+"fa": "در ساعت شلوغی مثل شاه‌ماهی در بشکه هستیم.",
+"nl": "In de spits zitten we als haringen in een ton."
+}
+],
+"tr-1294": [
+{
+"fa": "تو در این سرما شنا می‌کنی؟ تو اگر دوست داری، من نه!",
+"nl": "Jij gaat in die kou zwemmen? Jij liever dan ik!"
+}
+],
+"tr-1295": [
+{
+"fa": "نزدیک ۳۳۰۰ بازدیدکننده آمدند.",
+"nl": "Er kwamen tegen de 3300 bezoekers."
+},
+{
+"fa": "این شرکت نزدیک ۳۳۰۰ کارمند دارد.",
+"nl": "Het bedrijf heeft tegen de 3300 werknemers."
+}
+],
+"tr-1296": [
+{
+"fa": "در این ارتباط قیمت مهم نیست.",
+"nl": "In dit verband is de prijs niet belangrijk."
+}
+],
+"tr-1297": [
+{
+"fa": "از طریق ایمیل ارتباط برقرار می‌کنیم.",
+"nl": "We communiceren door middel van e-mail."
+}
+],
+"tr-1298": [
+{
+"fa": "فیلم‌ها زیرنویس‌دار شده‌اند.",
+"nl": "De films zijn van ondertitels voorzien."
+},
+{
+"fa": "تلویزیون هلند معمولاً زیرنویس دارد.",
+"nl": "Nederlandse tv is meestal van ondertitels voorzien."
+}
+],
+"tr-1299": [
+{
+"fa": "او آن کار را حتی بدون یک اشتباه انجام داد.",
+"nl": "Hij deed het werk zonder ook maar één fout."
+}
+],
+"tr-1300": [
+{
+"fa": "در این درس عبارت‌های ثابت زیادی یاد می‌گیری.",
+"nl": "In deze les leer je veel vaste uitdrukkingen."
+}
+],
+"tr-1301": [
+{
+"fa": "اگر واژه‌ای برایت آشنا نبود، آن را جست‌وجو کن.",
+"nl": "Mocht een woord je niet bekend voorkomen, zoek het dan op."
+}
+],
+"tr-1302": [
+{
+"fa": "اول خوب بخوان چه کاری باید انجام بدهی.",
+"nl": "Lees eerst goed wat je te doen staat."
+}
+],
+"tr-1303": [
+{
+"fa": "تا امتحان هنوز چند هفته باقی مانده است.",
+"nl": "Je hebt nog enige weken te gaan tot het examen."
+}
+],
+"tr-1304": [
+{
+"fa": "دیگر وقتش رسیده که شروع کنیم.",
+"nl": "Het is hoog tijd om te beginnen."
+}
+],
+"tr-1305": [
+{
+"fa": "طرح را در خطوط کلی می‌شناسم.",
+"nl": "Ik ken het plan in grote lijnen."
+}
+],
+"tr-1306": [
+{
+"fa": "با این کلمات لال و بی‌جواب نمی‌مانی.",
+"nl": "Met deze woorden sta je niet met je mond vol tanden."
+}
+],
+"tr-1307": [
+{
+"fa": "برای رایانه، او سراغ آدم درستی آمده است.",
+"nl": "Voor computers is hij bij jou aan het goede adres."
+}
+],
+"tr-1308": [
+{
+"fa": "دربارهٔ هلند همه‌چیز را می‌دانی.",
+"nl": "Over Nederland weet je er alles van af."
+}
+],
+"tr-1309": [
+{
+"fa": "سالن تقریباً خالی بود.",
+"nl": "De zaal was zo goed als leeg."
+}
+],
+"tr-1310": [
+{
+"fa": "اگر گفت‌وگو متوقف شد، سؤالی بپرس.",
+"nl": "Als het gesprek stilvalt, stel je een vraag."
+}
+],
+"tr-1311": [
+{
+"fa": "یک جلسهٔ دیگر؟ حوصله‌اش را نداری.",
+"nl": "Nog een vergadering? Daar heb je geen zin in."
+},
+{
+"fa": "زیر باران دوچرخه‌سواری: حوصله‌اش را نداری.",
+"nl": "In de regen fietsen: daar heb je geen zin in."
+}
+],
+"tr-1312": [
+{
+"fa": "بعد از سه ساعت انتظار کاملاً خسته و بیزار می‌شوی.",
+"nl": "Na drie uur wachten heb je er schoon genoeg van."
+}
+],
+"tr-1313": [
+{
+"fa": "وضعیت به‌طور اساسی تغییر کرده است.",
+"nl": "De situatie is wezenlijk veranderd."
+}
+],
+"tr-1314": [
+{
+"fa": "زنان می‌خواهند هم‌سطح مردان با آنان رفتار شود.",
+"nl": "Vrouwen willen op gelijke voet met mannen behandeld worden."
+}
+],
+"tr-1316": [
+{
+"fa": "مستعمره‌ها بعد از جنگ مستقل شدند.",
+"nl": "De koloniën werden na de oorlog onafhankelijk."
+}
+],
+"tr-1322": [
+{
+"fa": "در اروپا مرزها باز است.",
+"nl": "Binnen Europa zijn de grenzen open."
+}
+],
+"tr-1324": [
+{
+"fa": "کشاورزان از صبح زود تا شب دیر کار می‌کنند.",
+"nl": "De boeren werken van 's ochtends vroeg tot 's avonds laat."
+}
+],
+"tr-1325": [
+{
+"fa": "قرارداد دائم اطمینان می‌دهد.",
+"nl": "Een vast contract geeft zekerheid."
+}
+],
+"tr-1329": [
+{
+"fa": "شهر فوق‌العاده شلوغ بود.",
+"nl": "Het was buitengewoon druk in de stad."
+}
+],
+"tr-1330": [
+{
+"fa": "هلند گل زیادی صادر می‌کند.",
+"nl": "Nederland exporteert veel bloemen."
+}
+],
+"tr-1332": [
+{
+"fa": "بسیاری از کشورها این خشونت را محکوم می‌کنند.",
+"nl": "Veel landen veroordelen dit geweld."
+}
+],
+"tr-1333": [
+{
+"fa": "او نگاه انتقادی به کار خودش دارد.",
+"nl": "Hij kijkt kritisch naar zijn eigen werk."
+}
+],
+"tr-1334": [
+{
+"fa": "کنار روستا یک دژ قدیمی هست.",
+"nl": "Bij het dorp staat een oud fort."
+}
+],
+"tr-1335": [
+{
+"fa": "این مغایر قانون است.",
+"nl": "Dat is in strijd met de wet."
+},
+{
+"fa": "رفتار او در تضاد با قوانین است.",
+"nl": "Zijn gedrag is in strijd met de regels."
+}
+],
+"tr-1337": [
+{
+"fa": "نمی‌خواهند کسی را از خدمات درمانی محروم کنند.",
+"nl": "Ze willen niemand van de zorg uitsluiten."
+},
+{
+"fa": "آن قانون بچه‌ها را از تخفیف محروم می‌کند.",
+"nl": "Die regel sluit kinderen uit van korting."
+}
+],
+"tr-1338": [
+{
+"fa": "ساختمان قدیمی را ماه آینده خراب می‌کنند.",
+"nl": "Ze breken het oude gebouw volgende maand af."
+},
+{
+"fa": "آن دیوار را خراب کن.",
+"nl": "Breek die muur maar af."
+}
+],
+"tr-1339": [
+{
+"fa": "تعرفهٔ اتوبوس بالا رفته است.",
+"nl": "Het tarief voor de bus is verhoogd."
+},
+{
+"fa": "تعرفه در ساعت چقدر است؟",
+"nl": "Wat is het tarief per uur?"
+}
+],
+"tr-1340": [
+{
+"fa": "دخترش شرکت را تحویل می‌گیرد.",
+"nl": "Zijn dochter neemt het bedrijf over."
+},
+{
+"fa": "می‌خواهی فرمان را کمی به عهده بگیری؟",
+"nl": "Wil jij het stuur even overnemen?"
+}
+],
+"tr-1342": [
+{
+"fa": "این بخش به شکایت‌ها رسیدگی می‌کند.",
+"nl": "Deze afdeling houdt zich bezig met klachten."
+},
+{
+"fa": "او مشغول پژوهش است.",
+"nl": "Zij houdt zich bezig met onderzoek."
+}
+],
+"tr-1343": [
+{
+"fa": "در این منطقه صنایع زیادی مستقر است.",
+"nl": "In deze regio zijn veel industrieën gevestigd."
+},
+{
+"fa": "صنایع قدیمی به‌آرامی از بین رفتند.",
+"nl": "De oude industrieën verdwenen langzaam."
+}
+],
+"tr-1344": [
+{
+"fa": "توسعهٔ فناورانه سریع پیش می‌رود.",
+"nl": "De technologische ontwikkeling gaat snel."
+},
+{
+"fa": "این یک پیشرفت فناورانه است.",
+"nl": "Dit is een technologische doorbraak."
+}
+],
+"tr-1345": [
+{
+"fa": "این شغل دانش زبانی خوبی ایجاب می‌کند.",
+"nl": "Deze baan vereist goede talenkennis."
+},
+{
+"fa": "این کار صبر زیادی می‌خواهد.",
+"nl": "Het werk vereist veel geduld."
+}
+],
+"tr-1346": [
+{
+"fa": "در مورد قیمت هم‌نظر هستیم.",
+"nl": "Wat betreft de prijs zijn we het eens."
+},
+{
+"fa": "از نظر هوا خوش‌شانس بودیم.",
+"nl": "Wat betreft het weer hebben we geluk gehad."
+}
+],
+"tr-1348": [
+{
+"fa": "دلایل زیادی برای ماندن هست.",
+"nl": "Er zijn tal van redenen om te blijven."
+}
+],
+"tr-1349": [
+{
+"fa": "این پنیر اهل خودا است.",
+"nl": "Deze kaas is afkomstig uit Gouda."
+},
+{
+"fa": "او اهل ایران است.",
+"nl": "Zij is afkomstig uit Iran."
+}
+],
+"tr-1350": [
+{
+"fa": "علاوه بر این، می‌خواهم بابت کمکتان تشکر کنم.",
+"nl": "Voorts wil ik u bedanken voor uw hulp."
+},
+{
+"fa": "علاوه بر این، مشکل دومی هم هست.",
+"nl": "Voorts is er nog een tweede probleem."
+}
+],
+"tr-1351": [
+{
+"fa": "یورو واحد پول بسیاری از کشورهای اروپایی است.",
+"nl": "De euro is de munt van veel Europese landen."
+}
+],
+"tr-1352": [
+{
+"fa": "او به دلار پرداخت کرد.",
+"nl": "Hij betaalde in dollars."
+}
+],
+"tr-1353": [
+{
+"fa": "تا امروز پاسخی نیامده است.",
+"nl": "Tot op heden is er geen antwoord gekomen."
+}
+],
+"tr-1355": [
+{
+"fa": "کشتی مسیرش را تغییر داد.",
+"nl": "Het schip veranderde van koers."
+}
+],
+"tr-1356": [
+{
+"fa": "تصمیم مشترکی می‌گیریم.",
+"nl": "We nemen een gezamenlijk besluit."
+}
+],
+"tr-1357": [
+{
+"fa": "او آموزش نظامی دیده است.",
+"nl": "Hij heeft een militaire opleiding gevolgd."
+}
+],
+"tr-1359": [
+{
+"fa": "او دوچرخه‌سواری بلد نیست، چه برسد به رانندگی.",
+"nl": "Hij kan niet fietsen, laat staan autorijden."
+}
+],
+"tr-1360": [
+{
+"fa": "برادرش در ارتش است.",
+"nl": "Zijn broer zit bij het leger."
+}
+],
+"tr-1361": [
+{
+"fa": "باران شدید بارید، که در نتیجه خانه ماندیم.",
+"nl": "Het regende hard, waardoor we thuisbleven."
+}
+],
+"tr-1363": [
+{
+"fa": "از این پس خرید را شنبه انجام می‌دهم.",
+"nl": "Voortaan doe ik de boodschappen op zaterdag."
+}
+],
+"tr-1365": [
+{
+"fa": "سفر با قطار وقت زیادی صرفه‌جویی می‌کند.",
+"nl": "Met de trein reizen scheelt veel tijd."
+}
+],
+"tr-1366": [
+{
+"fa": "بدیهی است که سر وقت بیایی.",
+"nl": "Het is vanzelfsprekend dat je op tijd komt."
+},
+{
+"fa": "کمک همسایه‌ها بدیهی نیست.",
+"nl": "Hulp van de buren is niet vanzelfsprekend."
+}
+],
+"tr-1368": [
+{
+"fa": "او هر ماه پول زیادی خرج می‌کند.",
+"nl": "Zij geeft elke maand te veel geld uit."
+},
+{
+"fa": "ما برای لباس کم خرج می‌کنیم.",
+"nl": "Wij geven weinig uit aan kleding."
+}
+],
+"tr-1369": [
+{
+"fa": "آن کشور ۰٫۷ درصد تولید ناخالص ملی را به کمک اختصاص می‌دهد.",
+"nl": "Dat land geeft 0,7 procent van het bruto nationaal product aan hulp."
+}
+],
+"tr-1371": [
+{
+"fa": "او در سینه‌اش درد دارد.",
+"nl": "Hij heeft pijn op zijn borst."
+}
+],
+"tr-1372": [
+{
+"fa": "به نتایجشان می‌بالند.",
+"nl": "Ze slaan zich op de borst over hun resultaten."
+},
+{
+"fa": "سیاستمداران دوست دارند به خود ببالند.",
+"nl": "Politici slaan zich graag op de borst."
+}
+],
+"tr-1373": [
+{
+"fa": "آن خبر برای شرکت ویران‌کننده بود.",
+"nl": "Het bericht was vernietigend voor het bedrijf."
+},
+{
+"fa": "او نقد بسیار تندی بر کتابش دریافت کرد.",
+"nl": "Hij kreeg vernietigende kritiek op zijn boek."
+}
+],
+"tr-1375": [
+{
+"fa": "همسایه‌ها به ما خوب کمک کردند.",
+"nl": "De buren hebben ons goed geholpen."
+}
+],
+"tr-1376": [
+{
+"fa": "در این شرایط نمی‌توانیم کار کنیم.",
+"nl": "Onder deze omstandigheden kunnen we niet werken."
+}
+],
+"tr-1378": [
+{
+"fa": "طبقهٔ بالای ثروتمند بیشترین سود را می‌برد.",
+"nl": "De rijke bovenlaag profiteert het meest."
+}
+],
+"tr-1383": [
+{
+"fa": "او سبک زندگی سالمی دارد.",
+"nl": "Zij heeft een gezonde leefstijl."
+}
+],
+"tr-1384": [
+{
+"fa": "بسیاری از کشورها عادت‌های غربی را می‌پذیرند.",
+"nl": "Veel landen nemen westerse gewoontes over."
+}
+],
+"tr-1385": [
+{
+"fa": "قرن‌ها طول کشید تا این سرزمین را خشک کنند.",
+"nl": "Ze hebben er eeuwen over gedaan om dit land droog te maken."
+},
+{
+"fa": "قرن‌ها طول کشید تا به اینجا برسیم.",
+"nl": "Wij hebben er eeuwen over gedaan om hier te komen."
+}
+],
+"tr-1386": [
+{
+"fa": "ابتکارهای محلی زیادی در محله هست.",
+"nl": "Er zijn veel lokale initiatieven in de wijk."
+}
+],
+"tr-1387": [
+{
+"fa": "اول شرایط قرارداد را بخوان.",
+"nl": "Lees eerst de voorwaarden van het contract."
+}
+],
+"tr-1388": [
+{
+"fa": "مجوز فقط با شرایطی اعطا می‌شود.",
+"nl": "De vergunning wordt alleen onder voorwaarden verleend."
+}
+],
+"tr-1390": [
+{
+"fa": "هزینه‌های ما امسال بالا رفته است.",
+"nl": "Onze uitgaven zijn dit jaar gestegen."
+}
+],
+"tr-1392": [
+{
+"fa": "بدهی‌ها کشور را در چنگ خود دارد.",
+"nl": "De schulden houden het land in hun greep."
+}
+],
+"tr-1393": [
+{
+"fa": "بدهی‌ها آن کشورها را کاملاً زیر سلطه دارد.",
+"nl": "De schulden houden die landen in een ijzeren greep."
+}
+],
+"tr-1396": [
+{
+"fa": "حامیان طرح در اکثریت هستند.",
+"nl": "De voorstanders van het plan zijn in de meerderheid."
+},
+{
+"fa": "حامیان به هزینه‌های کمتر اشاره می‌کنند.",
+"nl": "Voorstanders wijzen op de lagere kosten."
+}
+],
+"tr-1397": [
+{
+"fa": "این موزه میراثی از قرن نوزدهم است.",
+"nl": "Dit museum is een erfenis uit de 19de eeuw."
+}
+],
+"tr-1398": [
+{
+"fa": "باران می‌بارد، بنابراین خانه می‌مانیم.",
+"nl": "Het regent, derhalve blijven we thuis."
+}
+],
+"tr-1399": [
+{
+"fa": "این یک مسئلهٔ اخلاقی است، نه حقوقی.",
+"nl": "Dit is een morele kwestie, geen juridische."
+}
+],
+"tr-1400": [
+{
+"fa": "تعهد داری که به‌موقع پرداخت کنی.",
+"nl": "Je hebt de verplichting om op tijd te betalen."
+}
+],
+"tr-1402": [
+{
+"fa": "این رویکرد واقعاً جواب می‌دهد.",
+"nl": "Deze aanpak werkt wel degelijk."
+}
+],
+"tr-1403": [
+{
+"fa": "آن اقدام تأثیر مثبتی داشت.",
+"nl": "De maatregel had een positief effect."
+}
+],
+"tr-1404": [
+{
+"fa": "برای غذا خواستهٔ خاصی داری؟",
+"nl": "Heb je specifieke wensen voor het eten?"
+}
+],
+"tr-1405": [
+{
+"fa": "مدرسه به نیازهای هر کودک توجه می‌کند.",
+"nl": "De school kijkt naar de behoeften van elk kind."
+}
+],
+"tr-1406": [
+{
+"fa": "طبقهٔ متوسط در این کشور رشد می‌کند.",
+"nl": "De middenklasse groeit in dit land."
+}
+],
+"tr-1407": [
+{
+"fa": "به این ترتیب نسل جدیدی می‌تواند پدیدار شود.",
+"nl": "Er kan zo een nieuwe generatie opkomen."
+}
+],
+"tr-1409": [
+{
+"fa": "باید تعادل بیشتری میان کار و خانواده باشد.",
+"nl": "Er moet meer evenwicht komen tussen werk en gezin."
+}
+],
+"tr-1410": [
+{
+"fa": "این شغل با سفر زیاد همراه است.",
+"nl": "Deze baan gaat gepaard met veel reizen."
+},
+{
+"fa": "رشد اغلب با مشکلات همراه است.",
+"nl": "Groei gaat vaak gepaard met problemen."
+}
+],
+"tr-1411": [
+{
+"fa": "انتقال دانش مهم است.",
+"nl": "De overdracht van kennis is belangrijk."
+}
+],
+"tr-1412": [
+{
+"fa": "غرب نمی‌تواند حالا روی برگرداند.",
+"nl": "Het Westen kan het niet maken om nu weg te kijken."
+}
+],
+"tr-1414": [
+{
+"fa": "او وجدان آسوده‌ای دارد.",
+"nl": "Hij heeft een schoon geweten."
+}
+],
+"tr-1415": [
+{
+"fa": "مهاجرت به شهر ادامه دارد.",
+"nl": "De trek naar de stad blijft doorgaan."
+}
+],
+"tr-1419": [
+{
+"fa": "کار به‌خوبی انجام شده است.",
+"nl": "Het werk is goed uitgevoerd."
+}
+],
+"tr-1421": [
+{
+"fa": "می‌توانی شوفاژ را از راه دور کنترل کنی.",
+"nl": "Je kunt de verwarming op afstand bedienen."
+}
+],
+"tr-1422": [
+{
+"fa": "این ماشین را یک نفر راه‌اندازی می‌کند.",
+"nl": "De machine wordt door één persoon bediend."
+}
+],
+"tr-1423": [
+{
+"fa": "او هفتهٔ آینده تحت عمل قرار می‌گیرد.",
+"nl": "Hij ondergaat volgende week een operatie."
+}
+],
+"tr-1425": [
+{
+"fa": "از آن صدای بلند جا خوردم.",
+"nl": "Ik schrok van dat harde geluid."
+},
+{
+"fa": "لازم نیست بترسی، فقط گربه است.",
+"nl": "Je hoeft niet te schrikken, het is maar de kat."
+}
+],
+"tr-1426": [
+{
+"fa": "چنین قبض سنگینی: واقعاً آدم جا می‌خورد!",
+"nl": "Zo'n hoge rekening: is dat schrikken!"
+},
+{
+"fa": "آن قبض چهارصد یورویی: واقعاً آدم جا می‌خورد!",
+"nl": "Die rekening van vierhonderd euro: is dat schrikken!"
+}
+],
+"tr-1427": [
+{
+"fa": "او وابسته به دانشگاه لایدن است.",
+"nl": "Hij is verbonden aan de universiteit van Leiden."
+},
+{
+"fa": "به این کار ریسک‌هایی متصل است.",
+"nl": "Aan dit werk zijn risico's verbonden."
+}
+],
+"tr-1429": [
+{
+"fa": "این یک پژوهش علمی است.",
+"nl": "Dit is een wetenschappelijk onderzoek."
+}
+],
+"tr-1430": [
+{
+"fa": "خیالت راحت، همه‌چیز درست می‌شود.",
+"nl": "Wees gerust, alles komt goed."
+}
+],
+"tr-1431": [
+{
+"fa": "برای این قانون یک استثنا هست.",
+"nl": "Op deze regel is één uitzondering."
+}
+],
+"tr-1433": [
+{
+"fa": "چه بیایی چه نه، خبر بده.",
+"nl": "Of je komt of niet, laat het even weten."
+},
+{
+"fa": "چه باران ببارد چه برف، او دوچرخه‌سواری می‌کند.",
+"nl": "Of het nu regent of sneeuwt, hij fietst."
+}
+],
+"tr-1435": [
+{
+"fa": "وقتی هلندی صحبت کردم، تعجب کرد.",
+"nl": "Hij keek vreemd op toen ik Nederlands sprak."
+}
+],
+"tr-1436": [
+{
+"fa": "بعد از عمل بستری طولانی‌ای در پی داشت.",
+"nl": "Na de operatie volgde een lange opname."
+}
+],
+"tr-1439": [
+{
+"fa": "در مورد اورژانسی مستقیم با ۱۱۲ تماس می‌گیری.",
+"nl": "Bij een spoedgeval bel je direct 112."
+}
+],
+"tr-1442": [
+{
+"fa": "پلیس با جرم در محله مبارزه می‌کند.",
+"nl": "De politie bestrijdt de criminaliteit in de wijk."
+}
+],
+"tr-1443": [
+{
+"fa": "مدارس و بیمارستان‌ها نهادهای عمومی هستند.",
+"nl": "Scholen en ziekenhuizen zijn publieke instellingen."
+}
+],
+"tr-1444": [
+{
+"fa": "لازم نیست فریاد بزنی، صدایت را می‌شنوم.",
+"nl": "Je hoeft niet te schreeuwen, ik hoor je wel."
+}
+],
+"tr-1445": [
+{
+"fa": "کمبود بسیار شدیدی از مسکن وجود دارد.",
+"nl": "Er is een schreeuwend tekort aan woningen."
+}
+],
+"tr-1447": [
+{
+"fa": "گران است، اما ضروری.",
+"nl": "Het is duur, doch noodzakelijk."
+}
+],
+"tr-1448": [
+{
+"fa": "با وجود اقدامات، مشکلات ادامه دارند.",
+"nl": "De problemen duren voort ondanks de maatregelen."
+}
+],
+"tr-1449": [
+{
+"fa": "بودجهٔ ما برای امسال کم است.",
+"nl": "Ons budget voor dit jaar is klein."
+}
+],
+"tr-1450": [
+{
+"fa": "پزشک اول اسکن‌ها را بررسی می‌کند.",
+"nl": "De arts bekijkt eerst de scans."
+}
+],
+"tr-1451": [
+{
+"fa": "جراحی زیبایی همیشه پوشش داده نمی‌شود.",
+"nl": "Plastische chirurgie wordt niet altijd vergoed."
+}
+],
+"tr-1452": [
+{
+"fa": "او در بخش جراحی کار می‌کند.",
+"nl": "Hij werkt op de afdeling chirurgie."
+}
+],
+"tr-1453": [
+{
+"fa": "پیامد این تصمیم روشن است.",
+"nl": "De consequentie van dit besluit is duidelijk."
+}
+],
+"tr-1455": [
+{
+"fa": "در تابستان خورشید زود طلوع می‌کند.",
+"nl": "In de zomer gaat de zon vroeg op."
+},
+{
+"fa": "امروز خورشید ساعت هشت طلوع می‌کند.",
+"nl": "Vandaag gaat de zon om acht uur op."
+}
+],
+"tr-1457": [
+{
+"fa": "همه‌چیز پول می‌خواهد: هیچ چیز مجانی نیست.",
+"nl": "Alles kost geld: voor niks gaat de zon op."
+}
+],
+"tr-1459": [
+{
+"fa": "در این شهر دو کلینیک خصوصی هست.",
+"nl": "In deze stad zijn twee privéklinieken."
+},
+{
+"fa": "کلینیک‌ها فهرست انتظار طولانی دارند.",
+"nl": "De klinieken hebben lange wachtlijsten."
+}
+],
+"tr-1460": [
+{
+"fa": "پرداخت باید ظرف سی روز انجام شود.",
+"nl": "De betaling moet binnen dertig dagen gebeuren."
+}
+],
+"tr-1461": [
+{
+"fa": "در ازای پرداخت می‌توانی سریع‌تر رسیدگی شوی.",
+"nl": "Tegen betaling kun je sneller geholpen worden."
+}
+],
+"tr-1462": [
+{
+"fa": "این اتاق به‌عنوان دفتر هم عمل می‌کند.",
+"nl": "Deze kamer fungeert ook als kantoor."
+}
+],
+"tr-1463": [
+{
+"fa": "بسیاری از کارآفرینان جوان آنلاین شروع می‌کنند.",
+"nl": "Veel jonge ondernemers beginnen online."
+}
+],
+"tr-1464": [
+{
+"fa": "مخالفت زیادی با طرح جدید هست.",
+"nl": "Er is veel weerstand tegen het nieuwe plan."
+}
+],
+"tr-1465": [
+{
+"fa": "مرکز تاریخی گردشگران زیادی را جذب می‌کند.",
+"nl": "Het historische centrum trekt veel toeristen."
+}
+],
+"tr-1467": [
+{
+"fa": "این هستهٔ اصلی مشکل است.",
+"nl": "Dat is de kern van het probleem."
+},
+{
+"fa": "در اصل هم‌نظر هستیم.",
+"nl": "In de kern zijn we het eens."
+}
+],
+"tr-1468": [
+{
+"fa": "سنگ بزرگی روی مسیر افتاده بود.",
+"nl": "Er lag een grote steen op het pad."
+}
+],
+"tr-1469": [
+{
+"fa": "بعد از بمباران هیچ ساختمانی سالم نماند.",
+"nl": "Na het bombardement bleef geen steen op de andere."
+}
+],
+"tr-1470": [
+{
+"fa": "در میدان مجسمهٔ یک نویسنده هست.",
+"nl": "Op het plein staat een beeld van een schrijver."
+}
+],
+"tr-1471": [
+{
+"fa": "این هنرمند با نور و شیشه کار می‌کند.",
+"nl": "Deze kunstenaar werkt met licht en glas."
+}
+],
+"tr-1472": [
+{
+"fa": "پشت ایستگاه ساختمان‌های نوساز زیادی هست.",
+"nl": "Achter het station staat veel nieuwbouw."
+}
+],
+"tr-1473": [
+{
+"fa": "امشب به تئاتر می‌رویم.",
+"nl": "We gaan vanavond naar het theater."
+},
+{
+"fa": "تئاتر بعد از بازسازی دوباره باز است.",
+"nl": "Het theater is na de verbouwing weer open."
+}
+],
+"tr-1474": [
+{
+"fa": "سوپرمارکت خیلی نزدیک خانه‌ام است.",
+"nl": "De supermarkt is vlakbij mijn huis."
+}
+],
+"tr-1476": [
+{
+"fa": "او همیشه پیراهن سفید می‌پوشد.",
+"nl": "Hij draagt altijd witte overhemden."
+}
+],
+"tr-1477": [
+{
+"fa": "آستین‌هایت را بالا بزن، می‌رویم سر کار.",
+"nl": "Rol je mouwen op, we gaan aan het werk."
+}
+],
+"tr-1478": [
+{
+"fa": "او با آستین‌های بالازده کار می‌کند.",
+"nl": "Hij werkt met opgerolde mouwen."
+}
+],
+"tr-1480": [
+{
+"fa": "بیا، باید آستین بالا بزنیم و دست به کار شویم.",
+"nl": "Kom, we moeten onze handen uit de mouwen steken."
+}
+],
+"tr-1482": [
+{
+"fa": "الان به چه چیزی فکر می‌کنی؟",
+"nl": "Waaraan denk je nu?"
+}
+],
+"tr-1483": [
+{
+"fa": "شهر ثروتش را مدیون بندر است.",
+"nl": "De stad dankt haar rijkdom aan de haven."
+},
+{
+"fa": "شغلم را مدیون یک دوست خوب هستم.",
+"nl": "Ik dank mijn baan aan een goede vriend."
+}
+],
+"tr-1484": [
+{
+"fa": "می‌توانی رازی را نگه داری؟",
+"nl": "Kun je een geheim bewaren?"
+}
+],
+"tr-1485": [
+{
+"fa": "روستا با اتوبوس به‌خوبی قابل دسترسی است.",
+"nl": "Het dorp is met de bus goed bereikbaar."
+}
+],
+"tr-1487": [
+{
+"fa": "کشتی‌ها در بندر پهلو می‌گیرند.",
+"nl": "De schepen leggen aan in de haven."
+}
+],
+"tr-1488": [
+{
+"fa": "کشتی‌ها در دلِ دریا منتظر جا هستند.",
+"nl": "De schepen wachten in volle zee op een plaats."
+}
+],
+"tr-1490": [
+{
+"fa": "هلند به‌خاطر مهندسی آبش مشهور است.",
+"nl": "Nederland is beroemd om zijn waterbouw."
+}
+],
+"tr-1491": [
+{
+"fa": "خانه کاملاً بازسازی شده است.",
+"nl": "Het huis is compleet gerenoveerd."
+}
+],
+"tr-1492": [
+{
+"fa": "زمین پشت کارخانه حالا یک پارک است.",
+"nl": "Het terrein achter de fabriek is nu een park."
+},
+{
+"fa": "محوطه با نرده بسته شده است.",
+"nl": "Het terrein is met een hek afgesloten."
+}
+],
+"tr-1494": [
+{
+"fa": "به‌خاطر عمق زیاد، کشتی‌های سنگین می‌توانند اینجا بیایند.",
+"nl": "Door de grote diepte kunnen zware schepen hier komen."
+}
+],
+"tr-1496": [
+{
+"fa": "منطقهٔ روهر در غرب آلمان قرار دارد.",
+"nl": "Het Ruhrgebied ligt in het westen van Duitsland."
+}
+],
+"tr-1499": [
+{
+"fa": "از سنگ‌آهن فولاد ساخته می‌شود.",
+"nl": "Uit ijzererts wordt staal gemaakt."
+}
+],
+"tr-1500": [
+{
+"fa": "قبلاً اینجا زغال‌سنگ استخراج می‌شد.",
+"nl": "Vroeger werd hier steenkool gewonnen."
+}
+],
+"tr-1504": [
+{
+"fa": "کشتیرانی داخلی کالاهای زیادی حمل می‌کند.",
+"nl": "De binnenvaart vervoert veel goederen."
+},
+{
+"fa": "کشتیرانی داخلی از حمل‌ونقل جاده‌ای ارزان‌تر است.",
+"nl": "De binnenvaart is goedkoper dan wegtransport."
+}
+],
+"tr-1505": [
+{
+"fa": "اعداد این گزارش درست نیستند.",
+"nl": "De getallen in dit rapport kloppen niet."
+}
+],
+"tr-1506": [
+{
+"fa": "لجستیک این شرکت خوب سازمان‌دهی شده است.",
+"nl": "De logistiek van dit bedrijf is goed geregeld."
+}
+],
+"tr-1507": [
+{
+"fa": "بندر روتردام بزرگ‌ترین بندر اروپاست.",
+"nl": "De Rotterdamse haven is de grootste van Europa."
+}
+],
+"tr-1508": [
+{
+"fa": "آسانسور دوباره کار می‌کند.",
+"nl": "De lift functioneert weer."
+}
+],
+"tr-1513": [
+{
+"fa": "ترکیب گروه تغییر کرده است.",
+"nl": "De samenstelling van de groep is veranderd."
+}
+],
+"tr-1515": [
+{
+"fa": "این زبان مخلوطی از هلندی و آلمانی است.",
+"nl": "Deze taal is een mengsel van Nederlands en Duits."
+}
+],
+"tr-1516": [
+{
+"fa": "پژوهشگر نتیجه می‌گیرد که این سیاست جواب می‌دهد.",
+"nl": "De onderzoeker concludeert dat het beleid werkt."
+}
+],
+"tr-1517": [
+{
+"fa": "ادارهٔ برنامه‌ریزی اجتماعی و فرهنگی دربارهٔ جامعه پژوهش می‌کند.",
+"nl": "Het Sociaal en Cultureel Planbureau doet onderzoek naar de samenleving."
+}
+],
+"tr-1518": [
+{
+"fa": "تعداد دوچرخه‌سواران به‌شدت افزایش یافته است.",
+"nl": "Het aantal fietsers is sterk toegenomen."
+}
+],
+"tr-1520": [
+{
+"fa": "در مصاحبه دربارهٔ کارش صحبت می‌کند.",
+"nl": "In het interview vertelt zij over haar werk."
+}
+],
+"tr-1524": [
+{
+"fa": "این صندلی از آن یکی راحت‌تر است.",
+"nl": "Deze stoel zit comfortabeler dan die andere."
+},
+{
+"fa": "سفر با قطار راحت‌تر شده است.",
+"nl": "Reizen met de trein is comfortabeler geworden."
+}
+],
+"tr-1525": [
+{
+"fa": "این خودرو مجهز به سیستم ناوبری است.",
+"nl": "De auto is uitgerust met een navigatiesysteem."
+},
+{
+"fa": "آشپزخانه به همهٔ دستگاه‌ها مجهز است.",
+"nl": "De keuken is uitgerust met alle apparaten."
+}
+],
+"tr-1526": [
+{
+"fa": "در این ماشین قدیمی هنوز پخش CD هست.",
+"nl": "In deze oude auto zit nog een cd-speler."
+},
+{
+"fa": "پخش CD من دیگر کار نمی‌کند.",
+"nl": "Mijn cd-speler doet het niet meer."
+}
+],
+"tr-1527": [
+{
+"fa": "در ماشین همیشه هندزفری صحبت می‌کنم.",
+"nl": "In de auto bel ik altijd handsfree."
+},
+{
+"fa": "صحبت با هندزفری در رانندگی اجباری است.",
+"nl": "Handsfree bellen is verplicht in het verkeer."
+}
+],
+"tr-1529": [
+{
+"fa": "تعداد دانشجویان پنج برابر شده است.",
+"nl": "Het aantal studenten is vervijfvoudigd."
+}
+],
+"tr-1530": [
+{
+"fa": "از چه چیزی معلوم است که اوضاع بهتر می‌شود؟",
+"nl": "Waaruit blijkt dat het beter gaat?"
+}
+],
+"tr-1531": [
+{
+"fa": "افزایشی در تعداد دانشجویان هست.",
+"nl": "Er is een toename van het aantal studenten."
+}
+],
+"tr-1533": [
+{
+"fa": "مشارکت زنان در بازار کار رشد می‌کند.",
+"nl": "De participatie van vrouwen op de arbeidsmarkt groeit."
+},
+{
+"fa": "مشارکت در کلاس مهم است.",
+"nl": "Participatie in de les is belangrijk."
+}
+],
+"tr-1534": [
+{
+"fa": "قیمت برای من عامل مهمی است.",
+"nl": "Prijs is voor mij een belangrijke factor."
+},
+{
+"fa": "هوا عاملی در آن حادثه بود.",
+"nl": "Het weer was een factor bij het ongeluk."
+}
+],
+"tr-1535": [
+{
+"fa": "طول پل هشتصد متر است.",
+"nl": "De lengte van de brug is achthonderd meter."
+}
+],
+"tr-1536": [
+{
+"fa": "در ساعت اوج قطار همیشه شلوغ است.",
+"nl": "In de spits is het altijd druk in de trein."
+},
+{
+"fa": "با حرکت زودهنگام از ساعت اوج پرهیز می‌کنم.",
+"nl": "Ik vermijd de spits door vroeg te vertrekken."
+}
+],
+"tr-1537": [
+{
+"fa": "مشاهدات ما آن تصویر را تأیید می‌کند.",
+"nl": "Onze waarnemingen bevestigen dat beeld."
+}
+],
+"tr-1538": [
+{
+"fa": "پاره‌وقت‌ها کمتر از ۳۶ ساعت در هفته کار می‌کنند.",
+"nl": "Parttimers werken minder dan 36 uur per week."
+}
+],
+"tr-1539": [
+{
+"fa": "تمام‌وقت‌ها اغلب وقت آزاد کمتری دارند.",
+"nl": "Fulltimers hebben vaak minder vrije tijd."
+}
+],
+"tr-1540": [
+{
+"fa": "کلاس‌ها ساعت چهار تمام می‌شوند.",
+"nl": "De lessen houden om vier uur op."
+},
+{
+"fa": "آن سروصدا را تمام کن!",
+"nl": "Hou op met dat lawaai!"
+}
+],
+"tr-1541": [
+{
+"fa": "افتتاح مغازهٔ جدید شنبه است.",
+"nl": "De opening van de nieuwe winkel is zaterdag."
+},
+{
+"fa": "در افتتاحیه شهردار حاضر بود.",
+"nl": "Bij de opening was de burgemeester aanwezig."
+}
+],
+"tr-1542": [
+{
+"fa": "افزایش قیمت اجتناب‌ناپذیر است.",
+"nl": "Een prijsstijging is onvermijdelijk."
+},
+{
+"fa": "اجتناب‌ناپذیر است که بیشتر کار کنیم.",
+"nl": "Het is onvermijdelijk dat we langer werken."
+}
+],
+"tr-1543": [
+{
+"fa": "آخر هفته ترافیک تفریحی زیادی هست.",
+"nl": "In het weekend is er veel recreatief verkeer."
+}
+],
+"tr-1544": [
+{
+"fa": "این مسیر از میان جنگل به دریاچه می‌رود.",
+"nl": "Dit pad loopt door het bos naar het meer."
+}
+],
+"tr-1545": [
+{
+"fa": "بچه‌ها با دوچرخه‌هایشان راه افتاده‌اند.",
+"nl": "De kinderen zijn al op pad met hun fietsen."
+},
+{
+"fa": "آن‌ها به سمت ساحل راه افتاده‌اند.",
+"nl": "Ze zijn op pad naar het strand."
+}
+],
+"tr-1546": [
+{
+"fa": "علاقه به این درس کاهش می‌یابد.",
+"nl": "De belangstelling voor het vak neemt af."
+}
+],
+"tr-1547": [
+{
+"fa": "او مدارک موردنیاز را ندارد.",
+"nl": "Hij heeft niet de benodigde papieren."
+}
+],
+"tr-1548": [
+{
+"fa": "در این تصمیم منطقی نیست.",
+"nl": "Er zit geen logica in dit besluit."
+}
+],
+"tr-1551": [
+{
+"fa": "پاسخ خیلی ساده است.",
+"nl": "Het antwoord is heel simpel."
+}
+],
+"tr-1552": [
+{
+"fa": "در مجموعهٔ بزرگ سینمایی بیست فیلم اکران می‌شود.",
+"nl": "In de megabioscoop draaien twintig films."
+},
+{
+"fa": "به مجموعهٔ سینمایی کنار ایستگاه رفتیم.",
+"nl": "We gingen naar de megabioscoop bij het station."
+}
+],
+"tr-1553": [
+{
+"fa": "در سالن اسکی تمام سال می‌توانی اسکی کنی.",
+"nl": "In de skibaan kun je het hele jaar skiën."
+},
+{
+"fa": "سالن اسکی نزدیک بزرگراه است.",
+"nl": "De skibaan ligt vlakbij de snelweg."
+}
+],
+"tr-1554": [
+{
+"fa": "در فرانسه جاده‌های عوارضی زیادی هست.",
+"nl": "In Frankrijk zijn veel tolwegen."
+}
+],
+"tr-1555": [
+{
+"fa": "با کارت‌های هوشمند سریع و آسان پرداخت می‌کنی.",
+"nl": "Met chipkaarten betaal je snel en makkelijk."
+}
+],
+"tr-1556": [
+{
+"fa": "بیا با هم پرداخت کنیم، این عادلانه‌تر است.",
+"nl": "Laten we samen betalen, dat is wel zo eerlijk."
+}
+],
+"tr-1557": [
+{
+"fa": "این خانه از پارسال در مالکیت ماست.",
+"nl": "Het huis is sinds vorig jaar in ons bezit."
+}
+],
+"tr-1558": [
+{
+"fa": "بر الکل و تنباکو مالیات ویژهٔ زیادی هست.",
+"nl": "Op alcohol en tabak zit veel accijns."
+}
+],
+"tr-1559": [
+{
+"fa": "بنزین دوباره گران‌تر شده است.",
+"nl": "De benzine is weer duurder geworden."
+}
+],
+"tr-1560": [
+{
+"fa": "آن ترافیک‌های طولانی حالا گذشته و تمام شده است.",
+"nl": "Die lange files zijn nu verleden tijd."
+}
+],
+"tr-1561": [
+{
+"fa": "می‌ترسم دیر برسیم.",
+"nl": "Ik vrees dat we te laat komen."
+},
+{
+"fa": "او برای شغلش بیم دارد.",
+"nl": "Hij vreest voor zijn baan."
+}
+],
+"tr-1562": [
+{
+"fa": "نمی‌خواهم ناامیدت کنم، اما نمی‌شود.",
+"nl": "Ik wil je niet teleurstellen, maar het lukt niet."
+},
+{
+"fa": "فیلم خوب بود؛ کسی را ناامید نکرد.",
+"nl": "De film was goed; hij stelde niemand teleur."
+}
+],
+"tr-1563": [
+{
+"fa": "سه دستهٔ مشتری تشخیص می‌دهیم.",
+"nl": "We onderscheiden drie categorieën klanten."
+}
+],
+"tr-1564": [
+{
+"fa": "والدین برای هر فرزند کمک‌هزینه دریافت می‌کنند.",
+"nl": "Voor elk kind krijgen ouders kinderbijslag."
+}
+],
+"tr-1567": [
+{
+"fa": "حقوق به حساب بانکی‌ام واریز می‌شود.",
+"nl": "Het salaris komt op mijn bankrekening."
+},
+{
+"fa": "برای اجاره به حساب بانکی نیاز داری.",
+"nl": "Je hebt een bankrekening nodig om te huren."
+}
+],
+"tr-1568": [
+{
+"fa": "در چارچوب این پروژه از مدارس بازدید می‌کنیم.",
+"nl": "In het kader van dit project bezoeken we scholen."
+},
+{
+"fa": "این در چارچوب توافق‌های ما نمی‌گنجد.",
+"nl": "Dat past niet in het kader van onze afspraken."
+}
+],
+"tr-1569": [
+{
+"fa": "در صورت ازکارافتادگی مقرری دریافت می‌کنی.",
+"nl": "Bij arbeidsongeschiktheid krijg je een uitkering."
+},
+{
+"fa": "آن ناتوانی از کار دو سال طول کشید.",
+"nl": "De arbeidsongeschiktheid duurde twee jaar."
+}
+],
+"tr-1572": [
+{
+"fa": "همکار سابق او حالا در برلین کار می‌کند.",
+"nl": "Zijn voormalige collega werkt nu in Berlijn."
+},
+{
+"fa": "کارخانهٔ سابق حالا موزه است.",
+"nl": "De voormalige fabriek is nu een museum."
+}
+],
+"tr-1573": [
+{
+"fa": "ساختمان برای افراد دارای معلولیت هم قابل دسترسی است.",
+"nl": "Het gebouw is ook toegankelijk voor gehandicapten."
+}
+],
+"tr-1574": [
+{
+"fa": "او مدت طولانی بیمار بوده است.",
+"nl": "Hij is langdurig ziek geweest."
+}
+],
+"tr-1576": [
+{
+"fa": "پدرم سال آینده بازنشسته می‌شود.",
+"nl": "Mijn vader gaat volgend jaar met pensioen."
+}
+],
+"tr-1577": [
+{
+"fa": "حداقل دستمزد در ژانویه بالا می‌رود.",
+"nl": "Het minimumloon gaat in januari omhoog."
+}
+],
+"tr-1578": [
+{
+"fa": "در این آسایشگاه از سالمندان خوب مراقبت می‌شود.",
+"nl": "In dit tehuis worden ouderen goed verzorgd."
+}
+],
+"tr-1579": [
+{
+"fa": "نوزاد در گهواره کنار تخت می‌خوابد.",
+"nl": "De baby slaapt in de wieg naast het bed."
+}
+],
+"tr-1580": [
+{
+"fa": "برای قبر گل بردیم.",
+"nl": "We brachten bloemen naar het graf."
+}
+],
+"tr-1582": [
+{
+"fa": "بعد از عمل به‌سرعت بهبود یافت.",
+"nl": "Na de operatie herstelde hij zich snel."
+}
+],
+"tr-1584": [
+{
+"fa": "صنعت نیروی محرک اقتصاد بود.",
+"nl": "De industrie was de motor van de economie."
+}
+],
+"tr-1585": [
+{
+"fa": "آن کسانی که می‌خواهند شرکت کنند، می‌توانند اعلام کنند.",
+"nl": "Diegenen die willen meedoen, kunnen zich melden."
+}
+],
+"tr-1586": [
+{
+"fa": "بدون کار او وسیلهٔ امرار معاش ندارد.",
+"nl": "Zonder werk heeft hij geen middelen van bestaan."
+}
+],
+"tr-1588": [
+{
+"fa": "کمیسیون جدیدی ایجاد شد.",
+"nl": "Er werd een nieuwe commissie ingesteld."
+}
+],
+"tr-1589": [
+{
+"fa": "در زمان‌های گذشته همه‌چیز متفاوت بود.",
+"nl": "In vroeger tijden was alles anders."
+}
+],
+"tr-1590": [
+{
+"fa": "بیکاری پارسال کاهش یافت.",
+"nl": "De werkloosheid nam vorig jaar af."
+},
+{
+"fa": "تعداد شکایت‌ها به‌روشنی کاهش یافت.",
+"nl": "Het aantal klachten nam duidelijk af."
+}
+],
+"tr-1592": [
+{
+"fa": "ناگهان چراغ خاموش شد.",
+"nl": "Plotseling ging het licht uit."
+}
+],
+"tr-1593": [
+{
+"fa": "او با سرعت بالایی کار می‌کند.",
+"nl": "Hij werkt in een hoog tempo."
+}
+],
+"tr-1595": [
+{
+"fa": "بیمار هیچ نشانه‌ای نشان نداد.",
+"nl": "De patiënt vertoonde geen symptomen."
+}
+],
+"tr-1597": [
+{
+"fa": "با تخفیف قیمت به‌طور محسوسی کاهش می‌یابد.",
+"nl": "Door de korting vermindert de prijs flink."
+}
+],
+"tr-1598": [
+{
+"fa": "اگر کاری نکنی، سر از مشکل درمی‌آوری.",
+"nl": "Als je niets doet, kom je in de problemen uit."
+},
+{
+"fa": "این جاده به ایستگاه ختم می‌شود.",
+"nl": "Deze weg komt bij het station uit."
+}
+],
+"tr-1600": [
+{
+"fa": "بیا، دست‌به‌کار شویم.",
+"nl": "Kom, we gaan aan de slag."
+}
+],
+"tr-1601": [
+{
+"fa": "گران است؛ از سوی دیگر عمر زیادی دارد.",
+"nl": "Het is duur; anderzijds gaat het lang mee."
+}
+],
+"tr-1602": [
+{
+"fa": "اگر سؤالی داری، در زنگ زدن تردید نکن.",
+"nl": "Aarzel niet om te bellen als je vragen hebt."
+}
+],
+"tr-1603": [
+{
+"fa": "شرکت می‌خواهد ده نفر را استخدام کند.",
+"nl": "Het bedrijf wil tien mensen in dienst nemen."
+},
+{
+"fa": "فقط افراد باتجربه را استخدام می‌کنند.",
+"nl": "Ze nemen alleen ervaren mensen in dienst."
+}
+],
+"tr-1605": [
+{
+"fa": "پرسش‌هایی دربارهٔ هزینه‌ها مطرح می‌شود.",
+"nl": "Er rijzen vragen over de kosten."
+}
+],
+"tr-1607": [
+{
+"fa": "نزدیک هفتاد درصد جمعیت در سن کار شاغل است.",
+"nl": "Bijna zeventig procent van de beroepsbevolking werkt."
+}
+],
+"tr-1609": [
+{
+"fa": "در بهار لاله‌ها شکوفا می‌شوند.",
+"nl": "In het voorjaar bloeien de tulpen."
+}
+],
+"tr-1610": [
+{
+"fa": "در آن روستا هنوز آسیاب‌های قدیمی پیدا می‌کنی.",
+"nl": "In dat dorp tref je nog oude molens aan."
+},
+{
+"fa": "همه‌جای شهر دوچرخه دیده می‌شود.",
+"nl": "Overal in de stad treft men fietsen aan."
+}
+],
+"tr-1611": [
+{
+"fa": "ویترین‌ها برای روزهای جشن تزیین شده‌اند.",
+"nl": "De etalages zijn versierd voor de feestdagen."
+}
+],
+"tr-1612": [
+{
+"fa": "لامپ‌های رشته‌ای قدیمی برق زیادی مصرف می‌کنند.",
+"nl": "De oude gloeilampen gebruiken veel stroom."
+}
+],
+"tr-1613": [
+{
+"fa": "این پنیر در فریسلاند تولید می‌شود.",
+"nl": "Deze kaas wordt in Friesland geproduceerd."
+}
+],
+"tr-1614": [
+{
+"fa": "تولید پنیر اینجا مهم است.",
+"nl": "De productie van kaas is hier belangrijk."
+},
+{
+"fa": "تولید به‌خاطر اعتصاب متوقف است.",
+"nl": "De productie ligt stil door een staking."
+}
+],
+"tr-1617": [
+{
+"fa": "مصرف گوشت کمی کاهش می‌یابد.",
+"nl": "De consumptie van vlees daalt licht."
+}
+],
+"tr-1618": [
+{
+"fa": "فرآوری شیر در کارخانه انجام می‌شود.",
+"nl": "De verwerking van melk gebeurt in de fabriek."
+}
+],
+"tr-1620": [
+{
+"fa": "با نوشیدنی اغلب چیپس می‌خوریم.",
+"nl": "Bij de borrel eten we vaak chips."
+}
+],
+"tr-1621": [
+{
+"fa": "هنوز شعلهٔ کوچکی در بخاری می‌سوزد.",
+"nl": "Er brandt nog een vlammetje in de kachel."
+}
+],
+"tr-1622": [
+{
+"fa": "این قانون به همهٔ دانش‌آموزان مربوط می‌شود.",
+"nl": "Deze regel slaat op alle leerlingen."
+},
+{
+"fa": "آن حرف به چه اشاره دارد؟",
+"nl": "Waar slaat die opmerking op?"
+}
+],
+"tr-1623": [
+{
+"fa": "افزایش قابل‌توجهی در هزینه‌ها هست.",
+"nl": "Er is een aanzienlijke stijging van de kosten."
+}
+],
+"tr-1624": [
+{
+"fa": "در خرونینگن گاز طبیعی استخراج می‌شود.",
+"nl": "In Groningen wordt aardgas gewonnen."
+}
+],
+"tr-1626": [
+{
+"fa": "بابت کمکت خیلی سپاسگزارم.",
+"nl": "Ik ben je heel dankbaar voor je hulp."
+}
+],
+"tr-1627": [
+{
+"fa": "انرژی خورشیدی منبع پاکی از انرژی است.",
+"nl": "Zonne-energie is een schone bron van energie."
+}
+],
+"tr-1628": [
+{
+"fa": "مرغ‌ها در باغ می‌چرخند.",
+"nl": "Er lopen kippen rond in de tuin."
+},
+{
+"fa": "بچه‌ها در حیاط مدرسه راه می‌روند.",
+"nl": "De kinderen lopen rond op het schoolplein."
+}
+],
+"tr-1629": [
+{
+"fa": "در چمنزار گاوهای سیاه‌وسفید ایستاده‌اند.",
+"nl": "In de wei staan zwart-witte koeien."
+}
+],
+"tr-1630": [
+{
+"fa": "شیر، پنیر و ماست لبنیات هستند.",
+"nl": "Melk, kaas en yoghurt zijn zuivel."
+},
+{
+"fa": "او لبنیات نمی‌خورد.",
+"nl": "Hij eet geen zuivel."
+}
+],
+"tr-1631": [
+{
+"fa": "پنیر شکل یک کره دارد.",
+"nl": "De kaas heeft de vorm van een bol."
+}
+],
+"tr-1633": [
+{
+"fa": "او احتمالاً از قبل رفته است.",
+"nl": "Hij is vermoedelijk al vertrokken."
+}
+],
+"tr-1634": [
+{
+"fa": "در بازار یک پنیر گودا خریدم.",
+"nl": "Op de markt kocht ik een Goudse kaas."
+}
+],
+"tr-1635": [
+{
+"fa": "در مزرعه یک بچه‌خوک کوچک راه می‌رود.",
+"nl": "Op de boerderij loopt een klein varkentje."
+}
+],
+"tr-1636": [
+{
+"fa": "دامداری اینجا مهم‌ترین بخش است.",
+"nl": "De veeteelt is hier de belangrijkste sector."
+}
+],
+"tr-1637": [
+{
+"fa": "یک گوجه‌فرنگی دیگر در سالاد بریز.",
+"nl": "Doe er nog een tomaat bij in de salade."
+}
+],
+"tr-1639": [
+{
+"fa": "در آوریل مزارع گل‌های پیازی زیبا هستند.",
+"nl": "In april zijn de bollenvelden prachtig."
+}
+],
+"tr-1640": [
+{
+"fa": "این موزه سالانه توسط هزاران نفر بازدید می‌شود.",
+"nl": "Dit museum wordt jaarlijks door duizenden bezocht."
+}
+],
+"tr-1641": [
+{
+"fa": "با اتوبوس به آنجا می‌روی؟",
+"nl": "Ga je daar heen met de bus?"
+},
+{
+"fa": "می‌خواهم به آنجا بروم، اما خیلی دور است.",
+"nl": "Ik wil daar heen, maar het is te ver."
+}
+],
+"tr-1642": [
+{
+"fa": "دیوارها زرد رنگ شده‌اند.",
+"nl": "De muren zijn geel geschilderd."
+}
+],
+"tr-1643": [
+{
+"fa": "او کت بنفشی پوشیده است.",
+"nl": "Ze draagt een paarse jas."
+}
+],
+"tr-1644": [
+{
+"fa": "بعد از باران رنگین‌کمانی دیدیم.",
+"nl": "Na de regen zagen we een regenboog."
+}
+],
+"tr-1645": [
+{
+"fa": "کمی فلفل دلمه‌ای در سالاد بریز.",
+"nl": "Doe wat paprika's in de salade."
+}
+],
+"tr-1646": [
+{
+"fa": "گوجه‌فرنگی‌ها در گلخانهٔ بزرگی رشد می‌کنند.",
+"nl": "De tomaten groeien in een grote kas."
+}
+],
+"tr-1647": [
+{
+"fa": "این منطقه به پنیرش معروف است.",
+"nl": "Deze streek is bekend om zijn kaas."
+}
+],
+"tr-1648": [
+{
+"fa": "شب‌ها اینجا خیلی ساکت است.",
+"nl": "'s Nachts is het hier heel stil."
+},
+{
+"fa": "شب‌ها کار می‌کنم و روزها می‌خوابم.",
+"nl": "Ik werk 's nachts en slaap overdag."
+}
+],
+"tr-1649": [
+{
+"fa": "چراغ را کمی روشن کن.",
+"nl": "Doe het licht even aan."
+}
+],
+"tr-1650": [
+{
+"fa": "بهره‌وری این شرکت بالاست.",
+"nl": "De productiviteit van het bedrijf is hoog."
+}
+],
+"tr-1652": [
+{
+"fa": "در حراج‌ها گل فروخته می‌شود.",
+"nl": "Op de veilingen worden bloemen verkocht."
+}
+],
+"tr-1653": [
+{
+"fa": "پدرم در یک کارخانه کار می‌کرد.",
+"nl": "Mijn vader werkte in een fabriek."
+},
+{
+"fa": "کارخانه سال آینده تعطیل می‌شود.",
+"nl": "De fabriek sluit volgend jaar."
+}
+],
+"tr-1654": [
+{
+"fa": "او مشهورترین نویسندهٔ کشور است.",
+"nl": "Hij is de bekendste schrijver des lands."
+}
+],
+"tr-1655": [
+{
+"fa": "جهت با یک فِلش مشخص شده است.",
+"nl": "De richting wordt met een pijl aangeduid."
+}
+],
+"tr-1656": [
+{
+"fa": "صرف‌نظر از قیمت، خانهٔ خوبی است.",
+"nl": "Afgezien van de prijs is het een goed huis."
+},
+{
+"fa": "به‌جز تو کسی آدرس را نمی‌داند.",
+"nl": "Afgezien van jou kent niemand het adres."
+}
+],
+"tr-1657": [
+{
+"fa": "وقتی می‌روی چراغ‌ها را خاموش کن.",
+"nl": "Doe de lampen uit als je weggaat."
+},
+{
+"fa": "در مغازه چراغ‌های زیبایی آویزان است.",
+"nl": "In de winkel hangen mooie lampen."
+}
+],
+"tr-1658": [
+{
+"fa": "فیلیپس شرکت چندملیتی شناخته‌شده‌ای است.",
+"nl": "Philips is een bekende multinational."
+},
+{
+"fa": "او در یک شرکت چندملیتی آمریکایی کار می‌کند.",
+"nl": "Hij werkt bij een Amerikaanse multinational."
+}
+],
+"tr-1659": [
+{
+"fa": "او در آیندهوون الکترونیک می‌خواند.",
+"nl": "Hij studeert elektronica in Eindhoven."
+},
+{
+"fa": "مغازه لوازم الکترونیک و رایانه می‌فروشد.",
+"nl": "De winkel verkoopt elektronica en computers."
+}
+],
+"tr-1660": [
+{
+"fa": "او با یک ماشین ژاپنی رانندگی می‌کند.",
+"nl": "Zij rijdt in een Japanse auto."
+}
+],
+"tr-1662": [
+{
+"fa": "سهم ما از هزینه‌ها کم است.",
+"nl": "Ons aandeel in de kosten is klein."
+}
+],
+"tr-1663": [
+{
+"fa": "سیستم‌های DVD حالا تقریباً هیچ‌جا دیده نمی‌شوند.",
+"nl": "Dvd-systemen zie je nu bijna nergens meer."
+}
+],
+"tr-1666": [
+{
+"fa": "در بندر کارخانهٔ پتروشیمی بزرگی هست.",
+"nl": "In de haven staat een grote petrochemische fabriek."
+}
+],
+"tr-1667": [
+{
+"fa": "هلند تولیدکنندهٔ بزرگ گل است.",
+"nl": "Nederland is een grote producent van bloemen."
+},
+{
+"fa": "تهیه‌کنندهٔ فیلم حاضر بود.",
+"nl": "De producent van de film was aanwezig."
+}
+],
+"tr-1669": [
+{
+"fa": "او رهبر این پروژه است.",
+"nl": "Zij is de leider van het project."
+},
+{
+"fa": "این شرکت پیشرو بازار است.",
+"nl": "Dit bedrijf is leider op de markt."
+}
+],
+"tr-1670": [
+{
+"fa": "امروز چه هوای دلپذیری!",
+"nl": "Wat een heerlijk weer vandaag!"
+}
+],
+"tr-1671": [
+{
+"fa": "آب دریاچه شفاف است.",
+"nl": "Het water in het meer is helder."
+}
+],
+"tr-1672": [
+{
+"fa": "تو نسبت به این پیشنهاد چه دیدگاهی داری؟",
+"nl": "Hoe kijk jij tegen dit voorstel aan?"
+},
+{
+"fa": "او نسبت به این تغییر نگاه مثبتی دارد.",
+"nl": "Zij kijkt positief tegen de verandering aan."
+}
+],
+"tr-1673": [
+{
+"fa": "در این دوره تأکید بر صحبت کردن است.",
+"nl": "In deze cursus ligt de nadruk op spreken."
+},
+{
+"fa": "او بر تلفظ خوب تأکید زیادی می‌کند.",
+"nl": "Hij legt veel nadruk op goede uitspraak."
+}
+],
+"tr-1675": [
+{
+"fa": "میان دو باشگاه رقابت وجود دارد.",
+"nl": "Er bestaat rivaliteit tussen de twee clubs."
+}
+],
+"tr-1676": [
+{
+"fa": "ما یک دوست مشترک داریم.",
+"nl": "We hebben een gemeenschappelijke vriend."
+}
+],
+"tr-1678": [
+{
+"fa": "نگرش او نسبت به همکاران دوستانه است.",
+"nl": "Zijn houding tegenover collega's is vriendelijk."
+}
+],
+"tr-1679": [
+{
+"fa": "نسبت به پارسال همه‌چیز گران‌تر است.",
+"nl": "Ten opzichte van vorig jaar is alles duurder."
+}
+],
+"tr-1680": [
+{
+"fa": "در جنگ میلیون‌ها نفر در اردوگاه‌های کار اجباری جان باختند.",
+"nl": "In de oorlog stierven miljoenen in concentratiekampen."
+}
+],
+"tr-1681": [
+{
+"fa": "او همیشه در برابر بی‌عدالتی مقاومت کرده است.",
+"nl": "Zij heeft zich altijd tegen onrecht verzet."
+},
+{
+"fa": "مردم در برابر اشغالگر مقاومت کردند.",
+"nl": "Het volk verzette zich tegen de bezetter."
+}
+],
+"tr-1682": [
+{
+"fa": "از نیت خوب او مطمئنم.",
+"nl": "Ik ben overtuigd van zijn goede bedoelingen."
+},
+{
+"fa": "او متقاعد است که موفق می‌شود.",
+"nl": "Hij is ervan overtuigd dat het lukt."
+}
+],
+"tr-1686": [
+{
+"fa": "امروز صبح نسبتاً سرد بود.",
+"nl": "Het was behoorlijk koud vanochtend."
+}
+],
+"tr-1688": [
+{
+"fa": "آلمان شریک تجاری شمارهٔ یک است.",
+"nl": "Duitsland is nummer 1 als handelspartner."
+}
+],
+"tr-1691": [
+{
+"fa": "در مقایسه با پارسال اوضاع بهتر است.",
+"nl": "In vergelijking met vorig jaar gaat het beter."
+}
+],
+"tr-1692": [
+{
+"fa": "بسیاری از آلمانی‌ها برای تعطیلات اینجا می‌آیند.",
+"nl": "Veel Duitsers komen hier op vakantie."
+}
+],
+"tr-1693": [
+{
+"fa": "تا ایستگاه نسبتاً دور است.",
+"nl": "Het is tamelijk ver lopen naar het station."
+}
+],
+"tr-1694": [
+{
+"fa": "معمولاً ساعت هفت بیدار می‌شوم.",
+"nl": "Ik sta gewoonlijk om zeven uur op."
+}
+],
+"tr-1696": [
+{
+"fa": "در آن مسابقه از ما بهتر بودند.",
+"nl": "In die wedstrijd waren ze ons de baas."
+},
+{
+"fa": "در شطرنج از ما بهتر بودند.",
+"nl": "Bij het schaken waren ze ons de baas."
+}
+],
+"tr-1698": [
+{
+"fa": "اسمش دوباره چه بود؟",
+"nl": "Hoe heet hij ook al weer?"
+}
+],
+"tr-1699": [
+{
+"fa": "آن بازیکنان در کشورشان قهرمان هستند.",
+"nl": "Die spelers zijn helden in hun land."
+}
+],
+"tr-1701": [
+{
+"fa": "تیم ما دیروز برد.",
+"nl": "Onze ploeg heeft gisteren gewonnen."
+}
+],
+"tr-1702": [
+{
+"fa": "در جلسه حضور داشتم.",
+"nl": "Ik heb de vergadering bijgewoond."
+}
+],
+"tr-1703": [
+{
+"fa": "آن تصویر در ذهنم می‌ماند.",
+"nl": "Dat beeld blijft in mijn geest hangen."
+}
+],
+"tr-1704": [
+{
+"fa": "روابط میان کشورها خوب است.",
+"nl": "De betrekkingen tussen de landen zijn goed."
+}
+],
+"tr-1705": [
+{
+"fa": "صندلی‌ها را به‌گونه‌ای بچین که همه ببینند.",
+"nl": "Zet de stoelen zodanig dat iedereen ziet."
+}
+],
+"tr-1706": [
+{
+"fa": "او بر تمام بخش رئیس‌بازی درمی‌آورد.",
+"nl": "Hij de baas speelde over de hele afdeling."
+},
+{
+"fa": "در جلسه دوباره بر همه رئیس‌بازی درآورد.",
+"nl": "Op de vergadering de baas speelde hij weer over iedereen."
+}
+],
+"tr-1707": [
+{
+"fa": "انقلاب صنعتی همه‌چیز را تغییر داد.",
+"nl": "De industriële revolutie veranderde alles."
+}
+],
+"tr-1710": [
+{
+"fa": "از دید هلندی‌ها این کاملاً عادی است.",
+"nl": "In Nederlandse ogen is dat heel gewoon."
+}
+],
+"tr-1711": [
+{
+"fa": "لیمبورخ استانی جنوبی است.",
+"nl": "Limburg is een zuidelijke provincie."
+}
+],
+"tr-1713": [
+{
+"fa": "به این پیشنهاد اعتراضی داری؟",
+"nl": "Heb je bezwaar tegen dit voorstel?"
+}
+],
+"tr-1714": [
+{
+"fa": "کیف را روی شانه‌هایش حمل کرد.",
+"nl": "Hij droeg de tas op zijn schouders."
+}
+],
+"tr-1715": [
+{
+"fa": "باید با هم برای این طرح جدی تلاش کنیم.",
+"nl": "We moeten samen de schouders zetten onder dit plan."
+},
+{
+"fa": "همه برای این پروژه سخت تلاش کردند.",
+"nl": "Iedereen zette de schouders onder het project."
+}
+],
+"tr-1716": [
+{
+"fa": "آن سوی خیابان یک نانوایی هست.",
+"nl": "Aan de overkant van de straat is een bakker."
+}
+],
+"tr-1717": [
+{
+"fa": "کانال مانش انگلستان را از فرانسه جدا می‌کند.",
+"nl": "Het Kanaal scheidt Engeland van Frankrijk."
+}
+],
+"tr-1718": [
+{
+"fa": "بریتانیایی‌ها دوست دارند چای بنوشند.",
+"nl": "De Britten drinken graag thee."
+}
+],
+"tr-1719": [
+{
+"fa": "هلندی‌ها برای صراحت ارزش قائل‌اند.",
+"nl": "Nederlanders hechten aan directheid."
+},
+{
+"fa": "او برای سنت‌ها اهمیت زیادی قائل است.",
+"nl": "Zij hecht veel waarde aan tradities."
+}
+],
+"tr-1722": [
+{
+"fa": "این داستان تا چه حد درست است؟",
+"nl": "In hoeverre klopt dit verhaal?"
+}
+],
+"tr-1723": [
+{
+"fa": "غذای آن رستوران عالی بود.",
+"nl": "Het eten in dat restaurant was voortreffelijk."
+}
+],
+"tr-1724": [
+{
+"fa": "در جشنواره ستاره‌های مشهوری اجرا کردند.",
+"nl": "Op het festival traden bekende sterren op."
+}
+],
+"tr-1725": [
+{
+"fa": "دیروز تصادفی با یک دوست قدیمی روبه‌رو شدم.",
+"nl": "Ik liep gisteren een oude vriend tegen het lijf."
+},
+{
+"fa": "در شهر اغلب تصادفی با آشنایان روبه‌رو می‌شوی.",
+"nl": "In de stad loop je vaak bekenden tegen het lijf."
+}
+],
+"tr-1726": [
+{
+"fa": "تمام بدنم درد می‌کند.",
+"nl": "Ik heb pijn in mijn hele lijf."
+}
+],
+"tr-1727": [
+{
+"fa": "جرئت نمی‌کنم آن را بپرسم.",
+"nl": "Ik durf dat niet te vragen."
+}
+],
+"tr-1730": [
+{
+"fa": "هیچ می‌دانی ساعت چند است؟",
+"nl": "Heb je enig idee hoe laat het is?"
+}
+],
+"tr-1732": [
+{
+"fa": "او وضعیت را پذیرفته است.",
+"nl": "Hij berust in de situatie."
+},
+{
+"fa": "او نتوانست آن باخت را بپذیرد.",
+"nl": "Zij kon niet berusten in het verlies."
+}
+],
+"tr-1733": [
+{
+"fa": "دولت علیه تروریسم اقداماتی انجام می‌دهد.",
+"nl": "De regering neemt maatregelen tegen terrorisme."
+}
+],
+"tr-1734": [
+{
+"fa": "او بابت چیزهای کوچک عصبانی می‌شود.",
+"nl": "Hij windt zich op over kleine dingen."
+},
+{
+"fa": "بابت آن حرف عصبانی نشو.",
+"nl": "Wind je niet op over die opmerking."
+}
+],
+"tr-1735": [
+{
+"fa": "از اجارهٔ بالا شکایت می‌کنند.",
+"nl": "Ze klagen over de hoge huur."
+},
+{
+"fa": "او هرگز از کارش شکایت نمی‌کند.",
+"nl": "Hij klaagt nooit over zijn werk."
+}
+],
+"tr-1737": [
+{
+"fa": "آن مشکلات را از نزدیک می‌شناسم.",
+"nl": "Ik ken die problemen van nabij."
+}
+],
+"tr-1738": [
+{
+"fa": "چنین چیزی را دیگر هرگز نمی‌خواهم تجربه کنم.",
+"nl": "Zoiets wil ik nooit meer meemaken."
+}
+],
+"tr-1739": [
+{
+"fa": "هرکس جرمی مرتکب شود، مجازات می‌شود.",
+"nl": "Wie een misdaad pleegt, wordt gestraft."
+}
+],
+"tr-1740": [
+{
+"fa": "از روی بی‌حوصلگی به پیاده‌روی رفت.",
+"nl": "Uit verveling ging hij wandelen."
+}
+],
+"tr-1741": [
+{
+"fa": "از روی بی‌حوصلگی به دوستان قدیمی‌اش زنگ زد.",
+"nl": "Hij belde uit verveling zijn oude vrienden op."
+}
+],
+"tr-1743": [
+{
+"fa": "هلند کشوری با ترکیب قومی متنوع است.",
+"nl": "Nederland is een etnisch gemengd land."
+}
+],
+"tr-1745": [
+{
+"fa": "آدرس اشتباه را نوشتم.",
+"nl": "Ik heb het verkeerde adres opgeschreven."
+}
+],
+"tr-1747": [
+{
+"fa": "پلیس هنگام بروز مشکل مداخله می‌کند.",
+"nl": "De politie grijpt in bij problemen."
+},
+{
+"fa": "وقتی اوضاع شلوغ شد، معلم مداخله کرد.",
+"nl": "De docent greep in toen het te druk werd."
+}
+],
+"tr-1748": [
+{
+"fa": "بسیار سخت‌گیرانه با خشونت برخورد کردند.",
+"nl": "Ze traden keihard op tegen het geweld."
+}
+],
+"tr-1749": [
+{
+"fa": "دامنهٔ مشکل بزرگ است.",
+"nl": "De omvang van het probleem is groot."
+}
+],
+"tr-1750": [
+{
+"fa": "اشتباه منتفی نیست.",
+"nl": "Een fout is niet uitgesloten."
+}
+],
+"tr-1751": [
+{
+"fa": "حرف او همیشه بحث ایجاد می‌کند.",
+"nl": "Zijn opmerking lokt altijd discussie uit."
+},
+{
+"fa": "آن سیاست انتقاد برمی‌انگیزد.",
+"nl": "Dat beleid lokt kritiek uit."
+}
+],
+"tr-1752": [
+{
+"fa": "در تمام مغازه دوربین نصب است.",
+"nl": "Er hangen camera's in de hele winkel."
+}
+],
+"tr-1753": [
+{
+"fa": "روی بام پنل خورشیدی نصب می‌کنیم.",
+"nl": "We laten zonnepanelen aanbrengen op het dak."
+}
+],
+"tr-1754": [
+{
+"fa": "دوربین همه‌جا حریم خصوصی‌ات را نقض می‌کند.",
+"nl": "Camera's overal tasten je privacy aan."
+}
+],
+"tr-1758": [
+{
+"fa": "دم ورودی حراست می‌تواند بازرسی بدنی کند.",
+"nl": "Bij de ingang mag de beveiliging je fouilleren."
+}
+],
+"tr-1759": [
+{
+"fa": "پلیس فقط با دلیل می‌تواند کسی را دستگیر کند.",
+"nl": "De politie kan iemand alleen met reden arresteren."
+}
+],
+"tr-1760": [
+{
+"fa": "سلول‌های زندان کوچک هستند.",
+"nl": "De cellen in de gevangenis zijn klein."
+}
+],
+"tr-1761": [
+{
+"fa": "جای کافی در زندان‌ها نیست.",
+"nl": "Er zijn te weinig plaatsen in de gevangenissen."
+}
+],
+"tr-1764": [
+{
+"fa": "معلم او را بابت رفتارش مورد بازخواست قرار داد.",
+"nl": "De docent sprak hem aan op zijn gedrag."
+},
+{
+"fa": "می‌توانی مردم را بابت مسئولیتشان مخاطب قرار دهی.",
+"nl": "Je mag mensen aanspreken op hun verantwoordelijkheid."
+}
+],
+"tr-1765": [
+{
+"fa": "در آن چاقوکشی یک مرد مجروح شد.",
+"nl": "Bij de steekpartij raakte één man gewond."
+}
+],
+"tr-1766": [
+{
+"fa": "در حادثه به‌سرعت دچار آسیب می‌شوی.",
+"nl": "Bij een ongeluk loop je snel een blessure op."
+},
+{
+"fa": "به‌خاطر سرعت زیاد جریمه شد.",
+"nl": "Hij liep een boete op wegens te hard rijden."
+}
+],
+"tr-1767": [
+{
+"fa": "او با زخم گلوله بستری شد.",
+"nl": "Hij werd met een schotwond opgenomen."
+}
+],
+"tr-1768": [
+{
+"fa": "سلاح‌ها اینجا شدیداً ممنوع است.",
+"nl": "Wapens zijn hier streng verboden."
+}
+],
+"tr-1769": [
+{
+"fa": "نمی‌توانی او را سرزنش کنی؛ تلاشش را کرد.",
+"nl": "Je kunt hem niets verwijten; hij deed zijn best."
+}
+],
+"tr-1770": [
+{
+"fa": "آیا در این ماجرا می‌توان والدین را مقصر دانست؟",
+"nl": "Valt de ouders iets te verwijten in deze zaak?"
+}
+],
+"tr-1771": [
+{
+"fa": "رسانه‌ها توجه زیادی به آن پرونده کردند.",
+"nl": "De media besteedden veel aandacht aan de zaak."
+}
+],
+"tr-1772": [
+{
+"fa": "پشت خانه پنج مرغ راه می‌روند.",
+"nl": "Achter het huis lopen vijf kippen."
+}
+],
+"tr-1773": [
+{
+"fa": "برای غذای رایگان خیلی سریع حاضر می‌شوند.",
+"nl": "Bij gratis eten zijn ze er als de kippen bij."
+},
+{
+"fa": "وقتی تخفیف باشد، مشتری‌ها خیلی سریع حاضر می‌شوند.",
+"nl": "Als er korting is, zijn de klanten er als de kippen bij."
+}
+],
+"tr-1774": [
+{
+"fa": "در برنامه کارشناسان فرصت حرف زدن پیدا می‌کنند.",
+"nl": "In de uitzending komen deskundigen aan het woord."
+}
+],
+"tr-1775": [
+{
+"fa": "سه کارشناس در آن پنل بودند.",
+"nl": "Er zaten drie deskundigen in het panel."
+}
+],
+"tr-1776": [
+{
+"fa": "حقوق اقلیت‌ها محافظت شده است.",
+"nl": "De rechten van minderheden zijn beschermd."
+}
+],
+"tr-1777": [
+{
+"fa": "هنوز دربارهٔ پیشنهادت فکر می‌کنم.",
+"nl": "Ik denk nog na over je voorstel."
+},
+{
+"fa": "او دربارهٔ رشتهٔ جدیدی فکر می‌کند.",
+"nl": "Zij denkt na over een nieuwe studie."
+}
+],
+"tr-1778": [
+{
+"fa": "نباید بچه‌ها را خیلی سخت مجازات کنی.",
+"nl": "Je moet kinderen niet te streng straffen."
+},
+{
+"fa": "مدرسه دانش‌آموزان غایب را مجازات می‌کند.",
+"nl": "De school straft leerlingen die spijbelen."
+}
+],
+"tr-1779": [
+{
+"fa": "می‌خواهند شرکت خودشان را راه‌اندازی کنند.",
+"nl": "Ze willen een eigen bedrijf opzetten."
+},
+{
+"fa": "دوره‌ای برای مبتدی‌ها راه می‌اندازیم.",
+"nl": "We zetten een cursus voor beginners op."
+}
+],
+"tr-1780": [
+{
+"fa": "می‌توانم از تو توصیه بخواهم؟",
+"nl": "Mag ik je om raad vragen?"
+},
+{
+"fa": "توصیهٔ او خیلی به من کمک کرد.",
+"nl": "Zijn raad heeft me erg geholpen."
+}
+],
+"tr-1781": [
+{
+"fa": "حالا چه کنیم؟ پیدا کردن راه‌حل خوب سخت است.",
+"nl": "Wat moeten we nu doen? Goede raad is duur."
+},
+{
+"fa": "در چنین وضعیتی پیدا کردن راه‌حل خوب سخت است.",
+"nl": "Goede raad is duur in zo'n situatie."
+}
+],
+"tr-1782": [
+{
+"fa": "کتاب‌ها روی قفسهٔ بالایی هستند.",
+"nl": "De boeken staan op de bovenste plank."
+}
+],
+"tr-1783": [
+{
+"fa": "هلندی‌ها چطور نان سر سفره می‌آورند؟",
+"nl": "Hoe krijgt de Nederlander brood op de plank?"
+},
+{
+"fa": "هلندی‌ها در این دوره چطور نان سر سفره می‌آورند؟",
+"nl": "Hoe krijgt de Nederlander brood op de plank in deze tijd?"
+}
+],
+"tr-1784": [
+{
+"fa": "او قادر است تنهایی انجامش دهد.",
+"nl": "Zij is in staat het alleen te doen."
+},
+{
+"fa": "او قادر به آمدن نیست.",
+"nl": "Hij is niet in staat om te komen."
+}
+],
+"tr-1787": [
+{
+"fa": "از این ارقام چه نتیجه‌ای می‌توانی بگیری؟",
+"nl": "Wat kun je uit deze cijfers afleiden?"
+},
+{
+"fa": "از واکنشش استنباط می‌کنم که عصبانی است.",
+"nl": "Uit zijn reactie leid ik af dat hij boos is."
+}
+],
+"tr-1790": [
+{
+"fa": "می‌توانم در خدمتتان باشم؟",
+"nl": "Kan ik u van dienst zijn?"
+}
+],
+"tr-1791": [
+{
+"fa": "آخر هفته اغلب بیرون از خانه غذا می‌خوریم.",
+"nl": "In het weekend eten we vaak buitenshuis."
+}
+],
+"tr-1792": [
+{
+"fa": "در سوپرمارکت سالادهای آماده هست.",
+"nl": "In de supermarkt liggen kant-en-klare salades."
+}
+],
+"tr-1793": [
+{
+"fa": "روزی سه وعده غذا می‌خورم.",
+"nl": "Ik eet drie maaltijden per dag."
+}
+],
+"tr-1794": [
+{
+"fa": "پست بسته‌ها را صبح تحویل می‌دهد.",
+"nl": "De post bezorgt de pakketten 's ochtends."
+}
+],
+"tr-1795": [
+{
+"fa": "یک پیتزا سفارش دهیم؟",
+"nl": "Zullen we een pizza bestellen?"
+}
+],
+"tr-1796": [
+{
+"fa": "ما هر سال یک مهمانی سازمان‌دهی می‌کنیم.",
+"nl": "Wij organiseren elk jaar een feest."
+}
+],
+"tr-1797": [
+{
+"fa": "سفر را از یک آژانس مسافرتی رزرو کردیم.",
+"nl": "We boekten de reis bij een reisbureau."
+}
+],
+"tr-1798": [
+{
+"fa": "دفتر ما کنار ایستگاه است.",
+"nl": "Ons kantoor ligt naast het station."
+}
+],
+"tr-1799": [
+{
+"fa": "مدیریت ساختمان پول زیادی می‌برد.",
+"nl": "Het beheer van het gebouw kost veel geld."
+}
+],
+"tr-1800": [
+{
+"fa": "او شبکهٔ بزرگی در این صنعت دارد.",
+"nl": "Zij heeft een groot netwerk in de branche."
+},
+{
+"fa": "شبکهٔ این ساختمان سریع است.",
+"nl": "Het netwerk in dit gebouw is snel."
+}
+],
+"tr-1801": [
+{
+"fa": "از طریق آژانس نیروی موقت کار پیدا کردم.",
+"nl": "Ik heb werk gevonden via een uitzendbureau."
+}
+],
+"tr-1803": [
+{
+"fa": "خدمات تهیهٔ غذا، غذای مهمانی را فراهم می‌کند.",
+"nl": "De catering verzorgt het eten op het feest."
+},
+{
+"fa": "او در یک شرکت خدمات غذایی کار می‌کند.",
+"nl": "Zij werkt bij een bedrijf in catering."
+}
+],
+"tr-1804": [
+{
+"fa": "در جنگل نباید شلیک کنی.",
+"nl": "In het bos mag je niet schieten."
+}
+],
+"tr-1805": [
+{
+"fa": "در جنگل قارچ‌های زیادی می‌رویند.",
+"nl": "In het bos groeien veel paddenstoelen."
+}
+],
+"tr-1806": [
+{
+"fa": "کافه‌های جدید مثل قارچ از زمین بیرون می‌زنند.",
+"nl": "Nieuwe koffiebars schieten als paddenstoelen uit de grond."
+}
+],
+"tr-1808": [
+{
+"fa": "مشاهده می‌کنیم که هزینه‌ها بالا می‌رود.",
+"nl": "We constateren dat de kosten stijgen."
+}
+],
+"tr-1809": [
+{
+"fa": "امسال شغل‌های زیادی اضافه شده است.",
+"nl": "Er zijn dit jaar veel banen bij gekomen."
+}
+],
+"tr-1810": [
+{
+"fa": "کار کم‌مهارت به‌آرامی از بین می‌رود.",
+"nl": "Laaggeschoold werk verdwijnt langzaam."
+}
+],
+"tr-1811": [
+{
+"fa": "تلاش می‌کنند هزینه‌ها را پایین نگه دارند.",
+"nl": "Ze trachten de kosten laag te houden."
+}
+],
+"tr-1812": [
+{
+"fa": "در خانواده‌های سنتی فقط مرد کار می‌کرد.",
+"nl": "In traditionele gezinnen werkte alleen de man."
+}
+],
+"tr-1814": [
+{
+"fa": "مردم به‌صورت گسترده تلفن جدید را خریدند.",
+"nl": "Mensen kochten massaal de nieuwe telefoon."
+}
+],
+"tr-1815": [
+{
+"fa": "بسیاری از زنان وارد بازار کار شده‌اند.",
+"nl": "Veel vrouwen zijn de arbeidsmarkt opgegaan."
+},
+{
+"fa": "از دههٔ هفتاد بسیاری از زنان وارد بازار کار شده‌اند.",
+"nl": "Sinds de jaren zeventig zijn veel vrouwen de arbeidsmarkt opgegaan."
+}
+],
+"tr-1816": [
+{
+"fa": "با یک نگاه دیدم چیزی درست نیست.",
+"nl": "Met één blik zag ik dat er iets mis was."
+}
+],
+"tr-1818": [
+{
+"fa": "پزشکان زن بیشتر از گذشته هستند.",
+"nl": "Er zijn meer vrouwelijke artsen dan vroeger."
+}
+],
+"tr-1819": [
+{
+"fa": "توجه کنید که مغازه دوشنبه بسته است.",
+"nl": "Merk op dat de winkel op maandag dicht is."
+}
+],
+"tr-1820": [
+{
+"fa": "او روابط تجاری زیادی در آلمان دارد.",
+"nl": "Hij heeft veel zakelijke contacten in Duitsland."
+}
+],
+"tr-1821": [
+{
+"fa": "ارائهٔ خدمات این هتل عالی است.",
+"nl": "De dienstverlening in dit hotel is uitstekend."
+}
+],
+"tr-1822": [
+{
+"fa": "او سال‌هاست در بخش هتل و رستوران کار می‌کند.",
+"nl": "Hij werkt al jaren in de horeca."
+}
+],
+"tr-1826": [
+{
+"fa": "او کار و تحصیل را ترکیب می‌کند.",
+"nl": "Zij combineert werk en studie."
+}
+],
+"tr-1827": [
+{
+"fa": "بعد از تحصیل می‌خواست روی پای خودش بایستد.",
+"nl": "Na haar studie wilde ze op eigen benen staan."
+}
+],
+"tr-1828": [
+{
+"fa": "او در یک بانک بزرگ پیشرفت شغلی می‌کند.",
+"nl": "Hij maakt carrière bij een grote bank."
+},
+{
+"fa": "او خانواده را بر کارراههٔ خود ترجیح داد.",
+"nl": "Zij koos voor haar gezin boven haar carrière."
+}
+],
+"tr-1829": [
+{
+"fa": "تبعیض در محل کار ممنوع است.",
+"nl": "Discriminatie op het werk is verboden."
+},
+{
+"fa": "هنوز در بازار مسکن تبعیض وجود دارد.",
+"nl": "Er is nog steeds discriminatie op de woningmarkt."
+}
+],
+"tr-1830": [
+{
+"fa": "قرارداد موقت یک‌ساله دارم.",
+"nl": "Ik heb een tijdelijk contract voor een jaar."
+}
+],
+"tr-1831": [
+{
+"fa": "این شغل انعطاف‌پذیری زیادی می‌خواهد.",
+"nl": "Deze baan vraagt veel flexibiliteit."
+}
+],
+"tr-1832": [
+{
+"fa": "روزی هشت ساعت کار استاندارد است.",
+"nl": "Acht uur werken per dag is de norm."
+}
+],
+"tr-1833": [
+{
+"fa": "سالی دو بار تعطیلات اینجا روال است.",
+"nl": "Twee keer per jaar op vakantie is de norm hier."
+},
+{
+"fa": "دورکاری به هنجار تبدیل شده است.",
+"nl": "Thuiswerken is de norm geworden."
+}
+],
+"tr-1834": [
+{
+"fa": "ما مرتب در پارک همدیگر را می‌بینیم.",
+"nl": "Wij zien elkaar geregeld in het park."
+}
+],
+"tr-1835": [
+{
+"fa": "می‌خواهم شغلم را عوض کنم.",
+"nl": "Ik wil van baan wisselen."
+}
+],
+"tr-1836": [
+{
+"fa": "می‌خواهم برای شغلی در یک مدرسه درخواست بدهم.",
+"nl": "Ik ga solliciteren bij een school."
+}
+],
+"tr-1837": [
+{
+"fa": "به یک آگهی در روزنامه پاسخ می‌دهم.",
+"nl": "Ik reageer op een advertentie in de krant."
+}
+],
+"tr-1839": [
+{
+"fa": "این راه‌حل باهوشانه‌ای بود.",
+"nl": "Dat was een slimme oplossing."
+}
+],
+"tr-1840": [
+{
+"fa": "عکس‌ها را برایم ایمیل کن.",
+"nl": "Stuur me de foto's op via de mail."
+},
+{
+"fa": "بسته را فردا ارسال می‌کنم.",
+"nl": "Ik stuur het pakket morgen op."
+}
+],
+"tr-1841": [
+{
+"fa": "رزومه‌ات حداکثر می‌تواند دو برگ A4 باشد.",
+"nl": "Je cv mag maximaal twee A4'tjes zijn."
+}
+],
+"tr-1843": [
+{
+"fa": "سفر حداکثر سه ساعت طول می‌کشد.",
+"nl": "De reis duurt maximaal drie uur."
+}
+],
+"tr-1844": [
+{
+"fa": "انگیزه‌ات را در یک صفحه بنویس.",
+"nl": "Schrijf je motivatie op één kantje."
+}
+],
+"tr-1845": [
+{
+"fa": "فردا دوچرخه‌سواری می‌کنیم، مگر اینکه باران ببارد.",
+"nl": "We gaan morgen fietsen, tenzij het regent."
+}
+],
+"tr-1846": [
+{
+"fa": "می‌توانی فرم را به‌صورت دیجیتال پر کنی.",
+"nl": "Je kunt het formulier digitaal invullen."
+}
+],
+"tr-1847": [
+{
+"fa": "رزومه‌ات را به‌عنوان پیوست بفرست.",
+"nl": "Stuur je cv als bijlage mee."
+}
+],
+"tr-1848": [
+{
+"fa": "ما را برای شام دعوت می‌کنند.",
+"nl": "Ze nodigen ons uit voor het diner."
+},
+{
+"fa": "او برای مصاحبه دعوت شده است.",
+"nl": "Hij is uitgenodigd voor een gesprek."
+}
+],
+"tr-1850": [
+{
+"fa": "در زیر همهٔ اطلاعات را می‌یابی.",
+"nl": "Hieronder vind je alle gegevens."
+}
+],
+"tr-1851": [
+{
+"fa": "سعی کن پاسخت را کوتاه بیان کنی.",
+"nl": "Probeer je antwoord kort te formuleren."
+}
+],
+"tr-1852": [
+{
+"fa": "همکارم شش ماهه باردار است.",
+"nl": "Mijn collega is zes maanden zwanger."
+}
+],
+"tr-1853": [
+{
+"fa": "کتتان را می‌توانید آنجا بگذارید.",
+"nl": "Uw jas kunt u daar kwijt."
+},
+{
+"fa": "چترتان را می‌توانید آنجا دم ورودی بگذارید.",
+"nl": "Uw paraplu kunt u daar kwijt bij de ingang."
+}
+],
+"tr-1855": [
+{
+"fa": "پیش از کلاس متن را می‌خوانیم.",
+"nl": "Voorafgaand aan de les lezen we de tekst."
+},
+{
+"fa": "پیش از امتحان یک استراحت هست.",
+"nl": "Voorafgaand aan het examen is er een pauze."
+}
+],
+"tr-1856": [
+{
+"fa": "مقدمهٔ کتاب کوتاه است.",
+"nl": "De inleiding van het boek is kort."
+}
+],
+"tr-1857": [
+{
+"fa": "یک فنجان چای می‌خواهی؟",
+"nl": "Wil je een kopje thee?"
+},
+{
+"fa": "صبح‌ها یک فنجان قهوه می‌نوشم.",
+"nl": "Ik drink 's ochtends een kopje koffie."
+}
+],
+"tr-1858": [
+{
+"fa": "به این سمت خیلی علاقه‌مندم.",
+"nl": "Ik ben erg geïnteresseerd in deze functie."
+}
+],
+"tr-1859": [
+{
+"fa": "چه ویژگی‌هایی در یک همکار می‌جویید؟",
+"nl": "Welke eigenschappen zoekt u in een collega?"
+}
+],
+"tr-1860": [
+{
+"fa": "او آن را لازم نمی‌داند.",
+"nl": "Hij acht dat niet nodig."
+}
+],
+"tr-1861": [
+{
+"fa": "خودتان را در سه کلمه چطور توصیف می‌کنید؟",
+"nl": "Hoe beschrijft u uzelf in drie woorden?"
+},
+{
+"fa": "عکس را به هلندی توصیف کن.",
+"nl": "Beschrijf de foto in het Nederlands."
+}
+],
+"tr-1862": [
+{
+"fa": "تجربهٔ زیادی در خارج کسب کرده‌ام.",
+"nl": "Ik heb veel ervaring opgedaan in het buitenland."
+},
+{
+"fa": "او آن دانش را در عمل به دست آورده است.",
+"nl": "Zij heeft die kennis in de praktijk opgedaan."
+}
+],
+"tr-1863": [
+{
+"fa": "جدیدترین آدرس شما چیست؟",
+"nl": "Wat is uw meest recente adres?"
+}
+],
+"tr-1864": [
+{
+"fa": "سمت کاری قبلی شما چه بود؟",
+"nl": "Wat was uw vorige werkkring?"
+}
+],
+"tr-1865": [
+{
+"fa": "او کارهای بدون دستمزد زیادی برای باشگاه انجام می‌دهد.",
+"nl": "Zij doet veel onbetaald werk voor de club."
+}
+],
+"tr-1866": [
+{
+"fa": "آن اطلاعات برای ما مرتبط نیست.",
+"nl": "Die informatie is niet relevant voor ons."
+}
+],
+"tr-1867": [
+{
+"fa": "این جنبهٔ مهمی از این کار است.",
+"nl": "Dat is een belangrijk aspect van het werk."
+}
+],
+"tr-1868": [
+{
+"fa": "می‌توانی مثال مشخصی بدهی؟",
+"nl": "Kun je een concreet voorbeeld geven?"
+}
+],
+"tr-1869": [
+{
+"fa": "دنبال یک کت مشابه به رنگ آبی می‌گردم.",
+"nl": "Ik zoek een soortgelijke jas in het blauw."
+}
+],
+"tr-1870": [
+{
+"fa": "هزینه‌ها در حدود هزار یورو است.",
+"nl": "De kosten liggen in de orde van duizend euro."
+}
+],
+"tr-1871": [
+{
+"fa": "دلایل گوناگونی برای این تصمیم هست.",
+"nl": "Er zijn verscheidene redenen voor dit besluit."
+}
+],
+"tr-1872": [
+{
+"fa": "می‌توانید دو معرف معرفی کنید؟",
+"nl": "Kunt u twee referenties opgeven?"
+}
+],
+"tr-1873": [
+{
+"fa": "یکی از همین روزها با شما تماس می‌گیریم.",
+"nl": "Wij bellen u een dezer dagen terug."
+}
+],
+"tr-1874": [
+{
+"fa": "در پایان می‌خواهم از همه تشکر کنم.",
+"nl": "Ten slotte wil ik iedereen bedanken."
+}
+],
+"tr-1875": [
+{
+"fa": "تصمیم نهایی هفتهٔ آینده گرفته می‌شود.",
+"nl": "De definitieve beslissing valt volgende week."
+}
+],
+"tr-1876": [
+{
+"fa": "جلسه نیم ساعت بیشتر طول کشید.",
+"nl": "De vergadering liep een half uur uit."
+}
+],
+"tr-1880": [
+{
+"fa": "سفر برگشت به‌خاطر ترافیک بیشتر طول کشید.",
+"nl": "De terugreis duurde langer door de file."
+}
+],
+"tr-1881": [
+{
+"fa": "نکتهٔ دیگری دربارهٔ این طرح داری؟",
+"nl": "Heb je nog een opmerking bij dit plan?"
+}
+],
+"tr-1882": [
+{
+"fa": "نانوایی روبروی مدرسه است.",
+"nl": "De bakker zit tegenover de school."
+}
+],
+"tr-1883": [
+{
+"fa": "ورودی آن طرف است.",
+"nl": "De ingang is aan de andere kant."
+},
+{
+"fa": "دم ورودی نگهبانی ایستاده است.",
+"nl": "Bij de ingang staat een bewaker."
+}
+],
+"tr-1884": [
+{
+"fa": "ظهر یک ساندویچ می‌خوریم.",
+"nl": "Tussen de middag eten we een broodje."
+}
+],
+"tr-1885": [
+{
+"fa": "در پارک بچه‌های زیادی بازی می‌کنند.",
+"nl": "In het park spelen veel kinderen."
+}
+],
+"tr-1886": [
+{
+"fa": "او مفصل دربارهٔ سفرش تعریف کرد.",
+"nl": "Hij vertelde uitvoerig over zijn reis."
+}
+],
+"tr-1887": [
+{
+"fa": "پسرم که در حال بزرگ شدن است، خیلی زیاد می‌خورد.",
+"nl": "Mijn opgroeiende zoon eet enorm veel."
+}
+],
+"tr-1888": [
+{
+"fa": "همسایهٔ سالمند من تنها زندگی می‌کند.",
+"nl": "Mijn bejaarde buurvrouw woont alleen."
+}
+],
+"tr-1889": [
+{
+"fa": "او از شصت‌سالگی گذشته است.",
+"nl": "Hij is de zestig al gepasseerd."
+}
+],
+"tr-1890": [
+{
+"fa": "با سه بچهٔ کوچک سرت خیلی شلوغ است.",
+"nl": "Met drie kleine kinderen heb je er je handen vol aan."
+}
+],
+"tr-1892": [
+{
+"fa": "بعد از دویدن زانویم درد می‌کند.",
+"nl": "Ik heb pijn in mijn knie na het hardlopen."
+}
+],
+"tr-1893": [
+{
+"fa": "مادرم زانو درد دارد.",
+"nl": "Mijn moeder heeft het aan haar knie."
+}
+],
+"tr-1894": [
+{
+"fa": "بعد از آن روز طولانی خیلی خسته‌ام.",
+"nl": "Ik ben na die lange dag heel moe."
+}
+],
+"tr-1895": [
+{
+"fa": "از نظر جسمی حالش خوب است.",
+"nl": "Lichamelijk gaat het goed met haar."
+}
+],
+"tr-1896": [
+{
+"fa": "با واکر چرخ‌دارش تا مغازه راه می‌رود.",
+"nl": "Met haar rollator loopt ze naar de winkel."
+}
+],
+"tr-1897": [
+{
+"fa": "می‌توانی میز را کمی هل بدهی؟",
+"nl": "Kun je de tafel een stukje schuiven?"
+},
+{
+"fa": "صندلی‌ات را کمی نزدیک‌تر بکش.",
+"nl": "Schuif je stoel wat dichterbij."
+}
+],
+"tr-1898": [
+{
+"fa": "او خوب از پسش برمی‌آید؛ بگذار خودش کارش را بکند.",
+"nl": "Ze redt zich prima; laat haar maar schuiven."
+},
+{
+"fa": "او ترتیبش را می‌دهد، بگذار خودش کارش را بکند.",
+"nl": "Hij regelt het wel, laat hem maar schuiven."
+}
+],
+"tr-1899": [
+{
+"fa": "هرچه روز پیش می‌رفت، گرم‌تر می‌شد.",
+"nl": "Naarmate de dag vorderde werd het warmer."
+}
+],
+"tr-1900": [
+{
+"fa": "در تاریخ اشتباه کردم.",
+"nl": "Ik vergiste me in de datum."
+},
+{
+"fa": "او در شمارهٔ خانه اشتباه کرد.",
+"nl": "Hij vergiste zich in het huisnummer."
+}
+],
+"tr-1901": [
+{
+"fa": "کسی جلوی درِ ورودی ایستاده است.",
+"nl": "Er staat iemand voor de voordeur."
+}
+],
+"tr-1902": [
+{
+"fa": "وقتی شنید عصبانی شد.",
+"nl": "Ze werd kwaad toen ze het hoorde."
+}
+],
+"tr-1903": [
+{
+"fa": "کلیدم را گم کرده‌ام.",
+"nl": "Ik ben mijn sleutel kwijt."
+}
+],
+"tr-1904": [
+{
+"fa": "کت دقیقاً اندازه بود.",
+"nl": "De jas paste precies."
+}
+],
+"tr-1905": [
+{
+"fa": "تازه بعداً متوجه شدم چه اتفاقی افتاده بود.",
+"nl": "Pas later drong het tot me door wat er gebeurd was."
+},
+{
+"fa": "خبر به‌آرامی به ذهنش نفوذ کرد.",
+"nl": "Het nieuws drong langzaam tot haar door."
+}
+],
+"tr-1906": [
+{
+"fa": "ببخشید، اشتباه از من بود.",
+"nl": "Sorry, dat was een vergissing van mij."
+}
+],
+"tr-1907": [
+{
+"fa": "کنار ایستگاه ماشین را برگرداندم.",
+"nl": "Bij het station heb ik de auto omgekeerd."
+}
+],
+"tr-1908": [
+{
+"fa": "پدرش حالا در خانهٔ مراقبت زندگی می‌کند.",
+"nl": "Zijn vader woont nu in een verzorgingstehuis."
+}
+],
+"tr-1909": [
+{
+"fa": "در گردش شنبه شرکت می‌کنی؟",
+"nl": "Doe je mee met het uitje van zaterdag?"
+},
+{
+"fa": "او در مسابقه شرکت می‌کند.",
+"nl": "Zij doet mee met de wedstrijd."
+}
+],
+"tr-1910": [
+{
+"fa": "فعالیت‌های زیادی برای بچه‌ها هست.",
+"nl": "Er zijn veel activiteiten voor kinderen."
+}
+],
+"tr-1911": [
+{
+"fa": "ساختار گزارش روشن است.",
+"nl": "De structuur van het rapport is duidelijk."
+}
+],
+"tr-1912": [
+{
+"fa": "او تولدش را با دوستان جشن گرفت.",
+"nl": "Zij vierde haar verjaardag met vrienden."
+},
+{
+"fa": "تمام روستا در جشن شرکت کرد.",
+"nl": "Het hele dorp vierde het feest mee."
+}
+],
+"tr-1913": [
+{
+"fa": "فردا تولد پسرم را جشن می‌گیریم.",
+"nl": "Morgen vieren we de verjaardag van mijn zoon."
+},
+{
+"fa": "برای تولدت چه می‌خواهی؟",
+"nl": "Wat wil je voor je verjaardag?"
+}
+],
+"tr-1914": [
+{
+"fa": "حالا از من عصبانی می‌شوی؟",
+"nl": "Word je nu boos op mij?"
+}
+],
+"tr-1915": [
+{
+"fa": "او از روی اصول مخالف خشونت است.",
+"nl": "Hij is principieel tegen geweld."
+}
+],
+"tr-1916": [
+{
+"fa": "او در یک مرکز نگهداری سالمندان کار می‌کند.",
+"nl": "Hij werkt in een inrichting voor ouderen."
+},
+{
+"fa": "این مؤسسه صد ساکن دارد.",
+"nl": "De inrichting heeft honderd bewoners."
+}
+],
+"tr-1918": [
+{
+"fa": "این رویکرد برای بچه‌ها بهتر جواب می‌دهد.",
+"nl": "Deze benadering werkt beter bij kinderen."
+}
+],
+"tr-1919": [
+{
+"fa": "غیرانسانی است که با کسی این‌طور رفتار شود.",
+"nl": "Het is onmenselijk om iemand zo te behandelen."
+}
+],
+"tr-1921": [
+{
+"fa": "گذار از مدرسه به کار بزرگ است.",
+"nl": "De overgang van school naar werk is groot."
+}
+],
+"tr-1922": [
+{
+"fa": "یکی از کارمندان بانک به من زنگ زد.",
+"nl": "Een medewerker van de bank belde me op."
+}
+],
+"tr-1923": [
+{
+"fa": "ساعت زنگ‌دار مرا ساعت شش بیدار می‌کند.",
+"nl": "De wekker wekt me om zes uur."
+}
+],
+"tr-1924": [
+{
+"fa": "اول لباس‌ها را می‌شویم.",
+"nl": "Ik ga eerst de was wassen."
+}
+],
+"tr-1925": [
+{
+"fa": "او به مادرش در لباس پوشیدن کمک می‌کند.",
+"nl": "Zij helpt haar moeder met kleden."
+}
+],
+"tr-1926": [
+{
+"fa": "شاید همین‌طور باشد، اما باور نمی‌کنم.",
+"nl": "Dat kan wel wezen, maar ik geloof het niet."
+}
+],
+"tr-1927": [
+{
+"fa": "او سر حرفش می‌ایستد و نظرش را عوض نمی‌کند.",
+"nl": "Hij houdt voet bij stuk en verandert niet van mening."
+}
+],
+"tr-1928": [
+{
+"fa": "او دو هفته مرخصی گرفت.",
+"nl": "Hij heeft twee weken verlof opgenomen."
+},
+{
+"fa": "او تا سپتامبر در مرخصی است.",
+"nl": "Zij is met verlof tot september."
+}
+],
+"tr-1929": [
+{
+"fa": "او برای پدر بیمارش مرخصی مراقبتی گرفت.",
+"nl": "Zij nam zorgverlof op voor haar zieke vader."
+}
+],
+"tr-1930": [
+{
+"fa": "این پیشنهاد را در نظر بگیر.",
+"nl": "Neem dit voorstel in overweging."
+}
+],
+"tr-1931": [
+{
+"fa": "پیشنهاد می‌کنم دیرتر بیایید.",
+"nl": "Mag ik u in overweging geven om later te komen."
+},
+{
+"fa": "توصیه می‌کنم یک بار دیگر آن را بخوانید.",
+"nl": "Ik geef u in overweging het nog eens te lezen."
+}
+],
+"tr-1932": [
+{
+"fa": "با منابع انسانی تماس بگیر.",
+"nl": "Neem contact op met personeelszaken."
+}
+],
+"tr-1933": [
+{
+"fa": "ساعت راهرو عقب است.",
+"nl": "De klok in de hal loopt achter."
+}
+],
+"tr-1934": [
+{
+"fa": "بدون رایانه زمان را به عقب برمی‌گردانیم.",
+"nl": "Zonder computers draaien we de klok terug."
+},
+{
+"fa": "اگر این کار را بکنیم، زمان را به ۱۹۵۰ برمی‌گردانیم.",
+"nl": "Als we dat doen, draaien we de klok terug naar 1950."
+}
+],
+"tr-1936": [
+{
+"fa": "پدربزرگم دوست داشت داستان تعریف کند.",
+"nl": "Mijn grootvader vertelde graag verhalen."
+}
+],
+"tr-1937": [
+{
+"fa": "کلاس ما از بقیه عقب بود.",
+"nl": "Onze klas liep achter op de rest."
+},
+{
+"fa": "ساعت ده دقیقه عقب بود.",
+"nl": "De klok liep tien minuten achter."
+}
+],
+"tr-1938": [
+{
+"fa": "او دو سال عقب‌ماندگی دارد.",
+"nl": "Hij heeft een achterstand van twee jaar."
+}
+],
+"tr-1939": [
+{
+"fa": "تیم ما سه امتیاز برتری دارد.",
+"nl": "Ons team heeft een voorsprong van drie punten."
+}
+],
+"tr-1940": [
+{
+"fa": "تقریباً فراموش کرده بودم به تو زنگ بزنم.",
+"nl": "Ik was haast vergeten je te bellen."
+}
+],
+"tr-1942": [
+{
+"fa": "آن پرونده دیگر پیگرد نمی‌شود.",
+"nl": "Die zaak wordt niet verder vervolgd."
+}
+],
+"tr-1943": [
+{
+"fa": "رودخانه اینجا خیلی گسترده است.",
+"nl": "De rivier is hier heel wijd."
+},
+{
+"fa": "در را کاملاً باز کرد.",
+"nl": "Hij deed de deur wijd open."
+}
+],
+"tr-1944": [
+{
+"fa": "آن ایده میان دانشجویان بسیار رایج است.",
+"nl": "Dat idee is wijd verbreid onder studenten."
+},
+{
+"fa": "این گیاه در سراسر اروپا گسترش یافته است.",
+"nl": "Deze plant is over heel Europa verbreid."
+}
+],
+"tr-1947": [
+{
+"fa": "دوچرخه‌سواری بدون چراغ قابل مجازات است.",
+"nl": "Fietsen zonder licht is strafbaar."
+}
+],
+"tr-1948": [
+{
+"fa": "قیمت بنزین دوباره کاهش می‌یابد.",
+"nl": "De prijs van benzine daalt weer."
+}
+],
+"tr-1949": [
+{
+"fa": "در سطح کشور این مشکل کوچکی است.",
+"nl": "Landelijk gezien is dat een klein probleem."
+}
+],
+"tr-1950": [
+{
+"fa": "پدربزرگش بر اثر حملهٔ قلبی فوت کرد.",
+"nl": "Zijn opa is aan een hartaanval overleden."
+},
+{
+"fa": "سالانه افراد زیادی بر اثر سرطان فوت می‌کنند.",
+"nl": "Er overlijden jaarlijks veel mensen aan kanker."
+}
+],
+"tr-1951": [
+{
+"fa": "در این شهر برای معتادان کمک هست.",
+"nl": "Er is hulp voor verslaafden in deze stad."
+}
+],
+"tr-1955": [
+{
+"fa": "این بی‌عدالتی بزرگی است.",
+"nl": "Dat is een groot onrecht."
+}
+],
+"tr-1956": [
+{
+"fa": "به این مشکل حالا رسیدگی می‌شود.",
+"nl": "Het probleem wordt nu aangepakt."
+}
+],
+"tr-1957": [
+{
+"fa": "بررسی می‌کنم که درست است یا نه.",
+"nl": "Ik ga na of het klopt."
+},
+{
+"fa": "می‌شود پیگیری کنی قطار کی حرکت می‌کند؟",
+"nl": "Kun je even nagaan wanneer de trein gaat?"
+}
+],
+"tr-1958": [
+{
+"fa": "این بیماری از طریق هوا منتقل می‌شود.",
+"nl": "De ziekte wordt via de lucht overgebracht."
+}
+],
+"tr-1959": [
+{
+"fa": "مدرسه موبایل را در کلاس اجازه نمی‌دهد.",
+"nl": "De school laat geen mobieltjes toe in de klas."
+},
+{
+"fa": "این قانون استثنا نمی‌پذیرد.",
+"nl": "Deze regel laat geen uitzondering toe."
+}
+],
+"tr-1960": [
+{
+"fa": "آن کشوری قدرتمند با نفوذ زیاد است.",
+"nl": "Dat is een machtig land met veel invloed."
+}
+],
+"tr-1961": [
+{
+"fa": "اسلام یکی از ادیان بزرگ جهان است.",
+"nl": "De islam is een van de grote wereldgodsdiensten."
+}
+],
+"tr-1962": [
+{
+"fa": "این‌ها مسائل اخلاقی دشواری هستند.",
+"nl": "Dit zijn moeilijke ethische vraagstukken."
+}
+],
+"tr-1963": [
+{
+"fa": "درون آن حزب گرایش‌های مختلفی هست.",
+"nl": "Binnen die partij zijn verschillende stromingen."
+}
+],
+"tr-1964": [
+{
+"fa": "مادربزرگم خیلی دین‌دار است.",
+"nl": "Mijn oma is heel gelovig."
+}
+],
+"tr-1966": [
+{
+"fa": "آیا این از نظر اخلاقی موجه است؟",
+"nl": "Is dit ethisch te verantwoorden?"
+}
+],
+"tr-1967": [
+{
+"fa": "این انتخاب مسئولانه‌ای است.",
+"nl": "Dat is een verantwoorde keuze."
+}
+],
+"tr-1968": [
+{
+"fa": "او راه‌حل ابتکاری‌ای پیدا کرده بود.",
+"nl": "Zij had een originele oplossing bedacht."
+}
+],
+"tr-1970": [
+{
+"fa": "سلسله مقالاتی دربارهٔ این موضوع منتشر شد.",
+"nl": "Er verscheen een reeks artikelen over het onderwerp."
+}
+],
+"tr-1971": [
+{
+"fa": "هرکس می‌تواند آزادانه نظرش را بیان کند.",
+"nl": "Iedereen mag zich vrij uiten."
+},
+{
+"fa": "او بیشتر خودش را در موسیقی بیان می‌کند.",
+"nl": "Hij uit zich vooral in muziek."
+}
+],
+"tr-1974": [
+{
+"fa": "هر صبح یک تخم‌مرغ می‌خورم.",
+"nl": "Ik eet elke ochtend een ei."
+},
+{
+"fa": "یک تخم‌مرغ دیگر در خمیر بریز.",
+"nl": "Doe nog een ei in het beslag."
+}
+],
+"tr-1975": [
+{
+"fa": "پنل خورشیدی روی بام: راه‌حل ساده و هوشمندانه!",
+"nl": "Zonnepanelen op het dak: het ei van Columbus!"
+}
+],
+"tr-1976": [
+{
+"fa": "آن جلسات بی‌پایان طول می‌کشند.",
+"nl": "Die vergaderingen duren eindeloos."
+}
+],
+"tr-1977": [
+{
+"fa": "واکنش او کاملاً قابل پیش‌بینی بود.",
+"nl": "Zijn reactie was heel voorspelbaar."
+}
+],
+"tr-1978": [
+{
+"fa": "بعد از صحبت طولانی به مصالحه رسیدند.",
+"nl": "Na lang praten sloten ze een compromis."
+}
+],
+"tr-1979": [
+{
+"fa": "وضعیت بی‌امید به نظر می‌رسید.",
+"nl": "De situatie leek uitzichtloos."
+}
+],
+"tr-1981": [
+{
+"fa": "یک عدد دل‌بخواهی انتخاب کن.",
+"nl": "Kies maar een willekeurig getal."
+},
+{
+"fa": "کتابی تصادفی از قفسه برداشت.",
+"nl": "Hij pakte een willekeurig boek van de plank."
+}
+],
+"tr-1982": [
+{
+"fa": "این تصمیم مبتنی بر یک سوءتفاهم است.",
+"nl": "Dit besluit berust op een misverstand."
+},
+{
+"fa": "قضاوت او مبتنی بر تجربه است.",
+"nl": "Zijn oordeel berust op ervaring."
+}
+],
+"tr-1983": [
+{
+"fa": "میان ما سوءتفاهمی پیش آمده است.",
+"nl": "Er is een misverstand tussen ons ontstaan."
+},
+{
+"fa": "آن یک سوءتفاهم بود، ببخشید.",
+"nl": "Dat was een misverstand, sorry."
+}
+],
+"tr-1984": [
+{
+"fa": "نمی‌آید؟ چه بهتر.",
+"nl": "Komt hij niet? Des te beter."
+}
+],
+"tr-1986": [
+{
+"fa": "روز آفتابی‌ای کنار دریا داشتیم.",
+"nl": "We hadden een zonnige dag aan zee."
+}
+],
+"tr-1987": [
+{
+"fa": "با چادر در کمپینگی کنار دریا هستیم.",
+"nl": "We staan met de tent op een camping bij zee."
+}
+],
+"tr-1988": [
+{
+"fa": "کنار پاسخ درست ضربدر بزن.",
+"nl": "Zet een kruisje bij het juiste antwoord."
+}
+],
+"tr-1989": [
+{
+"fa": "هر تابستان با کاروان سفر می‌کنند.",
+"nl": "Ze reizen elke zomer met de caravan."
+}
+],
+"tr-1990": [
+{
+"fa": "توالت‌ها انتهای راهرو هستند.",
+"nl": "De toiletten zijn aan het eind van de gang."
+}
+],
+"tr-1991": [
+{
+"fa": "سروصدای خیابان مرا بیدار نگه می‌دارد.",
+"nl": "Het lawaai van de straat houdt me wakker."
+}
+],
+"tr-1992": [
+{
+"fa": "بوهای آشپزخانه دلپذیر است.",
+"nl": "De geuren uit de keuken zijn heerlijk."
+}
+],
+"tr-1993": [
+{
+"fa": "بابا بچه‌ها را از مدرسه می‌آورد.",
+"nl": "Pa haalt de kinderen van school."
+}
+],
+"tr-1994": [
+{
+"fa": "ظاهراً از قبل رفته است.",
+"nl": "Hij is blijkbaar al vertrokken."
+}
+],
+"tr-1995": [
+{
+"fa": "تحرک برای سلامتی‌ات خوب است.",
+"nl": "Beweging is goed voor je gezondheid."
+}
+],
+"tr-1996": [
+{
+"fa": "جلوی تلویزیون اصلاً اهل حرکت نیست.",
+"nl": "Voor de tv is hij niet in beweging te krijgen."
+}
+],
+"tr-1997": [
+{
+"fa": "امروز صبح باران شدیدی بارید.",
+"nl": "Vanmorgen regende het hard."
+}
+],
+"tr-1998": [
+{
+"fa": "از قله تمام درّه را می‌بینی.",
+"nl": "Vanaf de top zie je het hele dal."
+}
+],
+"tr-1999": [
+{
+"fa": "کتت را روی صندلی بگذار.",
+"nl": "Zet je jas op de stoel."
+},
+{
+"fa": "کلاهت را بگذار، هوا سرد است.",
+"nl": "Zet je muts op, het is koud."
+}
+],
+"tr-2000": [
+{
+"fa": "او برای آفتاب کلاه می‌پوشد.",
+"nl": "Hij draagt een hoed tegen de zon."
+}
+],
+"tr-2002": [
+{
+"fa": "زیر آفتاب سوزان دنبال سایه گشتیم.",
+"nl": "We zochten schaduw tegen de brandende zon."
+}
+],
+"tr-2003": [
+{
+"fa": "عمویم از جوانی کچل شد.",
+"nl": "Mijn oom is al jong kaal geworden."
+}
+],
+"tr-2004": [
+{
+"fa": "واکنش او نسبتاً اغراق‌آمیز بود.",
+"nl": "Zijn reactie was nogal overdreven."
+}
+],
+"tr-2005": [
+{
+"fa": "آخر هفته را نزد والدینم می‌گذرانم.",
+"nl": "Ik breng het weekend bij mijn ouders door."
+},
+{
+"fa": "او وقت زیادی را در باغ می‌گذراند.",
+"nl": "Zij brengt veel tijd in de tuin door."
+}
+],
+"tr-2006": [
+{
+"fa": "بچه‌ها روی چمن بازی می‌کنند.",
+"nl": "De kinderen spelen in het gras."
+}
+],
+"tr-2007": [
+{
+"fa": "زیر سایهٔ درخت بزرگی نشسته بودیم.",
+"nl": "We zaten in de schaduw van een grote boom."
+}
+],
+"tr-2008": [
+{
+"fa": "کمی یخ در لیوانم بریز.",
+"nl": "Doe wat ijs in mijn glas."
+}
+],
+"tr-2009": [
+{
+"fa": "پارچه‌های تمیز در کمد هست.",
+"nl": "Er liggen schone doeken in de kast."
+}
+],
+"tr-2010": [
+{
+"fa": "دستش را روی پیشانی‌اش گذاشت.",
+"nl": "Hij legde zijn hand op zijn voorhoofd."
+}
+],
+"tr-2012": [
+{
+"fa": "آن‌ها اغلب بر سر چیزهای کوچک دعوا دارند.",
+"nl": "Ze hebben vaak ruzie over kleine dingen."
+},
+{
+"fa": "بعد از دعوا دوباره با هم صحبت کردند.",
+"nl": "Na de ruzie praatten ze weer met elkaar."
+}
+],
+"tr-2013": [
+{
+"fa": "مامان امشب برای همه غذا می‌پزد.",
+"nl": "Ma kookt vanavond voor iedereen."
+}
+],
+"tr-2014": [
+{
+"fa": "در سالن پر وحشت ایجاد شد.",
+"nl": "Er ontstond paniek in de volle zaal."
+}
+],
+"tr-2015": [
+{
+"fa": "ذخایر ما دارد تمام می‌شود.",
+"nl": "Onze voorraden raken op."
+}
+],
+"tr-2017": [
+{
+"fa": "هلندی‌ها روی نان اسپرینکل شکلاتی می‌خورند.",
+"nl": "Nederlanders eten hagelslag op brood."
+},
+{
+"fa": "کمی اسپرینکل شکلاتی روی نانت بریز.",
+"nl": "Doe wat hagelslag op je boterham."
+}
+],
+"tr-2018": [
+{
+"fa": "اشک در چشمانش بود.",
+"nl": "Ze had tranen in haar ogen."
+}
+],
+"tr-2019": [
+{
+"fa": "بر سر سلیقه‌ها نمی‌توان بحث کرد.",
+"nl": "Over smaken valt niet te twisten."
+},
+{
+"fa": "سوپ دو مزه دارد: گوجه و مرغ.",
+"nl": "De soep heeft twee smaken: tomaat en kip."
+}
+],
+"tr-2020": [
+{
+"fa": "تو ماهی دوست داری، من نه: سلیقه‌ها متفاوت است.",
+"nl": "Jij houdt van vis, ik niet: smaken verschillen."
+},
+{
+"fa": "سلیقه‌ها متفاوت است، پس خودت انتخاب کن.",
+"nl": "Smaken verschillen, dus kies zelf maar."
+}
+],
+"tr-2021": [
+{
+"fa": "ماهی دوست ندارم بخورم.",
+"nl": "Ik lust geen vis."
+}
+],
+"tr-2022": [
+{
+"fa": "از آن بحث‌های همیشگی خسته‌ام.",
+"nl": "Ik ben die eeuwige discussies zat."
+}
+],
+"tr-2023": [
+{
+"fa": "قابلمه را روی آتش بگذار.",
+"nl": "Zet de pot op het vuur."
+}
+],
+"tr-2024": [
+{
+"fa": "امشب غذای سنتی هلندی می‌خوریم.",
+"nl": "Vanavond eten we de Hollandse pot."
+},
+{
+"fa": "در آن کافه غذای سنتی هلندی سرو می‌کنند.",
+"nl": "In dat café serveren ze de Hollandse pot."
+}
+],
+"tr-2025": [
+{
+"fa": "کلاهت را بگذار، گوش‌هایت سرد می‌شود.",
+"nl": "Zet je muts op, je oren worden koud."
+}
+],
+"tr-2026": [
+{
+"fa": "او ماه‌هاست عاشق اوست.",
+"nl": "Hij is al maanden verliefd op haar."
+}
+],
+"tr-2027": [
+{
+"fa": "او تا خرخره عاشق اوست.",
+"nl": "Hij is tot over zijn oren verliefd op haar."
+}
+],
+"tr-2028": [
+{
+"fa": "یک بار در آینه نگاه کن.",
+"nl": "Kijk eens in de spiegel."
+}
+],
+"tr-2029": [
+{
+"fa": "گردنبندی دور گردنش می‌اندازد.",
+"nl": "Ze draagt een ketting om haar hals."
+}
+],
+"tr-2030": [
+{
+"fa": "او نسبتاً مبهم پاسخ داد.",
+"nl": "Hij antwoordde nogal vaag."
+}
+],
+"tr-2031": [
+{
+"fa": "این‌طور به من خیره نشو.",
+"nl": "Zit niet zo naar me te staren."
+}
+],
+"tr-2032": [
+{
+"fa": "اینجا پسرهای خوش‌قیافه‌تری از او هست.",
+"nl": "Er zijn hier knappere jongens dan hij."
+}
+],
+"tr-2033": [
+{
+"fa": "دو مرد در اسباب‌کشی کمک کردند.",
+"nl": "Twee kerels hielpen met de verhuizing."
+}
+],
+"tr-2034": [
+{
+"fa": "نتوانستم از خندیدن خودداری کنم.",
+"nl": "Ik kon niet nalaten te lachen."
+}
+],
+"tr-2035": [
+{
+"fa": "به عقل گوش بده، نه به احساست.",
+"nl": "Luister naar de rede, niet naar je gevoel."
+}
+],
+"tr-2036": [
+{
+"fa": "او نسبت به انتقاد پذیرا نیست.",
+"nl": "Hij is niet vatbaar voor kritiek."
+}
+],
+"tr-2037": [
+{
+"fa": "گوش نمی‌دهد؛ حرف منطقی نمی‌پذیرد.",
+"nl": "Ze luistert niet; ze is niet voor rede vatbaar."
+}
+],
+"tr-2038": [
+{
+"fa": "او نابینا به دنیا آمده است.",
+"nl": "Zij is blind geboren."
+}
+],
+"tr-2039": [
+{
+"fa": "نمی‌دانم چه کار باید بکنم.",
+"nl": "Ik weet niet wat ik moet beginnen."
+},
+{
+"fa": "بدون کار نمی‌داند چه کار باید بکند.",
+"nl": "Zonder werk weet hij niet wat hij moet beginnen."
+}
+],
+"tr-2040": [
+{
+"fa": "پی‌نوشت: چترت را فراموش نکن.",
+"nl": "PS: vergeet je paraplu niet."
+}
+],
+"tr-2041": [
+{
+"fa": "عصر بخیر، به جمع ما خوش آمدید.",
+"nl": "Goedenavond, welkom bij ons."
+},
+{
+"fa": "عصر بخیر خانم‌ها و آقایان.",
+"nl": "Goedenavond dames en heren."
+}
+],
+"tr-2044": [
+{
+"fa": "شهردار پارک جدید را افتتاح کرد.",
+"nl": "De burgemeester opende het nieuwe park."
+}
+],
+"tr-2045": [
+{
+"fa": "اعضای هیئت اجرایی شهرداری فردا طرح را بررسی می‌کنند.",
+"nl": "De wethouders bespreken het plan morgen."
+}
+],
+"tr-2046": [
+{
+"fa": "شورای شهر هر ماه جلسه دارد.",
+"nl": "De gemeenteraad vergadert elke maand."
+}
+],
+"tr-2047": [
+{
+"fa": "تصمیم گرفته‌ایم نقل مکان کنیم.",
+"nl": "We hebben besloten om te verhuizen."
+}
+],
+"tr-2048": [
+{
+"fa": "او به‌عنوان یک استثنا دیر آمد.",
+"nl": "Hij kwam bij wijze van uitzondering te laat."
+}
+],
+"tr-2049": [
+{
+"fa": "این پروژه هنوز یک آزمایش است.",
+"nl": "Dit project is nog een experiment."
+}
+],
+"tr-2051": [
+{
+"fa": "او امور مالی باشگاه را مدیریت می‌کند.",
+"nl": "Zij beheert de financiën van de club."
+}
+],
+"tr-2052": [
+{
+"fa": "سه‌شنبهٔ هفتهٔ آینده دوره شروع می‌شود.",
+"nl": "Volgende week dinsdag aanstaande begint de cursus."
+}
+],
+"tr-2053": [
+{
+"fa": "کار زیر نظارت یک کارشناس انجام می‌شود.",
+"nl": "Het werk gebeurt onder toezicht van een expert."
+}
+],
+"tr-2058": [
+{
+"fa": "ببخشید، می‌توانم رد شوم؟",
+"nl": "Pardon, mag ik er even langs?"
+},
+{
+"fa": "ببخشید، متوجه نشدم چه گفتید.",
+"nl": "Pardon, ik verstond u niet."
+}
+],
+"tr-2059": [
+{
+"fa": "در میکروفون صحبت کن، وگرنه صدایت را نمی‌شنویم.",
+"nl": "Spreek in de microfoon, anders horen we je niet."
+}
+],
+"tr-2061": [
+{
+"fa": "با فعالیت‌های مجرمانه سخت برخورد می‌شود.",
+"nl": "Criminele activiteiten worden hard aangepakt."
+}
+],
+"tr-2062": [
+{
+"fa": "چنین اقداماتی خلاف قوانین است.",
+"nl": "Zulke handelingen zijn tegen de regels."
+}
+],
+"tr-2063": [
+{
+"fa": "دیگر پول خردی برایم نمانده است.",
+"nl": "Ik heb geen centen meer over."
+},
+{
+"fa": "او هر سنت را می‌شمارد، مراقب پول‌هایش است.",
+"nl": "Hij telt elke cent, hij let op de centen."
+}
+],
+"tr-2064": [
+{
+"fa": "بیا، بزن بریم به «هوکیه» برای یک فنجان قهوه!",
+"nl": "Kom, op naar Het Hoekje voor een kop koffie!"
+},
+{
+"fa": "همه آنجا هستند: بزن بریم به «هوکیه»!",
+"nl": "Iedereen is er al: op naar Het Hoekje!"
+}
+],
+"tr-2065": [
+{
+"fa": "باید اعتراف کنم که فراموشش کرده‌ام.",
+"nl": "Ik moet bekennen dat ik het vergeten ben."
+}
+],
+"tr-2066": [
+{
+"fa": "در وهلهٔ اول آسان به نظر می‌رسید.",
+"nl": "In eerste instantie leek het makkelijk."
+}
+],
+"tr-2067": [
+{
+"fa": "وضعیت بیمار پایدار است.",
+"nl": "De toestand van de patiënt is stabiel."
+}
+],
+"tr-2068": [
+{
+"fa": "بیرون چیز عجیبی در حال رخ دادن است.",
+"nl": "Er speelt zich iets vreemds af buiten."
+}
+],
+"tr-2069": [
+{
+"fa": "این الگوی آشنای هر سال است.",
+"nl": "Dit is het bekende patroon van elk jaar."
+}
+],
+"tr-2070": [
+{
+"fa": "مواد مخدر سنگین در هلند ممنوع است.",
+"nl": "Harddrugs zijn in Nederland verboden."
+}
+],
+"tr-2071": [
+{
+"fa": "این مشکل واقعی است، نه خیال.",
+"nl": "Dat is een reëel probleem, geen fantasie."
+}
+],
+"tr-2072": [
+{
+"fa": "رویکرد این دوره عملی است.",
+"nl": "De opzet van de cursus is praktisch."
+}
+],
+"tr-2073": [
+{
+"fa": "نظر او با نظر بقیه متفاوت است.",
+"nl": "Zijn mening wijkt af van die van de rest."
+},
+{
+"fa": "این نتیجه به‌شدت با انتظار متفاوت است.",
+"nl": "Dit resultaat wijkt sterk af van de verwachting."
+}
+],
+"tr-2074": [
+{
+"fa": "دادستان دو سال حبس درخواست کرد.",
+"nl": "De officier van justitie eiste twee jaar cel."
+}
+],
+"tr-2075": [
+{
+"fa": "فروش کانابیس اینجا تنظیم شده است.",
+"nl": "De verkoop van cannabis is hier gereguleerd."
+}
+],
+"tr-2076": [
+{
+"fa": "وزن این بسته چقدر است؟",
+"nl": "Wat is het gewicht van dit pakket?"
+}
+],
+"tr-2078": [
+{
+"fa": "مواد مخدر سبک در هلند تحمل می‌شود.",
+"nl": "Softdrugs worden in Nederland gedoogd."
+}
+],
+"tr-2079": [
+{
+"fa": "یک مرد جوان در حمل چمدان‌هایم کمکم کرد.",
+"nl": "Een jongeman hielp mij met mijn koffers."
+}
+],
+"tr-2081": [
+{
+"fa": "از داستان او خیلی خندیدیم.",
+"nl": "We moesten hard lachen om zijn verhaal."
+}
+],
+"tr-2082": [
+{
+"fa": "او این را در یک روز انجام می‌دهد؟ مسخره نکن!",
+"nl": "Hij zou dat in één dag doen? Laat me niet lachen!"
+}
+],
+"tr-2083": [
+{
+"fa": "این به تو مربوط نیست.",
+"nl": "Dat gaat jou niets aan."
+},
+{
+"fa": "تا آنجا که به من مربوط است، می‌تواند بیاید.",
+"nl": "Wat mij aangaat, mag hij komen."
+}
+],
+"tr-2084": [
+{
+"fa": "این یک طرح آزمایشی شش‌ماهه است.",
+"nl": "Dit is een proef van zes maanden."
+}
+],
+"tr-2085": [
+{
+"fa": "شهرداری گزارش جدیدی منتشر می‌کند.",
+"nl": "De gemeente brengt een nieuw rapport uit."
+},
+{
+"fa": "انتشارات هفتهٔ آینده کتابی منتشر می‌کند.",
+"nl": "De uitgeverij brengt volgende week een boek uit."
+}
+],
+"tr-2087": [
+{
+"fa": "گفت‌وگو خوب پیش می‌رود.",
+"nl": "Het gesprek verloopt goed."
+}
+],
+"tr-2088": [
+{
+"fa": "پول نمی‌دهی، پس نمی‌آیی: تمام شد.",
+"nl": "Je betaalt niet, dus je gaat niet mee: einde verhaal."
+}
+],
+"tr-2090": [
+{
+"fa": "او عکاس حرفه‌ای است.",
+"nl": "Zij is een professionele fotograaf."
+}
+],
+"tr-2091": [
+{
+"fa": "آن ساختمان را واقعاً زشت می‌دانم.",
+"nl": "Dat gebouw vind ik echt lelijk."
+}
+],
+"tr-2092": [
+{
+"fa": "بدون بیمه به دردسر بزرگی می‌افتی.",
+"nl": "Zonder verzekering kom je lelijk in de problemen."
+}
+],
+"tr-2093": [
+{
+"fa": "بازیکنان هر روز تمرین می‌کنند.",
+"nl": "De spelers trainen elke dag."
+}
+],
+"tr-2094": [
+{
+"fa": "مربیان دربارهٔ تاکتیک صحبت می‌کنند.",
+"nl": "De trainers bespreken de tactiek."
+}
+],
+"tr-2096": [
+{
+"fa": "عملکردهای او در مدرسه خوب است.",
+"nl": "Zijn prestaties op school zijn goed."
+}
+],
+"tr-2097": [
+{
+"fa": "نتیجه خیلی پایین‌تر از حد استاندارد بود.",
+"nl": "Het resultaat was ver onder de maat."
+}
+],
+"tr-2099": [
+{
+"fa": "آن پیشنهاد را نمی‌پذیرم.",
+"nl": "Ik ga niet in op dat voorstel."
+},
+{
+"fa": "او درخواست او را پذیرفت.",
+"nl": "Zij ging op zijn verzoek in."
+}
+],
+"tr-2102": [
+{
+"fa": "از باغمان لذت زیادی می‌بریم.",
+"nl": "We beleven veel plezier aan onze tuin."
+}
+],
+"tr-2103": [
+{
+"fa": "از کارم لذت زیادی می‌برم.",
+"nl": "Ik heb veel plezier in mijn werk."
+}
+],
+"tr-2104": [
+{
+"fa": "در این روستا انگار یک خانوادهٔ بزرگ هستیم.",
+"nl": "In dit dorp zijn we als het ware een grote familie."
+}
+],
+"tr-2105": [
+{
+"fa": "دیدار با او خیلی دلپذیر بود.",
+"nl": "De ontmoeting met hem was heel prettig."
+},
+{
+"fa": "اولین دیدار ما در ایستگاه بود.",
+"nl": "Onze eerste ontmoeting was op het station."
+}
+],
+"tr-2107": [
+{
+"fa": "شنبه به کنسرت می‌رویم.",
+"nl": "We gaan zaterdag naar een concert."
+}
+],
+"tr-2109": [
+{
+"fa": "شرکت در وضعیت دشواری است.",
+"nl": "Het bedrijf verkeert in moeilijkheden."
+},
+{
+"fa": "او در سلامت خوبی به سر می‌برد.",
+"nl": "Zij verkeert in goede gezondheid."
+}
+],
+"tr-2110": [
+{
+"fa": "خانهٔ قدیمی هنوز سرپاست.",
+"nl": "Het oude huis staat nog overeind."
+}
+],
+"tr-2111": [
+{
+"fa": "او برای بسیاری از بچه‌ها الگوست.",
+"nl": "Voor veel kinderen is hij een rolmodel."
+}
+],
+"tr-2112": [
+{
+"fa": "داستان او خیلی الهام‌بخش بود.",
+"nl": "Haar verhaal was heel inspirerend."
+},
+{
+"fa": "او معلمی الهام‌بخش است.",
+"nl": "Hij is een inspirerend docent."
+}
+],
+"tr-2113": [
+{
+"fa": "تیم ما خوب با هم همکاری می‌کند.",
+"nl": "Ons team werkt goed samen."
+}
+],
+"tr-2114": [
+{
+"fa": "او صدای نیرومندی دارد.",
+"nl": "Zij heeft een krachtige stem."
+}
+],
+"tr-2115": [
+{
+"fa": "تعریف کردن محرک خوبی است.",
+"nl": "Een compliment is een goede stimulans."
+}
+],
+"tr-2116": [
+{
+"fa": "سرمایه‌گذاری‌ها در بندر زیاد است.",
+"nl": "De investeringen in de haven zijn groot."
+}
+],
+"tr-2117": [
+{
+"fa": "او آن تعطیلات را کاملاً حقش بود.",
+"nl": "Hij heeft die vakantie dubbel en dwars verdiend."
+}
+],
+"tr-2120": [
+{
+"fa": "توپ را به سمت من بینداز.",
+"nl": "Gooi de bal maar naar mij."
+}
+],
+"tr-2121": [
+{
+"fa": "سرعت در این جاده صد است.",
+"nl": "De snelheid op deze weg is honderd."
+},
+{
+"fa": "او با سرعت بالایی کار می‌کند.",
+"nl": "Hij werkt met een hoge snelheid."
+}
+],
+"tr-2122": [
+{
+"fa": "در آخرین دقیقه گل زده شد.",
+"nl": "In de laatste minuut viel het doelpunt."
+},
+{
+"fa": "آن گل زیبایی بود.",
+"nl": "Dat was een prachtig doelpunt."
+}
+],
+"tr-2123": [
+{
+"fa": "از دیر رسیدن متنفرم.",
+"nl": "Ik haat het om te laat te komen."
+},
+{
+"fa": "نفرت هرگز چیزی را حل نمی‌کند.",
+"nl": "Haat lost nooit iets op."
+}
+],
+"tr-2124": [
+{
+"fa": "هزاران تماشاگر در ورزشگاه بودند.",
+"nl": "Er waren duizenden toeschouwers in het stadion."
+}
+],
+"tr-2125": [
+{
+"fa": "آن خبر برای همه تکان‌دهنده بود.",
+"nl": "Het nieuws was schokkend voor iedereen."
+}
+],
+"tr-2126": [
+{
+"fa": "لازم نیست از لهجه‌ات خجالت بکشی.",
+"nl": "Je hoeft je niet te schamen voor je accent."
+}
+],
+"tr-2127": [
+{
+"fa": "روی یخ ریسک نمی‌کنم.",
+"nl": "Ik waag me niet op het ijs."
+}
+],
+"tr-2128": [
+{
+"fa": "بچه‌ها بر سر اسباب‌بازی دعوا می‌کنند.",
+"nl": "De kinderen vechten om het speelgoed."
+}
+],
+"tr-2129": [
+{
+"fa": "بعد از پیروزی جشن بزرگی برپا شد.",
+"nl": "Na de overwinning was er een groot feest."
+}
+],
+"tr-2130": [
+{
+"fa": "با مشتش روی میز کوبید.",
+"nl": "Hij sloeg met zijn vuist op tafel."
+}
+],
+"tr-2131": [
+{
+"fa": "بعد از مسابقه با هم کتک‌کاری کردند.",
+"nl": "Na de wedstrijd gingen ze op de vuist."
+},
+{
+"fa": "دو مرد در خیابان کتک‌کاری کردند.",
+"nl": "Twee mannen gingen op straat op de vuist."
+}
+],
+"tr-2133": [
+{
+"fa": "طوفان خرابی زیادی به بار آورد.",
+"nl": "De storm veroorzaakte veel vernieling."
+}
+],
+"tr-2134": [
+{
+"fa": "واقعاً تمام روز مشغول بودم.",
+"nl": "Ik ben letterlijk de hele dag bezig geweest."
+}
+],
+"tr-2135": [
+{
+"fa": "آن باغ کلی کار دارد.",
+"nl": "Die tuin geeft handenvol werk."
+}
+],
+"tr-2136": [
+{
+"fa": "آن ماشین ثروتی هزینه برداشت.",
+"nl": "Die auto heeft een vermogen gekost."
+}
+],
+"tr-2137": [
+{
+"fa": "او مبلغ نمادین یک یورو می‌پردازد.",
+"nl": "Hij betaalt een symbolisch bedrag van één euro."
+}
+],
+"tr-2138": [
+{
+"fa": "این مدرسه استعدادهای جوان زیادی دارد.",
+"nl": "Deze school heeft veel jonge talenten."
+}
+],
+"tr-2140": [
+{
+"fa": "کار خوب باید پاداش داده شود.",
+"nl": "Goed werk moet beloond worden."
+}
+],
+"tr-2141": [
+{
+"fa": "هوا هر روز بدتر می‌شود.",
+"nl": "Het weer wordt elke dag gemener."
+}
+],
+"tr-2142": [
+{
+"fa": "معجزه است که کسی زخمی نشد.",
+"nl": "Het is een wonder dat niemand gewond raakte."
+}
+],
+"tr-2143": [
+{
+"fa": "جای تعجب نیست که بعد از چنین روزی خسته باشی.",
+"nl": "Geen wonder dat je moe bent na zo'n dag."
+}
+],
+"tr-2144": [
+{
+"fa": "تحلیل‌ها تصویر روشنی نشان می‌دهند.",
+"nl": "De analyses laten een duidelijk beeld zien."
+}
+],
+"tr-2145": [
+{
+"fa": "این کتاب به عصر طلایی اختصاص دارد.",
+"nl": "Dit boek is gewijd aan de Gouden Eeuw."
+},
+{
+"fa": "آن شب به موسیقی اختصاص داشت.",
+"nl": "De avond was gewijd aan muziek."
+}
+],
+"tr-2146": [
+{
+"fa": "تأملات او دربارهٔ سیاست تیزبینانه است.",
+"nl": "Zijn beschouwingen over de politiek zijn scherp."
+}
+],
+"tr-2147": [
+{
+"fa": "این پژوهش ماه گذشته منتشر شد.",
+"nl": "Het onderzoek is vorige maand gepubliceerd."
+}
+],
+"tr-2148": [
+{
+"fa": "یک تلاش دیگر بکن، حتماً موفق می‌شوی.",
+"nl": "Doe nog een poging, het lukt vast."
+}
+],
+"tr-2149": [
+{
+"fa": "هلند سرزمینی هموار است.",
+"nl": "Nederland is een plat land."
+}
+],
+"tr-2150": [
+{
+"fa": "ویژگی‌های این سیستم چیست؟",
+"nl": "Wat zijn de kenmerken van dit systeem?"
+}
+],
+"tr-2152": [
+{
+"fa": "او بر اساس موازین اخلاقی سخت‌گیرانه عمل می‌کند.",
+"nl": "Hij handelt volgens een strenge moraal."
+}
+],
+"tr-2153": [
+{
+"fa": "او آگاهی محیط‌زیستی زیادی دارد و همیشه دوچرخه‌سواری می‌کند.",
+"nl": "Zij is heel milieubewust en fietst altijd."
+},
+{
+"fa": "زندگی با آگاهی محیط‌زیستی گاهی وقت بیشتری می‌برد.",
+"nl": "Milieubewust leven kost soms meer tijd."
+}
+],
+"tr-2154": [
+{
+"fa": "زبالهٔ خانه را تفکیک می‌کنیم.",
+"nl": "We scheiden ons afval thuis."
+}
+],
+"tr-2156": [
+{
+"fa": "یک نان ساندویچی به سر کار می‌برم.",
+"nl": "Ik neem een boterham mee naar mijn werk."
+}
+],
+"tr-2157": [
+{
+"fa": "یک بار سر وقت آمد، اما این چیزی را ثابت نمی‌کند.",
+"nl": "Hij was één keer op tijd, maar dat zegt niets."
+}
+],
+"tr-2158": [
+{
+"fa": "می‌خواهم تذکر بدهم که وقت تمام شده است.",
+"nl": "Ik wil even opmerken dat de tijd om is."
+}
+],
+"tr-2159": [
+{
+"fa": "تراکم جمعیت اینجا بالاست.",
+"nl": "De dichtheid van de bevolking is hier hoog."
+},
+{
+"fa": "تراکم ترافیک افزایش می‌یابد.",
+"nl": "De dichtheid van het verkeer neemt toe."
+}
+],
+"tr-2160": [
+{
+"fa": "پزشک فشار خونم را اندازه می‌گیرد.",
+"nl": "De dokter meet mijn bloeddruk."
+}
+],
+"tr-2162": [
+{
+"fa": "مقالهٔ جالبی دربارهٔ هلند خواندم.",
+"nl": "Ik las een interessant artikel over Nederland."
+}
+],
+"tr-2163": [
+{
+"fa": "این عادت ناخودآگاه اوست.",
+"nl": "Dat is een onbewuste gewoonte van hem."
+}
+],
+"tr-2164": [
+{
+"fa": "انگیزهٔ او برای رفتن چه بود؟",
+"nl": "Wat was zijn motief om te vertrekken?"
+}
+],
+"tr-2165": [
+{
+"fa": "روزنامه‌نگار پرسش‌های دشواری مطرح کرد.",
+"nl": "De journalist stelde moeilijke vragen."
+}
+],
+"tr-2167": [
+{
+"fa": "میخ را در دیوار بکوب.",
+"nl": "Sla de spijker in de muur."
+}
+],
+"tr-2168": [
+{
+"fa": "با آن حرف دقیقاً به هدف زده است.",
+"nl": "Met die opmerking slaat hij de spijker op de kop."
+},
+{
+"fa": "با تحلیلش دقیقاً به هدف می‌زند.",
+"nl": "Met zijn analyse slaat hij de spijker op de kop."
+}
+],
+"tr-2169": [
+{
+"fa": "در این کافه اهل کسب‌وکار زیادی می‌آیند.",
+"nl": "In dit café komen veel zakenlui."
+}
+],
+"tr-2170": [
+{
+"fa": "استادان در سالن بزرگ درس می‌دهند.",
+"nl": "De hoogleraren geven college in de grote zaal."
+}
+],
+"tr-2171": [
+{
+"fa": "معاون وزیر به پرسش‌ها پاسخ داد.",
+"nl": "De staatssecretaris beantwoordde de vragen."
+}
+],
+"tr-2172": [
+{
+"fa": "دزد را پلیس گرفت.",
+"nl": "De dief werd door de politie gepakt."
+}
+],
+"tr-2173": [
+{
+"fa": "از میان جنگل مسیرهای زیبایی می‌گذرد.",
+"nl": "Door het bos lopen mooie paden."
+},
+{
+"fa": "مسیرها بعد از باران گلی هستند.",
+"nl": "De paden zijn na de regen modderig."
+}
+],
+"tr-2174": [
+{
+"fa": "علائم را تا خروجی دنبال کن.",
+"nl": "Volg de aanduidingen naar de uitgang."
+}
+],
+"tr-2175": [
+{
+"fa": "کنار جاده تابلوهای آبی هست.",
+"nl": "Langs de weg staan blauwe borden."
+},
+{
+"fa": "تابلوها جهت را نشان می‌دهند.",
+"nl": "De borden geven de richting aan."
+}
+],
+"tr-2176": [
+{
+"fa": "در تابستان مزارع گندم طلایی هستند.",
+"nl": "In de zomer zijn de korenvelden goudgeel."
+}
+],
+"tr-2177": [
+{
+"fa": "گاوها در مراتع ایستاده‌اند.",
+"nl": "De koeien staan in de weilanden."
+}
+],
+"tr-2178": [
+{
+"fa": "سفر ماجراجویانه‌ای بود.",
+"nl": "Het was een avontuurlijke reis."
+}
+],
+"tr-2179": [
+{
+"fa": "بچه‌ها تخیل غنی‌ای دارند.",
+"nl": "Kinderen hebben een rijke verbeelding."
+}
+],
+"tr-2180": [
+{
+"fa": "آن داستان تخیل را تحریک می‌کند.",
+"nl": "Dat verhaal spreekt tot de verbeelding."
+}
+],
+"tr-2181": [
+{
+"fa": "یکشنبه با دوچرخه برای گردش بیرون می‌روی.",
+"nl": "Op zondag ga je eropuit met de fiets."
+}
+],
+"tr-2182": [
+{
+"fa": "روی دوچرخه کاملاً در عنصر خودشان هستند.",
+"nl": "Op de fiets zijn ze in hun element."
+},
+{
+"fa": "در آب در عنصر خودشان هستند، روی دوچرخه هم همین‌طور.",
+"nl": "In het water zijn ze in hun element, op de fiets zijn ze in hun element."
+}
+],
+"tr-2183": [
+{
+"fa": "آب عنصر مهمی در این چشم‌انداز است.",
+"nl": "Water is een belangrijk element in dit landschap."
+}
+],
+"tr-2184": [
+{
+"fa": "با دوچرخه‌سواری آمادگی جسمانی‌ام خوب می‌ماند.",
+"nl": "Door het fietsen blijft mijn conditie goed."
+}
+],
+"tr-2185": [
+{
+"fa": "بعد از پله‌ها نفسم بند آمده بود.",
+"nl": "Ik was buiten adem na de trap."
+}
+],
+"tr-2186": [
+{
+"fa": "این گل‌ها را بو کن.",
+"nl": "Ruik eens aan deze bloemen."
+}
+],
+"tr-2187": [
+{
+"fa": "در تپه‌های شنی هوا پاک است.",
+"nl": "In de duinen is de lucht zuiver."
+}
+],
+"tr-2189": [
+{
+"fa": "روستا پناهجویان زیادی را پذیرفته است.",
+"nl": "Het dorp heeft veel vluchtelingen opgevangen."
+}
+],
+"tr-2191": [
+{
+"fa": "شهر ثروتش را از تجارت گرفت.",
+"nl": "De stad ontleende haar rijkdom aan de handel."
+}
+],
+"tr-2193": [
+{
+"fa": "مردم اینجا خیلی مهمان‌نواز هستند.",
+"nl": "De mensen hier zijn heel gastvrij."
+}
+],
+"tr-2194": [
+{
+"fa": "هلند به‌عنوان کشوری مداراگر شناخته می‌شد.",
+"nl": "Nederland stond bekend als een tolerant land."
+}
+],
+"tr-2195": [
+{
+"fa": "همسایه‌ام اهل مراکش است.",
+"nl": "Mijn buurman komt uit Marokko."
+}
+],
+"tr-2196": [
+{
+"fa": "او پارسال به ترکیه سفر کرد.",
+"nl": "Zij is vorig jaar naar Turkije gereisd."
+}
+],
+"tr-2197": [
+{
+"fa": "هوای خوب گردشگران زیادی را جذب کرد.",
+"nl": "Het goede weer trok veel toeristen aan."
+}
+],
+"tr-2199": [
+{
+"fa": "او تابعیت هلندی به دست آورده است.",
+"nl": "Zij heeft de Nederlandse nationaliteit verworven."
+}
+],
+"tr-2200": [
+{
+"fa": "بسیاری از سورینامی‌ها در آمستردام جنوب‌شرقی زندگی می‌کنند.",
+"nl": "Veel Surinamers wonen in Amsterdam-Zuidoost."
+}
+],
+"tr-2201": [
+{
+"fa": "زندگی آرام در روستا را انتخاب کردند.",
+"nl": "Ze kozen voor een rustig leven op het platteland."
+}
+],
+"tr-2202": [
+{
+"fa": "رویه‌های پناهندگی اغلب سال‌ها طول می‌کشد.",
+"nl": "De asielprocedures duren vaak jaren."
+}
+],
+"tr-2204": [
+{
+"fa": "درخواستم را هفتهٔ گذشته ارائه کردم.",
+"nl": "Ik heb mijn aanvraag vorige week ingediend."
+}
+],
+"tr-2206": [
+{
+"fa": "قبل از امتحان اضطراب زیادی حس می‌کردم.",
+"nl": "Voor het examen voelde ik veel spanning."
+}
+],
+"tr-2207": [
+{
+"fa": "هنوز باید منتظر نتیجه بمانیم.",
+"nl": "We moeten het resultaat nog afwachten."
+}
+],
+"tr-2208": [
+{
+"fa": "کسانی که می‌خواهند شرکت کنند، می‌توانند اعلام کنند.",
+"nl": "Degenen die willen meedoen, kunnen zich melden."
+}
+],
+"tr-2209": [
+{
+"fa": "درخواستم متأسفانه رد شد.",
+"nl": "Mijn aanvraag werd helaas afgewezen."
+}
+],
+"tr-2210": [
+{
+"fa": "وکیلم مدارک را ترتیب می‌دهد.",
+"nl": "Mijn advocaat regelt de papieren."
+}
+],
+"tr-2211": [
+{
+"fa": "برای این پرونده وکیل می‌گیرند.",
+"nl": "Ze nemen een advocaat in de arm voor de zaak."
+}
+],
+"tr-2212": [
+{
+"fa": "اگر طرح شکست بخورد، چیز دیگری امتحان می‌کنیم.",
+"nl": "Als het plan mislukt, proberen we iets anders."
+}
+],
+"tr-2213": [
+{
+"fa": "ساختمان قدیمی حذف شده است.",
+"nl": "Het oude gebouw is verwijderd."
+}
+],
+"tr-2214": [
+{
+"fa": "بازگشت او به هلند دشوار بود.",
+"nl": "Zijn terugkeer naar Nederland was moeilijk."
+}
+],
+"tr-2215": [
+{
+"fa": "مهاجران بدون اقامت اغلب بدون قرارداد کار می‌کنند.",
+"nl": "Illegalen werken vaak zonder contract."
+}
+],
+"tr-2216": [
+{
+"fa": "او در نظافت دفاتر کار می‌کند.",
+"nl": "Zij werkt in de schoonmaak van kantoren."
+}
+],
+"tr-2217": [
+{
+"fa": "اول باید مجوزی به دست بیاوری.",
+"nl": "Je moet eerst een vergunning verkrijgen."
+}
+],
+"tr-2218": [
+{
+"fa": "تلاش می‌کنند ویزایی به دست بیاورند.",
+"nl": "Ze proberen een visum zien te verkrijgen."
+}
+],
+"tr-2219": [
+{
+"fa": "چنین درخواستی زحمت زیادی دارد.",
+"nl": "Zo'n aanvraag heeft heel wat voeten in de aarde."
+},
+{
+"fa": "خریدن خانه زحمت زیادی دارد.",
+"nl": "Een huis kopen heeft heel wat voeten in de aarde."
+}
+],
+"tr-2220": [
+{
+"fa": "بسیاری از افراد با تحصیلات بالا اینجا کار پیدا نمی‌کنند.",
+"nl": "Veel hoogopgeleiden vinden hier geen werk."
+}
+],
+"tr-2222": [
+{
+"fa": "تو را از این اداره به آن اداره می‌فرستند.",
+"nl": "Ze sturen je van het kastje naar de muur."
+}
+],
+"tr-2223": [
+{
+"fa": "ما واجد شرایط کمک‌هزینهٔ اجاره هستیم.",
+"nl": "Wij komen in aanmerking voor huurtoeslag."
+},
+{
+"fa": "دانشجویان واجد شرایط تخفیف هستند.",
+"nl": "Studenten komen in aanmerking voor korting."
+}
+],
+"tr-2224": [
+{
+"fa": "غذاهای ترکی را دوست دارم.",
+"nl": "Ik eet graag Turkse gerechten."
+}
+],
+"tr-2225": [
+{
+"fa": "چای مراکشی خیلی شیرین است.",
+"nl": "Marokkaanse thee is heel zoet."
+}
+],
+"tr-2226": [
+{
+"fa": "از نظر مادی وضعشان خوب است.",
+"nl": "Materieel gaat het hun goed."
+}
+],
+"tr-2227": [
+{
+"fa": "او در انزوای اجتماعی زندگی می‌کند.",
+"nl": "Hij leeft in een sociaal isolement."
+}
+],
+"tr-2228": [
+{
+"fa": "سه نسل در این خانه زندگی می‌کنند.",
+"nl": "Drie generaties wonen in dit huis."
+}
+],
+"tr-2229": [
+{
+"fa": "از درون هنوز احساس غریبگی می‌کرد.",
+"nl": "Innerlijk voelde ze zich nog een vreemde."
+}
+],
+"tr-2230": [
+{
+"fa": "شنیده‌ام که نقل مکان کرده‌ای.",
+"nl": "Ik heb vernomen dat je verhuisd bent."
+}
+],
+"tr-2232": [
+{
+"fa": "به‌سرعت خود را با کار جدید تطبیق می‌دهی.",
+"nl": "Je past je snel aan aan het nieuwe werk."
+},
+{
+"fa": "بچه‌ها به‌راحتی خود را با زبان جدید تطبیق می‌دهند.",
+"nl": "Kinderen passen zich makkelijk aan een nieuwe taal aan."
+}
+],
+"tr-2233": [
+{
+"fa": "کم‌کم اینجا احساس خانه‌بودن می‌کنم.",
+"nl": "Ik begin me hier thuis te voelen."
+},
+{
+"fa": "در این شهر احساس تعلق می‌کنی؟",
+"nl": "Voel je je thuis in deze stad?"
+}
+],
+"tr-2234": [
+{
+"fa": "در آغاز این هزاره چیزهای زیادی تغییر کرد.",
+"nl": "Aan het begin van dit millennium veranderde veel."
+}
+],
+"tr-2235": [
+{
+"fa": "در آب مثل ماهی در آب هستند.",
+"nl": "In het water voelen ze zich als een vis in het water."
+},
+{
+"fa": "روی صحنه مثل ماهی در آب است.",
+"nl": "Op het toneel voelt zij zich als een vis in het water."
+}
+],
+"tr-2236": [
+{
+"fa": "هلند برای آن‌ها کشور میزبان شده است.",
+"nl": "Nederland is voor hen het gastland geworden."
+}
+],
+"tr-2237": [
+{
+"fa": "او بهترین چیز را برای بچه‌هایش می‌خواهد.",
+"nl": "Zij wil het allerbeste voor haar kinderen."
+}
+],
+"tr-2238": [
+{
+"fa": "چه روز درخشانی!",
+"nl": "Wat een stralende dag!"
+}
+],
+"tr-2239": [
+{
+"fa": "کنار ساحل درختان نخل بلندی هستند.",
+"nl": "Langs het strand staan hoge palmbomen."
+}
+],
+"tr-2240": [
+{
+"fa": "آن روستا در گوشهٔ دورافتاده‌ای از کشور است.",
+"nl": "Dat dorp ligt in een uithoek van het land."
+}
+],
+"tr-2241": [
+{
+"fa": "کوراسائو در دریای کارائیب قرار دارد.",
+"nl": "Curaçao ligt in de Caribische Zee."
+}
+],
+"tr-2242": [
+{
+"fa": "بسیاری از آفریقایی‌ها چند زبان صحبت می‌کنند.",
+"nl": "Veel Afrikanen spreken meerdere talen."
+}
+],
+"tr-2245": [
+{
+"fa": "جزیره خودگردانی دارد.",
+"nl": "Het eiland heeft zelfbestuur."
+}
+],
+"tr-2246": [
+{
+"fa": "گفت‌وگوی جذابی بود.",
+"nl": "Dat was een boeiend gesprek."
+}
+],
+"tr-2249": [
+{
+"fa": "بسیاری از مردم آنجا در فقر زندگی می‌کنند.",
+"nl": "Veel mensen leven daar in armoede."
+},
+{
+"fa": "فقر در جهان به‌آرامی کاهش می‌یابد.",
+"nl": "De armoede in de wereld neemt langzaam af."
+}
+],
+"tr-2250": [
+{
+"fa": "بسیاری از خانواده‌ها زیر خط فقر زندگی می‌کنند.",
+"nl": "Veel gezinnen leven onder de armoedegrens."
+}
+],
+"tr-2251": [
+{
+"fa": "صندوق بین‌المللی پول به آن کشور وام داد.",
+"nl": "Het IMF gaf het land een lening."
+},
+{
+"fa": "صندوق بین‌المللی پول هر سال گزارشی منتشر می‌کند.",
+"nl": "Het IMF publiceert elk jaar een rapport."
+}
+],
+"tr-2252": [
+{
+"fa": "سیاست پولی سخت‌گیرانه است.",
+"nl": "Het monetair beleid is streng."
+}
+],
+"tr-2255": [
+{
+"fa": "بودجه به‌شدت کاهش یافته است.",
+"nl": "Er is fors gesneden in het budget."
+},
+{
+"fa": "دولت در حوزهٔ درمان بودجه را کاهش داده است.",
+"nl": "De regering heeft in de zorg gesneden."
+}
+],
+"tr-2257": [
+{
+"fa": "مبارزه با فقر پول زیادی می‌برد.",
+"nl": "De bestrijding van armoede kost veel geld."
+}
+],
+"tr-2258": [
+{
+"fa": "چه باغ زیبایی داری!",
+"nl": "Wat een prachtige tuin heb je!"
+}
+],
+"tr-2260": [
+{
+"fa": "موسیقی بلندی از کافه شنیده می‌شد.",
+"nl": "Er klonk luide muziek uit het café."
+}
+],
+"tr-2261": [
+{
+"fa": "موسیقی ریتمیک همه را شاد کرد.",
+"nl": "De ritmische muziek maakte iedereen vrolijk."
+}
+],
+"tr-2262": [
+{
+"fa": "حال‌وهوای دفتر امروز خوب است.",
+"nl": "De stemming op kantoor is vandaag goed."
+}
+],
+"tr-2263": [
+{
+"fa": "همه می‌رقصند و می‌خوانند: جو خیلی خوب است.",
+"nl": "Iedereen danst en zingt: de stemming zit er goed in."
+}
+],
+"tr-2264": [
+{
+"fa": "او موهای بلوند دارد.",
+"nl": "Zij heeft blond haar."
+}
+],
+"tr-2265": [
+{
+"fa": "او کت قهوه‌ای پوشیده است.",
+"nl": "Hij draagt een bruine jas."
+}
+],
+"tr-2266": [
+{
+"fa": "تماشاگران بعد از کنسرت دست می‌زنند.",
+"nl": "Het publiek klapt na het concert."
+}
+],
+"tr-2267": [
+{
+"fa": "او با اشتیاق دربارهٔ سفرش تعریف کرد.",
+"nl": "Zij vertelde enthousiast over haar reis."
+}
+],
+"tr-2268": [
+{
+"fa": "او یک سال در آمریکای لاتین سفر کرد.",
+"nl": "Zij reisde een jaar door Latijns-Amerika."
+}
+],
+"tr-2270": [
+{
+"fa": "می‌توانستیم بدانیم که باران خواهد بارید.",
+"nl": "We hadden het kunnen weten dat het zou regenen."
+}
+],
+"tr-2271": [
+{
+"fa": "جشن شنبه برگزار می‌شود.",
+"nl": "Het feest vindt zaterdag plaats."
+},
+{
+"fa": "جلسه در سالن دو برگزار می‌شود.",
+"nl": "De vergadering vindt in zaal twee plaats."
+}
+],
+"tr-2272": [
+{
+"fa": "امسال شرکت‌کنندگان بیشتری هست.",
+"nl": "Er zijn dit jaar meer deelnemers."
+}
+],
+"tr-2273": [
+{
+"fa": "در مهمانی سالسا رقصیدند.",
+"nl": "Op het feest dansten ze salsa."
+}
+],
+"tr-2274": [
+{
+"fa": "پسرم دوست دارد رپ گوش کند.",
+"nl": "Mijn zoon luistert graag naar rap."
+}
+],
+"tr-2275": [
+{
+"fa": "همه در نتیجه سهم دارند.",
+"nl": "Iedereen draagt bij aan het resultaat."
+},
+{
+"fa": "ورزش به سلامت خوب کمک می‌کند.",
+"nl": "Sport draagt bij aan een goede gezondheid."
+}
+],
+"tr-2276": [
+{
+"fa": "موسیقی شور جشن را بیشتر کرد.",
+"nl": "De muziek verhoogde de feestvreugde."
+}
+],
+"tr-2277": [
+{
+"fa": "بچه‌ها مادرشان را صدا می‌زنند.",
+"nl": "De kinderen roepen om hun moeder."
+}
+],
+"tr-2278": [
+{
+"fa": "می‌توانم چیز دیگری پیشنهاد کنم؟",
+"nl": "Mag ik iets anders suggereren?"
+}
+],
+"tr-2279": [
+{
+"fa": "تو آن طرح را می‌پسندی؟",
+"nl": "Zie jij dat plan wel zitten?"
+}
+],
+"tr-2281": [
+{
+"fa": "می‌خواهند با هم آینده‌ای بسازند.",
+"nl": "Ze willen samen een toekomst opbouwen."
+}
+],
+"tr-2283": [
+{
+"fa": "روابط همسایه‌ها خوب است.",
+"nl": "De verhoudingen tussen de buren zijn goed."
+}
+],
+"tr-2284": [
+{
+"fa": "فوراً به کمک نیاز داریم.",
+"nl": "We hebben dringend hulp nodig."
+}
+],
+"tr-2285": [
+{
+"fa": "قرارداد نیاز به بازنگری دارد.",
+"nl": "Het contract is aan herziening toe."
+}
+],
+"tr-2286": [
+{
+"fa": "یک چیز قطعی است: فردا نمی‌آید.",
+"nl": "Eén ding is zeker: morgen komt hij niet."
+},
+{
+"fa": "یک چیز روشن است، باید حالا شروع کنیم.",
+"nl": "Eén ding is zeker, we moeten nu beginnen."
+}
+],
+"tr-2287": [
+{
+"fa": "شب سال نو اولیبولن می‌خوریم.",
+"nl": "Op oudejaarsavond eten we oliebollen."
+}
+],
+"tr-2288": [
+{
+"fa": "در دسامبر درخت کریسمس در اتاق است.",
+"nl": "In december staat de kerstboom in de kamer."
+},
+{
+"fa": "با هم درخت کریسمس را تزیین می‌کنیم.",
+"nl": "We versieren de kerstboom samen."
+}
+],
+"tr-2289": [
+{
+"fa": "در ژانویه کارت تبریک سال نو می‌فرستیم.",
+"nl": "In januari sturen we nieuwjaarskaarten."
+}
+],
+"tr-2290": [
+{
+"fa": "اینجا بوی خوب قهوه می‌آید.",
+"nl": "Het ruikt hier lekker naar koffie."
+}
+],
+"tr-2291": [
+{
+"fa": "بیسکویت شیرین دوست دارم.",
+"nl": "Ik hou van zoete koekjes."
+}
+],
+"tr-2292": [
+{
+"fa": "مادرم خودش اولیبولن می‌پزد.",
+"nl": "Mijn moeder bakt zelf oliebollen."
+}
+],
+"tr-2293": [
+{
+"fa": "این بیسکویت‌ها تازه پخته شده‌اند.",
+"nl": "Deze koekjes zijn vers gebakken."
+},
+{
+"fa": "یک تخم‌مرغ سرخ‌شده خوردم.",
+"nl": "Ik heb een gebakken ei gegeten."
+}
+],
+"tr-2294": [
+{
+"fa": "ساعت دوازده شامپاین می‌نوشیم.",
+"nl": "Om twaalf uur drinken we champagne."
+}
+],
+"tr-2295": [
+{
+"fa": "نیمه‌شب همه‌جا آتش‌بازی هست.",
+"nl": "Om middernacht is er overal vuurwerk."
+}
+],
+"tr-2296": [
+{
+"fa": "ساعت دوازده آتش‌بازی می‌کنند.",
+"nl": "Ze steken om twaalf uur vuurwerk af."
+},
+{
+"fa": "آن چراغ‌ها را روشن می‌کنی؟",
+"nl": "Steek je die lampjes even af?"
+}
+],
+"tr-2297": [
+{
+"fa": "بچه‌ها یکشنبه‌ها بازی می‌کنند.",
+"nl": "De kinderen doen spelletjes op zondag."
+}
+],
+"tr-2298": [
+{
+"fa": "بچه‌ها امشب می‌توانند بیدار بمانند.",
+"nl": "De kinderen mogen vanavond opblijven."
+}
+],
+"tr-2299": [
+{
+"fa": "این فیلم فقط برای بزرگسالان است.",
+"nl": "Deze film is alleen voor volwassenen."
+}
+],
+"tr-2300": [
+{
+"fa": "بهترین لحظات سفرت چه بود؟",
+"nl": "Wat waren de hoogtepunten van je reis?"
+}
+],
+"tr-2302": [
+{
+"fa": "آن خبر همه را به حرف انداخت.",
+"nl": "Het nieuws maakte alle tongen los."
+}
+],
+"tr-2303": [
+{
+"fa": "چه چیزی همه را در مهمانی به حرف انداخت؟",
+"nl": "Wat maakte de tongen los op het feest?"
+}
+],
+"tr-2304": [
+{
+"fa": "دیگر دسامبر است؟ زمان سریع می‌گذرد!",
+"nl": "Is het al december? De tijd vliegt!"
+},
+{
+"fa": "وقتی سرت شلوغ باشد، زمان سریع می‌گذرد.",
+"nl": "De tijd vliegt als je het druk hebt."
+}
+],
+"tr-2305": [
+{
+"fa": "از آن سفر خاطرات خوبی داریم.",
+"nl": "We hebben mooie herinneringen aan die reis."
+}
+],
+"tr-2306": [
+{
+"fa": "چه امروز، چه فردا: حتماً می‌آیم.",
+"nl": "Hetzij vandaag, hetzij morgen: ik kom zeker."
+}
+],
+"tr-2308": [
+{
+"fa": "او روزی فقط یک سیگار می‌کشد.",
+"nl": "Hij rookt nog één sigaret per dag."
+}
+],
+"tr-2309": [
+{
+"fa": "شمعی روشن کرد.",
+"nl": "Ze stak een kaars op."
+}
+],
+"tr-2310": [
+{
+"fa": "او شب‌ها ایتالیایی یاد می‌گیرد.",
+"nl": "Zij leert Italiaans in de avonduren."
+}
+],
+"tr-2311": [
+{
+"fa": "بچه‌ها مؤدبانه رفتار می‌کنند.",
+"nl": "De kinderen gedragen zich netjes."
+}
+],
+"tr-2312": [
+{
+"fa": "برنامه می‌ریزیم، اما اینکه چه مقدارش عملی شود، سؤال است.",
+"nl": "We maken plannen, maar wat ervan terechtkomt is de vraag."
+},
+{
+"fa": "قول‌های زیادی می‌دهد، اما نمی‌دانیم چه مقدارش عملی می‌شود.",
+"nl": "Hij belooft veel, maar wat ervan terechtkomt weten we niet."
+}
+],
+"tr-2314": [
+{
+"fa": "تولد او مناسبتِ برگزاری جشن بود.",
+"nl": "Zijn verjaardag was de aanleiding voor het feest."
+}
+],
+"tr-2315": [
+{
+"fa": "این مفیدترین درس این دوره بود.",
+"nl": "Dit was de nuttigste les van de cursus."
+},
+{
+"fa": "مفیدترین نکته برای تو چیست؟",
+"nl": "Wat is voor jou de nuttigste tip?"
+}
+],
+"tr-2316": [
+{
+"fa": "دربارهٔ متن من نظری داری؟",
+"nl": "Heb je commentaar op mijn tekst?"
+}
+],
+"tr-2318": [
+{
+"fa": "این مطلب را باید برای امتحان بدانی.",
+"nl": "Deze stof moet je voor het examen kennen."
+}
+],
+"tr-2321": [
+{
+"fa": "مواد آموزشی دوره را روز اول می‌گیری.",
+"nl": "Het materiaal voor de cursus krijg je op de eerste dag."
+}
+],
+"tr-2323": [
+{
+"fa": "او روان هلندی صحبت می‌کند.",
+"nl": "Hij spreekt vloeiend Nederlands."
+}
+],
+"tr-2324": [
+{
+"fa": "وقتی خسته است، آه می‌کشد.",
+"nl": "Hij zucht als hij moe is."
+},
+{
+"fa": "آه می‌کشد و دوباره سر کار می‌رود.",
+"nl": "Ze zucht en gaat weer aan het werk."
+}
+],
+"tr-2325": [
+{
+"fa": "حالا در مرحلهٔ آخر هستیم.",
+"nl": "We zitten nu in de laatste fase."
+}
+],
+"tr-2326": [
+{
+"fa": "یادگیری همه‌چیز در یک هفته توقع زیادی است.",
+"nl": "Alles in één week leren is te veel gevraagd."
+}
+],
+"tr-2327": [
+{
+"fa": "پایهٔ این قانون قدیمی است.",
+"nl": "De grondslag van deze wet is oud."
+}
+],
+"tr-2328": [
+{
+"fa": "هیچ‌کس از مالیات خلاص نمی‌شود.",
+"nl": "Niemand ontkomt aan de belasting."
+},
+{
+"fa": "به‌سختی از جریمه فرار کرد.",
+"nl": "Hij ontkwam ternauwernood aan een boete."
+}
+],
+"tr-2330": [
+{
+"fa": "روز اول سال نو مغازه‌ها بسته هستند.",
+"nl": "Op nieuwjaarsdag zijn de winkels dicht."
+},
+{
+"fa": "روز اول سال نو تا دیر می‌خوابیم.",
+"nl": "We slapen op nieuwjaarsdag lang uit."
+}
+],
+"tr-2331": [
+{
+"fa": "در عید پاک تخم‌مرغ می‌خوریم.",
+"nl": "Met Pasen eten we eieren."
+},
+{
+"fa": "عید پاک امسال در آوریل است.",
+"nl": "Pasen valt dit jaar in april."
+}
+],
+"tr-2332": [
+{
+"fa": "عید عروج مسیح روز تعطیل است.",
+"nl": "Hemelvaartsdag is een vrije dag."
+},
+{
+"fa": "در عید عروج مسیح بسیاری از مردم تعطیل‌اند.",
+"nl": "Met Hemelvaartsdag zijn veel mensen vrij."
+}
+],
+"tr-2333": [
+{
+"fa": "در پنطیکاست دو روز تعطیل داریم.",
+"nl": "Met Pinksteren hebben we twee vrije dagen."
+},
+{
+"fa": "پنطیکاست بعد از عید پاک می‌آید.",
+"nl": "Pinksteren komt na Pasen."
+}
+],
+"tr-2334": [
+{
+"fa": "هلند پنجم مه آزادسازی را جشن می‌گیرد.",
+"nl": "Op 5 mei viert Nederland de bevrijding."
+},
+{
+"fa": "بعد از آزادسازی بسیاری از مردم برگشتند.",
+"nl": "Na de bevrijding keerden veel mensen terug."
 }
 ]
 }
