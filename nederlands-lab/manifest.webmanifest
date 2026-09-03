@@ -1,0 +1,21 @@
+{
+  "name": "Nederlands Lab — Groen Boek & Tweede Ronde",
+  "short_name": "Nederlands Lab",
+  "description": "Dutch vocabulary trainer for Het Groene Boek and Tweede Ronde with Persian meanings, spaced repetition and cross-device sync.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "lang": "nl",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%230f1218'/%3E%3Cpath d='M144 352V160h48l96 128V160h48v192h-48l-96-128v128z' fill='%2360d394'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
