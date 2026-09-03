@@ -9,7 +9,7 @@ import { store } from '../core/store.js';
 import * as SRS from '../core/srs.js';
 import * as DATA from '../core/data.js';
 import { startSession } from './session.js';
-import { progressBar, wordRow, emptyState, glossify, speakButton } from './components.js';
+import { progressBar, wordRow, emptyState, glossify, readingLine, speakButton } from './components.js';
 import { go } from '../main.js';
 
 export function renderBooks(view) {
@@ -102,22 +102,22 @@ export function renderLesson(view, bookId, n) {
     el('button.btn', { type: 'button', html: `${icon(ICONS.cards, 16)} Oefen alles`, onclick: () => startSession('lesson', { book: bookId, lesson: n, size: Math.min(words.length, 40) }) }),
     el('button.btn', { type: 'button', html: `${icon(ICONS.gap, 16)} Invullen`, onclick: () => startSession('blank', { book: bookId, lesson: n }) })));
 
-  /* tabs: text / words / exercises from the book */
-  const hasText = (lesson.text || []).length > 0;
-  const hasCloze = (lesson.cloze || []).length > 0;
+  /* tabs follow whatever the book actually provides for this lesson */
   const panel = el('div');
   const tabDefs = [
-    hasText ? ['tekst', 'Tekst'] : null,
-    ['woorden', `Woorden (${words.length})`],
-    hasCloze ? ['gaten', 'Gatentekst'] : null,
+    (lesson.text || []).length ? ['tekst', 'Tekst', () => renderText(panel, lesson)] : null,
+    ['woorden', `Woorden (${words.length})`, () => renderWords(panel, words)],
+    (lesson.cloze || []).length ? ['gaten', 'Gatentekst', () => renderCloze(panel, lesson)] : null,
+    (lesson.questions || []).length || (lesson.speak || []).length
+      ? ['spreken', 'Spreken', () => renderSpeak(panel, lesson)] : null,
+    (lesson.grammar || []).length ? ['grammatica', 'Grammatica', () => renderGrammar(panel, lesson)] : null,
+    (lesson.kijk || []).length ? ['kijk', 'Kijk goed', () => renderKijk(panel, lesson)] : null,
   ].filter(Boolean);
 
   const tabs = el('div.tabs', { role: 'tablist', style: { marginBottom: '16px' } });
   const paint = (key) => {
     for (const btn of tabs.children) btn.setAttribute('aria-selected', String(btn.dataset.k === key));
-    if (key === 'tekst') renderText(panel, lesson);
-    else if (key === 'gaten') renderCloze(panel, lesson);
-    else renderWords(panel, words, bookId, n);
+    (tabDefs.find((t) => t[0] === key) || tabDefs[0])[2]();
   };
   for (const [k, label] of tabDefs) {
     tabs.append(el('button', { type: 'button', role: 'tab', dataset: { k }, text: label, onclick: () => paint(k) }));
@@ -140,15 +140,103 @@ function renderText(panel, lesson) {
   const body = el('div.reading');
   for (const para of lesson.text) {
     const p = el('p', { lang: 'nl' });
-    p.append(glossify(para, null));
+    p.append(readingLine(para));
     body.append(p);
   }
+  const plain = lesson.text.map((t) => t.replace(/[*›»>]/g, '')).join(' ').slice(0, 600);
   panel.append(
-    el('div.callout.callout-info', { text: 'Tik op een woord voor de Perzische betekenis. Lees de tekst eerst helemaal door — dat is de kern van de Delftse methode.' }),
+    el('div.callout.callout-info', { text: 'Tik op een woord voor de Perzische betekenis. Nieuwe woorden staan schuin. Lees de tekst eerst helemaal door — dat is de kern van de Delftse methode.' }),
     el('section.card', { style: { marginTop: '14px' } }, body,
       el('div.row', { style: { marginTop: '16px' } },
-        speakButton(lesson.text.join(' ').slice(0, 600)) || el('span'),
+        speakButton(plain) || el('span'),
         el('span.muted', { style: { fontSize: '.8rem' }, text: 'Luister naar het begin van de tekst' }))));
+}
+
+/** The book's own comprehension questions and speaking prompts. */
+function renderSpeak(panel, lesson) {
+  panel.replaceChildren();
+  const parts = [el('div.callout.callout-info', {
+    text: 'Beantwoord de vragen hardop. Spreken is in de Delftse methode net zo belangrijk als lezen.' })];
+  if ((lesson.questions || []).length) {
+    parts.push(el('section.card', { style: { marginTop: '14px' } },
+      el('div.section-title', { text: `Geef antwoord · ${lesson.questions.length}` }),
+      el('ol.prompt-list', {}, lesson.questions.map((q) => {
+        const li = el('li', { lang: 'nl' });
+        li.append(glossify(q, null));
+        return li;
+      }))));
+  }
+  if ((lesson.speak || []).length) {
+    parts.push(el('section.card', { style: { marginTop: '14px' } },
+      el('div.section-title', { text: `Spreken · ${lesson.speak.length}` }),
+      el('ol.prompt-list', {}, lesson.speak.map((q) => {
+        const li = el('li', { lang: 'nl' });
+        li.append(glossify(q, null));
+        return li;
+      }))));
+  }
+  panel.append(...parts);
+}
+
+/** Grammar cards the book attaches to this lesson. */
+function renderGrammar(panel, lesson) {
+  panel.replaceChildren();
+  panel.append(el('div.callout.callout-info', {
+    text: 'De grammatica die bij deze les hoort, precies zoals het boek hem geeft.' }));
+  lesson.grammar.forEach((g, i) => {
+    panel.append(el('section.card', { style: { marginTop: '14px' } },
+      el('div.section-title', { text: g.t || `Grammatica ${i + 1}` }),
+      el('div.md', { lang: 'nl' }, mdBlock(g.md))));
+  });
+}
+
+/** "Kijk goed": the forms, cards and signs printed alongside the text. */
+function renderKijk(panel, lesson) {
+  panel.replaceChildren();
+  panel.append(el('div.callout.callout-info', {
+    text: 'Realia uit het boek: formulieren, kaartjes en borden bij deze les.' }));
+  for (const k of lesson.kijk) {
+    panel.append(el('section.card', { style: { marginTop: '14px' } },
+      k.page ? el('div.section-title', { text: `p. ${k.page}` }) : null,
+      el('div.md', { lang: 'nl' }, mdBlock(k.md))));
+  }
+}
+
+/**
+ * Minimal markdown for the grammar and realia blocks: headings, bold, bullets
+ * and blank-line paragraphs are all the source uses.
+ */
+function mdBlock(md) {
+  const frag = document.createDocumentFragment();
+  let list = null;
+  for (const raw of String(md || '').split('\n')) {
+    const line = raw.trimEnd();
+    if (!line.trim()) { list = null; continue; }
+    const bullet = line.match(/^\s*[-*]\s+(.*)$/);
+    if (bullet) {
+      if (!list) { list = el('ul.md-list'); frag.append(list); }
+      list.append(inlineMd('li', bullet[1]));
+      continue;
+    }
+    list = null;
+    const head = line.match(/^(#{1,6})\s+(.*)$/);
+    frag.append(head ? inlineMd('h4.md-h', head[2]) : inlineMd('p', line));
+  }
+  return frag;
+}
+
+/** Renders **bold** inside one line; everything else stays literal text. */
+function inlineMd(spec, text) {
+  const node = el(spec, { lang: 'nl' });
+  for (const part of String(text).split(/(\*\*[^*]+\*\*)/g)) {
+    if (!part) continue;
+    if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+      node.append(el('strong', { text: part.slice(2, -2) }));
+    } else {
+      node.append(glossify(part, null));
+    }
+  }
+  return node;
 }
 
 /** The book's own gap-fill passage. */
@@ -165,7 +253,7 @@ function renderCloze(panel, lesson) {
     el('section.card', { style: { marginTop: '14px' } }, body));
 }
 
-function renderWords(panel, words, bookId, n) {
+function renderWords(panel, words) {
   panel.replaceChildren();
   const groups = [
     ['Te herhalen', words.filter((w) => SRS.isDue(store.card(w.id)))],

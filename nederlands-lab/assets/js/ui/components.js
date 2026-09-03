@@ -94,6 +94,34 @@ export function glossify(sentence, term, { gloss = true } = {}) {
 }
 
 /**
+ * One line of a lesson text. The book italicises words that are new in this
+ * lesson and marks them with asterisks in the source; those become <em> here,
+ * and everything stays tappable for its Persian meaning.
+ */
+export function readingLine(text, { gloss = true } = {}) {
+  const frag = document.createDocumentFragment();
+  const raw = String(text ?? '');
+  // A leading > or » is the book's speaker marker for the two voices.
+  const speaker = /^\s*[>›»]/.test(raw) ? raw.trim()[0] : '';
+  const body = speaker ? raw.replace(/^\s*[>›»]\s*/, '') : raw;
+  if (speaker) frag.append(el('span.speaker', { text: speaker === '»' ? '»' : '\u203a' }));
+
+  // The body is one inline run: the paragraph is a flex row only so the speaker
+  // marker can sit in its own gutter, so the text itself must be a single item.
+  const line = el('span.line-body');
+  for (const part of body.split(/(\*[^*]+\*)/g)) {
+    if (!part) continue;
+    const marked = part.length > 2 && part.startsWith('*') && part.endsWith('*');
+    const inner = marked ? part.slice(1, -1) : part;
+    const node = marked ? el('em.nw') : line;
+    node.append(glossify(inner, null, { gloss }));
+    if (marked) line.append(node);
+  }
+  frag.append(line);
+  return frag;
+}
+
+/**
  * Persian text node with any embedded Dutch isolated, so quotes and slashes
  * around a Latin word stay where the author put them.
  */
@@ -172,17 +200,27 @@ export function exampleBlock(w, { limit = 3, gloss = store.settings.gloss } = {}
 
 /* ---------- word detail ---------- */
 
+// Both books grade their vocabulary, with slightly different bands.
+const TIER_LABEL = {
+  ESSENTIAL: ['kernwoord', 'chip-good'],
+  HIGH: ['veel gebruikt', 'chip-good'],
+  PROFESSIONAL: ['vakwoord', 'chip-warn'],
+};
+
 export function wordFacts(w) {
   const chips = [];
   if (w.article) chips.push(el('span.chip', { text: `${w.article} ${w.term}` }));
   if (w.plural) chips.push(el('span.chip', { text: `mv. ${w.plural}` }));
   if (w.verb?.inf && w.verb.inf !== w.term) chips.push(el('span.chip', { text: `inf. ${w.verb.inf}` }));
+  if (w.verb?.p3) chips.push(el('span.chip', { text: `hij ${w.verb.p3}` }));
+  if (w.verb?.past) chips.push(el('span.chip', { text: `verl. ${w.verb.past}` }));
   if (w.verb?.pp) chips.push(el('span.chip', { text: `volt. ${w.verb.pp}` }));
   if (w.verb?.aux) chips.push(el('span.chip', { text: `hulpww. ${w.verb.aux}` }));
+  if (w.sep) chips.push(el('span.chip', { text: `scheidbaar: ${w.sep}` }));
   if (w.prep) chips.push(el('span.chip', { text: `+ ${w.prep}` }));
   if (w.pos) chips.push(el('span.chip', { text: w.pos }));
   if (w.cefr) chips.push(el('span.chip', { text: w.cefr }));
-  if (w.tier === 'ESSENTIAL') chips.push(el('span.chip.chip-good', { text: 'kernwoord' }));
+  if (TIER_LABEL[w.tier]) chips.push(el(`span.chip.${TIER_LABEL[w.tier][1]}`, { text: TIER_LABEL[w.tier][0] }));
   return chips;
 }
 

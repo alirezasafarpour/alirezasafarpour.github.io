@@ -6,8 +6,10 @@ lesson by importance. The batch is written to build/ex_batch.json for ex_add.py.
 """
 import json, os, sys
 
-DATA = "../data/tr.words.json"
-CURATED = "curated/examples.curated.json"
+BOOK = os.environ.get("BOOK", "tr")
+DATA = f"../data/{BOOK}.words.json"
+CURATED = ("curated/examples.curated.json" if BOOK == "tr"
+           else f"curated/{BOOK}.examples.curated.json")
 BATCH = "build/ex_batch.json"
 WANT = 2  # every word should end up with at least this many examples
 
@@ -35,4 +37,5 @@ if __name__ == "__main__":
     for i, (w, need) in enumerate(batch, 1):
         have = "; ".join(e["nl"] for e in w.get("ex", [])) or "-"
         art = w.get("article") or "-"
-        print(f'{i}|{w["term"]}|{art}|{w.get("pos","")}|{w.get("faShort") or w.get("fa","")}|{w.get("en","")}|need {need}|have: {have}')
+        fa = (w.get("faShort") or w.get("fa", ""))[:70]
+        print(f'{i}|{w["term"]}|{art}|{w.get("pos","")}|{fa}|{w.get("en","")}|need {need}|have: {have}')

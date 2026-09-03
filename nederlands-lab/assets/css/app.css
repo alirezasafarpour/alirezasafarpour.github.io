@@ -663,3 +663,34 @@ a { color: inherit; text-decoration: none; }
 .finish-mark { font-size: 3rem; line-height: 1; }
 .finish h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; letter-spacing: -.02em; }
 .finish-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); width: 100%; }
+
+/* ============================================================
+   Lesson content: dialogue, new words, grammar cards, realia
+   ============================================================ */
+.reading p { display: flex; gap: 10px; align-items: baseline; }
+.reading p > .line-body { flex: 1; min-width: 0; }
+.reading p > .speaker {
+  flex: none; width: 1.1em; text-align: center; color: var(--accent);
+  font-family: var(--font-ui); font-weight: 700; font-size: .95rem; opacity: .75;
+}
+/* Words the book prints in italics because they are new in this lesson. */
+.reading em.nw {
+  font-style: italic; font-weight: 600;
+  color: var(--ink); background: linear-gradient(transparent 68%, var(--accent-soft) 68%);
+}
+.reading em.nw .tok[data-known="1"] { border-bottom-color: transparent; }
+
+.prompt-list { margin: 0; padding-inline-start: 1.3em; display: flex; flex-direction: column; gap: 10px; }
+.prompt-list li { font-family: var(--font-display); font-size: 1rem; line-height: 1.7; }
+.prompt-list li::marker { color: var(--ink-3); font-family: var(--font-mono); font-size: .8rem; }
+
+.md { display: flex; flex-direction: column; gap: 10px; }
+.md p { font-family: var(--font-display); font-size: 1rem; line-height: 1.75; }
+.md .md-h {
+  font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--accent); margin-top: 6px;
+}
+.md .md-h:first-child { margin-top: 0; }
+.md .md-list { margin: 0; padding-inline-start: 1.2em; display: flex; flex-direction: column; gap: 6px; }
+.md .md-list li { font-family: var(--font-display); font-size: 1rem; line-height: 1.7; }
+.md strong { font-weight: 700; color: var(--accent); }

@@ -7,7 +7,8 @@ can map the numbered answers back to their sentences.
 import json, os, sys, collections
 import lib_text as T
 
-DATA = "../data/tr.words.json"
+BOOK = os.environ.get("BOOK", "tr")
+DATA = f"../data/{BOOK}.words.json"
 SENT_FA = "curated/sentences.fa.json"
 BATCH = "build/fa_batch.json"
 

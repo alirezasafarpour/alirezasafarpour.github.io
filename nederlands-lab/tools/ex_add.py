@@ -6,7 +6,9 @@ word. Existing curated sentences for a word are kept; duplicates are ignored.
 """
 import json, os, sys
 
-CURATED = "curated/examples.curated.json"
+BOOK = os.environ.get("BOOK", "tr")
+CURATED = ("curated/examples.curated.json" if BOOK == "tr"
+           else f"curated/{BOOK}.examples.curated.json")
 BATCH = "build/ex_batch.json"
 
 batch = json.load(open(BATCH, encoding="utf-8"))
