@@ -24,8 +24,15 @@ RAW = "build/tr.words.raw.json"
 ARTIFACTS = ("_____", "*", "`", " = ", "|", "->")
 
 
+REJECTED = set()
+if os.path.exists("curated/rejected.json"):
+    REJECTED = {T.fold(x) for x in json.load(open("curated/rejected.json", encoding="utf-8"))}
+
+
 def usable(s):
     """True when a mined sentence reads as ordinary running Dutch."""
+    if T.fold(s) in REJECTED:
+        return False
     if any(a in s for a in ARTIFACTS):
         return False
     if s.endswith(":") or s.endswith(";"):

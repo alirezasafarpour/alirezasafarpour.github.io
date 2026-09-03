@@ -75,15 +75,32 @@ def level_of(s):
     return 1 if n <= 55 else 2 if n <= 95 else 3
 
 
+REJECTED = set()
+if os.path.exists("curated/rejected.json"):
+    REJECTED = {T.fold(x) for x in json.load(open("curated/rejected.json", encoding="utf-8"))}
+
+
 def usable(s):
     """True when a mined sentence reads as an ordinary, complete Dutch sentence."""
+    if T.fold(s) in REJECTED:
+        return False
     if not (14 <= len(s) <= 165) or "_" in s or "*" in s:
         return False
     if not re.search(r"[.!?]$", s):
         return False
     if re.match(r"^\s*\d+[.)]", s):          # numbered exercise line
         return False
+    # A sentence clipped mid-way by the source extraction starts lower-case;
+    # a real one opens with a capital, a quote, a dash or a digit.
+    first = re.search(r"[A-Za-zÀ-ÖØ-öø-ÿ]", s)
+    if first and first.group().islower() and not re.match(r"^\s*['\"\u2018\u201c\u2013\u2014(]", s):
+        return False
     return len(s.split()) >= 3
+
+
+def strip_speaker(s):
+    """Drop the book's dialogue markers; an example should stand on its own."""
+    return T.norm_ws(re.sub(r"^\s*[>\u203a\u00bb]\s*", "", s or ""))
 
 
 def load_curated():
@@ -167,7 +184,8 @@ def build_words(data, exs):
         idx = v.get("ex")
         w["_book"] = ""
         if isinstance(idx, int) and 1 <= idx <= len(exs):
-            w["_book"] = clean_text(exs[idx - 1])
+            book_sentence = strip_speaker(clean_text(exs[idx - 1]))
+            w["_book"] = book_sentence if usable(book_sentence) else ""
 
         key = (T.fold(term), w["lesson"])
         if key in seen:
@@ -227,7 +245,7 @@ def attach_examples(words, data, curated, sent_fa):
     # Sentence pool: the shared exs list plus every lesson's own sentences.
     pool, seen = [], set()
     for s in list(data.get("exs") or []) + [s for l in data.get("gbLessons", []) for s in (l.get("sents") or [])]:
-        s = clean_text(s)
+        s = strip_speaker(clean_text(s))
         if not usable(s):
             continue
         k = T.fold(s)

@@ -10,6 +10,7 @@ import lib_text as T
 BOOK = os.environ.get("BOOK", "tr")
 DATA = f"../data/{BOOK}.words.json"
 SENT_FA = "curated/sentences.fa.json"
+REJECT = "curated/rejected.json"
 BATCH = "build/fa_batch.json"
 
 
@@ -22,6 +23,8 @@ def load_done():
 def pending():
     words = json.load(open(DATA, encoding="utf-8"))
     done = {T.fold(k) for k, v in load_done().items() if v and v.strip()}
+    if os.path.exists(REJECT):
+        done |= {T.fold(k) for k in json.load(open(REJECT, encoding="utf-8"))}
     first_use, users = {}, collections.Counter()
     for w in words:
         for e in w["ex"]:
@@ -43,8 +46,10 @@ if __name__ == "__main__":
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 120
     todo, total, done = pending()
     os.makedirs("build", exist_ok=True)
+    # The whole pending list is written, not just the printed slice: a smaller
+    # probe run must not renumber the batch a translation pass is working from.
+    json.dump(todo, open(BATCH, "w", encoding="utf-8"), ensure_ascii=False)
     batch = todo[:n]
-    json.dump(batch, open(BATCH, "w", encoding="utf-8"), ensure_ascii=False)
     print(f"# {done}/{total} sentences translated, {len(todo)} remaining. This batch: {len(batch)}")
     for i, s in enumerate(batch, 1):
         print(f"{i}|{s}")

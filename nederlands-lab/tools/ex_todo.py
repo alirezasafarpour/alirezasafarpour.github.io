@@ -30,8 +30,8 @@ if __name__ == "__main__":
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 60
     todo, total = pending()
     os.makedirs("build", exist_ok=True)
+    json.dump([{"id": w["id"], "need": k} for w, k in todo], open(BATCH, "w", encoding="utf-8"), ensure_ascii=False)
     batch = todo[:n]
-    json.dump([{"id": w["id"], "need": k} for w, k in batch], open(BATCH, "w", encoding="utf-8"), ensure_ascii=False)
     print(f"# {len(todo)} words still need examples (of {total}). This batch: {len(batch)}")
     print("# reply: <n>|<dutch>|<persian>   (one line per sentence; repeat n for a second sentence)")
     for i, (w, need) in enumerate(batch, 1):
