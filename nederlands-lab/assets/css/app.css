@@ -786,7 +786,9 @@ small.block, .block { display: block; }
 .g-start-card { display: flex; flex-direction: column; gap: var(--sp-4); }
 .g-concept-list { display: flex; flex-direction: column; gap: 10px; }
 .g-concept-row { display: flex; align-items: center; gap: 10px; }
-.g-concept-row small { font-family: var(--font-fa); direction: rtl; text-align: right; color: var(--ink-3); font-size: .75rem; line-height: 1.7; }
+/* The Persian name belongs under the Dutch one, never running into it. */
+.g-concept-row small { display: block; font-family: var(--font-fa); direction: rtl; text-align: right; color: var(--ink-3); font-size: .75rem; line-height: 1.7; margin-top: 2px; }
+.g-concept-row strong { display: block; }
 .g-bar { width: 74px; flex: none; }
 
 /* the rule card */
