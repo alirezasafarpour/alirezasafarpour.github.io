@@ -5,7 +5,7 @@
  * signal, but picks up new words as soon as there is a connection.
  */
 
-const VERSION = 'nl-lab-v1';
+const VERSION = 'nl-lab-v2';
 const SHELL = [
   './',
   './index.html',

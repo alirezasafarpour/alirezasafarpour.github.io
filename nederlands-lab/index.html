@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
-<title>Nederlands Lab — Groen Boek &amp; Tweede Ronde</title>
-<meta name="description" content="Dutch vocabulary trainer for Het Groene Boek and Tweede Ronde (Delftse methode) with Persian meanings, spaced repetition and cross-device sync.">
+<title>Nederlands Lab — woorden &amp; grammatica</title>
+<meta name="description" content="Dutch vocabulary and grammar trainer: Het Groene Boek, Tweede Ronde and a full A0-B1 grammar course with Persian explanations, spaced repetition and cross-device sync.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f1218'/%3E%3Cpath d='M18 44V20h6l12 16V20h6v24h-6L24 28v16z' fill='%2360d394'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 <body>
 <div class="boot" id="boot">
   <div class="boot-mark" aria-hidden="true">NL</div>
-  <p class="boot-text">Woordenlijsten laden…</p>
+  <p class="boot-text">Woorden en grammatica laden…</p>
   <noscript><p class="boot-text">Deze app heeft JavaScript nodig.</p></noscript>
 </div>
 
@@ -49,6 +49,7 @@
     <nav class="sidenav" aria-label="Hoofdnavigatie">
       <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"/></svg><span>Start</span></a>
       <a href="#/books" data-nav="books"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v16H4zM13 4h7v16h-7z"/></svg><span>Lessen</span></a>
+      <a href="#/grammar" data-nav="grammar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h9M4 12h16M4 18h6"/><path d="M17 4.5 20.5 8 17 11.5"/></svg><span>Grammatica</span></a>
       <a href="#/browse" data-nav="browse"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Woorden</span></a>
       <a href="#/stats" data-nav="stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7m4 7H3"/></svg><span>Voortgang</span></a>
       <a href="#/settings" data-nav="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.1 5.1l2.1 2.1M16.8 16.8l2.1 2.1M18.9 5.1l-2.1 2.1M7.2 16.8l-2.1 2.1"/></svg><span>Instellingen</span></a>
@@ -60,6 +61,7 @@
   <nav class="tabbar" aria-label="Navigatie">
     <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"/></svg><span>Start</span></a>
     <a href="#/books" data-nav="books"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v16H4zM13 4h7v16h-7z"/></svg><span>Lessen</span></a>
+    <a href="#/grammar" data-nav="grammar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h9M4 12h16M4 18h6"/><path d="M17 4.5 20.5 8 17 11.5"/></svg><span>Grammatica</span></a>
     <a href="#/browse" data-nav="browse"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Woorden</span></a>
     <a href="#/stats" data-nav="stats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m6 10V4m6 16v-7m4 7H3"/></svg><span>Voortgang</span></a>
     <a href="#/settings" data-nav="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.1 5.1l2.1 2.1M16.8 16.8l2.1 2.1M18.9 5.1l-2.1 2.1M7.2 16.8l-2.1 2.1"/></svg><span>Meer</span></a>

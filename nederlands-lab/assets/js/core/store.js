@@ -14,7 +14,7 @@ const STORE_KV = 'kv';
 const STORE_DATA = 'datasets';
 const STATE_KEY = 'state';
 const MIRROR_KEY = 'nl-lab:mirror';
-const SCHEMA = 2;
+const SCHEMA = 3;
 
 export const DEFAULT_SETTINGS = {
   theme: 'auto',
@@ -41,6 +41,13 @@ function freshState() {
       lastBook: 'gb',
       daily: {},             // dayKey -> { a, c, n, ms }
       createdAt: Date.now(),
+    },
+    // Grammar lives in its own namespace so vocabulary progress can never be
+    // touched by it — different ids, different mastery rules, same sync row.
+    grammar: {
+      concepts: {},          // conceptId -> SRS-shaped card + grammar counters
+      lessons: {},           // lessonId  -> { started, done, best, tries, t }
+      meta: { position: '', lastLevel: '', answers: 0, correct: 0 },
     },
     settings: { ...DEFAULT_SETTINGS },
     rev: 0,                  // bumped on every local mutation
@@ -184,6 +191,82 @@ class Store extends EventTarget {
     this.touch();
   }
 
+  /* ---------- grammar ---------- */
+
+  get grammar() { return this.state.grammar; }
+
+  gConcept(id) { return this.state.grammar.concepts[id]; }
+  gLesson(id) { return this.state.grammar.lessons[id]; }
+
+  /**
+   * Record one grammar answer against a concept. Grammar keeps its own answer
+   * tallies so the vocabulary numbers stay exactly what they were, but the day
+   * counts as studied either way — a streak is about showing up, not about
+   * which half of the app you opened.
+   */
+  gAnswer(conceptId, grade, opts = {}) {
+    const now = Date.now();
+    const before = this.state.grammar.concepts[conceptId];
+    const card = SRS.review(before, grade, now);
+    // Sessions the concept has been practised in, counted once per day: the
+    // difference between "got it right five times in a row just now" and
+    // "still right about it a week later".
+    const today = dayKey(now);
+    card.days = before?.days || [];
+    if (!card.days.includes(today)) card.days = [...card.days, today].slice(-12);
+    this.state.grammar.concepts[conceptId] = card;
+
+    const gm = this.state.grammar.meta;
+    const m = this.state.meta;
+    if (!opts.silent) {
+      gm.answers = (gm.answers || 0) + 1;
+      if (grade > SRS.GRADE.AGAIN) gm.correct = (gm.correct || 0) + 1;
+      const day = (m.daily[today] ||= { a: 0, c: 0, n: 0 });
+      day.ga = (day.ga || 0) + 1;
+      if (grade > SRS.GRADE.AGAIN) day.gc = (day.gc || 0) + 1;
+    }
+    m.lastActivity = now;
+    this.refreshStreak(now);
+    this.touch();
+    this.emit('grammar', { id: conceptId, card });
+    return card;
+  }
+
+  /** Opening a lesson records that it was started — never that it was passed. */
+  gStartLesson(id, level) {
+    const rec = { ...(this.state.grammar.lessons[id] || { done: 0, best: 0, tries: 0 }) };
+    rec.started = rec.started || Date.now();
+    rec.t = Date.now();
+    this.state.grammar.lessons[id] = rec;
+    this.state.grammar.meta.position = id;
+    if (level) this.state.grammar.meta.lastLevel = level;
+    this.touch();
+    return rec;
+  }
+
+  /**
+   * Finish a lesson attempt. `score` is 0-100 for that run; a lesson only counts
+   * as done once the learner actually performed, and its best score never drops
+   * because of a lazy second run.
+   */
+  gFinishLesson(id, score, passMark = 80) {
+    const rec = { ...(this.state.grammar.lessons[id] || { started: Date.now(), done: 0, best: 0, tries: 0 }) };
+    rec.tries = (rec.tries || 0) + 1;
+    rec.best = Math.max(rec.best || 0, Math.round(score));
+    rec.last = Math.round(score);
+    if (rec.best >= passMark) rec.done = rec.done || Date.now();
+    rec.t = Date.now();
+    this.state.grammar.lessons[id] = rec;
+    this.touch();
+    this.emit('grammar', { lesson: id, rec });
+    return rec;
+  }
+
+  gTodayCount() {
+    const d = this.state.meta.daily[dayKey()] || {};
+    return { answers: d.ga || 0, correct: d.gc || 0 };
+  }
+
   updateSettings(patch) {
     Object.assign(this.state.settings, patch);
     this.touch();
@@ -203,7 +286,9 @@ class Store extends EventTarget {
   refreshStreak(now = Date.now()) {
     const m = this.state.meta;
     const today = dayKey(now);
-    const studiedToday = (m.daily[today]?.a || 0) > 0;
+    const d = m.daily[today];
+    // Vocabulary or grammar — a day spent on either keeps the streak alive.
+    const studiedToday = ((d?.a || 0) + (d?.ga || 0)) > 0;
     if (m.lastDay === today) {
       if (studiedToday && m.streak === 0) m.streak = 1;
       return m.streak;
@@ -292,11 +377,12 @@ class Store extends EventTarget {
     try {
       localStorage.setItem(MIRROR_KEY, JSON.stringify(this.state));
     } catch {
-      // Over quota: keep meta + settings only, cards live in IndexedDB/cloud.
+      // Over quota: drop the word cards (the bulk) but keep everything small —
+      // grammar is a few hundred records at most, so it stays in the mirror.
       try {
         localStorage.setItem(MIRROR_KEY, JSON.stringify({
           schema: SCHEMA, cards: {}, flags: this.state.flags,
-          meta: this.state.meta, settings: this.state.settings,
+          meta: this.state.meta, grammar: this.state.grammar, settings: this.state.settings,
           rev: this.state.rev, updatedAt: this.state.updatedAt, partial: true,
         }));
       } catch { /* storage unavailable; IndexedDB and cloud still hold the data */ }
@@ -367,12 +453,14 @@ export function mergeStates(a, b) {
     if (!lf || (rf.t || 0) > (lf.t || 0)) out.flags[id] = rf;
   }
 
+  out.grammar = mergeGrammar(a.grammar, b.grammar);
+
   const am = a.meta || {}, bm = b.meta || {};
   const daily = { ...(am.daily || {}) };
   for (const [k, d] of Object.entries(bm.daily || {})) {
     const cur = daily[k];
     // Same day on two devices: keep the fuller record rather than double-counting.
-    if (!cur || (d.a || 0) > (cur.a || 0)) daily[k] = d;
+    if (!cur || ((d.a || 0) + (d.ga || 0)) > ((cur.a || 0) + (cur.ga || 0))) daily[k] = d;
   }
   const newer = (bm.lastActivity || 0) > (am.lastActivity || 0) ? bm : am;
   out.meta = {
@@ -395,6 +483,56 @@ export function mergeStates(a, b) {
   return out;
 }
 
+/**
+ * Grammar merges the same way vocabulary does: per concept and per lesson by
+ * their own timestamp, so two devices that studied different topics both keep
+ * their work. A lesson's best score is the one thing that takes the maximum
+ * rather than the newest — passing it once is a fact, not a state.
+ */
+function mergeGrammar(a, b) {
+  const base = freshState().grammar;
+  if (!a && !b) return base;
+  const ga = { ...base, ...(a || {}) };
+  const gb = { ...base, ...(b || {}) };
+
+  const concepts = { ...(ga.concepts || {}) };
+  for (const [id, rc] of Object.entries(gb.concepts || {})) {
+    const lc = concepts[id];
+    if (!lc) { concepts[id] = rc; continue; }
+    const lt = lc.t || lc.last || 0;
+    const rt = rc.t || rc.last || 0;
+    if (rt > lt) concepts[id] = rc;
+    else if (rt === lt && (rc.r || 0) > (lc.r || 0)) concepts[id] = rc;
+  }
+
+  const lessons = { ...(ga.lessons || {}) };
+  for (const [id, rl] of Object.entries(gb.lessons || {})) {
+    const ll = lessons[id];
+    if (!ll) { lessons[id] = rl; continue; }
+    const newer = (rl.t || 0) > (ll.t || 0) ? rl : ll;
+    lessons[id] = {
+      ...newer,
+      started: Math.min(ll.started || Infinity, rl.started || Infinity) || newer.started,
+      done: Math.min(ll.done || Infinity, rl.done || Infinity) || 0,
+      best: Math.max(ll.best || 0, rl.best || 0),
+      tries: Math.max(ll.tries || 0, rl.tries || 0),
+    };
+    if (!Number.isFinite(lessons[id].started)) delete lessons[id].started;
+    if (!Number.isFinite(lessons[id].done)) lessons[id].done = 0;
+  }
+
+  const ma = ga.meta || {}, mb = gb.meta || {};
+  return {
+    concepts,
+    lessons,
+    meta: {
+      ...ma, ...mb,
+      answers: Math.max(ma.answers || 0, mb.answers || 0),
+      correct: Math.max(ma.correct || 0, mb.correct || 0),
+    },
+  };
+}
+
 function migrate(s) {
   const out = { ...freshState(), ...s };
   out.cards = s.cards || {};
@@ -402,6 +540,8 @@ function migrate(s) {
   out.meta = { ...freshState().meta, ...(s.meta || {}) };
   out.meta.daily = s.meta?.daily || {};
   out.meta.position = s.meta?.position || {};
+  // Pre-grammar saves simply gain an empty grammar namespace.
+  out.grammar = mergeGrammar(freshState().grammar, s.grammar);
   out.schema = SCHEMA;
   return out;
 }

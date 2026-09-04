@@ -6,6 +6,7 @@ import * as SRS from '../core/srs.js';
 import * as DATA from '../core/data.js';
 import { progressBar, wordRow, emptyState } from './components.js';
 import { startSession } from './session.js';
+import { grammarStatsCard } from './grammar.js';
 
 function donut(value, label) {
   const d = el('div.donut', {}, el('span', { text: `${value}%` }));
@@ -100,5 +101,5 @@ export function renderStats(view) {
         el('div.mini-list', {}, hard.map((w) => wordRow(w))))
     : null;
 
-  view.append(el('div.stack', {}, top, accuracy, activity, books, schedule, hardCard));
+  view.append(el('div.stack', {}, top, accuracy, activity, books, grammarStatsCard(), schedule, hardCard));
 }

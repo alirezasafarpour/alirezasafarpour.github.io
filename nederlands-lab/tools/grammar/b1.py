@@ -1,0 +1,380 @@
+"""B1, deel 1 — betrekkelijke bijzinnen, er gevorderd en de lijdende vorm."""
+
+from _kit import (concept, lesson, module, ex, wrong, pattern, discover, rule,
+                  mc, dehet, nietgeen, pickorder, pick2, dialogue, scenario,
+                  blank, conjugate, transform, fa2nl, fix, type_all,
+                  order, question, subclause)
+
+# ---------------------------------------------------------------- concepts
+
+C_REL = concept(
+    "relative-die-dat", "Betrekkelijke bijzin met die en dat", "جمله‌واره‌ی موصولی با die و dat", "B1",
+    keywords=["die", "dat", "betrekkelijk", "relative clause", "موصولی"],
+    summary_fa="de-woord → die، het-woord → dat. فعل جمله‌واره آخر می‌رود.")
+
+C_REL_PREP = concept(
+    "relative-preposition", "Waar- en wie- in bijzinnen", "موصولی با حرف اضافه", "B1",
+    keywords=["waarmee", "waarover", "waarin", "met wie", "wiens", "voorzetsel betrekkelijk"],
+    summary_fa="برای اشیا: waar + حرف اضافه (waarmee، waarover). برای آدم‌ها: حرف اضافه + wie.")
+
+C_PRON_ADV = concept(
+    "pronominal-adverb", "Voornaamwoordelijke bijwoorden", "قیدهای ضمیری (ermee، daarop)", "B1",
+    keywords=["ermee", "daarop", "daarvan", "hierover", "erover", "ernaar", "قید ضمیری"],
+    summary_fa="حرف اضافه + ضمیر برای اشیا: met het → ermee، op dat → daarop.")
+
+C_ER_POS = concept(
+    "er-position", "De plaats van er", "جای er در جمله", "B1",
+    keywords=["er positie", "er volgorde", "er splitsen", "er … mee"],
+    summary_fa="er بعد از فعل و قبل از بقیه می‌آید؛ گاهی حرف اضافه از آن جدا می‌شود.")
+
+C_PASS = concept(
+    "passive-worden", "Lijdende vorm met worden", "مجهول با worden", "B1",
+    keywords=["passief", "lijdende vorm", "worden", "wordt gemaakt", "مجهول"],
+    summary_fa="worden + اسم مفعول: De brief wordt geschreven. عامل با door می‌آید.")
+
+C_PASS_PERF = concept(
+    "passive-perfect", "Passief in het perfectum", "مجهول در ماضی نقلی", "B1",
+    keywords=["is gemaakt", "is geworden", "passief perfectum", "زمان گذشته مجهول"],
+    summary_fa="zijn + اسم مفعول (بدون geworden): De brief is verstuurd.")
+
+# ----------------------------------------------------------------- lessons
+
+lesson(
+    "b1-l01", "b1-relatief", "B1",
+    "De man die daar staat", "جمله‌واره‌ی موصولی: die و dat",
+    [C_REL],
+    discover(
+        ["de man die daar staat", "het boek dat op tafel ligt",
+         "de mensen die hier werken"],
+        "چه چیزی تعیین می‌کند die بیاید یا dat؟",
+        "همان de/het همیشگی. کلمات de و همه‌ی جمع‌ها die می‌گیرند؛ کلمات het می‌گیرند dat."),
+    rule("de-woord + die · het-woord + dat · werkwoord achteraan",
+         "جمله‌واره‌ی موصولی اسم را توضیح می‌دهد، و مثل هر جمله‌واره‌ای فعلش آخر می‌رود.",
+         "the man who / the book that"),
+    pattern([("de man", "noun"), ("die", "rel"), ("daar", "place"), ("staat", "verb-end")],
+            "جمع همیشه die می‌گیرد، حتی اگر مفردش het باشد: de boeken die…"),
+    [
+        ex("De man die daar staat, is mijn collega.", "مردی که آنجا ایستاده همکارم است."),
+        ex("Het huis dat we gekocht hebben, is oud.", "خانه‌ای که خریدیم قدیمی است."),
+        ex("Ik ken iemand die goed Nederlands spreekt.", "کسی را می‌شناسم که هلندی خوب حرف می‌زند."),
+        ex("De cursus die ik volg, duurt zes maanden.", "دوره‌ای که می‌روم شش ماه است."),
+        ex("Dat is het enige wat ik weet.", "این تنها چیزی است که می‌دانم.",
+           "بعد از alles، iets، niets و het enige می‌آید wat، نه dat"),
+    ],
+    [
+        wrong("het boek die op tafel ligt", "het boek dat op tafel ligt",
+              "boek کلمه‌ی het است → dat."),
+        wrong("De man die staat daar", "De man die daar staat",
+              "در جمله‌واره فعل آخر می‌رود."),
+    ],
+    "برای توضیح دادن دقیق‌تر بدون ساختن جمله‌ی جدید. در توصیف شغل، خانه و آدم‌ها ضروری است: «Ik zoek een baan die bij mij past.»",
+    [
+        mc("De vrouw ___ daar zit, is mijn buurvrouw.", ["die", "dat", "wat"], "die",
+           "vrouw کلمه‌ی de است → die.", concept=C_REL),
+        mc("Het boek ___ ik lees, is spannend.", ["dat", "die", "wat"], "dat",
+           "boek کلمه‌ی het است → dat.", concept=C_REL),
+        mc("De kinderen ___ hier spelen, wonen naast ons.", ["die", "dat", "wat"], "die",
+           "جمع همیشه die.", concept=C_REL),
+        pickorder("کدام درست است؟",
+                  ["De man die daar staat, is mijn baas.",
+                   "De man die staat daar, is mijn baas."],
+                  "De man die daar staat, is mijn baas.",
+                  "در جمله‌واره فعل آخرین کلمه است.", concept=C_REL),
+        subclause("Ik ken iemand die goed Nederlands spreekt.",
+                  why="die + بقیه + فعل در انتها.", concept=C_REL),
+        transform("Ik zoek een baan. De baan past bij mij. → (met «die»)",
+                  "Ik zoek een baan die bij mij past.",
+                  "baan کلمه‌ی de است → die، و فعل آخر می‌رود.", concept=C_REL),
+        fix("Het huis die wij huren is klein.", "Het huis dat wij huren is klein.",
+            "huis کلمه‌ی het است → dat.", concept=C_REL),
+        fa2nl("«مردی که آنجا ایستاده همکار من است.»",
+              "De man die daar staat, is mijn collega.",
+              "die + قید + فعل آخر.", concept=C_REL),
+    ])
+
+lesson(
+    "b1-l02", "b1-relatief", "B1",
+    "De collega met wie ik werk", "موصولی با حرف اضافه",
+    [C_REL_PREP, C_REL],
+    discover(
+        ["de collega met wie ik werk", "het project waaraan ik werk",
+         "de laptop waarmee ik werk"],
+        "برای آدم‌ها چه چیزی به کار رفته و برای اشیا چه چیزی؟",
+        "آدم: حرف اضافه + wie. شیء: waar + همان حرف اضافه، سرِهم."),
+    rule("personen: voorzetsel + wie · dingen: waar + voorzetsel",
+         "met wie، voor wie، over wie — ولی waarmee، waarvoor، waarover.",
+         "with whom / with which"),
+    pattern([("de laptop", "noun"), ("waarmee", "rel-prep"), ("ik", "subject"), ("werk", "verb-end"),
+             ("|", "sep"), ("de collega", "noun"), ("met wie", "rel-person"), ("ik werk", "clause")],
+            "met + waar می‌شود waarmee (نه waarmet) — mee شکل ویژه‌ی met است."),
+    [
+        ex("De collega met wie ik samenwerk, is heel aardig.", "همکاری که با او کار می‌کنم خیلی مهربان است."),
+        ex("Het project waaraan ik werk, is bijna klaar.", "پروژه‌ای که رویش کار می‌کنم تقریباً تمام است."),
+        ex("De cursus waarover ik je vertelde, begint maandag.", "دوره‌ای که درباره‌اش گفتم دوشنبه شروع می‌شود."),
+        ex("Dat is de reden waarom ik bel.", "این دلیلی است که زنگ می‌زنم."),
+        ex("De mensen voor wie ik werk, zijn tevreden.", "کسانی که برایشان کار می‌کنم راضی‌اند."),
+    ],
+    [
+        wrong("de laptop met die ik werk", "de laptop waarmee ik werk",
+              "برای اشیا حرف اضافه با waar ترکیب می‌شود، نه با die."),
+        wrong("de collega waarmee ik werk", "de collega met wie ik werk",
+              "برای آدم‌ها wie به کار می‌رود (اگرچه در گفتار روزمره waarmee هم شنیده می‌شود)."),
+    ],
+    "در توصیف کار و پروژه‌ها بسیار پرکاربرد است — مخصوصاً در مصاحبه: «het team waarmee ik werkte»، «de klanten met wie ik contact had».",
+    [
+        mc("De collega ___ ik samenwerk, is ziek.", ["met wie", "waarmee", "die"], "met wie",
+           "برای آدم‌ها: حرف اضافه + wie.", concept=C_REL_PREP),
+        mc("Het project ___ ik werk, is groot.", ["waaraan", "aan dat", "met wie"], "waaraan",
+           "برای اشیا: waar + حرف اضافه.", concept=C_REL_PREP),
+        mc("De laptop ___ ik werk, is nieuw.", ["waarmee", "waarmet", "met die"], "waarmee",
+           "met + waar می‌شود waarmee.", concept=C_REL_PREP),
+        blank("Dat is de reden ___ ik bel. (waarom)", "waarom",
+              "برای دلیل: waarom.", concept=C_REL_PREP),
+        transform("Ik werk met een collega. Zij is heel aardig. → (met «met wie»)",
+                  "De collega met wie ik werk, is heel aardig.",
+                  "آدم → met wie، و فعل جمله‌واره آخر.", concept=C_REL_PREP),
+        fix("Het boek waarmee ik het gelezen heb is goed.",
+            "Het boek dat ik gelezen heb, is goed.",
+            "اینجا حرف اضافه‌ای در کار نیست، پس فقط dat لازم است.", concept=C_REL_PREP),
+        fa2nl("«پروژه‌ای که رویش کار می‌کنم تقریباً تمام است.»",
+              "Het project waaraan ik werk, is bijna klaar.",
+              "aan + waar → waaraan.", concept=C_REL_PREP),
+        scenario("In een sollicitatiegesprek beschrijf je je vorige team.",
+                 "Wat zeg je?",
+                 ["Het team waarmee ik werkte, was klein.",
+                  "Het team met dat ik werkte, was klein.",
+                  "Het team dat ik werkte mee, was klein."],
+                 "Het team waarmee ik werkte, was klein.",
+                 "برای اشیا و گروه‌ها: waar + حرف اضافه.", concept=C_REL_PREP),
+    ])
+
+lesson(
+    "b1-l03", "b1-er2", "B1",
+    "Ermee, daarop, daarvan", "قیدهای ضمیری",
+    [C_PRON_ADV],
+    discover(
+        ["Ik werk met de laptop. → Ik werk ermee.",
+         "Ik wacht op de bus. → Ik wacht erop.",
+         "Ik denk aan mijn familie. → Ik denk eraan."],
+        "چه اتفاقی برای «حرف اضافه + اسم» افتاده؟",
+        "اسم به er تبدیل شده و حرف اضافه به آن چسبیده است. در هلندی نمی‌شود گفت «met het»."),
+    rule("voorzetsel + het/dat → er/daar + voorzetsel",
+         "met → ermee · op → erop · aan → eraan · over → erover · van → ervan. با تأکید: daarmee، daarop.",
+         "with it / on it / about it"),
+    pattern([("met", "prep"), ("+", "plus"), ("het", "pron"), ("→", "arrow"), ("ermee", "result"),
+             ("|", "sep"), ("op", "prep"), ("+", "plus"), ("dat", "pron"), ("→", "arrow"), ("daarop", "result")],
+            "برای آدم‌ها این کار را نمی‌کنیم: met hem، niet «ermee»."),
+    [
+        ex("Ik ben er blij mee.", "از آن خوشحالم.", "er … mee — اغلب از هم جدا می‌شوند"),
+        ex("Ik wacht erop.", "منتظرش هستم."),
+        ex("Wat vind je ervan?", "نظرت درباره‌اش چیست؟", "سؤال بسیار پرکاربرد"),
+        ex("Daar weet ik niets van.", "از آن چیزی نمی‌دانم."),
+        ex("Ik heb er geen tijd voor.", "برایش وقت ندارم."),
+        ex("Ik ben ermee bezig.", "دارم رویش کار می‌کنم."),
+    ],
+    [
+        wrong("Ik werk met het.", "Ik werk ermee.",
+              "«met het» در هلندی وجود ندارد؛ باید ermee شود."),
+        wrong("Wat vind je van het?", "Wat vind je ervan?",
+              "van + het همیشه ervan می‌شود."),
+    ],
+    "این‌ها همه‌جا هستند و نبودشان بلافاصله شنیده می‌شود. «Wat vind je ervan?» و «Ik ben ermee bezig» را در محیط کار هر روز می‌شنوی.",
+    [
+        mc("Ik wacht op de bus. → Ik wacht ___.", ["erop", "op het", "daarvan"], "erop",
+           "op + het → erop.", concept=C_PRON_ADV),
+        mc("Wat vind je ___? (van dat plan)", ["ervan", "van het", "daarvan het"], "ervan",
+           "van + het → ervan.", concept=C_PRON_ADV),
+        mc("Ik werk met deze laptop. → Ik werk ___.", ["ermee", "met het", "erop"], "ermee",
+           "met → mee در این ترکیب: ermee.", concept=C_PRON_ADV),
+        blank("Ik denk aan mijn familie. → Ik denk ___.", "eraan",
+              "aan + het → eraan.", concept=C_PRON_ADV),
+        transform("Ik ben blij met dit resultaat. → (met «er»)", "Ik ben er blij mee.",
+                  "er جلو می‌آید و mee آخر — این جدا شدن کاملاً عادی است.",
+                  concept=C_PRON_ADV),
+        fix("Ik heb geen tijd voor het.", "Ik heb er geen tijd voor.",
+            "voor + het → er … voor.", concept=C_PRON_ADV),
+        fa2nl("«نظرت درباره‌اش چیست؟»", "Wat vind je ervan?",
+              "van + het → ervan.", concept=C_PRON_ADV),
+        dialogue("— Heb je het rapport af?", "— Nee, ik ben ___ bezig.",
+                 ["ermee", "met het", "daarvan"], "ermee",
+                 "«ergens mee bezig zijn» → ermee bezig.", concept=C_PRON_ADV),
+    ])
+
+lesson(
+    "b1-l04", "b1-er2", "B1",
+    "Waar staat er?", "جای er در جمله",
+    [C_ER_POS, C_PRON_ADV],
+    discover(
+        ["Ik heb er geen tijd voor.", "Ik ben er niet blij mee.",
+         "Ik weet er niets van."],
+        "er کجا ایستاده و حرف اضافه کجا؟",
+        "er زود می‌آید (بلافاصله بعد از فعل)، ولی حرف اضافه تا آخر جمله عقب می‌ماند. بین‌شان بقیه‌ی جمله قرار می‌گیرد."),
+    rule("er staat vroeg · het voorzetsel blijft achteraan",
+         "هرچه جمله بلندتر باشد، فاصله‌ی er و حرف اضافه بیشتر می‌شود. این برای فارسی‌زبان‌ها عجیب ولی کاملاً عادی است.",
+         "er early, preposition late"),
+    pattern([("Ik", "subject"), ("heb", "verb"), ("er", "er"), ("geen tijd", "object"),
+             ("voor", "prep-end")],
+            "با niet: er … niet … voor. با صفت: er … blij mee."),
+    [
+        ex("Ik heb er geen zin in.", "حالش را ندارم."),
+        ex("Ik ben er niet blij mee.", "از آن راضی نیستم."),
+        ex("We hebben er lang over gesproken.", "خیلی درباره‌اش حرف زدیم."),
+        ex("Ik heb er nog niet over nagedacht.", "هنوز درباره‌اش فکر نکرده‌ام."),
+        ex("Daar ben ik het niet mee eens.", "با آن موافق نیستم.", "عبارت کلیدی در بحث و جلسه"),
+    ],
+    [
+        wrong("Ik heb geen tijd ervoor.", "Ik heb er geen tijd voor.",
+              "er باید زودتر بیاید و حرف اضافه آخر بماند."),
+        wrong("Ik ben blij ermee niet.", "Ik ben er niet blij mee.",
+              "ترتیب: er + niet + صفت + حرف اضافه."),
+    ],
+    "در جلسه و بحث کاری این ساختار حیاتی است: «Ik ben het er mee eens / niet mee eens.» بدون آن نمی‌شود نظر داد.",
+    [
+        pickorder("کدام درست است؟",
+                  ["Ik heb er geen tijd voor.", "Ik heb geen tijd ervoor.",
+                   "Ik er heb geen tijd voor."],
+                  "Ik heb er geen tijd voor.",
+                  "er بلافاصله بعد از فعل، حرف اضافه در انتها.", concept=C_ER_POS),
+        pickorder("کدام درست است؟",
+                  ["Ik ben er niet blij mee.", "Ik ben niet er blij mee.",
+                   "Ik ben blij er niet mee."],
+                  "Ik ben er niet blij mee.",
+                  "ترتیب: er، بعد niet، بعد صفت، بعد حرف اضافه.", concept=C_ER_POS),
+        order("We hebben er lang over gesproken.",
+              why="er زود می‌آید، over درست قبل از اسم مفعول.", concept=C_ER_POS),
+        blank("Ik heb ___ nog niet over nagedacht.", "er",
+              "er جای «daarover» را می‌گیرد و زود می‌آید.", concept=C_ER_POS),
+        transform("Ik heb geen zin in dat feest. → (met «er»)", "Ik heb er geen zin in.",
+                  "er زود، in آخر.", concept=C_ER_POS),
+        fix("Ik ben het niet eens ermee.", "Ik ben het er niet mee eens.",
+            "er زود می‌آید و mee قبل از eens قرار می‌گیرد.", concept=C_ER_POS),
+        fa2nl("«با آن موافق نیستم.»", "Ik ben het er niet mee eens.",
+              "عبارت ثابت: het er … mee eens zijn.", concept=C_ER_POS),
+        scenario("In een vergadering ben je het oneens met een voorstel.",
+                 "Wat zeg je?",
+                 ["Ik ben het er niet mee eens.", "Ik ben niet eens ermee.",
+                  "Ik ben het niet ermee eens."],
+                 "Ik ben het er niet mee eens.",
+                 "این عبارت ثابت است و ترتیبش تغییر نمی‌کند.", concept=C_ER_POS),
+    ])
+
+lesson(
+    "b1-l05", "b1-passief", "B1",
+    "De brief wordt geschreven", "مجهول با worden",
+    [C_PASS],
+    discover(
+        ["De secretaresse schrijft de brief.",
+         "De brief wordt geschreven.",
+         "De brief wordt door de secretaresse geschreven."],
+        "چه چیزی فاعلِ جمله شده و فعل کننده‌ی کار کجا رفت؟",
+        "مفعول فاعل شد و کننده‌ی کار یا حذف شد یا با door آمد. وقتی مهم نیست چه کسی کار را می‌کند، مجهول به کار می‌رود."),
+    rule("worden + voltooid deelwoord (+ door …)",
+         "برای وقتی که خودِ کار مهم است، نه کننده‌اش: در قوانین، دستورالعمل‌ها و زبان اداری.",
+         "is being + past participle"),
+    pattern([("De brief", "subject"), ("wordt", "worden"), ("door de secretaresse", "agent"),
+             ("geschreven", "participle")],
+            "door = «توسط». اسم مفعول همیشه آخر می‌رود."),
+    [
+        ex("De formulieren worden vandaag verstuurd.", "فرم‌ها امروز فرستاده می‌شوند."),
+        ex("Hier wordt Nederlands gesproken.", "اینجا هلندی صحبت می‌شود."),
+        ex("Het huis wordt volgende maand verkocht.", "خانه ماه آینده فروخته می‌شود."),
+        ex("De vergadering wordt verzet naar dinsdag.", "جلسه به سه‌شنبه موکول می‌شود."),
+        ex("U wordt zo geholpen.", "الان به شما رسیدگی می‌شود.", "در مغازه و اداره خیلی می‌شنوی"),
+    ],
+    [
+        wrong("De brief is geschreven door de secretaresse. (bedoel je het proces?)",
+              "De brief wordt door de secretaresse geschreven.",
+              "worden = در حال انجام؛ zijn = کار تمام شده. اگر منظورت جریانِ کار است، worden."),
+        wrong("De brief wordt door de secretaresse schrijven.",
+              "De brief wordt door de secretaresse geschreven.",
+              "بعد از worden اسم مفعول می‌آید، نه مصدر."),
+    ],
+    "زبان رسمی، نامه‌های اداری و اعلان‌های عمومی پر از مجهول است. برای خواندن نامه‌های شهرداری و بیمه لازمش داری.",
+    [
+        mc("De formulieren ___ vandaag verstuurd.", ["worden", "wordt", "zijn"], "worden",
+           "formulieren جمع است → worden.", concept=C_PASS),
+        mc("Hier ___ Nederlands gesproken.", ["wordt", "worden", "is"], "wordt",
+           "فاعل ضمنی مفرد است → wordt.", concept=C_PASS),
+        pickorder("کدام درست است؟",
+                  ["Het huis wordt volgende maand verkocht.",
+                   "Het huis wordt verkocht volgende maand.",
+                   "Het huis verkocht wordt volgende maand."],
+                  "Het huis wordt volgende maand verkocht.",
+                  "اسم مفعول آخرین کلمه است.", concept=C_PASS),
+        transform("De manager schrijft het rapport. → (مجهول)",
+                  "Het rapport wordt door de manager geschreven.",
+                  "مفعول فاعل می‌شود، کننده با door می‌آید، اسم مفعول آخر.", concept=C_PASS),
+        transform("Ze repareren de fiets. → (مجهول، بدون کننده)",
+                  "De fiets wordt gerepareerd.",
+                  "وقتی کننده مهم نیست، door کلاً حذف می‌شود.", concept=C_PASS),
+        blank("De vergadering ___ verzet naar dinsdag.", "wordt",
+              "vergadering مفرد است → wordt.", concept=C_PASS),
+        fix("De brief wordt door de secretaresse schrijven.",
+            "De brief wordt door de secretaresse geschreven.",
+            "بعد از worden اسم مفعول لازم است.", concept=C_PASS),
+        fa2nl("«اینجا هلندی صحبت می‌شود.»", "Hier wordt Nederlands gesproken.",
+              "hier جای اول، wordt جای دوم، اسم مفعول آخر.", concept=C_PASS),
+    ])
+
+lesson(
+    "b1-l06", "b1-passief", "B1",
+    "De brief is verstuurd", "مجهول در زمان گذشته",
+    [C_PASS_PERF, C_PASS],
+    discover(
+        ["De brief wordt verstuurd.", "De brief is verstuurd.",
+         "De brief werd gisteren verstuurd."],
+        "کدام یعنی «کار تمام شده» و کدام یعنی «در جریان»؟",
+        "is verstuurd = تمام شده. wordt verstuurd = در حال انجام. werd = گذشته‌ی در جریان."),
+    rule("is/zijn + deelwoord (klaar) · werd/werden + deelwoord (verleden proces)",
+         "در ماضی نقلی مجهول، geworden حذف می‌شود: «is verstuurd»، نه «is verstuurd geworden».",
+         "has been sent"),
+    pattern([("wordt verstuurd", "present"), ("→", "arrow"), ("werd verstuurd", "past"),
+             ("→", "arrow"), ("is verstuurd", "perfect")],
+            "سه زمان مجهول که در نامه‌های اداری مدام می‌بینی."),
+    [
+        ex("De brief is gisteren verstuurd.", "نامه دیروز فرستاده شد."),
+        ex("Uw aanvraag is ontvangen.", "درخواست شما دریافت شد.", "جمله‌ی استاندارد نامه‌های اداری"),
+        ex("Het huis werd vorig jaar verkocht.", "خانه پارسال فروخته شد."),
+        ex("De afspraak is verzet naar volgende week.", "قرار به هفته‌ی آینده موکول شد."),
+        ex("Er is niets besloten.", "هیچ تصمیمی گرفته نشد."),
+    ],
+    [
+        wrong("De brief is verstuurd geworden.", "De brief is verstuurd.",
+              "در مجهولِ ماضی نقلی geworden حذف می‌شود — این اشتباه از آلمانی می‌آید."),
+        wrong("De brief heeft verstuurd.", "De brief is verstuurd.",
+              "مجهول همیشه با zijn ساخته می‌شود، نه hebben."),
+    ],
+    "هر نامه‌ای از شهرداری، بیمه یا کارفرما با همین جمله‌ها نوشته می‌شود: «Uw aanvraag is ontvangen en wordt beoordeeld.»",
+    [
+        pick2("De brief ___ gisteren verstuurd.", ["is", "heeft"], "is",
+              "مجهول همیشه با zijn.", concept=C_PASS_PERF),
+        mc("Uw aanvraag ___ ontvangen.", ["is", "heeft", "wordt geworden"], "is",
+           "کار تمام شده → is + اسم مفعول.", concept=C_PASS_PERF),
+        pick2("Het huis ___ vorig jaar verkocht.", ["werd", "wordt"], "werd",
+              "گذشته‌ی در جریان → werd.", concept=C_PASS_PERF),
+        fix("De brief is verstuurd geworden.", "De brief is verstuurd.",
+            "geworden در مجهولِ ماضی نقلی نمی‌آید.", concept=C_PASS_PERF),
+        fix("Het rapport heeft gisteren geschreven.", "Het rapport is gisteren geschreven.",
+            "مجهول با zijn ساخته می‌شود.", concept=C_PASS_PERF),
+        transform("Ze hebben de afspraak verzet. → (مجهول، ماضی نقلی)",
+                  "De afspraak is verzet.",
+                  "مفعول فاعل می‌شود و فعل کمکی zijn می‌گیرد.", concept=C_PASS_PERF),
+        fa2nl("«درخواست شما دریافت شد.»", "Uw aanvraag is ontvangen.",
+              "is + اسم مفعول، بدون geworden.", concept=C_PASS_PERF),
+        order("De formulieren zijn vorige week verstuurd.",
+              why="فعل کمکی جای دوم، اسم مفعول آخر.", concept=C_PASS_PERF),
+    ])
+
+# ----------------------------------------------------------------- modules
+
+module("b1-relatief", "B1", "Betrekkelijke bijzinnen", "جمله‌واره‌های موصولی",
+       "با die، dat و waar+voorzetsel توضیح‌های دقیق بدهی بدون شکستن جمله.",
+       ["b1-l01", "b1-l02"], icon="list")
+
+module("b1-er2", "B1", "Er, gevorderd", "er در سطح پیشرفته",
+       "ermee، daarop، ervan — و جای درست er در جمله‌های بلند.",
+       ["b1-l03", "b1-l04"], icon="spark")
+
+module("b1-passief", "B1", "De lijdende vorm", "مجهول",
+       "زبان رسمی نامه‌ها و اعلان‌ها را بفهمی و خودت هم به کار ببری.",
+       ["b1-l05", "b1-l06"], icon="cloud")

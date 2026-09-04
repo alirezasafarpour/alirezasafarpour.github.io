@@ -5,6 +5,8 @@ import { store } from '../core/store.js';
 import * as DATA from '../core/data.js';
 import { startSession } from './session.js';
 import { progressBar, emptyState, wordRow } from './components.js';
+import * as G from '../core/grammar.js';
+import { startGrammar } from './grammar-session.js';
 import { go } from '../main.js';
 
 function tile(label, sub, iconName, tone, onClick) {
@@ -49,6 +51,39 @@ function bookPanel(book) {
         onclick: () => go(`#/book/${book.id}`),
       })),
     lesson ? el('p.muted', { style: { fontSize: '.82rem' }, text: `Huidige les: ${lesson.title}` }) : null);
+}
+
+/** The grammar course, summarised on the home screen with one way in. */
+function grammarPanel() {
+  if (!G.loaded()) return null;
+  const p = G.overallProgress();
+  const next = G.nextLesson();
+  const due = p.due;
+
+  return el('section.card.book-card', {},
+    el('div.book-head', {},
+      el('div', {},
+        el('h3', { text: 'Grammatica' }),
+        el('p', { text: `A0 → B1 · ${G.gdb.modules.length} modules · ${p.lessons} lessen` })),
+      el('span.chip.chip-tr', { text: `${p.pct}%` })),
+    progressBar(p.done, p.lessons, 'tr'),
+    el('div.book-nums', {},
+      el('div', {}, el('b', { text: String(p.done) }), 'lessen af'),
+      el('div', {}, el('b', { text: String(p.conceptsMastered) }), 'beheerst'),
+      el('div', {}, el('b', { text: String(due) }), 'te herhalen')),
+    el('div.row.wrap', { style: { gap: '8px' } },
+      due
+        ? el('button.btn.btn-sm.btn-primary', {
+            type: 'button', html: `${icon(ICONS.refresh, 15)} Herhalen (${due})`,
+            onclick: () => startGrammar('review', {}),
+          })
+        : next
+          ? el('button.btn.btn-sm.btn-primary', {
+              type: 'button', html: `${icon(ICONS.spark, 15)} ${G.lessonState(next.id).started ? 'Verder' : 'Start'}: ${next.title}`,
+              onclick: () => go(`#/grammar/lesson/${next.id}`),
+            })
+          : null,
+      el('button.btn.btn-sm', { type: 'button', text: 'Naar grammatica', onclick: () => go('#/grammar') })));
 }
 
 export function renderDashboard(view) {
@@ -124,6 +159,9 @@ export function renderDashboard(view) {
   /* per-book progress */
   const bookGrid = el('div.stack', {}, DATA.db.books.map(bookPanel));
 
+  /* grammar lives beside the vocabulary, not instead of it */
+  const grammar = grammarPanel();
+
   /* attention list */
   const weak = DATA.db.words
     .filter((w) => store.difficult(w.id))
@@ -137,5 +175,5 @@ export function renderDashboard(view) {
         el('div.mini-list', {}, weak.map((w) => wordRow(w))))
     : null;
 
-  view.append(el('div.stack', {}, hero, stats, todayCard, modes, bookGrid, attention));
+  view.append(el('div.stack', {}, hero, stats, todayCard, modes, bookGrid, grammar, attention));
 }

@@ -1,8 +1,14 @@
 # Nederlands Lab
 
-A Dutch vocabulary trainer for the two Delftse-methode books — **Het Groene Boek**
-(deel 1) and **Tweede Ronde** (deel 2) — with Persian meanings, example sentences,
-spaced repetition and cross-device sync.
+A Dutch trainer with two halves that reinforce each other:
+
+- **Woorden** — the two Delftse-methode books, **Het Groene Boek** (deel 1) and
+  **Tweede Ronde** (deel 2), with Persian meanings, example sentences and
+  spaced repetition.
+- **Grammatica** — a full **A0 → B1** grammar course written for Persian
+  speakers, with its own curriculum, mastery model and review schedule.
+
+Both share one account, one sync row and one streak.
 
 Static site, no build step. Open `index.html` from any web server, or visit
 `https://alirezasafarpour.github.io/nederlands-lab/`.
@@ -31,6 +37,49 @@ that is slipping gets buried behind new material.
 A word answered wrongly comes back **three to five cards later in the same session**
 and again sooner on later days; a word answered easily several times in a row
 stretches out fast and stops competing for attention.
+
+## The grammar course
+
+A separate section with its own dashboard, curriculum and progress — it does not
+touch vocabulary progress in any way.
+
+**28 modules · 66 lessons · 66 tracked concepts · 556 exercises**, from *ik ben*
+to the passive, `er`-constructions and the fixed phrases you need in a Dutch job
+interview.
+
+### How a lesson runs
+
+Never a wall of theory followed by a quiz. One flow:
+
+**Ontdek** (see real Dutch, work out the pattern) → **De regel** (one short rule
+plus the sentence shape drawn as coloured slots) → **Zo klinkt het** (examples) →
+practice, easiest first → **Let op** (the mistakes Persian speakers actually
+make, wrong and right side by side) → harder practice → **Wanneer gebruik je
+dit?**
+
+Every explanation is in Persian; every Dutch sentence is tap-to-gloss against the
+vocabulary lexicon, so a word you have not met yet is one tap from its meaning.
+
+### Exercise types
+
+Multiple choice · de/het · niet/geen · pick the right word order · reorder words
+into a sentence · fill in the blank · conjugate the verb · transform a sentence ·
+make a question · turn a main clause into a subordinate one · Persian → Dutch ·
+correct the mistake · finish the dialogue · choose between two constructions ·
+mini scenarios ("what do you say when…").
+
+### Mastery is earned, never granted
+
+Opening a lesson does not complete it. A lesson counts as done only at **80%** on
+its exercises, and a concept counts as **mastered** only after six correct
+answers at 80%+ accuracy, spread over **more than one day**. A wrong answer
+explains *why* in Persian, shows the correct structure and one more example, then
+comes back later in the same session and sooner on later days.
+
+### Grammar reference
+
+A searchable lookup kept separate from the course. Search in Dutch, Persian or
+English — "niet geen", "word order", "om te", "er", "perfect tense" all resolve.
 
 ## Study modes
 
@@ -68,7 +117,13 @@ last-write-wins.
 
 Persisted: learned words, stage, ease, interval and due date, correct/wrong counts,
 lapses, difficult and favourite flags, lesson position per book, daily statistics,
-streak and last activity.
+streak and last activity — plus, in its own namespace, every grammar concept's
+mastery record and every grammar lesson's best score.
+
+Grammar merges the same way vocabulary does: per concept and per lesson by
+timestamp, so two devices that studied different topics both keep their work. A
+lesson's best score is the one field that takes the maximum rather than the
+newest — passing a lesson is a fact, not a state to be overwritten.
 
 ### Setting up sync
 
@@ -93,6 +148,7 @@ If you use magic links, add `https://alirezasafarpour.github.io/nederlands-lab/`
 | `data/tr.lessons.json` | 45 lessons: titles, reading texts, gap-fill passages |
 | `data/gb.words.json` | Het Groene Boek vocabulary |
 | `data/gb.lessons.json` | Het Groene Boek lessons |
+| `data/grammar.a0.json` … `grammar.b1.json` | the grammar course, one file per CEFR level |
 
 A book whose files are missing simply does not appear; the app still runs on the
 other one.
@@ -133,7 +189,13 @@ cd tools
 python3 build_tr.py        # normalise source JSON + parse the lesson markdown
 python3 build_examples.py  # mine example sentences, attach curated Persian
 python3 build_gb.py        # normalise the Groen Boek dataset
+python3 build_grammar.py   # build and validate the grammar course
 ```
+
+The grammar course is authored as Python in `tools/grammar/` rather than raw
+JSON, so every lesson is checked as it is written: an exercise whose answer is
+not among its own options, word tiles that do not match their sentence, a missing
+Persian explanation or a concept no lesson teaches all fail the build.
 
 Curated example sentences and their Persian translations live in
 `tools/curated/examples.curated.json`, keyed by word id, and are merged in by
@@ -151,9 +213,12 @@ assets/js/
   core/store.js         IndexedDB progress store + merge logic
   core/srs.js           spaced repetition
   core/data.js          dataset loading, search, queue building
+  core/grammar.js       grammar curriculum, concept mastery, review queues
   core/sync.js          Supabase auth + sync (no SDK, direct REST)
   core/audio.js         Dutch text-to-speech
   ui/                   dashboard, books, browse, stats, settings, session, components
+  ui/grammar.js         grammar dashboard, curriculum, lessons, reference
+  ui/grammar-session.js the grammar lesson runner
 data/                   vocabulary and lesson JSON
 supabase/schema.sql     database + row-level security
 tools/                  Python data pipeline

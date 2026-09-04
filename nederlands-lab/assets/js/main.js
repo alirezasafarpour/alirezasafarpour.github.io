@@ -6,11 +6,17 @@ import * as DATA from './core/data.js';
 import * as sync from './core/sync.js';
 import { renderDashboard } from './ui/dashboard.js';
 import { renderBooks, renderBook, renderLesson } from './ui/books.js';
+import {
+  renderGrammar, renderCurriculum, renderGrammarModule, renderGrammarLesson,
+  renderGrammarReference, renderGrammarRefLesson,
+} from './ui/grammar.js';
 import { renderBrowse } from './ui/browse.js';
 import { renderStats } from './ui/stats.js';
 import { renderSettings, applyTheme } from './ui/settings.js';
 import { closeSheet } from './ui/components.js';
 import { isActive as sessionActive } from './ui/session.js';
+import * as GRAMMAR from './core/grammar.js';
+import { isActive as grammarActive } from './ui/grammar-session.js';
 
 export function go(hash) {
   if (location.hash === hash) render();
@@ -26,7 +32,10 @@ function parseRoute() {
   return { parts, params: new URLSearchParams(queryPart || '') };
 }
 
-const NAV_FOR = { '': 'home', book: 'books', lesson: 'books', browse: 'browse', stats: 'stats', settings: 'settings' };
+const NAV_FOR = {
+  '': 'home', book: 'books', lesson: 'books', browse: 'browse',
+  grammar: 'grammar', stats: 'stats', settings: 'settings',
+};
 
 function render() {
   const view = $('#view');
@@ -44,6 +53,7 @@ function render() {
       case 'book': renderBook(view, parts[1]); break;
       case 'lesson': renderLesson(view, parts[1], Number(parts[2])); break;
       case 'browse': renderBrowse(view, params); break;
+      case 'grammar': renderGrammarRoute(view, parts, params); break;
       case 'stats': renderStats(view); break;
       case 'settings': renderSettings(view); break;
       default: renderDashboard(view); break;
@@ -61,6 +71,21 @@ function render() {
   view.scrollTop = 0;
   window.scrollTo({ top: 0 });
   paintChrome();
+}
+
+/** #/grammar, /curriculum, /level/:id, /module/:id, /lesson/:id, /ref[/:id] */
+function renderGrammarRoute(view, parts, params) {
+  switch (parts[1]) {
+    case undefined: return renderGrammar(view);
+    case 'curriculum': return renderCurriculum(view);
+    case 'level': return renderCurriculum(view, parts[2]);
+    case 'module': return renderGrammarModule(view, parts[2]);
+    case 'lesson': return renderGrammarLesson(view, parts[2]);
+    case 'ref': return parts[2]
+      ? renderGrammarRefLesson(view, parts[2])
+      : renderGrammarReference(view, params);
+    default: return renderGrammar(view);
+  }
 }
 
 /* ---------- chrome ---------- */
@@ -96,8 +121,9 @@ function wireChrome() {
   sync.onChange(paintChrome);
   store.on('progress', paintChrome);
   document.addEventListener('session:done', () => { render(); sync.sync(); });
+  document.addEventListener('grammar:done', () => { render(); sync.sync(); });
   document.addEventListener('route:refresh', render);
-  addEventListener('hashchange', () => { if (!sessionActive()) render(); });
+  addEventListener('hashchange', () => { if (!sessionActive() && !grammarActive()) render(); });
 }
 
 /* ---------- boot ---------- */
@@ -106,11 +132,12 @@ async function boot() {
   await store.init();
   applyTheme(store.settings.theme);
 
-  try {
-    await DATA.loadData();
-  } catch (err) {
-    console.error('dataset load failed', err);
-  }
+  // The two courses load side by side; neither one blocks the other.
+  const [, grammarLoad] = await Promise.allSettled([
+    DATA.loadData(),
+    GRAMMAR.loadGrammar(),
+  ]);
+  if (grammarLoad.status === 'rejected') console.error('grammar load failed', grammarLoad.reason);
 
   $('#boot')?.remove();
   $('#app').hidden = false;
